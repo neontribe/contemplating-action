@@ -5,4 +5,4 @@ Fixes #
 - 
 -
 
-@neontribe/contemplating-action-dev
+@neontribe/contemplating-action
