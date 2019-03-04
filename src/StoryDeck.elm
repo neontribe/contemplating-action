@@ -217,7 +217,7 @@ decks =
       , relatedInfo = [ 2, 5 ]
       , cards =
             [ { quoteText =
-                    """Part 1 of 4 - The story starts with some background. It gives us key pieces of information that make this person’s story clear and 
+                    """The story starts with some background. It gives us key pieces of information that make this person’s story clear and 
                     relatable. It tends to deal with facts about the situation they were in rather than their feelings. It is always a situation 
                     that clearly needed to change.
                     """
@@ -226,28 +226,28 @@ decks =
               , messageText = Nothing
               }
             , { quoteText =
-                    """Part 2 of 4 - Next the story moves on a little. It does one of two things. Either it tells us about a specific incident that began a 
+                    """Next the story moves on a little. It does one of two things. Either it tells us about a specific incident that began a 
                     drive to change things, or it explores the person’s fears and other things that were holding them back. This section focuses 
                     on emotions and helps us connect with the person’s story.
                     """
-              , imagePath = AssetPath "ourproject-image2.jpg"
+              , imagePath = AssetPath "story_images/ourproject-image2.jpg"
               , altText = "The man looks up a long staircase with a locked door at the top"
               , messageText = Just "This bar is used to give a little extra insight into how the person was feeling."
               }
             , { quoteText =
-                    """Part 3 of 4 - Here the story starts to change for the better. The person becomes able to take a positive step and get some support. 
+                    """Here the story starts to change for the better. The person becomes able to take a positive step and get some support. 
                     The story tells us a little about what happened, how they managed to take the step and how they felt. 
                     """
-              , imagePath = AssetPath "ourproject-image3.jpg"
+              , imagePath = AssetPath "story_images/ourproject-image3.jpg"
               , altText = "The man starts climbing the stairs to reach a hand holding out a key."
               , messageText = Nothing
               }
             , { quoteText =
-                    """Part 4 of 4 - The final section of the story is about hope. It show that making a chance can be a positive choice. However it doesn’t 
+                    """The final section of the story is about hope. It show that making a chance can be a positive choice. However it doesn’t 
                     suggest that the person’s life is now perfect. It is designed to encourage others to believe they could make a move to a more 
                     hopeful place too. It takes care not to sound out of reach.
                     """
-              , imagePath = AssetPath "ourproject-image4.jpg"
+              , imagePath = AssetPath "story_images/ourproject-image4.jpg"
               , altText = "The door is open and the lock is on the floor. The man is outside in a bright and sunny environment holding onto the key."
               , messageText = Just "sometimes the story highlights a worry that remains, and how the person is coping with it"
               }
