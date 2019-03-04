@@ -283,41 +283,4 @@ decks =
               }
             ]
       }
-    , { id = 3
-      , title = "A story about rocks"
-      , teaser = "The rocks are many and varied."
-      , teaserImgPath = AssetPath "story_images/thumb_placeholder.png"
-      , teaserImgAltText = "Some text that describes the teaser image."
-      , relatedInfo = [ 2, 5 ]
-      , cards =
-            [ { quoteText =
-                    """Something inspiring about rocks.
-                    """
-              , imagePath = AssetPath "story_images/slide1.svg"
-              , altText = "Some text that describes the image"
-              , messageText = Nothing
-              }
-            , { quoteText =
-                    """Something suprising about rocks.
-                    """
-              , imagePath = AssetPath "story_images/slide2.svg"
-              , altText = "Some text that describes the image."
-              , messageText = Just "Caption text."
-              }
-            , { quoteText =
-                    """Something magical about rocks.
-                    """
-              , imagePath = AssetPath "story_images/slide3.svg"
-              , altText = "Some text that describes the image."
-              , messageText = Nothing
-              }
-            , { quoteText =
-                    """Something interesting about rocks.
-                    """
-              , imagePath = AssetPath "story_images/slide4.svg"
-              , altText = "Some text that describes the image."
-              , messageText = Nothing
-              }
-            ]
-      }
     ]
