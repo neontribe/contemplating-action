@@ -98,8 +98,6 @@ view model =
                     [ h2 [] [ text "Stories" ]
                     , storyTeaser 1
                     , storyTeaser 2
-                    , storyTeaser 3
-                    , storyTeaser 4
                     ]
                 , div [ class "section section--highlight" ]
                     [ div [ class "text-center" ]
@@ -122,7 +120,6 @@ view model =
                     , card id 2
                     , card id 3
                     , card id 4
-                    , card id 5
                     ]
                 , div [ class "section section--highlight section--story-end" ]
                     [ p [ class "story--related" ] [ text "Every story is different. Let us help you discover yours." ]
@@ -167,6 +164,7 @@ view model =
                     , infoCard (getInfo 3)
                     , infoCard (getInfo 4)
                     , infoCard (getInfo 5)
+                    , infoCard (getInfo 6)
                     ]
                 ]
 
