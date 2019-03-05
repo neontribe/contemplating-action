@@ -16,6 +16,13 @@
        url('./fonts/caveat.ttf') format('truetype'); /* Mobile */
 }
 
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: normal;
+  src:url('./fonts/Poppins-Medium.ttf') format('truetype'); /* Mobile */
+}
+
 $nav-height-mobile: 71px;
 $nav-height-desktop--single-line: 54px;
 $nav-height-desktop--double-line: 77px;
@@ -44,7 +51,7 @@ $shadow: rgba(89, 97, 116, 0.4);
 $white: #fafafa;
 $white-pure: #ffffff;
 
-// CA colours
+// CA vars
 $Purple: #662483;
 $LightBlue: #4575BA;
 $DarkBlue: #1A1E64;
@@ -79,7 +86,7 @@ $max-width: 1044px;
 
 :root {
   font-size: 16px;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.5;
 }
 
