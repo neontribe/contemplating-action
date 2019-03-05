@@ -10917,15 +10917,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 							_1: {
 								ctor: '::',
 								_0: _neontribe$haven$StoryDeck$storyTeaser(2),
-								_1: {
-									ctor: '::',
-									_0: _neontribe$haven$StoryDeck$storyTeaser(3),
-									_1: {
-										ctor: '::',
-										_0: _neontribe$haven$StoryDeck$storyTeaser(4),
-										_1: { ctor: '[]' }
-									}
-								}
+								_1: { ctor: '[]' }
 							}
 						}
 					}),
@@ -10998,11 +10990,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 									_1: {
 										ctor: '::',
 										_0: A2(_neontribe$haven$StoryDeck$card, _p1, 4),
-										_1: {
-											ctor: '::',
-											_0: A2(_neontribe$haven$StoryDeck$card, _p1, 5),
-											_1: { ctor: '[]' }
-										}
+										_1: { ctor: '[]' }
 									}
 								}
 							}
@@ -11169,7 +11157,11 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 										_1: {
 											ctor: '::',
 											_0: _neontribe$haven$Info$infoCard(_neontribe$haven$Info$getInfo(5)),
-											_1: { ctor: '[]' }
+											_1: {
+												ctor: '::',
+												_0: _neontribe$haven$Info$infoCard(_neontribe$haven$Info$getInfo(6)),
+												_1: { ctor: '[]' }
+											}
 										}
 									}
 								}
