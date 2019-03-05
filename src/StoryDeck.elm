@@ -122,13 +122,13 @@ cardMessage deckId cardId =
         message =
             (getCard deckId cardId).messageText
     in
-    case message of
-        -- Easiest to return an empty p here. Class in case we need to style.
-        Nothing ->
-            p [ class "no-message" ] []
+        case message of
+            -- Easiest to return an empty p here. Class in case we need to style.
+            Nothing ->
+                p [ class "no-message" ] []
 
-        Just message ->
-            blockquote [ class "story--message quote" ] [ text message ]
+            Just message ->
+                blockquote [ class "story--message quote" ] [ text message ]
 
 
 cardImgPath : Int -> Int -> String
@@ -151,12 +151,12 @@ getCard deckId cardId =
                 |> Array.fromList
                 |> Array.get (cardId - 1)
     in
-    case foundCard of
-        Just card ->
-            card
+        case foundCard of
+            Just card ->
+                card
 
-        Nothing ->
-            placeholderCard
+            Nothing ->
+                placeholderCard
 
 
 getDeck : Int -> List Deck -> Deck
@@ -165,12 +165,12 @@ getDeck deckId decks =
         foundDeck =
             List.head (List.filter (\i -> i.id == deckId) decks)
     in
-    case foundDeck of
-        Just deck ->
-            deck
+        case foundDeck of
+            Just deck ->
+                deck
 
-        Nothing ->
-            placeholderDeck
+            Nothing ->
+                placeholderDeck
 
 
 getRelatedInfo : Int -> List Int
