@@ -1,13 +1,17 @@
 {
   "scripts": {
     "build": "./node_modules/.bin/webpack",
-    "dev": "./node_modules/.bin/webpack-dev-server --port 3000 --hot"
+    "dev": "./node_modules/.bin/webpack-dev-server --port 3000 --hot",
+    "format": "./node_modules/elm-format/bin/elm-format",
+    "test": "./node_modules/elm-test/bin/elm-test"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "css-loader": "^0.28.7",
     "elm": "^0.18.0",
     "elm-assets-loader": "^0.3.0",
+    "elm-format": "0.6.1-alpha",
+    "elm-test": "0.18.12",
     "elm-webpack-loader": "^4.4.0",
     "file-loader": "^1.1.5",
     "node-sass": "^4.6.1",

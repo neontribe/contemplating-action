@@ -22,14 +22,14 @@
 - Watch files and serve to `localhost:3000` with `yarn dev`
 
 ## Tests
-We're using [elm-test](https://github.com/elm-community/elm-test/) for testing.
-- `npm install -g elm-test` will install the test runner on your machine
-- Run tests with `elm-test` from root of site
+We're using [elm-test](https://github.com/rtfeldman/node-test-runner/releases/tag/0.18.12) for testing.
+- Run tests with `yarn test` from root of site
 - Todo add to build process
 
 ## Code Style
 We're using [elm-format](https://github.com/avh4/elm-format) to standardise formatting. The output of different versions of elm-format varies significantly, so please use version 0.6.1-alpha.
-- `npm install -g elm-format@0.6.1-alpha`
+- e.g. run over all src files `yarn format src` from the root of the site
+- Todo add to commit or push
 
 ## Deployment
 - Build to `dist\` with `yarn build`
