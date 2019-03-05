@@ -1,7 +1,7 @@
 {
     "version": "0.0.0",
-    "summary": "Haven App",
-    "repository": "https://github.com/neontribe/haven.git",
+    "summary": "Contemplating Action info app",
+    "repository": "https://github.com/neontribe/contemplating-action.git",
     "license": "MIT",
     "source-directories": [
         "src"
