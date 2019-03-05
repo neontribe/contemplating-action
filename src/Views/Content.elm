@@ -24,7 +24,7 @@ view model =
     case model.currentPage of
         Home ->
             div [ class "section--vertical-fill-center" ]
-                [ section [ class "section section--highlight section--align-bottom" ]
+                [ section [ class "section section--lighter section--align-bottom" ]
                     [ h2 []
                         [ text "Read some stories and find out more information" ]
                     , div [ class "button-group button-group--row" ]

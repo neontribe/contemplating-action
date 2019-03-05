@@ -26,6 +26,7 @@ $nav-height-desktop--double-line: 77px;
 
 ------------------------------ */
 
+// Haven vars
 $lilac-light: #f2f4f8;
 $blue: #4ab3ce;
 $blue-light: lighten($blue, 30%);
@@ -42,6 +43,21 @@ $orange-outer: #ffa17b;
 $shadow: rgba(89, 97, 116, 0.4);
 $white: #fafafa;
 $white-pure: #ffffff;
+
+// CA colours
+$Purple: #662483;
+$LightBlue: #4575BA;
+$DarkBlue: #1A1E64;
+$Black: #3c3c3b;
+$White: #F5F5F5;
+$LightGrey: #E4E1E7;
+
+// Theme colours
+$primary-colour: $DarkBlue;
+$secondary-colour: $LightBlue;
+$text-colour: $Black;
+$interaction-colour: $Purple;
+
 
 $max-width: 1044px;
 
@@ -72,7 +88,7 @@ body {
   padding: 0;
   margin: 0 auto;
   font-size: 1.125rem;
-  color: $grey-dark;
+  color: $text-colour;
   background-color: $white;
 
   /* Allow space for mobile nav without overlapping content */
@@ -213,7 +229,7 @@ img {
   color: $white-pure;
   font-size: 1.75rem;
   border-radius: 50%;
-  background-color: $green-light;
+  background-color: $secondary-colour;
 }
 
 .icon--large {
@@ -223,7 +239,7 @@ img {
 }
 
 .icon--alternate {
-  color: $green;
+  color: $text-colour;
   margin-left: 10px;
 }
 
@@ -265,7 +281,7 @@ img {
 }
 
 .title--alternate {
-  color: $blue-dark;
+  color: $primary-colour;
 }
 
 /* ------------------------------
@@ -282,19 +298,19 @@ img {
 
   &:hover,
   &:active {
-    color: $blue-dark;
+    color: $interaction-colour;
   }
 }
 
 .link--plain {
-  color: $blue-darker;
+  color: $interaction-colour;
   border-bottom-color: transparent;
   font-weight: normal;
   text-decoration: none;
 
   &:hover,
   &:active {
-    color: $blue-dark;
+    color: $interaction-colour;
     border-bottom-color: currentColor;
   }
 }
@@ -322,8 +338,8 @@ img {
 
 .button {
   display: inline-block;
-  color: $white-pure;
-  background-color: $blue-darker;
+  color: $White;
+  background-color: $interaction-colour;
   border-radius: 5em;
   padding: 15px 20px;
   font-size: 1.125rem;
@@ -334,7 +350,7 @@ img {
 .button:active,
 .button:focus,
 .button:hover {
-  background-color: $blue-dark;
+  background-color: $interaction-colour;
 }
 
 .button--center {
@@ -351,14 +367,14 @@ img {
 }
 
 .button--alternate {
-  color: $white-pure;
-  background-color: $blue-darker;
+  color: $White;
+  background-color: $interaction-colour;
 }
 
 .button--alternate:active,
-.button--alternate:focus, // Otherwise turns same blue as bg
+.button--alternate:focus,
 .button--alternate:hover {
-  background-color: $blue-dark;
+  background-color: $interaction-colour;
 }
 
 .button--icon {
@@ -420,10 +436,10 @@ img {
 }
 
 .section--lighter {
-  background-color: $white-pure;
+  background-color: $White;
 }
 .section--highlight {
-  color: $grey-dark;
+  color: $text-colour;
   background-color: $lilac-light;
 }
 
@@ -480,7 +496,7 @@ img {
 .nav-bar {
   display: flex;
   align-items: stretch;
-  background-color: $grey-dark;
+  background-color: $primary-colour;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -577,17 +593,17 @@ nav,
   display: flex;
   justify-content: center;
   padding: 0;
-  font-family: 'Caveat', cursive;
-  background-image: radial-gradient(at bottom, $orange-centre, $orange-outer);
+  background: $secondary-colour;
+  color: $White;
 }
 
 .section--header a {
-  color: $grey-dark;
+  color: $White;
   text-decoration: none;
 }
 
 .section--header a:hover {
-  border-bottom: 5px solid $grey-dark;
+  border-bottom: 5px solid $White;
   cursor: pointer;
 }
 
@@ -651,7 +667,7 @@ nav,
 
 .card--alternate {
   color: $white-pure;
-  background-color: $blue-darker;
+  background-color: $primary-colour;
 }
 
 .card--with-icon {
@@ -799,7 +815,7 @@ nav,
 
 .story--message {
   background-color: $grey;
-  color: $grey-dark;
+  color: $text-colour;
   font-size: 1rem;
   margin: 0;
   padding: 5px;
