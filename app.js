@@ -10630,7 +10630,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 						ctor: '::',
 						_0: A2(_elm_lang$html$Html$h2, { ctor: '[]' }, {
 							ctor: '::',
-							_0: _elm_lang$html$Html$text('Read some stories and find out more information'),
+							_0: _elm_lang$html$Html$text('A project exploring how to encourage people to seek support. Can stories help change lives?'),
 							_1: { ctor: '[]' }
 						}),
 						_1: {
@@ -10651,12 +10651,12 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 									}
 								}, {
 									ctor: '::',
-									_0: A2(_neontribe$haven$Icon$getIcon, 'stories', _elm_lang$core$Maybe$Just('button--icon')),
+									_0: A2(_neontribe$haven$Icon$getIcon, 'question-circle', _elm_lang$core$Maybe$Just('button--icon')),
 									_1: {
 										ctor: '::',
 										_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
 											ctor: '::',
-											_0: _elm_lang$html$Html$text('Show me the stories'),
+											_0: _elm_lang$html$Html$text('Find out more'),
 											_1: { ctor: '[]' }
 										}),
 										_1: { ctor: '[]' }
@@ -10693,14 +10693,14 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 							ctor: '::',
 							_0: A2(_elm_lang$html$Html$h2, { ctor: '[]' }, {
 								ctor: '::',
-								_0: _elm_lang$html$Html$text('Call to action here.'),
+								_0: _elm_lang$html$Html$text('Breaking down fears and barriers.'),
 								_1: { ctor: '[]' }
 							}),
 							_1: {
 								ctor: '::',
 								_0: A2(_elm_lang$html$Html$p, { ctor: '[]' }, {
 									ctor: '::',
-									_0: _elm_lang$html$Html$text('Short description of services.\n                        '),
+									_0: _elm_lang$html$Html$text('In 2017, The Haven, Wolverhampton, Neontribe and women who had been through domestic violence co-designed a \n                        web app to encourage other women in that situation to seek support and advice. We want to find out if the structure of \n                        that app could be used by different organisations to encourage people to use a helpline or web chat or text service. We \n                        believe that reassuring people that their fears and challenges are shared will help them take early steps on a journey of \n                        change. Explore the app and then take our survey to tell us what you think.\n                        '),
 									_1: { ctor: '[]' }
 								}),
 								_1: {
@@ -10792,7 +10792,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 														ctor: '::',
 														_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
 															ctor: '::',
-															_0: _elm_lang$html$Html$text('Email Us'),
+															_0: _elm_lang$html$Html$text('Email us'),
 															_1: { ctor: '[]' }
 														}),
 														_1: { ctor: '[]' }
@@ -10828,7 +10828,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 										ctor: '::',
 										_0: A2(_elm_lang$html$Html$p, { ctor: '[]' }, {
 											ctor: '::',
-											_0: _elm_lang$html$Html$text('A bit more information. The small print.'),
+											_0: _elm_lang$html$Html$text('This space is used by The Haven to remind people to call the Police in emergency situations. It could be used for any kind of risk related reminder by other charities.'),
 											_1: { ctor: '[]' }
 										}),
 										_1: { ctor: '[]' }
