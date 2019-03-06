@@ -45,7 +45,6 @@ view model =
                         change. Explore the app and then take our survey to tell us what you think.
                         """
                         ]
-                        
                     , p [] [ a [ class "link link--plain", href "https://neontribe.co.uk/blog" ] [ text "Read more about this project" ] ]
                     , div [ class "button-group" ]
                         [ div [ class "desktop-only" ]
