@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -224,7 +224,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(16);
+var	fixUrls = __webpack_require__(15);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -549,37 +549,32 @@ module.exports = __webpack_require__.p + "ourproject-image1.jpg?a8817eae407a978b
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "thumb_placeholder.png?5a37c6a2b4c26f96bbc3aa9e1dba4982";
+module.exports = __webpack_require__.p + "ama_1.jpg?29b97a0fd04364118924b8b467255ca3";
 
 /***/ }),
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "slide1.svg?174d4e36746d5a1bf711f6e7c7293046";
+module.exports = __webpack_require__(6);
+
 
 /***/ }),
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(7);
-
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
 
 
-__webpack_require__(8);
+__webpack_require__(7);
 
 // Requiring after app.scss ensures correct selector precedence
-__webpack_require__(17);
+__webpack_require__(16);
 
 // Require index.html so it gets copied to dist
-__webpack_require__(22);
+__webpack_require__(21);
 
 // Require icons
+__webpack_require__(22);
 __webpack_require__(23);
 __webpack_require__(24);
 __webpack_require__(25);
@@ -595,9 +590,8 @@ __webpack_require__(34);
 __webpack_require__(35);
 __webpack_require__(36);
 __webpack_require__(37);
-__webpack_require__(38);
 
-var Elm = __webpack_require__(39);
+var Elm = __webpack_require__(38);
 var mountNode = document.getElementById('main');
 
 // .embed() can take an optional second argument. This would be an object describing the data we need to start a program, i.e. a userID or some token
@@ -633,13 +627,13 @@ observer.observe(mountNode, config);
 
 
 /***/ }),
-/* 8 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(9);
+var content = __webpack_require__(8);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -664,7 +658,7 @@ if(false) {
 }
 
 /***/ }),
-/* 9 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var escape = __webpack_require__(0);
@@ -673,49 +667,49 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: 'Nunito';\n  font-style: normal;\n  font-weight: normal;\n  src: url(" + escape(__webpack_require__(10)) + ");\n  /* IE9 */\n  src: url(" + escape(__webpack_require__(11)) + ") format(\"woff\"), url(" + escape(__webpack_require__(12)) + ") format(\"truetype\");\n  /* Mobile */ }\n\n@font-face {\n  font-family: 'Caveat';\n  font-style: normal;\n  font-weight: normal;\n  src: url(" + escape(__webpack_require__(13)) + ");\n  /* IE9 */\n  src: url(" + escape(__webpack_require__(14)) + ") format(\"woff\"), url(" + escape(__webpack_require__(15)) + ") format(\"truetype\");\n  /* Mobile */ }\n\n/* ------------------------------\n\n   Variables\n\n------------------------------ */\n/* ------------------------------\n\n   Reset\n\n------------------------------ */\n*,\n*::before,\n*::after {\n  box-sizing: border-box; }\n\n*:focus {\n  outline-color: #a6e263; }\n\n:root {\n  font-size: 16px;\n  font-family: 'Nunito', sans-serif;\n  line-height: 1.5; }\n\nbody {\n  max-width: 1044px;\n  padding: 0;\n  margin: 0 auto;\n  font-size: 1.125rem;\n  color: #596174;\n  background-color: #fafafa;\n  /* Allow space for mobile nav without overlapping content */\n  margin-bottom: 71px; }\n\nbutton {\n  border: 0;\n  background: none;\n  padding: 0;\n  cursor: pointer;\n  font-size: inherit; }\n\ninput {\n  font: inherit;\n  border: none;\n  border-radius: 0;\n  padding: 0;\n  -webkit-appearance: none; }\n\nlabel {\n  cursor: pointer; }\n\nul, ol, li {\n  list-style: none;\n  margin: 0;\n  padding: 0; }\n\n.ul--disc li {\n  list-style: disc;\n  margin-left: 30px; }\n\np {\n  margin: 0; }\n\nbutton + p {\n  margin-top: 3em; }\n\np + p {\n  line-height: 1.5;\n  margin-top: 1em; }\n\nh1, h2, h3, h4, h5, h6 {\n  padding: 0;\n  margin: 0; }\n\nh1 {\n  font-size: 3.5rem;\n  line-height: 1.5; }\n\nh2 {\n  font-size: 1.5rem;\n  margin-bottom: 1em;\n  line-height: 1.5; }\n\nh3, h4, h5 {\n  font-size: 1.2rem;\n  line-height: 1.5;\n  margin-top: 1em; }\n\nbutton {\n  font-family: inherit;\n  color: inherit; }\n\nimg {\n  height: auto;\n  max-width: 100%; }\n\n@media screen and (min-width: 721px) {\n  :root {\n    font-size: 22px; }\n  body {\n    /* Remove spacing for lower navigation */\n    margin-bottom: 0; } }\n\n/* ------------------------------\n\n   Page\n\n------------------------------ */\n/* IE11 helper */\n.content {\n  min-height: 1px; }\n\n.page {\n  min-height: 100vh;\n  position: relative;\n  display: flex;\n  flex-direction: column; }\n\n@media screen and (min-width: 721px) {\n  .page {\n    /* Provide spacing for navigation */\n    padding-top: 77px; } }\n\n@media screen and (min-width: 860px) {\n  .page {\n    /* Provide spacing for navigation */\n    padding-top: 54px; } }\n\n/* ------------------------------\n\n   Icon\n\n------------------------------ */\n.icon {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 50px;\n  width: 50px;\n  color: #ffffff;\n  font-size: 1.75rem;\n  border-radius: 50%;\n  background-color: #b8e388; }\n\n.icon--large {\n  height: 100px;\n  width: 100px;\n  font-size: 60px; }\n\n.icon--alternate {\n  color: #a6e263;\n  margin-left: 10px; }\n\n/* ------------------------------\n\n   Text\n\n------------------------------ */\n.text-center {\n  text-align: center; }\n\n.text-right {\n  text-align: right; }\n\n.text-small {\n  font-size: 1rem; }\n\n.quote:before {\n  content: open-quote; }\n\n.quote:after {\n  content: close-quote; }\n\n/* ------------------------------\n\n   Title\n\n------------------------------ */\n.title--small {\n  font-size: 1.25rem;\n  margin-bottom: 10px; }\n\n.title--alternate {\n  color: #0099be; }\n\n/* ------------------------------\n\n   Link\n\n------------------------------ */\n.link {\n  font-weight: bold;\n  color: inherit;\n  border-bottom: 1px solid currentColor;\n  text-decoration: none; }\n  .link:hover, .link:active {\n    color: #0099be; }\n\n.link--plain {\n  color: #007b99;\n  border-bottom-color: transparent;\n  font-weight: normal;\n  text-decoration: none; }\n  .link--plain:hover, .link--plain:active {\n    color: #0099be;\n    border-bottom-color: currentColor; }\n\n.link--unstyled {\n  color: inherit;\n  text-decoration: none; }\n\n.link--stateless:hover, .link--stateless:active, .link--stateless:focus {\n  color: inherit !important;\n  border-bottom-color: inherit !important; }\n\n/* ------------------------------\n\n   Button\n\n------------------------------ */\n.button {\n  display: inline-block;\n  color: #ffffff;\n  background-color: #007b99;\n  border-radius: 5em;\n  padding: 15px 20px;\n  font-size: 1.125rem;\n  font-weight: bold;\n  text-decoration: none; }\n\n.button:active,\n.button:focus,\n.button:hover {\n  background-color: #0099be; }\n\n.button--center {\n  margin: auto; }\n\n.button + .button {\n  margin-top: 20px; }\n\n.button--full-width {\n  width: 100%;\n  text-align: center; }\n\n.button--alternate {\n  color: #ffffff;\n  background-color: #007b99; }\n\n.button--alternate:active,\n.button--alternate:focus,\n.button--alternate:hover {\n  background-color: #0099be; }\n\n.button--icon {\n  margin-right: 10px; }\n\n.button-group {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n  margin-top: 40px; }\n\n.button-group--row {\n  flex-direction: row; }\n\n@media screen and (min-width: 360px) {\n  .button {\n    white-space: nowrap; } }\n\n@media screen and (min-width: 800px) {\n  .button--default-width--desktop {\n    width: auto !important;\n    padding: 15px 50px; }\n  .button-group {\n    flex-direction: row; }\n  .button + .button {\n    margin-top: 0;\n    margin-left: 20px; } }\n\n/* ------------------------------\n\n   Section\n\n------------------------------ */\n.section {\n  padding: 40px 20px;\n  background-color: #fafafa; }\n\n.section--darker {\n  background-color: #f4f2f0; }\n\n.section--lighter {\n  background-color: #ffffff; }\n\n.section--highlight {\n  color: #596174;\n  background-color: #f2f4f8; }\n\n.section--align-bottom {\n  padding-bottom: 0; }\n\n.section--vertical-fill-center {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  flex: 1 0 auto;\n  min-height: 1px; }\n\n.section--info {\n  align-items: center; }\n\n.section--story-end {\n  padding-top: 0; }\n\n@media screen and (min-width: 721px) {\n  .home .section--header {\n    padding: 0; }\n  .section {\n    padding: 60px;\n    display: flex;\n    flex-direction: column;\n    justify-content: center; }\n  .section--align-bottom {\n    padding-bottom: 0; }\n  .section--story-end {\n    padding-top: 0; } }\n\n/* ------------------------------\n\n   Navigation\n\n------------------------------ */\n.nav-bar {\n  display: flex;\n  align-items: stretch;\n  background-color: #596174;\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  z-index: 100; }\n\n.nav-icon {\n  color: #e1e2e6; }\n\nnav,\n.nav-item {\n  display: flex;\n  flex: 1 0 auto;\n  justify-content: center;\n  align-items: center;\n  white-space: nowrap; }\n\n.nav-item--text-only,\n.nav-item a {\n  flex: 1 0 auto;\n  padding: 15px 10px;\n  color: #fafafa;\n  text-align: center;\n  text-decoration: none;\n  font-weight: bold;\n  line-height: 1; }\n\n.nav-item--active .nav-item-text,\n.nav-item:hover .nav-item-text {\n  color: #c2e6ef; }\n\n.nav-item a:active .nav-item-text {\n  color: #4ab3ce; }\n\n.nav-item-text {\n  display: block; }\n\n.nav-item-text + .nav-item-text {\n  margin-top: 5px; }\n\n@media screen and (min-width: 721px) {\n  .nav-bar {\n    top: 0;\n    bottom: auto;\n    left: auto;\n    right: auto;\n    margin: auto;\n    width: 100%;\n    max-width: 1044px; }\n  nav, .nav-bar {\n    justify-content: flex-end; }\n  .nav-item {\n    flex: 0 1 auto; }\n  .nav-item-text {\n    font-size: 0.7273rem;\n    margin: 5px;\n    vertical-align: middle; } }\n\n@media screen and (min-width: 860px) {\n  .nav-item-text {\n    display: inline;\n    font-size: 0.8181rem; } }\n\n/* ------------------------------\n\n   Header\n\n------------------------------ */\n.section--header {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  padding: 0;\n  font-family: 'Caveat', cursive;\n  background-image: radial-gradient(at bottom, #ffda8a, #ffa17b); }\n\n.section--header a {\n  color: #596174;\n  text-decoration: none; }\n\n.section--header a:hover {\n  border-bottom: 5px solid #596174;\n  cursor: pointer; }\n\n.section--header:after {\n  content: '';\n  position: absolute;\n  left: 0;\n  bottom: 1px;\n  width: 100%;\n  height: 4px;\n  box-shadow: 0 3px 4px 0 rgba(89, 97, 116, 0.4); }\n\n.home .section--header {\n  height: 120px;\n  font-size: 1.512rem;\n  align-items: center; }\n\n.home .section--header::after {\n  display: none; }\n\n/* ------------------------------\n\n   Footer\n\n------------------------------ */\n@media screen and (min-width: 721px) {\n  .section--footer {\n    padding: 40px 20px;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    width: 100%; }\n  .footer--item {\n    margin: 0 20px; } }\n\n/* ------------------------------\n\n   Card\n\n------------------------------ */\n.card {\n  width: 100%;\n  padding: 15px;\n  border-radius: 10px;\n  font-size: 1rem;\n  background-color: #fafafa; }\n\n.card + .card {\n  margin-top: 20px; }\n\n.card--alternate {\n  color: #ffffff;\n  background-color: #007b99; }\n\n.card--with-icon {\n  position: relative;\n  padding: 70px 20px 40px;\n  margin-top: 40px; }\n\n.card--icon {\n  position: absolute;\n  top: -50px;\n  left: 0;\n  right: 0;\n  margin: auto; }\n\n.card--thumbnail {\n  float: left;\n  margin-right: 15px;\n  width: 80px;\n  height: 80px; }\n\n.card--quote {\n  margin-left: 0;\n  margin-right: 0; }\n\n@media screen and (min-width: 721px) {\n  .card--thumbnail {\n    width: 210px;\n    height: 210px; } }\n\n/* ------------------------------\n\n    Info to help you\n\n------------------------------ */\n.section--info .card {\n  margin-top: 10px; }\n\n.info {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  width: 100%;\n  text-align: left;\n  line-height: 1.5;\n  text-decoration: none; }\n\n.info:active,\n.info:focus,\n.info:hover {\n  background-color: #0099be; }\n\n.info--icon {\n  flex-shrink: 0;\n  margin-right: 20px;\n  font-size: 30px; }\n\n.info--text {\n  flex: 1 1 auto;\n  margin-right: 10px; }\n\n.info--list {\n  width: 100%; }\n\n@media screen and (min-width: 721px) {\n  .info--list {\n    width: 60%; } }\n\n/* Stops hover issue on iPad */\n@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n  .info:hover {\n    background-color: #007b99; } }\n\n/* ------------------------------\n\n   Stories\n\n------------------------------ */\n.stories--more-link {\n  margin-top: 10px; }\n\n/* ------------------------------\n\n   Story\n\n------------------------------ */\n.story {\n  position: relative;\n  min-height: 1px; }\n\n.story + .story {\n  margin-top: 0; }\n\n.story:not(:last-child) {\n  margin-bottom: 45px; }\n\n.story:not(:last-child)::after {\n  content: '';\n  position: absolute;\n  bottom: -45px;\n  left: 0;\n  right: 0;\n  margin: auto;\n  width: 0;\n  height: 0;\n  border-left: 35px solid transparent;\n  border-right: 35px solid transparent;\n  border-top: 45px solid #fafafa; }\n\n.story--illustration {\n  position: relative;\n  margin-top: 20px; }\n\n.story--illustration img {\n  display: block; }\n\n.story--message {\n  background-color: #e1e2e6;\n  color: #596174;\n  font-size: 1rem;\n  margin: 0;\n  padding: 5px;\n  text-align: center; }\n\n/* .button--group override (not ideal) */\n.story--related {\n  width: 100%;\n  margin-top: 10px;\n  margin-bottom: 20px;\n  /* Same as `.button + .button` spacing */ }\n\n/* ------------------------------\n\n   Supporter\n\n------------------------------ */\n.supporter--logo-group {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-wrap: wrap;\n  width: 100%;\n  padding: 20px 40px; }\n\n.supporter--logo {\n  height: 166px;\n  margin: 20px 40px; }\n\n@media screen and (max-width: 721px) {\n  .supporter--logo {\n    width: 100%;\n    margin: 10px 0px; } }\n\n/* ------------------------------\n\n   Helper\n\n------------------------------ */\n.block {\n  display: block; }\n\n.inset {\n  margin: 0 10px; }\n\n.desktop-only {\n  display: none; }\n\n@media screen and (min-width: 721px) {\n  .desktop-only {\n    display: inherit; }\n  .mobile-only {\n    display: none; } }\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: 'Nunito';\n  font-style: normal;\n  font-weight: normal;\n  src: url(" + escape(__webpack_require__(9)) + ");\n  /* IE9 */\n  src: url(" + escape(__webpack_require__(10)) + ") format(\"woff\"), url(" + escape(__webpack_require__(11)) + ") format(\"truetype\");\n  /* Mobile */ }\n\n@font-face {\n  font-family: 'Caveat';\n  font-style: normal;\n  font-weight: normal;\n  src: url(" + escape(__webpack_require__(12)) + ");\n  /* IE9 */\n  src: url(" + escape(__webpack_require__(13)) + ") format(\"woff\"), url(" + escape(__webpack_require__(14)) + ") format(\"truetype\");\n  /* Mobile */ }\n\n/* ------------------------------\n\n   Variables\n\n------------------------------ */\n/* ------------------------------\n\n   Reset\n\n------------------------------ */\n*,\n*::before,\n*::after {\n  box-sizing: border-box; }\n\n*:focus {\n  outline-color: #a6e263; }\n\n:root {\n  font-size: 16px;\n  font-family: 'Nunito', sans-serif;\n  line-height: 1.5; }\n\nbody {\n  max-width: 1044px;\n  padding: 0;\n  margin: 0 auto;\n  font-size: 1.125rem;\n  color: #596174;\n  background-color: #fafafa;\n  /* Allow space for mobile nav without overlapping content */\n  margin-bottom: 71px; }\n\nbutton {\n  border: 0;\n  background: none;\n  padding: 0;\n  cursor: pointer;\n  font-size: inherit; }\n\ninput {\n  font: inherit;\n  border: none;\n  border-radius: 0;\n  padding: 0;\n  -webkit-appearance: none; }\n\nlabel {\n  cursor: pointer; }\n\nul, ol, li {\n  list-style: none;\n  margin: 0;\n  padding: 0; }\n\n.ul--disc li {\n  list-style: disc;\n  margin-left: 30px; }\n\np {\n  margin: 0; }\n\nbutton + p {\n  margin-top: 3em; }\n\np + p {\n  line-height: 1.5;\n  margin-top: 1em; }\n\nh1, h2, h3, h4, h5, h6 {\n  padding: 0;\n  margin: 0; }\n\nh1 {\n  font-size: 3.5rem;\n  line-height: 1.5; }\n\nh2 {\n  font-size: 1.5rem;\n  margin-bottom: 1em;\n  line-height: 1.5; }\n\nh3, h4, h5 {\n  font-size: 1.2rem;\n  line-height: 1.5;\n  margin-top: 1em; }\n\nbutton {\n  font-family: inherit;\n  color: inherit; }\n\nimg {\n  height: auto;\n  max-width: 100%; }\n\n@media screen and (min-width: 721px) {\n  :root {\n    font-size: 22px; }\n  body {\n    /* Remove spacing for lower navigation */\n    margin-bottom: 0; } }\n\n/* ------------------------------\n\n   Page\n\n------------------------------ */\n/* IE11 helper */\n.content {\n  min-height: 1px; }\n\n.page {\n  min-height: 100vh;\n  position: relative;\n  display: flex;\n  flex-direction: column; }\n\n@media screen and (min-width: 721px) {\n  .page {\n    /* Provide spacing for navigation */\n    padding-top: 77px; } }\n\n@media screen and (min-width: 860px) {\n  .page {\n    /* Provide spacing for navigation */\n    padding-top: 54px; } }\n\n/* ------------------------------\n\n   Icon\n\n------------------------------ */\n.icon {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 50px;\n  width: 50px;\n  color: #ffffff;\n  font-size: 1.75rem;\n  border-radius: 50%;\n  background-color: #b8e388; }\n\n.icon--large {\n  height: 100px;\n  width: 100px;\n  font-size: 60px; }\n\n.icon--alternate {\n  color: #a6e263;\n  margin-left: 10px; }\n\n/* ------------------------------\n\n   Text\n\n------------------------------ */\n.text-center {\n  text-align: center; }\n\n.text-right {\n  text-align: right; }\n\n.text-small {\n  font-size: 1rem; }\n\n.quote:before {\n  content: open-quote; }\n\n.quote:after {\n  content: close-quote; }\n\n/* ------------------------------\n\n   Title\n\n------------------------------ */\n.title--small {\n  font-size: 1.25rem;\n  margin-bottom: 10px; }\n\n.title--alternate {\n  color: #0099be; }\n\n/* ------------------------------\n\n   Link\n\n------------------------------ */\n.link {\n  font-weight: bold;\n  color: inherit;\n  border-bottom: 1px solid currentColor;\n  text-decoration: none; }\n  .link:hover, .link:active {\n    color: #0099be; }\n\n.link--plain {\n  color: #007b99;\n  border-bottom-color: transparent;\n  font-weight: normal;\n  text-decoration: none; }\n  .link--plain:hover, .link--plain:active {\n    color: #0099be;\n    border-bottom-color: currentColor; }\n\n.link--unstyled {\n  color: inherit;\n  text-decoration: none; }\n\n.link--stateless:hover, .link--stateless:active, .link--stateless:focus {\n  color: inherit !important;\n  border-bottom-color: inherit !important; }\n\n/* ------------------------------\n\n   Button\n\n------------------------------ */\n.button {\n  display: inline-block;\n  color: #ffffff;\n  background-color: #007b99;\n  border-radius: 5em;\n  padding: 15px 20px;\n  font-size: 1.125rem;\n  font-weight: bold;\n  text-decoration: none; }\n\n.button:active,\n.button:focus,\n.button:hover {\n  background-color: #0099be; }\n\n.button--center {\n  margin: auto; }\n\n.button + .button {\n  margin-top: 20px; }\n\n.button--full-width {\n  width: 100%;\n  text-align: center; }\n\n.button--alternate {\n  color: #ffffff;\n  background-color: #007b99; }\n\n.button--alternate:active,\n.button--alternate:focus,\n.button--alternate:hover {\n  background-color: #0099be; }\n\n.button--icon {\n  margin-right: 10px; }\n\n.button-group {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n  margin-top: 40px; }\n\n.button-group--row {\n  flex-direction: row; }\n\n@media screen and (min-width: 360px) {\n  .button {\n    white-space: nowrap; } }\n\n@media screen and (min-width: 800px) {\n  .button--default-width--desktop {\n    width: auto !important;\n    padding: 15px 50px; }\n  .button-group {\n    flex-direction: row; }\n  .button + .button {\n    margin-top: 0;\n    margin-left: 20px; } }\n\n/* ------------------------------\n\n   Section\n\n------------------------------ */\n.section {\n  padding: 40px 20px;\n  background-color: #fafafa; }\n\n.section--darker {\n  background-color: #f4f2f0; }\n\n.section--lighter {\n  background-color: #ffffff; }\n\n.section--highlight {\n  color: #596174;\n  background-color: #f2f4f8; }\n\n.section--align-bottom {\n  padding-bottom: 0; }\n\n.section--vertical-fill-center {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  flex: 1 0 auto;\n  min-height: 1px; }\n\n.section--info {\n  align-items: center; }\n\n.section--story-end {\n  padding-top: 0; }\n\n@media screen and (min-width: 721px) {\n  .home .section--header {\n    padding: 0; }\n  .section {\n    padding: 60px;\n    display: flex;\n    flex-direction: column;\n    justify-content: center; }\n  .section--align-bottom {\n    padding-bottom: 0; }\n  .section--story-end {\n    padding-top: 0; } }\n\n/* ------------------------------\n\n   Navigation\n\n------------------------------ */\n.nav-bar {\n  display: flex;\n  align-items: stretch;\n  background-color: #596174;\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  z-index: 100; }\n\n.nav-icon {\n  color: #e1e2e6; }\n\nnav,\n.nav-item {\n  display: flex;\n  flex: 1 0 auto;\n  justify-content: center;\n  align-items: center;\n  white-space: nowrap; }\n\n.nav-item--text-only,\n.nav-item a {\n  flex: 1 0 auto;\n  padding: 15px 10px;\n  color: #fafafa;\n  text-align: center;\n  text-decoration: none;\n  font-weight: bold;\n  line-height: 1; }\n\n.nav-item--active .nav-item-text,\n.nav-item:hover .nav-item-text {\n  color: #c2e6ef; }\n\n.nav-item a:active .nav-item-text {\n  color: #4ab3ce; }\n\n.nav-item-text {\n  display: block; }\n\n.nav-item-text + .nav-item-text {\n  margin-top: 5px; }\n\n@media screen and (min-width: 721px) {\n  .nav-bar {\n    top: 0;\n    bottom: auto;\n    left: auto;\n    right: auto;\n    margin: auto;\n    width: 100%;\n    max-width: 1044px; }\n  nav, .nav-bar {\n    justify-content: flex-end; }\n  .nav-item {\n    flex: 0 1 auto; }\n  .nav-item-text {\n    font-size: 0.7273rem;\n    margin: 5px;\n    vertical-align: middle; } }\n\n@media screen and (min-width: 860px) {\n  .nav-item-text {\n    display: inline;\n    font-size: 0.8181rem; } }\n\n/* ------------------------------\n\n   Header\n\n------------------------------ */\n.section--header {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  padding: 0;\n  font-family: 'Caveat', cursive;\n  background-image: radial-gradient(at bottom, #ffda8a, #ffa17b); }\n\n.section--header a {\n  color: #596174;\n  text-decoration: none; }\n\n.section--header a:hover {\n  border-bottom: 5px solid #596174;\n  cursor: pointer; }\n\n.section--header:after {\n  content: '';\n  position: absolute;\n  left: 0;\n  bottom: 1px;\n  width: 100%;\n  height: 4px;\n  box-shadow: 0 3px 4px 0 rgba(89, 97, 116, 0.4); }\n\n.home .section--header {\n  height: 120px;\n  font-size: 1.512rem;\n  align-items: center; }\n\n.home .section--header::after {\n  display: none; }\n\n/* ------------------------------\n\n   Footer\n\n------------------------------ */\n@media screen and (min-width: 721px) {\n  .section--footer {\n    padding: 40px 20px;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    width: 100%; }\n  .footer--item {\n    margin: 0 20px; } }\n\n/* ------------------------------\n\n   Card\n\n------------------------------ */\n.card {\n  width: 100%;\n  padding: 15px;\n  border-radius: 10px;\n  font-size: 1rem;\n  background-color: #fafafa; }\n\n.card + .card {\n  margin-top: 20px; }\n\n.card--alternate {\n  color: #ffffff;\n  background-color: #007b99; }\n\n.card--with-icon {\n  position: relative;\n  padding: 70px 20px 40px;\n  margin-top: 40px; }\n\n.card--icon {\n  position: absolute;\n  top: -50px;\n  left: 0;\n  right: 0;\n  margin: auto; }\n\n.card--thumbnail {\n  float: left;\n  margin-right: 15px;\n  width: 80px;\n  height: 80px; }\n\n.card--quote {\n  margin-left: 0;\n  margin-right: 0; }\n\n@media screen and (min-width: 721px) {\n  .card--thumbnail {\n    width: 210px;\n    height: 210px; } }\n\n/* ------------------------------\n\n    Info to help you\n\n------------------------------ */\n.section--info .card {\n  margin-top: 10px; }\n\n.info {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  width: 100%;\n  text-align: left;\n  line-height: 1.5;\n  text-decoration: none; }\n\n.info:active,\n.info:focus,\n.info:hover {\n  background-color: #0099be; }\n\n.info--icon {\n  flex-shrink: 0;\n  margin-right: 20px;\n  font-size: 30px; }\n\n.info--text {\n  flex: 1 1 auto;\n  margin-right: 10px; }\n\n.info--list {\n  width: 100%; }\n\n@media screen and (min-width: 721px) {\n  .info--list {\n    width: 60%; } }\n\n/* Stops hover issue on iPad */\n@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n  .info:hover {\n    background-color: #007b99; } }\n\n/* ------------------------------\n\n   Stories\n\n------------------------------ */\n.stories--more-link {\n  margin-top: 10px; }\n\n/* ------------------------------\n\n   Story\n\n------------------------------ */\n.story {\n  position: relative;\n  min-height: 1px; }\n\n.story + .story {\n  margin-top: 0; }\n\n.story:not(:last-child) {\n  margin-bottom: 45px; }\n\n.story:not(:last-child)::after {\n  content: '';\n  position: absolute;\n  bottom: -45px;\n  left: 0;\n  right: 0;\n  margin: auto;\n  width: 0;\n  height: 0;\n  border-left: 35px solid transparent;\n  border-right: 35px solid transparent;\n  border-top: 45px solid #fafafa; }\n\n.story--illustration {\n  position: relative;\n  margin-top: 20px; }\n\n.story--illustration img {\n  display: block; }\n\n.story--message {\n  background-color: #e1e2e6;\n  color: #596174;\n  font-size: 1rem;\n  margin: 0;\n  padding: 5px;\n  text-align: center; }\n\n/* .button--group override (not ideal) */\n.story--related {\n  width: 100%;\n  margin-top: 10px;\n  margin-bottom: 20px;\n  /* Same as `.button + .button` spacing */ }\n\n/* ------------------------------\n\n   Supporter\n\n------------------------------ */\n.supporter--logo-group {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-wrap: wrap;\n  width: 100%;\n  padding: 20px 40px; }\n\n.supporter--logo {\n  height: 166px;\n  margin: 20px 40px; }\n\n@media screen and (max-width: 721px) {\n  .supporter--logo {\n    width: 100%;\n    margin: 10px 0px; } }\n\n/* ------------------------------\n\n   Helper\n\n------------------------------ */\n.block {\n  display: block; }\n\n.inset {\n  margin: 0 10px; }\n\n.desktop-only {\n  display: none; }\n\n@media screen and (min-width: 721px) {\n  .desktop-only {\n    display: inherit; }\n  .mobile-only {\n    display: none; } }\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "nunito.eot?75cb2deae35a5d180317999e8e8cf952";
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "feb87cc98b5b4c5c706bd5745e1e3b14.woff";
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "nunito.ttf?daa2089f6a9fb8fd0bf8c5642f915039";
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "caveat.eot?7950921f31523b67a449b0d44066701c";
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "27dbe3599dcc09dd24d2afe553cb3494.woff";
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "caveat.ttf?a6152192fdc81fbb0c35e050eacf2da4";
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports) {
 
 
@@ -810,13 +804,13 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(18);
+var content = __webpack_require__(17);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -841,7 +835,7 @@ if(false) {
 }
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var escape = __webpack_require__(0);
@@ -850,133 +844,133 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "/* Several icons in this set provided by Font Awesome by Dave Gandy - http://fontawesome.io */\n@font-face {\n  font-family: 'icomoon';\n  font-weight: normal;\n  font-style: normal;\n  src: url(" + escape(__webpack_require__(19)) + ");\n  /* IE9 */\n  src: url(" + escape(__webpack_require__(20)) + ") format(\"woff\"), url(" + escape(__webpack_require__(21)) + ") format(\"truetype\");\n  /* Mobile */ }\n\n[class^=\"icon-\"], [class*=\" icon-\"] {\n  /* use !important to prevent issues with browser extensions that change fonts */\n  font-family: 'icomoon' !important;\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n.icon-exit:before {\n  content: \"\\E905\"; }\n\n.icon-leaving:before {\n  content: \"\\E903\"; }\n\n.icon-police:before {\n  content: \"\\E904\"; }\n\n.icon-pound-note:before {\n  content: \"\\E900\"; }\n\n.icon-pound:before {\n  content: \"\\E901\"; }\n\n.icon-police-bold:before {\n  content: \"\\E906\"; }\n\n.icon-children:before {\n  content: \"\\E902\"; }\n\n.icon-question:before {\n  content: \"\\F128\"; }\n\n.icon-stories:before {\n  content: \"\\F02D\"; }\n\n.icon-question-circle:before {\n  content: \"\\F059\"; }\n\n.icon-arrow-right:before {\n  content: \"\\F061\"; }\n\n.icon-sign-out:before {\n  content: \"\\F08B\"; }\n\n.icon-call:before {\n  content: \"\\F095\"; }\n\n.icon-email:before {\n  content: \"\\F0E0\"; }\n\n.icon-question-circle-o:before {\n  content: \"\\F29C\"; }\n\n.icon-id-card:before {\n  content: \"\\F2C2\"; }\n", ""]);
+exports.push([module.i, "/* Several icons in this set provided by Font Awesome by Dave Gandy - http://fontawesome.io */\n@font-face {\n  font-family: 'icomoon';\n  font-weight: normal;\n  font-style: normal;\n  src: url(" + escape(__webpack_require__(18)) + ");\n  /* IE9 */\n  src: url(" + escape(__webpack_require__(19)) + ") format(\"woff\"), url(" + escape(__webpack_require__(20)) + ") format(\"truetype\");\n  /* Mobile */ }\n\n[class^=\"icon-\"], [class*=\" icon-\"] {\n  /* use !important to prevent issues with browser extensions that change fonts */\n  font-family: 'icomoon' !important;\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n.icon-exit:before {\n  content: \"\\E905\"; }\n\n.icon-leaving:before {\n  content: \"\\E903\"; }\n\n.icon-police:before {\n  content: \"\\E904\"; }\n\n.icon-pound-note:before {\n  content: \"\\E900\"; }\n\n.icon-pound:before {\n  content: \"\\E901\"; }\n\n.icon-police-bold:before {\n  content: \"\\E906\"; }\n\n.icon-children:before {\n  content: \"\\E902\"; }\n\n.icon-question:before {\n  content: \"\\F128\"; }\n\n.icon-stories:before {\n  content: \"\\F02D\"; }\n\n.icon-question-circle:before {\n  content: \"\\F059\"; }\n\n.icon-arrow-right:before {\n  content: \"\\F061\"; }\n\n.icon-sign-out:before {\n  content: \"\\F08B\"; }\n\n.icon-call:before {\n  content: \"\\F095\"; }\n\n.icon-email:before {\n  content: \"\\F0E0\"; }\n\n.icon-question-circle-o:before {\n  content: \"\\F29C\"; }\n\n.icon-id-card:before {\n  content: \"\\F2C2\"; }\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "icomoon.eot?551471df6110e04d1f2bd585cf0b4514";
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports) {
 
 module.exports = "data:application/font-woff;base64,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"
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "icomoon.ttf?9380601fa2f48fe98eda1f4198212e63";
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "index.html";
 
 /***/ }),
-/* 23 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "favicon.png?3c0be403e91869f70662a77544ea792b";
 
 /***/ }),
-/* 24 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "favicon.ico?87e525b0c6c67a14d99350e9e465e777";
 
 /***/ }),
-/* 25 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "apple-icon-57x57.png?0506aed680f37c10e44fb5e50f95e20d";
 
 /***/ }),
-/* 26 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "apple-icon-60x60.png?bab1dbfa24dfefc47eaaeb9207cbd624";
 
 /***/ }),
-/* 27 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "apple-icon-72x72.png?e6056204c16e71714a39d2eff8d07ed8";
 
 /***/ }),
-/* 28 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "apple-icon-76x76.png?c5eeeb7471d345f1e1e8b41b54767b12";
 
 /***/ }),
-/* 29 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "apple-icon-114x114.png?882ad41bb9d474c98affcb7bfa80aa4f";
 
 /***/ }),
-/* 30 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "apple-icon-120x120.png?3c0be403e91869f70662a77544ea792b";
 
 /***/ }),
-/* 31 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "apple-icon-144x144.png?e11b648977727da00f210bf8c606ab29";
 
 /***/ }),
-/* 32 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "apple-icon-152x152.png?d5591ff964df205662f1f68445ae60d3";
 
 /***/ }),
-/* 33 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "apple-icon-180x180.png?0aa6008b103de4e8d10372a14607a1ea";
 
 /***/ }),
-/* 34 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "android-icon-192x192.png?a9c0a1cc4633880fe3b6cb9810acda89";
 
 /***/ }),
-/* 35 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "favicon-32x32.png?180fb29837f0d323d474ad72cfa20277";
 
 /***/ }),
-/* 36 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "favicon-96x96.png?67eef14dce76d914e1edfa887a887432";
 
 /***/ }),
-/* 37 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "favicon-16x16.png?e0dad37e8d96e33c3fd287b2060437c7";
 
 /***/ }),
-/* 38 */
+/* 37 */
 /***/ (function(module, exports) {
 
 module.exports = {"name":"App","icons":[{"src":"/android-icon-36x36.png","sizes":"36x36","type":"image/png","density":"0.75"},{"src":"/android-icon-48x48.png","sizes":"48x48","type":"image/png","density":"1.0"},{"src":"/android-icon-72x72.png","sizes":"72x72","type":"image/png","density":"1.5"},{"src":"/android-icon-96x96.png","sizes":"96x96","type":"image/png","density":"2.0"},{"src":"/android-icon-144x144.png","sizes":"144x144","type":"image/png","density":"3.0"},{"src":"/android-icon-192x192.png","sizes":"192x192","type":"image/png","density":"4.0"}]}
 
 /***/ }),
-/* 39 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
@@ -9499,7 +9493,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 			icon: 'call',
 			infoText: {
 				ctor: '::',
-				_0: 'We include bite size information relating to a small number of fears and barriers that are likely to be stopping people from taking the \n            next step. Keeping the language simple we aim to be open and honest, with a reassuring tone. We resist the temptation to provide all the \n            information people might need. Our goal is to offer just enough to help people reach out to support services. Other websites have excellent \n            longer content.',
+				_0: 'We include bite size information relating to a small number of fears and barriers that are likely to be stopping people from taking the\n            next step. Keeping the language simple we aim to be open and honest, with a reassuring tone. We resist the temptation to provide all the\n            information people might need. Our goal is to offer just enough to help people reach out to support services. Other websites have excellent\n            longer content.',
 				_1: { ctor: '[]' }
 			}
 		},
@@ -9512,7 +9506,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 				icon: 'call',
 				infoText: {
 					ctor: '::',
-					_0: 'Many organisations struggle with the same problem with stories. People often say that they want to hear stories from other people who\n             have been through the same problems as them, but when the organisation provides stories, no one looks at them. We believe that visual \n             storytelling can change this. We are testing whether the 4 image format engages people in a way that other storytelling might not do.',
+					_0: 'Many organisations struggle with the same problem with stories. People often say that they want to hear stories from other people who\n             have been through the same problems as them, but when the organisation provides stories, no one looks at them. We believe that visual\n             storytelling can change this. We are testing whether the 4 image format engages people in a way that other storytelling might not do.',
 					_1: { ctor: '[]' }
 				}
 			},
@@ -9525,7 +9519,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 					icon: 'call',
 					infoText: {
 						ctor: '::',
-						_0: 'The survey is research with key staff in organisations that run helplines or web chats or text services. We want to know whether those \n            staff who work most closely with people seeking support think this approach could work. We also want to know what concerns or hopes they \n            might have, if they were to try creating an app like this within their organisation.',
+						_0: 'The survey is research with key staff in organisations that run helplines or web chats or text services. We want to know whether those\n            staff who work most closely with people seeking support think this approach could work. We also want to know what concerns or hopes they\n            might have, if they were to try creating an app like this within their organisation.',
 						_1: { ctor: '[]' }
 					}
 				},
@@ -9538,7 +9532,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 						icon: 'call',
 						infoText: {
 							ctor: '::',
-							_0: 'We are currently working with 3 charities as well as The Haven, Wolverhampton whose app inspired the project. We are testing two things. \n            Firstly, can we get people from social media or other locations into the app. Secondly, if we do, does it encourage people to seek support.  \n            When this trial is complete in the summer we will be looking for more organisations to work with. Please take the survey if you are interested.',
+							_0: 'We are currently working with 3 charities as well as The Haven, Wolverhampton whose app inspired the project. We are testing two things.\n            Firstly, can we get people from social media or other locations into the app. Secondly, if we do, does it encourage people to seek support.\n            When this trial is complete in the summer we will be looking for more organisations to work with. Please take the survey if you are interested.',
 							_1: { ctor: '[]' }
 						}
 					},
@@ -9551,7 +9545,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 							icon: 'call',
 							infoText: {
 								ctor: '::',
-								_0: 'At the moment, we have a budget to support the charities working with us and pay for new stories and illustrations that work for them. \n            We expect that all stages of testing whether this approach is useful will be free for any charities taking part. The testing is designed \n            to help us decide whether a free or low cost tool allowing charities to create their own content using this structure would be useful.',
+								_0: 'At the moment, we have a budget to support the charities working with us and pay for new stories and illustrations that work for them.\n            We expect that all stages of testing whether this approach is useful will be free for any charities taking part. The testing is designed\n            to help us decide whether a free or low cost tool allowing charities to create their own content using this structure would be useful.',
 								_1: { ctor: '[]' }
 							}
 						},
@@ -9564,7 +9558,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 								icon: 'call',
 								infoText: {
 									ctor: '::',
-									_0: 'This is a partnership between CAST - a charity driving social change through digital technology - and digital development agency \n            Neontribe. It is one of a number of projects aimed at supporting civic and social organisations to grow confident in using digital tools \n            to achieve their charitable objectives.  It is possible thanks to The Haven, Wolverhampton sharing technology developed for the people \n            they work with.',
+									_0: 'This is a partnership between CAST - a charity driving social change through digital technology - and digital development agency\n            Neontribe. It is one of a number of projects aimed at supporting civic and social organisations to grow confident in using digital tools\n            to achieve their charitable objectives.  It is possible thanks to The Haven, Wolverhampton sharing technology developed for the people\n            they work with.',
 									_1: { ctor: '[]' }
 								}
 							},
@@ -9936,7 +9930,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 		ctor: '::',
 		_0: {
 			id: 1,
-			title: 'Our Project Story',
+			title: 'Our Project',
 			teaser: 'This shows you how we believe shaping stories from real people can work so that they help people feel ready to take action',
 			teaserImgPath: _neontribe$haven$Assets$AssetPath(__webpack_require__(3)),
 			teaserImgAltText: 'A man kneeling on the floor of a dark room with his head in his hands',
@@ -9952,7 +9946,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 			cards: {
 				ctor: '::',
 				_0: {
-					quoteText: 'The story starts with some background. It gives us key pieces of information that make this person’s story clear and \n                    relatable. It tends to deal with facts about the situation they were in rather than their feelings. It is always a situation \n                    that clearly needed to change.\n                    ',
+					quoteText: 'The story starts with some background. It gives us key pieces of information that make this person’s story clear and\n                    relatable. It tends to deal with facts about the situation they were in rather than their feelings. It is always a situation\n                    that clearly needed to change.\n                    ',
 					imagePath: _neontribe$haven$Assets$AssetPath(__webpack_require__(3)),
 					altText: 'A man is kneeling on the floor of a dark room with his head in his hands',
 					messageText: _elm_lang$core$Maybe$Nothing
@@ -9960,24 +9954,24 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 				_1: {
 					ctor: '::',
 					_0: {
-						quoteText: 'Next the story moves on a little. It does one of two things. Either it tells us about a specific incident that began a \n                    drive to change things, or it explores the person’s fears and other things that were holding them back. This section focuses \n                    on emotions and helps us connect with the person’s story.\n                    ',
-						imagePath: _neontribe$haven$Assets$AssetPath(__webpack_require__(40)),
+						quoteText: 'Next the story moves on a little. It does one of two things. Either it tells us about a specific incident that began a\n                    drive to change things, or it explores the person’s fears and other things that were holding them back. This section focuses\n                    on emotions and helps us connect with the person’s story.\n                    ',
+						imagePath: _neontribe$haven$Assets$AssetPath(__webpack_require__(39)),
 						altText: 'The man looks up a long staircase with a locked door at the top',
 						messageText: _elm_lang$core$Maybe$Just('This bar is used to give a little extra insight into how the person was feeling.')
 					},
 					_1: {
 						ctor: '::',
 						_0: {
-							quoteText: 'Here the story starts to change for the better. The person becomes able to take a positive step and get some support. \n                    The story tells us a little about what happened, how they managed to take the step and how they felt. \n                    ',
-							imagePath: _neontribe$haven$Assets$AssetPath(__webpack_require__(41)),
+							quoteText: 'Here the story starts to change for the better. The person becomes able to take a positive step and get some support.\n                    The story tells us a little about what happened, how they managed to take the step and how they felt.\n                    ',
+							imagePath: _neontribe$haven$Assets$AssetPath(__webpack_require__(40)),
 							altText: 'The man starts climbing the stairs to reach a hand holding out a key.',
 							messageText: _elm_lang$core$Maybe$Nothing
 						},
 						_1: {
 							ctor: '::',
 							_0: {
-								quoteText: 'The final section of the story is about hope. It show that making a chance can be a positive choice. However it doesn’t \n                    suggest that the person’s life is now perfect. It is designed to encourage others to believe they could make a move to a more \n                    hopeful place too. It takes care not to sound out of reach.\n                    ',
-								imagePath: _neontribe$haven$Assets$AssetPath(__webpack_require__(42)),
+								quoteText: 'The final section of the story is about hope. It show that making a chance can be a positive choice. However it doesn’t\n                    suggest that the person’s life is now perfect. It is designed to encourage others to believe they could make a move to a more\n                    hopeful place too. It takes care not to sound out of reach.\n                    ',
+								imagePath: _neontribe$haven$Assets$AssetPath(__webpack_require__(41)),
 								altText: 'The door is open and the lock is on the floor. The man is outside in a bright and sunny environment holding onto the key.',
 								messageText: _elm_lang$core$Maybe$Just('sometimes the story highlights a worry that remains, and how the person is coping with it')
 							},
@@ -9991,10 +9985,10 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 			ctor: '::',
 			_0: {
 				id: 2,
-				title: 'A story about trees',
-				teaser: 'The trees are not in a row.',
+				title: 'The Haven',
+				teaser: 'This is one of the six stories created for The Haven’s app. The story uses Ama’s words but the names have been changed, and the story has been shaped to help others.',
 				teaserImgPath: _neontribe$haven$Assets$AssetPath(__webpack_require__(4)),
-				teaserImgAltText: 'Some text that describes the teaser image.',
+				teaserImgAltText: 'A pregnant woman wrapped in chains',
 				relatedInfo: {
 					ctor: '::',
 					_0: 2,
@@ -10007,33 +10001,33 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 				cards: {
 					ctor: '::',
 					_0: {
-						quoteText: 'Something inspiring about trees.\n                    ',
-						imagePath: _neontribe$haven$Assets$AssetPath(__webpack_require__(5)),
-						altText: 'Some text that describes the image',
+						quoteText: 'I was born in Senegal and had lived in Spain as well as the UK and I couldn’t speak English. My husband became abusive \n                    after I got pregnant with our first child. For years I suffered so many different things\n                    ',
+						imagePath: _neontribe$haven$Assets$AssetPath(__webpack_require__(4)),
+						altText: 'A pregnant woman wrapped in chains',
 						messageText: _elm_lang$core$Maybe$Nothing
 					},
 					_1: {
 						ctor: '::',
 						_0: {
-							quoteText: 'Something suprising about trees.\n                    ',
-							imagePath: _neontribe$haven$Assets$AssetPath(__webpack_require__(43)),
-							altText: 'Some text that describes the image.',
-							messageText: _elm_lang$core$Maybe$Just('Caption text.')
+							quoteText: 'I wanted to leave, but my husband told me without him I would be sent back to Africa. I was completely dependent on my \n                    husband, I did not see any way out of my situation.\n                    ',
+							imagePath: _neontribe$haven$Assets$AssetPath(__webpack_require__(42)),
+							altText: 'A pregnant woman chained to her husband',
+							messageText: _elm_lang$core$Maybe$Just('I did not know my rights in the UK and had no money but soon I discovered I had choices.')
 						},
 						_1: {
 							ctor: '::',
 							_0: {
-								quoteText: 'Something magical about trees.\n                    ',
-								imagePath: _neontribe$haven$Assets$AssetPath(__webpack_require__(44)),
-								altText: 'Some text that describes the image.',
+								quoteText: 'One day I broke down at my health care class. My teacher was so supportive. She told me about The Haven and they found me a \n                    support worker who spoke Spanish. They talked to social services for me and found me an immigration solicitor.\n                    ',
+								imagePath: _neontribe$haven$Assets$AssetPath(__webpack_require__(43)),
+								altText: 'A woman crying at a desk',
 								messageText: _elm_lang$core$Maybe$Nothing
 							},
 							_1: {
 								ctor: '::',
 								_0: {
-									quoteText: 'Something interesting about trees.\n                    ',
-									imagePath: _neontribe$haven$Assets$AssetPath(__webpack_require__(45)),
-									altText: 'Some text that describes the image.',
+									quoteText: 'I have a house now, with my children, and away from my abusive husband. My solicitor is helping me with immigration documents and divorce papers. \n                    For the first time in a long time I can sleep and look forward to the future.\n                    ',
+									imagePath: _neontribe$haven$Assets$AssetPath(__webpack_require__(44)),
+									altText: 'A smiling woman with two children',
 									messageText: _elm_lang$core$Maybe$Nothing
 								},
 								_1: { ctor: '[]' }
@@ -10047,7 +10041,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 	};
 	var _neontribe$haven$StoryDeck$placeholderCard = {
 		quoteText: 'Story coming soon.',
-		imagePath: _neontribe$haven$Assets$AssetPath(__webpack_require__(5)),
+		imagePath: _neontribe$haven$Assets$AssetPath(__webpack_require__(45)),
 		altText: 'Placeholder image',
 		messageText: _elm_lang$core$Maybe$Just('Check back soon')
 	};
@@ -10055,7 +10049,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 		id: 0,
 		title: 'Coming soon',
 		teaser: 'We\'re working on it',
-		teaserImgPath: _neontribe$haven$Assets$AssetPath(__webpack_require__(4)),
+		teaserImgPath: _neontribe$haven$Assets$AssetPath(__webpack_require__(46)),
 		teaserImgAltText: 'Placeholder image',
 		relatedInfo: {
 			ctor: '::',
@@ -10599,10 +10593,154 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 				ctor: '::',
 				_0: A2(_elm_lang$html$Html$p, { ctor: '[]' }, {
 					ctor: '::',
-					_0: _elm_lang$html$Html$text('We would like to thank our funders, whose generosity has made this website possible.'),
+					_0: _elm_lang$html$Html$text('We are grateful to all the partners that have made this project possible.'),
 					_1: { ctor: '[]' }
 				}),
-				_1: { ctor: '[]' }
+				_1: {
+					ctor: '::',
+					_0: A2(_elm_lang$html$Html$div, {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('supporter--logo-group'),
+						_1: { ctor: '[]' }
+					}, {
+						ctor: '::',
+						_0: A2(_elm_lang$html$Html$img, {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class('supporter--logo'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$src(_neontribe$haven$Assets$path(_neontribe$haven$Assets$AssetPath(__webpack_require__(47)))),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$alt('Cast Logo'),
+									_1: { ctor: '[]' }
+								}
+							}
+						}, { ctor: '[]' }),
+						_1: { ctor: '[]' }
+					}),
+					_1: {
+						ctor: '::',
+						_0: A2(_elm_lang$html$Html$p, { ctor: '[]' }, {
+							ctor: '::',
+							_0: _elm_lang$html$Html$text('Contemplating Action is a partnership with CAST - Centre for Acceleration of Social Technology.'),
+							_1: { ctor: '[]' }
+						}),
+						_1: {
+							ctor: '::',
+							_0: A2(_elm_lang$html$Html$div, {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class('supporter--logo-group'),
+								_1: { ctor: '[]' }
+							}, {
+								ctor: '::',
+								_0: A2(_elm_lang$html$Html$img, {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$class('supporter--logo'),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$src(_neontribe$haven$Assets$path(_neontribe$haven$Assets$AssetPath(__webpack_require__(48)))),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$alt('Comic Relief'),
+											_1: { ctor: '[]' }
+										}
+									}
+								}, { ctor: '[]' }),
+								_1: {
+									ctor: '::',
+									_0: A2(_elm_lang$html$Html$img, {
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$class('supporter--logo'),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$src(_neontribe$haven$Assets$path(_neontribe$haven$Assets$AssetPath(__webpack_require__(49)))),
+											_1: {
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$alt('Department for Culture Media & Sport'),
+												_1: { ctor: '[]' }
+											}
+										}
+									}, { ctor: '[]' }),
+									_1: {
+										ctor: '::',
+										_0: A2(_elm_lang$html$Html$img, {
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$class('supporter--logo'),
+											_1: {
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$src(_neontribe$haven$Assets$path(_neontribe$haven$Assets$AssetPath(__webpack_require__(50)))),
+												_1: {
+													ctor: '::',
+													_0: _elm_lang$html$Html_Attributes$alt('Big Lottery Fund'),
+													_1: { ctor: '[]' }
+												}
+											}
+										}, { ctor: '[]' }),
+										_1: { ctor: '[]' }
+									}
+								}
+							}),
+							_1: {
+								ctor: '::',
+								_0: A2(_elm_lang$html$Html$p, { ctor: '[]' }, {
+									ctor: '::',
+									_0: _elm_lang$html$Html$text('The initial You Matter app which inspired Contemplating Action was part of Tech vs Abuse. This grant was funded through a joint funding initiative between the Tampon Tax Fund, a partnership between HM Government and Comic Relief, and the Big Lottery Fund.'),
+									_1: { ctor: '[]' }
+								}),
+								_1: {
+									ctor: '::',
+									_0: A2(_elm_lang$html$Html$div, {
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$class('supporter--logo-group'),
+										_1: { ctor: '[]' }
+									}, {
+										ctor: '::',
+										_0: A2(_elm_lang$html$Html$img, {
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$class('supporter--logo'),
+											_1: {
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$src(_neontribe$haven$Assets$path(_neontribe$haven$Assets$AssetPath(__webpack_require__(51)))),
+												_1: {
+													ctor: '::',
+													_0: _elm_lang$html$Html_Attributes$alt('Neontribe'),
+													_1: { ctor: '[]' }
+												}
+											}
+										}, { ctor: '[]' }),
+										_1: {
+											ctor: '::',
+											_0: A2(_elm_lang$html$Html$img, {
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$class('supporter--logo'),
+												_1: {
+													ctor: '::',
+													_0: _elm_lang$html$Html_Attributes$src(_neontribe$haven$Assets$path(_neontribe$haven$Assets$AssetPath(__webpack_require__(52)))),
+													_1: {
+														ctor: '::',
+														_0: _elm_lang$html$Html_Attributes$alt('The Haven Wolverhampton'),
+														_1: { ctor: '[]' }
+													}
+												}
+											}, { ctor: '[]' }),
+											_1: { ctor: '[]' }
+										}
+									}),
+									_1: {
+										ctor: '::',
+										_0: A2(_elm_lang$html$Html$p, { ctor: '[]' }, {
+											ctor: '::',
+											_0: _elm_lang$html$Html$text('This website has been developed by Neontribe and The Haven, together with women who have been victims of domestic abuse. The Haven is a Wolverhampton based charity which supports women and dependent children who are vulnerable to domestic violence, homelessness and abuse.'),
+											_1: { ctor: '[]' }
+										}),
+										_1: { ctor: '[]' }
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 		}),
 		_1: {
@@ -10671,7 +10809,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 									_0: _elm_lang$html$Html_Attributes$class('block'),
 									_1: {
 										ctor: '::',
-										_0: _elm_lang$html$Html_Attributes$src(_neontribe$haven$Assets$path(_neontribe$haven$Assets$AssetPath(__webpack_require__(46)))),
+										_0: _elm_lang$html$Html_Attributes$src(_neontribe$haven$Assets$path(_neontribe$haven$Assets$AssetPath(__webpack_require__(53)))),
 										_1: {
 											ctor: '::',
 											_0: _elm_lang$html$Html_Attributes$alt('A description of banner image.'),
@@ -10700,28 +10838,86 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 								ctor: '::',
 								_0: A2(_elm_lang$html$Html$p, { ctor: '[]' }, {
 									ctor: '::',
-									_0: _elm_lang$html$Html$text('In 2017, The Haven, Wolverhampton, Neontribe and women who had been through domestic violence co-designed a \n                        web app to encourage other women in that situation to seek support and advice. We want to find out if the structure of \n                        that app could be used by different organisations to encourage people to use a helpline or web chat or text service. We \n                        believe that reassuring people that their fears and challenges are shared will help them take early steps on a journey of \n                        change. Explore the app and then take our survey to tell us what you think.\n                        '),
+									_0: _elm_lang$html$Html$text('In 2017, The Haven, Wolverhampton, Neontribe and women who had been through domestic violence co-designed a\n                        web app to encourage other women in that situation to seek support and advice. We want to find out if the structure of\n                        that app could be used by different organisations to encourage people to use a helpline or web chat or text service. We\n                        believe that reassuring people that their fears and challenges are shared will help them take early steps on a journey of\n                        change. Explore the app and then take our survey to tell us what you think.\n                        '),
 									_1: { ctor: '[]' }
 								}),
 								_1: {
 									ctor: '::',
-									_0: A2(_elm_lang$html$Html$div, {
+									_0: A2(_elm_lang$html$Html$p, { ctor: '[]' }, {
 										ctor: '::',
-										_0: _elm_lang$html$Html_Attributes$class('button-group'),
+										_0: A2(_elm_lang$html$Html$a, {
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$class('link link--plain'),
+											_1: {
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$href('https://neontribe.co.uk/blog'),
+												_1: { ctor: '[]' }
+											}
+										}, {
+											ctor: '::',
+											_0: _elm_lang$html$Html$text('Read more about this project'),
+											_1: { ctor: '[]' }
+										}),
 										_1: { ctor: '[]' }
-									}, {
+									}),
+									_1: {
 										ctor: '::',
 										_0: A2(_elm_lang$html$Html$div, {
 											ctor: '::',
-											_0: _elm_lang$html$Html_Attributes$class('desktop-only'),
+											_0: _elm_lang$html$Html_Attributes$class('button-group'),
 											_1: { ctor: '[]' }
 										}, {
 											ctor: '::',
-											_0: A2(_elm_lang$html$Html$div, { ctor: '[]' }, {
+											_0: A2(_elm_lang$html$Html$div, {
 												ctor: '::',
-												_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
+												_0: _elm_lang$html$Html_Attributes$class('desktop-only'),
+												_1: { ctor: '[]' }
+											}, {
+												ctor: '::',
+												_0: A2(_elm_lang$html$Html$div, { ctor: '[]' }, {
 													ctor: '::',
-													_0: A2(_neontribe$haven$Icon$getIcon, 'phone', _elm_lang$core$Maybe$Just('button--icon')),
+													_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
+														ctor: '::',
+														_0: A2(_neontribe$haven$Icon$getIcon, 'phone', _elm_lang$core$Maybe$Just('button--icon')),
+														_1: {
+															ctor: '::',
+															_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
+																ctor: '::',
+																_0: _elm_lang$html$Html$text('Call Us'),
+																_1: { ctor: '[]' }
+															}),
+															_1: { ctor: '[]' }
+														}
+													}),
+													_1: {
+														ctor: '::',
+														_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
+															ctor: '::',
+															_0: _elm_lang$html$Html$text(_neontribe$haven$Views_Config$helplineDisplay),
+															_1: { ctor: '[]' }
+														}),
+														_1: { ctor: '[]' }
+													}
+												}),
+												_1: { ctor: '[]' }
+											}),
+											_1: {
+												ctor: '::',
+												_0: A2(_elm_lang$html$Html$a, {
+													ctor: '::',
+													_0: _elm_lang$html$Html_Attributes$class('mobile-only button button--full-width button--default-width--desktop'),
+													_1: {
+														ctor: '::',
+														_0: _elm_lang$html$Html_Attributes$href(A2(_elm_lang$core$Basics_ops['++'], 'tel:', _neontribe$haven$Views_Config$helpline)),
+														_1: {
+															ctor: '::',
+															_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$haven$Messages$ButtonPress, 'contact', 'call', 'call-button', true)),
+															_1: { ctor: '[]' }
+														}
+													}
+												}, {
+													ctor: '::',
+													_0: A2(_neontribe$haven$Icon$getIcon, 'call', _elm_lang$core$Maybe$Just('button--icon')),
 													_1: {
 														ctor: '::',
 														_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
@@ -10734,75 +10930,37 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 												}),
 												_1: {
 													ctor: '::',
-													_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
+													_0: A2(_elm_lang$html$Html$a, {
 														ctor: '::',
-														_0: _elm_lang$html$Html$text(_neontribe$haven$Views_Config$helplineDisplay),
-														_1: { ctor: '[]' }
-													}),
-													_1: { ctor: '[]' }
-												}
-											}),
-											_1: { ctor: '[]' }
-										}),
-										_1: {
-											ctor: '::',
-											_0: A2(_elm_lang$html$Html$a, {
-												ctor: '::',
-												_0: _elm_lang$html$Html_Attributes$class('mobile-only button button--full-width button--default-width--desktop'),
-												_1: {
-													ctor: '::',
-													_0: _elm_lang$html$Html_Attributes$href(A2(_elm_lang$core$Basics_ops['++'], 'tel:', _neontribe$haven$Views_Config$helpline)),
-													_1: {
-														ctor: '::',
-														_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$haven$Messages$ButtonPress, 'contact', 'call', 'call-button', true)),
-														_1: { ctor: '[]' }
-													}
-												}
-											}, {
-												ctor: '::',
-												_0: A2(_neontribe$haven$Icon$getIcon, 'call', _elm_lang$core$Maybe$Just('button--icon')),
-												_1: {
-													ctor: '::',
-													_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
-														ctor: '::',
-														_0: _elm_lang$html$Html$text('Call Us'),
-														_1: { ctor: '[]' }
-													}),
-													_1: { ctor: '[]' }
-												}
-											}),
-											_1: {
-												ctor: '::',
-												_0: A2(_elm_lang$html$Html$a, {
-													ctor: '::',
-													_0: _elm_lang$html$Html_Attributes$class('button button--full-width button--default-width--desktop'),
-													_1: {
-														ctor: '::',
-														_0: _elm_lang$html$Html_Attributes$href(A2(_elm_lang$core$Basics_ops['++'], 'mailto:', _neontribe$haven$Views_Config$email)),
+														_0: _elm_lang$html$Html_Attributes$class('button button--full-width button--default-width--desktop'),
 														_1: {
 															ctor: '::',
-															_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$haven$Messages$ButtonPress, 'contact', 'email', 'email-button', true)),
+															_0: _elm_lang$html$Html_Attributes$href(A2(_elm_lang$core$Basics_ops['++'], 'mailto:', _neontribe$haven$Views_Config$email)),
+															_1: {
+																ctor: '::',
+																_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$haven$Messages$ButtonPress, 'contact', 'email', 'email-button', true)),
+																_1: { ctor: '[]' }
+															}
+														}
+													}, {
+														ctor: '::',
+														_0: A2(_neontribe$haven$Icon$getIcon, 'email', _elm_lang$core$Maybe$Just('button--icon')),
+														_1: {
+															ctor: '::',
+															_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
+																ctor: '::',
+																_0: _elm_lang$html$Html$text('Email us'),
+																_1: { ctor: '[]' }
+															}),
 															_1: { ctor: '[]' }
 														}
-													}
-												}, {
-													ctor: '::',
-													_0: A2(_neontribe$haven$Icon$getIcon, 'email', _elm_lang$core$Maybe$Just('button--icon')),
-													_1: {
-														ctor: '::',
-														_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
-															ctor: '::',
-															_0: _elm_lang$html$Html$text('Email us'),
-															_1: { ctor: '[]' }
-														}),
-														_1: { ctor: '[]' }
-													}
-												}),
-												_1: { ctor: '[]' }
+													}),
+													_1: { ctor: '[]' }
+												}
 											}
-										}
-									}),
-									_1: { ctor: '[]' }
+										}),
+										_1: { ctor: '[]' }
+									}
 								}
 							}
 						}),
@@ -11462,43 +11620,91 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 }).call(this);
 
 /***/ }),
-/* 40 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "ourproject-image2.jpg?c9ac9614f8ad1f1ce1ee3875570a26e4";
 
 /***/ }),
-/* 41 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "ourproject-image3.jpg?473b2314a245320a3b56f265bc2cdd6d";
 
 /***/ }),
-/* 42 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "ourproject-image4.jpg?ba223b1146b19074b33d782aacc9f4bb";
 
 /***/ }),
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "ama_2.jpg?a78ea6e454052fac10c25b0c95215817";
+
+/***/ }),
 /* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "slide2.svg?78c911ef752313630386faba380363ba";
+module.exports = __webpack_require__.p + "ama_3.jpg?88f4cb965bc55a51c6d3feb266321fe4";
 
 /***/ }),
 /* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "slide3.svg?5ee070c9b5f10fd0b9f97f1999ec07ac";
+module.exports = __webpack_require__.p + "ama_4.jpg?ba9594ec58404c00526caddfd505feb6";
 
 /***/ }),
 /* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "slide4.svg?6feee3ae521bb344169e64d6d4c24fd6";
+module.exports = __webpack_require__.p + "slide1.svg?174d4e36746d5a1bf711f6e7c7293046";
 
 /***/ }),
 /* 46 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "thumb_placeholder.png?5a37c6a2b4c26f96bbc3aa9e1dba4982";
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "Castlogo.png?60a10767e1334bcd877cba09c802e832";
+
+/***/ }),
+/* 48 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "comicrelief.svg?bdaa58e8cbdd18891d22d435c23e6456";
+
+/***/ }),
+/* 49 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "DCMSlogo.svg?ed978020b1899a1cb8a23a41d456d351";
+
+/***/ }),
+/* 50 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "biglottery.svg?9ad1254b0f0d56591028d90637c5567c";
+
+/***/ }),
+/* 51 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "neontribelogo.svg?458fc0b0dc6b101e8c0c917109ab7f4e";
+
+/***/ }),
+/* 52 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "havenlogo.svg?9151f243117ff6def60b409f5cb9c1fd";
+
+/***/ }),
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "banner.png?b019b9a4c748fa886fe9eacf34b9842b";
