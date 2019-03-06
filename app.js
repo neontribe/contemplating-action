@@ -10335,8 +10335,8 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 
 	var _neontribe$haven$Views_Config$helplineDisplay = A2(_elm_lang$core$Basics_ops['++'], '0000', A2(_elm_lang$core$Basics_ops['++'], ' ', A2(_elm_lang$core$Basics_ops['++'], '000', A2(_elm_lang$core$Basics_ops['++'], ' ', '000'))));
 	var _neontribe$haven$Views_Config$helpline = '0000000000';
-	var _neontribe$haven$Views_Config$email = 'katja@neontribe.co.uk';
-	var _neontribe$haven$Views_Config$appTitle = 'Pics, stories & info';
+	var _neontribe$haven$Views_Config$email = 'ca@neontribe.co.uk';
+	var _neontribe$haven$Views_Config$appTitle = 'Contemplating Action';
 
 	var _neontribe$haven$Views_Footer$footerContent = A2(_elm_lang$html$Html$footer, {
 		ctor: '::',
@@ -11319,7 +11319,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 				ctor: '::',
 				_0: A2(_elm_lang$html$Html$nav, { ctor: '[]' }, {
 					ctor: '::',
-					_0: A6(_neontribe$haven$Views_Nav$navItem, 'stories', '#/stories', 'story', 'view-list', 'Stories', 'Stories'),
+					_0: A6(_neontribe$haven$Views_Nav$navItem, 'question-circle', '#/stories', 'find-out-more', 'view-list', 'Find Out More', 'Find Out More'),
 					_1: {
 						ctor: '::',
 						_0: A6(_neontribe$haven$Views_Nav$navItem, 'email', A2(_elm_lang$core$Basics_ops['++'], 'mailto:', _neontribe$haven$Views_Config$email), 'contact', 'email', 'Email', _neontribe$haven$Views_Config$email),
