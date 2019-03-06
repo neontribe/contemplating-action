@@ -23,7 +23,7 @@ view _ =
                 ]
             ]
         , nav []
-            [ navItem "stories" "#/stories" "story" "view-list" "Stories" "Stories"
+            [ navItem "question-circle" "#/stories" "find-out-more" "view-list" "Find Out More" "Find Out More"
             , navItem "email" ("mailto:" ++ email) "contact" "email" "Email" email
             , span [ class "nav-item mobile-only" ]
                 [ navItem "call" ("tel:" ++ helpline) "contact" "call" "Call" helplineDisplay ]
