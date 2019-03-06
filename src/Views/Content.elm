@@ -38,13 +38,14 @@ view model =
                 , section [ class "section section--vertical-fill-center section--lighter" ]
                     [ h2 [] [ text "Breaking down fears and barriers." ]
                     , p []
-                        [ text """In 2017, The Haven, Wolverhampton, Neontribe and women who had been through domestic violence co-designed a 
-                        web app to encourage other women in that situation to seek support and advice. We want to find out if the structure of 
-                        that app could be used by different organisations to encourage people to use a helpline or web chat or text service. We 
-                        believe that reassuring people that their fears and challenges are shared will help them take early steps on a journey of 
+                        [ text """In 2017, The Haven, Wolverhampton, Neontribe and women who had been through domestic violence co-designed a
+                        web app to encourage other women in that situation to seek support and advice. We want to find out if the structure of
+                        that app could be used by different organisations to encourage people to use a helpline or web chat or text service. We
+                        believe that reassuring people that their fears and challenges are shared will help them take early steps on a journey of
                         change. Explore the app and then take our survey to tell us what you think.
                         """
                         ]
+                    , p [] [ a [ class "link link--plain", href "https://neontribe.co.uk/blog" ] [ text "Read more about this project" ] ]
                     , div [ class "button-group" ]
                         [ div [ class "desktop-only" ]
                             [ div []
