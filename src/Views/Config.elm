@@ -3,12 +3,12 @@ module Views.Config exposing (appTitle, email, helpline, helplineDisplay)
 
 appTitle : String
 appTitle =
-    "Pics, stories & info"
+    "Contemplating Action"
 
 
 email : String
 email =
-    "katja@neontribe.co.uk"
+    "ca@neontribe.co.uk"
 
 
 helpline : String
