@@ -121,7 +121,7 @@ info =
     [ { id = 1
       , name = "Bite size information"
       , slug = "bitesize-information"
-      , icon = "call"
+      , icon = "information"
       , infoText =
             [ """We include bite size information relating to a small number of fears and barriers that are likely to be stopping people from taking the
             next step. Keeping the language simple we aim to be open and honest, with a reassuring tone. We resist the temptation to provide all the
@@ -132,7 +132,7 @@ info =
     , { id = 2
       , name = "Illustrations"
       , slug = "illustrations"
-      , icon = "call"
+      , icon = "illustrations"
       , infoText =
             [ """Many organisations struggle with the same problem with stories. People often say that they want to hear stories from other people who
              have been through the same problems as them, but when the organisation provides stories, no one looks at them. We believe that visual
@@ -142,7 +142,7 @@ info =
     , { id = 3
       , name = "What is the survey?"
       , slug = "what-is-the-survey"
-      , icon = "call"
+      , icon = "survey"
       , infoText =
             [ """The survey is research with key staff in organisations that run helplines or web chats or text services. We want to know whether those
             staff who work most closely with people seeking support think this approach could work. We also want to know what concerns or hopes they
@@ -152,7 +152,7 @@ info =
     , { id = 4
       , name = "Can my organisation try this?"
       , slug = "try-this"
-      , icon = "call"
+      , icon = "organisation"
       , infoText =
             [ """We are currently working with 3 charities as well as The Haven, Wolverhampton whose app inspired the project. We are testing two things.
             Firstly, can we get people from social media or other locations into the app. Secondly, if we do, does it encourage people to seek support.
@@ -162,7 +162,7 @@ info =
     , { id = 5
       , name = "What does taking part cost?"
       , slug = "cost"
-      , icon = "call"
+      , icon = "cost"
       , infoText =
             [ """At the moment, we have a budget to support the charities working with us and pay for new stories and illustrations that work for them.
             We expect that all stages of testing whether this approach is useful will be free for any charities taking part. The testing is designed
@@ -172,7 +172,7 @@ info =
     , { id = 6
       , name = "Who is involved in this project?"
       , slug = "who-is-involved"
-      , icon = "call"
+      , icon = "involved"
       , infoText =
             [ """This is a partnership between CAST - a charity driving social change through digital technology - and digital development agency
             Neontribe. It is one of a number of projects aimed at supporting civic and social organisations to grow confident in using digital tools
