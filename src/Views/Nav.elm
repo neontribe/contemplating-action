@@ -24,12 +24,12 @@ view _ =
             ]
         , nav []
             [ navItem "question-circle" "#/stories" "find-out-more" "view-list" "Find Out More" "Find Out More"
-            , navItem "email" ("mailto:" ++ email) "contact" "email" "Email" email
+            , navItem "envelope" ("mailto:" ++ email) "contact" "email" "Email" email
             , span [ class "nav-item mobile-only" ]
-                [ navItem "call" ("tel:" ++ helpline) "contact" "call" "Call" helplineDisplay ]
+                [ navItem "phone" ("tel:" ++ helpline) "contact" "call" "Call" helplineDisplay ]
             , span [ class "nav-item" ]
                 [ a [ class "btn ", href "https://google.com", target "_blank", rel "noopener", onClick (Exit True) ]
-                    [ getIcon "exit" (Just "nav-item-text nav-icon")
+                    [ getIcon "Exit-Door" (Just "nav-item-text nav-icon")
                     , span [ class " nav-item-text" ] [ text "Exit Site" ]
                     ]
                 ]

@@ -61,7 +61,7 @@ view model =
                             , href ("tel:" ++ helpline)
                             , onClick (ButtonPress "contact" "call" "call-button" True)
                             ]
-                            [ getIcon "call" (Just "button--icon")
+                            [ getIcon "phone" (Just "button--icon")
                             , span [] [ text "Call Us" ]
                             ]
                         , a
@@ -69,7 +69,7 @@ view model =
                             , href ("mailto:" ++ email)
                             , onClick (ButtonPress "contact" "email" "email-button" True)
                             ]
-                            [ getIcon "email" (Just "button--icon")
+                            [ getIcon "envelope" (Just "button--icon")
                             , span [] [ text "Email us" ]
                             ]
                         ]
@@ -140,7 +140,7 @@ view model =
                     , div [ class "desktop-only" ]
                         [ div [ class "text-center" ]
                             [ span []
-                                [ getIcon "call" (Just "button--icon")
+                                [ getIcon "phone" (Just "button--icon")
                                 , span [] [ text "Call Us" ]
                                 ]
                             , span [] [ text helplineDisplay ]
@@ -151,7 +151,7 @@ view model =
                         , href ("tel:" ++ helpline)
                         , onClick (ButtonPress "contact" "call" "call-button" True)
                         ]
-                        [ getIcon "call" (Just "button--icon")
+                        [ getIcon "phone" (Just "button--icon")
                         , span [] [ text "Call Us" ]
                         ]
                     ]
