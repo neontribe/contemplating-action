@@ -35,7 +35,7 @@ view model =
                         ]
                     , img [ class "block", src (path (AssetPath "banner.png")), alt "A description of banner image." ] []
                     ]
-                , section [ class "section section--vertical-fill-center section--lighter" ]
+                , section [ class "section section--vertical-fill-center" ]
                     [ h2 [] [ text "Call to action here." ]
                     , p []
                         [ text """Short description of services.
@@ -94,14 +94,14 @@ view model =
 
         StoriesPage ->
             div [ class "section--vertical-fill-center" ]
-                [ div [ class "section section--darker section--vertical-fill-center" ]
+                [ div [ class "section section--lighter section--vertical-fill-center" ]
                     [ h2 [] [ text "Stories" ]
                     , storyTeaser 1
                     , storyTeaser 2
                     , storyTeaser 3
                     , storyTeaser 4
                     ]
-                , div [ class "section section--highlight" ]
+                , div [ class "section section--lighter" ]
                     [ div [ class "text-center" ]
                         [ a
                             [ class "button button--alternate button--full-width button--default-width--desktop"
@@ -115,7 +115,7 @@ view model =
 
         StoryPage id ->
             article [ class "section--vertical-fill-center" ]
-                [ div [ class "section section--darker section--vertical-fill-center" ]
+                [ div [ class "section section--lighter section--vertical-fill-center" ]
                     [ h2 []
                         [ text (storyTitle id) ]
                     , card id 1
@@ -124,7 +124,7 @@ view model =
                     , card id 4
                     , card id 5
                     ]
-                , div [ class "section section--highlight section--story-end" ]
+                , div [ class "section section--story-end" ]
                     [ p [ class "story--related" ] [ text "Every story is different. Let us help you discover yours." ]
                     , div [ class "button-group story--related" ] (storyRelatedInfo id)
                     , div [ class "button-group story--related" ]

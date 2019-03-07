@@ -20,7 +20,7 @@
   font-family: 'Poppins';
   font-style: normal;
   font-weight: normal;
-  src:url('./fonts/Poppins-Medium.ttf') format('truetype'); /* Mobile */
+  src: url('./fonts/Poppins-Medium.ttf') format('truetype'); /* Mobile */
 }
 
 $nav-height-mobile: 71px;
@@ -33,38 +33,34 @@ $nav-height-desktop--double-line: 77px;
 
 ------------------------------ */
 
-// Haven vars
-$lilac-light: #f2f4f8;
-$blue: #4ab3ce;
-$blue-light: lighten($blue, 30%);
-$blue-dark: #0099be;
-$blue-darker: #007b99;
-$green: #a6e263;
-$grey: #e1e2e6;
-$green-light: #b8e388;
-$grey-light: #f4f2f0;
-$grey-light-blue: #e3f3f7;
-$grey-dark: #596174;
-$orange-centre: #ffda8a;
-$orange-outer: #ffa17b;
-$shadow: rgba(89, 97, 116, 0.4);
-$white: #fafafa;
-$white-pure: #ffffff;
+// Haven variables
+$old-blue: #4ab3ce;
+$old-blue-light: lighten($old-blue, 30%);
+$old-blue-dark: #0099be;
+$old-blue-darker: #007b99;
+$old-grey: #e1e2e6;;
+$old-shadow: rgba(89, 97, 116, 0.4);
+$old-white: #fafafa;
 
-// CA vars
+// Contemplating Action variables
 $Purple: #662483;
 $LightBlue: #4575BA;
 $DarkBlue: #1A1E64;
 $Black: #3c3c3b;
 $White: #F5F5F5;
-$LightGrey: #E4E1E7;
+$LightPurpleGrey: #E4E1E7;
+$LightGrey: #eee;
+$colour: #30336d;
+
+// Utility variables
+$white-pure: #ffffff;
+$black-pure: #000000;
 
 // Theme colours
 $primary-colour: $DarkBlue;
 $secondary-colour: $LightBlue;
 $text-colour: $Black;
 $interaction-colour: $Purple;
-
 
 $max-width: 1044px;
 
@@ -81,7 +77,7 @@ $max-width: 1044px;
 }
 
 *:focus {
-  outline-color: $green;
+  outline-color: $secondary-colour;
 }
 
 :root {
@@ -96,7 +92,7 @@ body {
   margin: 0 auto;
   font-size: 1.125rem;
   color: $text-colour;
-  background-color: $white;
+  background-color: $white-pure;
 
   /* Allow space for mobile nav without overlapping content */
   margin-bottom: $nav-height-mobile;
@@ -152,8 +148,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3.5rem;
-  line-height: 1.5;
+  font-size: 2em;
+  line-height: 2.65;
 }
 
 h2 {
@@ -233,7 +229,7 @@ img {
   justify-content: center;
   height: 50px;
   width: 50px;
-  color: $white-pure;
+  color: $White;
   font-size: 1.75rem;
   border-radius: 50%;
   background-color: $secondary-colour;
@@ -435,19 +431,19 @@ img {
 
 .section {
   padding: 40px 20px;
-  background-color: $white;
+  background-color: $White;
 }
 
 .section--darker {
-  background-color: $grey-light;
+  background-color: $LightGrey;
 }
 
 .section--lighter {
-  background-color: $White;
+  background-color: $white-pure;
 }
 .section--highlight {
   color: $text-colour;
-  background-color: $lilac-light;
+  background-color: $LightPurpleGrey;
 }
 
 .section--align-bottom {
@@ -512,7 +508,7 @@ img {
 }
 
 .nav-icon {
-  color: $grey;
+  color: $old-grey;
 }
 
 nav,
@@ -528,7 +524,7 @@ nav,
 .nav-item a {
   flex: 1 0 auto;
   padding: 15px 10px;
-  color: $white;
+  color: $old-white;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
@@ -538,13 +534,13 @@ nav,
 .nav-item--active,
 .nav-item:hover {
   .nav-item-text {
-    color: $blue-light;
+    color: $old-blue-light;
   }
 }
 
 .nav-item a:active {
   .nav-item-text {
-    color: $blue;
+    color: $old-blue;
   }
 }
 
@@ -621,7 +617,7 @@ nav,
   bottom: 1px;
   width: 100%;
   height: 4px;
-  box-shadow: 0 3px 4px 0 $shadow;
+  box-shadow: 0 3px 4px 0 $old-shadow;
 }
 
 .home .section--header {
@@ -665,7 +661,7 @@ nav,
   padding: 15px;
   border-radius: 10px;
   font-size: 1rem;
-  background-color: $white;
+  background-color: $White;
 }
 
 .card + .card {
@@ -733,7 +729,7 @@ nav,
 .info:active,
 .info:focus,
 .info:hover {
-  background-color: $blue-dark;
+  background-color: $old-blue-dark;
 }
 
 .info--icon {
@@ -763,7 +759,7 @@ nav,
   and (max-device-width: 1024px)
   and (-webkit-min-device-pixel-ratio: 1) {
     .info:hover {
-      background-color: $blue-darker;
+      background-color: $old-blue-darker;
     }
 }
 
@@ -808,7 +804,7 @@ nav,
   height: 0;
   border-left: 35px solid transparent;
   border-right: 35px solid transparent;
-  border-top: 45px solid $white;
+  border-top: 45px solid $old-white;
 }
 
 .story--illustration {
@@ -821,7 +817,7 @@ nav,
 }
 
 .story--message {
-  background-color: $grey;
+  background-color: $old-grey;
   color: $text-colour;
   font-size: 1rem;
   margin: 0;

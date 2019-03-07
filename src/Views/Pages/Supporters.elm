@@ -11,7 +11,7 @@ import Views.Footer exposing (footerContent)
 
 supportersContent : Html Msg
 supportersContent =
-    div [ class " section section--lighter" ]
+    div [ class "section" ]
         [ div []
             [ h2 [] [ text "Our Supporters" ]
             , p [] [ text "We would like to thank our funders, whose generosity has made this website possible." ]
