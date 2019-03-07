@@ -667,7 +667,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: 'Nunito';\n  font-style: normal;\n  font-weight: normal;\n  src: url(" + escape(__webpack_require__(9)) + ");\n  /* IE9 */\n  src: url(" + escape(__webpack_require__(10)) + ") format(\"woff\"), url(" + escape(__webpack_require__(11)) + ") format(\"truetype\");\n  /* Mobile */ }\n\n@font-face {\n  font-family: 'Caveat';\n  font-style: normal;\n  font-weight: normal;\n  src: url(" + escape(__webpack_require__(12)) + ");\n  /* IE9 */\n  src: url(" + escape(__webpack_require__(13)) + ") format(\"woff\"), url(" + escape(__webpack_require__(14)) + ") format(\"truetype\");\n  /* Mobile */ }\n\n/* ------------------------------\n\n   Variables\n\n------------------------------ */\n/* ------------------------------\n\n   Reset\n\n------------------------------ */\n*,\n*::before,\n*::after {\n  box-sizing: border-box; }\n\n*:focus {\n  outline-color: #a6e263; }\n\n:root {\n  font-size: 16px;\n  font-family: 'Nunito', sans-serif;\n  line-height: 1.5; }\n\nbody {\n  max-width: 1044px;\n  padding: 0;\n  margin: 0 auto;\n  font-size: 1.125rem;\n  color: #596174;\n  background-color: #fafafa;\n  /* Allow space for mobile nav without overlapping content */\n  margin-bottom: 71px; }\n\nbutton {\n  border: 0;\n  background: none;\n  padding: 0;\n  cursor: pointer;\n  font-size: inherit; }\n\ninput {\n  font: inherit;\n  border: none;\n  border-radius: 0;\n  padding: 0;\n  -webkit-appearance: none; }\n\nlabel {\n  cursor: pointer; }\n\nul, ol, li {\n  list-style: none;\n  margin: 0;\n  padding: 0; }\n\n.ul--disc li {\n  list-style: disc;\n  margin-left: 30px; }\n\np {\n  margin: 0; }\n\nbutton + p {\n  margin-top: 3em; }\n\np + p {\n  line-height: 1.5;\n  margin-top: 1em; }\n\nh1, h2, h3, h4, h5, h6 {\n  padding: 0;\n  margin: 0; }\n\nh1 {\n  font-size: 3.5rem;\n  line-height: 1.5; }\n\nh2 {\n  font-size: 1.5rem;\n  margin-bottom: 1em;\n  line-height: 1.5; }\n\nh3, h4, h5 {\n  font-size: 1.2rem;\n  line-height: 1.5;\n  margin-top: 1em; }\n\nbutton {\n  font-family: inherit;\n  color: inherit; }\n\nimg {\n  height: auto;\n  max-width: 100%; }\n\n@media screen and (min-width: 721px) {\n  :root {\n    font-size: 22px; }\n  body {\n    /* Remove spacing for lower navigation */\n    margin-bottom: 0; } }\n\n/* ------------------------------\n\n   Page\n\n------------------------------ */\n/* IE11 helper */\n.content {\n  min-height: 1px; }\n\n.page {\n  min-height: 100vh;\n  position: relative;\n  display: flex;\n  flex-direction: column; }\n\n@media screen and (min-width: 721px) {\n  .page {\n    /* Provide spacing for navigation */\n    padding-top: 77px; } }\n\n@media screen and (min-width: 860px) {\n  .page {\n    /* Provide spacing for navigation */\n    padding-top: 54px; } }\n\n/* ------------------------------\n\n   Icon\n\n------------------------------ */\n.icon {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 50px;\n  width: 50px;\n  color: #ffffff;\n  font-size: 1.75rem;\n  border-radius: 50%;\n  background-color: #b8e388; }\n\n.icon--large {\n  height: 100px;\n  width: 100px;\n  font-size: 60px; }\n\n.icon--alternate {\n  color: #a6e263;\n  margin-left: 10px; }\n\n/* ------------------------------\n\n   Text\n\n------------------------------ */\n.text-center {\n  text-align: center; }\n\n.text-right {\n  text-align: right; }\n\n.text-small {\n  font-size: 1rem; }\n\n.quote:before {\n  content: open-quote; }\n\n.quote:after {\n  content: close-quote; }\n\n/* ------------------------------\n\n   Title\n\n------------------------------ */\n.title--small {\n  font-size: 1.25rem;\n  margin-bottom: 10px; }\n\n.title--alternate {\n  color: #0099be; }\n\n/* ------------------------------\n\n   Link\n\n------------------------------ */\n.link {\n  font-weight: bold;\n  color: inherit;\n  border-bottom: 1px solid currentColor;\n  text-decoration: none; }\n  .link:hover, .link:active {\n    color: #0099be; }\n\n.link--plain {\n  color: #007b99;\n  border-bottom-color: transparent;\n  font-weight: normal;\n  text-decoration: none; }\n  .link--plain:hover, .link--plain:active {\n    color: #0099be;\n    border-bottom-color: currentColor; }\n\n.link--unstyled {\n  color: inherit;\n  text-decoration: none; }\n\n.link--stateless:hover, .link--stateless:active, .link--stateless:focus {\n  color: inherit !important;\n  border-bottom-color: inherit !important; }\n\n/* ------------------------------\n\n   Button\n\n------------------------------ */\n.button {\n  display: inline-block;\n  color: #ffffff;\n  background-color: #007b99;\n  border-radius: 5em;\n  padding: 15px 20px;\n  font-size: 1.125rem;\n  font-weight: bold;\n  text-decoration: none; }\n\n.button:active,\n.button:focus,\n.button:hover {\n  background-color: #0099be; }\n\n.button--center {\n  margin: auto; }\n\n.button + .button {\n  margin-top: 20px; }\n\n.button--full-width {\n  width: 100%;\n  text-align: center; }\n\n.button--alternate {\n  color: #ffffff;\n  background-color: #007b99; }\n\n.button--alternate:active,\n.button--alternate:focus,\n.button--alternate:hover {\n  background-color: #0099be; }\n\n.button--icon {\n  margin-right: 10px; }\n\n.button-group {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n  margin-top: 40px; }\n\n.button-group--row {\n  flex-direction: row; }\n\n@media screen and (min-width: 360px) {\n  .button {\n    white-space: nowrap; } }\n\n@media screen and (min-width: 800px) {\n  .button--default-width--desktop {\n    width: auto !important;\n    padding: 15px 50px; }\n  .button-group {\n    flex-direction: row; }\n  .button + .button {\n    margin-top: 0;\n    margin-left: 20px; } }\n\n/* ------------------------------\n\n   Section\n\n------------------------------ */\n.section {\n  padding: 40px 20px;\n  background-color: #fafafa; }\n\n.section--darker {\n  background-color: #f4f2f0; }\n\n.section--lighter {\n  background-color: #ffffff; }\n\n.section--highlight {\n  color: #596174;\n  background-color: #f2f4f8; }\n\n.section--align-bottom {\n  padding-bottom: 0; }\n\n.section--vertical-fill-center {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  flex: 1 0 auto;\n  min-height: 1px; }\n\n.section--info {\n  align-items: center; }\n\n.section--story-end {\n  padding-top: 0; }\n\n@media screen and (min-width: 721px) {\n  .home .section--header {\n    padding: 0; }\n  .section {\n    padding: 60px;\n    display: flex;\n    flex-direction: column;\n    justify-content: center; }\n  .section--align-bottom {\n    padding-bottom: 0; }\n  .section--story-end {\n    padding-top: 0; } }\n\n/* ------------------------------\n\n   Navigation\n\n------------------------------ */\n.nav-bar {\n  display: flex;\n  align-items: stretch;\n  background-color: #596174;\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  z-index: 100; }\n\n.nav-icon {\n  color: #e1e2e6; }\n\nnav,\n.nav-item {\n  display: flex;\n  flex: 1 0 auto;\n  justify-content: center;\n  align-items: center;\n  white-space: nowrap; }\n\n.nav-item--text-only,\n.nav-item a {\n  flex: 1 0 auto;\n  padding: 15px 10px;\n  color: #fafafa;\n  text-align: center;\n  text-decoration: none;\n  font-weight: bold;\n  line-height: 1; }\n\n.nav-item--active .nav-item-text,\n.nav-item:hover .nav-item-text {\n  color: #c2e6ef; }\n\n.nav-item a:active .nav-item-text {\n  color: #4ab3ce; }\n\n.nav-item-text {\n  display: block; }\n\n.nav-item-text + .nav-item-text {\n  margin-top: 5px; }\n\n@media screen and (min-width: 721px) {\n  .nav-bar {\n    top: 0;\n    bottom: auto;\n    left: auto;\n    right: auto;\n    margin: auto;\n    width: 100%;\n    max-width: 1044px; }\n  nav, .nav-bar {\n    justify-content: flex-end; }\n  .nav-item {\n    flex: 0 1 auto; }\n  .nav-item-text {\n    font-size: 0.7273rem;\n    margin: 5px;\n    vertical-align: middle; } }\n\n@media screen and (min-width: 860px) {\n  .nav-item-text {\n    display: inline;\n    font-size: 0.8181rem; } }\n\n/* ------------------------------\n\n   Header\n\n------------------------------ */\n.section--header {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  padding: 0;\n  font-family: 'Caveat', cursive;\n  background-image: radial-gradient(at bottom, #ffda8a, #ffa17b); }\n\n.section--header a {\n  color: #596174;\n  text-decoration: none; }\n\n.section--header a:hover {\n  border-bottom: 5px solid #596174;\n  cursor: pointer; }\n\n.section--header:after {\n  content: '';\n  position: absolute;\n  left: 0;\n  bottom: 1px;\n  width: 100%;\n  height: 4px;\n  box-shadow: 0 3px 4px 0 rgba(89, 97, 116, 0.4); }\n\n.home .section--header {\n  height: 120px;\n  font-size: 1.512rem;\n  align-items: center; }\n\n.home .section--header::after {\n  display: none; }\n\n/* ------------------------------\n\n   Footer\n\n------------------------------ */\n@media screen and (min-width: 721px) {\n  .section--footer {\n    padding: 40px 20px;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    width: 100%; }\n  .footer--item {\n    margin: 0 20px; } }\n\n/* ------------------------------\n\n   Card\n\n------------------------------ */\n.card {\n  width: 100%;\n  padding: 15px;\n  border-radius: 10px;\n  font-size: 1rem;\n  background-color: #fafafa; }\n\n.card + .card {\n  margin-top: 20px; }\n\n.card--alternate {\n  color: #ffffff;\n  background-color: #007b99; }\n\n.card--with-icon {\n  position: relative;\n  padding: 70px 20px 40px;\n  margin-top: 40px; }\n\n.card--icon {\n  position: absolute;\n  top: -50px;\n  left: 0;\n  right: 0;\n  margin: auto; }\n\n.card--thumbnail {\n  float: left;\n  margin-right: 15px;\n  width: 80px;\n  height: 80px; }\n\n.card--quote {\n  margin-left: 0;\n  margin-right: 0; }\n\n@media screen and (min-width: 721px) {\n  .card--thumbnail {\n    width: 210px;\n    height: 210px; } }\n\n/* ------------------------------\n\n    Info to help you\n\n------------------------------ */\n.section--info .card {\n  margin-top: 10px; }\n\n.info {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  width: 100%;\n  text-align: left;\n  line-height: 1.5;\n  text-decoration: none; }\n\n.info:active,\n.info:focus,\n.info:hover {\n  background-color: #0099be; }\n\n.info--icon {\n  flex-shrink: 0;\n  margin-right: 20px;\n  font-size: 30px; }\n\n.info--text {\n  flex: 1 1 auto;\n  margin-right: 10px; }\n\n.info--list {\n  width: 100%; }\n\n@media screen and (min-width: 721px) {\n  .info--list {\n    width: 60%; } }\n\n/* Stops hover issue on iPad */\n@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n  .info:hover {\n    background-color: #007b99; } }\n\n/* ------------------------------\n\n   Stories\n\n------------------------------ */\n.stories--more-link {\n  margin-top: 10px; }\n\n/* ------------------------------\n\n   Story\n\n------------------------------ */\n.story {\n  position: relative;\n  min-height: 1px; }\n\n.story + .story {\n  margin-top: 0; }\n\n.story:not(:last-child) {\n  margin-bottom: 45px; }\n\n.story:not(:last-child)::after {\n  content: '';\n  position: absolute;\n  bottom: -45px;\n  left: 0;\n  right: 0;\n  margin: auto;\n  width: 0;\n  height: 0;\n  border-left: 35px solid transparent;\n  border-right: 35px solid transparent;\n  border-top: 45px solid #fafafa; }\n\n.story--illustration {\n  position: relative;\n  margin-top: 20px; }\n\n.story--illustration img {\n  display: block; }\n\n.story--message {\n  background-color: #e1e2e6;\n  color: #596174;\n  font-size: 1rem;\n  margin: 0;\n  padding: 5px;\n  text-align: center; }\n\n/* .button--group override (not ideal) */\n.story--related {\n  width: 100%;\n  margin-top: 10px;\n  margin-bottom: 20px;\n  /* Same as `.button + .button` spacing */ }\n\n/* ------------------------------\n\n   Supporter\n\n------------------------------ */\n.supporter--logo-group {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-wrap: wrap;\n  width: 100%;\n  padding: 20px 40px; }\n\n.supporter--logo {\n  height: 166px;\n  margin: 20px 40px; }\n\n@media screen and (max-width: 721px) {\n  .supporter--logo {\n    width: 100%;\n    margin: 10px 0px; } }\n\n/* ------------------------------\n\n   Helper\n\n------------------------------ */\n.block {\n  display: block; }\n\n.inset {\n  margin: 0 10px; }\n\n.desktop-only {\n  display: none; }\n\n@media screen and (min-width: 721px) {\n  .desktop-only {\n    display: inherit; }\n  .mobile-only {\n    display: none; } }\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: 'Nunito';\n  font-style: normal;\n  font-weight: normal;\n  src: url(" + escape(__webpack_require__(9)) + ");\n  /* IE9 */\n  src: url(" + escape(__webpack_require__(10)) + ") format(\"woff\"), url(" + escape(__webpack_require__(11)) + ") format(\"truetype\");\n  /* Mobile */ }\n\n@font-face {\n  font-family: 'Caveat';\n  font-style: normal;\n  font-weight: normal;\n  src: url(" + escape(__webpack_require__(12)) + ");\n  /* IE9 */\n  src: url(" + escape(__webpack_require__(13)) + ") format(\"woff\"), url(" + escape(__webpack_require__(14)) + ") format(\"truetype\");\n  /* Mobile */ }\n\n/* ------------------------------\n\n   Variables\n\n------------------------------ */\n/* ------------------------------\n\n   Reset\n\n------------------------------ */\n*,\n*::before,\n*::after {\n  box-sizing: border-box; }\n\n*:focus {\n  outline-color: #a6e263; }\n\n:root {\n  font-size: 16px;\n  font-family: 'Nunito', sans-serif;\n  line-height: 1.5; }\n\nbody {\n  max-width: 1044px;\n  padding: 0;\n  margin: 0 auto;\n  font-size: 1.125rem;\n  color: #596174;\n  background-color: #fafafa;\n  /* Allow space for mobile nav without overlapping content */\n  margin-bottom: 71px; }\n\nbutton {\n  border: 0;\n  background: none;\n  padding: 0;\n  cursor: pointer;\n  font-size: inherit; }\n\ninput {\n  font: inherit;\n  border: none;\n  border-radius: 0;\n  padding: 0;\n  -webkit-appearance: none; }\n\nlabel {\n  cursor: pointer; }\n\nul, ol, li {\n  list-style: none;\n  margin: 0;\n  padding: 0; }\n\n.ul--disc li {\n  list-style: disc;\n  margin-left: 30px; }\n\np {\n  margin: 0; }\n\nbutton + p {\n  margin-top: 3em; }\n\np + p {\n  line-height: 1.5;\n  margin-top: 1em; }\n\nh1, h2, h3, h4, h5, h6 {\n  padding: 0;\n  margin: 0; }\n\nh1 {\n  font-size: 3.5rem;\n  line-height: 1.5; }\n\nh2 {\n  font-size: 1.5rem;\n  margin-bottom: 1em;\n  line-height: 1.5; }\n\nh3, h4, h5 {\n  font-size: 1.2rem;\n  line-height: 1.5;\n  margin-top: 1em; }\n\nbutton {\n  font-family: inherit;\n  color: inherit; }\n\nimg {\n  height: auto;\n  max-width: 100%; }\n\n@media screen and (min-width: 721px) {\n  :root {\n    font-size: 22px; }\n  body {\n    /* Remove spacing for lower navigation */\n    margin-bottom: 0; } }\n\n/* ------------------------------\n\n   Page\n\n------------------------------ */\n/* IE11 helper */\n.content {\n  min-height: 1px; }\n\n.page {\n  min-height: 100vh;\n  position: relative;\n  display: flex;\n  flex-direction: column; }\n\n@media screen and (min-width: 721px) {\n  .page {\n    /* Provide spacing for navigation */\n    padding-top: 77px; } }\n\n@media screen and (min-width: 860px) {\n  .page {\n    /* Provide spacing for navigation */\n    padding-top: 54px; } }\n\n/* ------------------------------\n\n   Icon\n\n------------------------------ */\n.icon {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 50px;\n  width: 50px;\n  color: #ffffff;\n  font-size: 1.75rem;\n  border-radius: 50%;\n  background-color: #b8e388; }\n\n.icon--large {\n  height: 100px;\n  width: 100px;\n  font-size: 100px; }\n\n.icon--alternate {\n  color: #a6e263;\n  margin-left: 10px; }\n\n/* ------------------------------\n\n   Text\n\n------------------------------ */\n.text-center {\n  text-align: center; }\n\n.text-right {\n  text-align: right; }\n\n.text-small {\n  font-size: 1rem; }\n\n.quote:before {\n  content: open-quote; }\n\n.quote:after {\n  content: close-quote; }\n\n/* ------------------------------\n\n   Title\n\n------------------------------ */\n.title--small {\n  font-size: 1.25rem;\n  margin-bottom: 10px; }\n\n.title--alternate {\n  color: #0099be; }\n\n/* ------------------------------\n\n   Link\n\n------------------------------ */\n.link {\n  font-weight: bold;\n  color: inherit;\n  border-bottom: 1px solid currentColor;\n  text-decoration: none; }\n  .link:hover, .link:active {\n    color: #0099be; }\n\n.link--plain {\n  color: #007b99;\n  border-bottom-color: transparent;\n  font-weight: normal;\n  text-decoration: none; }\n  .link--plain:hover, .link--plain:active {\n    color: #0099be;\n    border-bottom-color: currentColor; }\n\n.link--unstyled {\n  color: inherit;\n  text-decoration: none; }\n\n.link--stateless:hover, .link--stateless:active, .link--stateless:focus {\n  color: inherit !important;\n  border-bottom-color: inherit !important; }\n\n/* ------------------------------\n\n   Button\n\n------------------------------ */\n.button {\n  display: inline-block;\n  color: #ffffff;\n  background-color: #007b99;\n  border-radius: 5em;\n  padding: 15px 20px;\n  font-size: 1.125rem;\n  font-weight: bold;\n  text-decoration: none; }\n\n.button:active,\n.button:focus,\n.button:hover {\n  background-color: #0099be; }\n\n.button--center {\n  margin: auto; }\n\n.button + .button {\n  margin-top: 20px; }\n\n.button--full-width {\n  width: 100%;\n  text-align: center; }\n\n.button--alternate {\n  color: #ffffff;\n  background-color: #007b99; }\n\n.button--alternate:active,\n.button--alternate:focus,\n.button--alternate:hover {\n  background-color: #0099be; }\n\n.button--icon {\n  margin-right: 10px; }\n\n.button-group {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n  margin-top: 40px; }\n\n.button-group--row {\n  flex-direction: row; }\n\n@media screen and (min-width: 360px) {\n  .button {\n    white-space: nowrap; } }\n\n@media screen and (min-width: 800px) {\n  .button--default-width--desktop {\n    width: auto !important;\n    padding: 15px 50px; }\n  .button-group {\n    flex-direction: row; }\n  .button + .button {\n    margin-top: 0;\n    margin-left: 20px; } }\n\n/* ------------------------------\n\n   Section\n\n------------------------------ */\n.section {\n  padding: 40px 20px;\n  background-color: #fafafa; }\n\n.section--darker {\n  background-color: #f4f2f0; }\n\n.section--lighter {\n  background-color: #ffffff; }\n\n.section--highlight {\n  color: #596174;\n  background-color: #f2f4f8; }\n\n.section--align-bottom {\n  padding-bottom: 0; }\n\n.section--vertical-fill-center {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  flex: 1 0 auto;\n  min-height: 1px; }\n\n.section--info {\n  align-items: center; }\n\n.section--story-end {\n  padding-top: 0; }\n\n@media screen and (min-width: 721px) {\n  .home .section--header {\n    padding: 0; }\n  .section {\n    padding: 60px;\n    display: flex;\n    flex-direction: column;\n    justify-content: center; }\n  .section--align-bottom {\n    padding-bottom: 0; }\n  .section--story-end {\n    padding-top: 0; } }\n\n/* ------------------------------\n\n   Navigation\n\n------------------------------ */\n.nav-bar {\n  display: flex;\n  align-items: stretch;\n  background-color: #596174;\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  z-index: 100; }\n\n.nav-icon {\n  color: #e1e2e6; }\n\nnav,\n.nav-item {\n  display: flex;\n  flex: 1 0 auto;\n  justify-content: center;\n  align-items: center;\n  white-space: nowrap; }\n\n.nav-item--text-only,\n.nav-item a {\n  flex: 1 0 auto;\n  padding: 15px 10px;\n  color: #fafafa;\n  text-align: center;\n  text-decoration: none;\n  font-weight: bold;\n  line-height: 1; }\n\n.nav-item--active .nav-item-text,\n.nav-item:hover .nav-item-text {\n  color: #c2e6ef; }\n\n.nav-item a:active .nav-item-text {\n  color: #4ab3ce; }\n\n.nav-item-text {\n  display: block; }\n\n.nav-item-text + .nav-item-text {\n  margin-top: 5px; }\n\n@media screen and (min-width: 721px) {\n  .nav-bar {\n    top: 0;\n    bottom: auto;\n    left: auto;\n    right: auto;\n    margin: auto;\n    width: 100%;\n    max-width: 1044px; }\n  nav, .nav-bar {\n    justify-content: flex-end; }\n  .nav-item {\n    flex: 0 1 auto; }\n  .nav-item-text {\n    font-size: 0.7273rem;\n    margin: 5px;\n    vertical-align: middle; } }\n\n@media screen and (min-width: 860px) {\n  .nav-item-text {\n    display: inline;\n    font-size: 0.8181rem; } }\n\n/* ------------------------------\n\n   Header\n\n------------------------------ */\n.section--header {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  padding: 0;\n  font-family: 'Caveat', cursive;\n  background-image: radial-gradient(at bottom, #ffda8a, #ffa17b); }\n\n.section--header a {\n  color: #596174;\n  text-decoration: none; }\n\n.section--header a:hover {\n  border-bottom: 5px solid #596174;\n  cursor: pointer; }\n\n.section--header:after {\n  content: '';\n  position: absolute;\n  left: 0;\n  bottom: 1px;\n  width: 100%;\n  height: 4px;\n  box-shadow: 0 3px 4px 0 rgba(89, 97, 116, 0.4); }\n\n.home .section--header {\n  height: 120px;\n  font-size: 1.512rem;\n  align-items: center; }\n\n.home .section--header::after {\n  display: none; }\n\n/* ------------------------------\n\n   Footer\n\n------------------------------ */\n@media screen and (min-width: 721px) {\n  .section--footer {\n    padding: 40px 20px;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    width: 100%; }\n  .footer--item {\n    margin: 0 20px; } }\n\n/* ------------------------------\n\n   Card\n\n------------------------------ */\n.card {\n  width: 100%;\n  padding: 15px;\n  border-radius: 10px;\n  font-size: 1rem;\n  background-color: #fafafa; }\n\n.card + .card {\n  margin-top: 20px; }\n\n.card--alternate {\n  color: #ffffff;\n  background-color: #007b99; }\n\n.card--with-icon {\n  position: relative;\n  padding: 70px 20px 40px;\n  margin-top: 40px; }\n\n.card--icon {\n  position: absolute;\n  top: -50px;\n  left: 0;\n  right: 0;\n  margin: auto; }\n\n.card--thumbnail {\n  float: left;\n  margin-right: 15px;\n  width: 80px;\n  height: 80px; }\n\n.card--quote {\n  margin-left: 0;\n  margin-right: 0; }\n\n@media screen and (min-width: 721px) {\n  .card--thumbnail {\n    width: 210px;\n    height: 210px; } }\n\n/* ------------------------------\n\n    Info to help you\n\n------------------------------ */\n.section--info .card {\n  margin-top: 10px; }\n\n.info {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  width: 100%;\n  text-align: left;\n  line-height: 1.5;\n  text-decoration: none; }\n\n.info:active,\n.info:focus,\n.info:hover {\n  background-color: #0099be; }\n\n.info--icon {\n  flex-shrink: 0;\n  margin-right: 20px;\n  font-size: 50px; }\n\n.info--text {\n  flex: 1 1 auto;\n  margin-right: 10px; }\n\n.info--list {\n  width: 100%; }\n\n@media screen and (min-width: 721px) {\n  .info--list {\n    width: 60%; } }\n\n/* Stops hover issue on iPad */\n@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n  .info:hover {\n    background-color: #007b99; } }\n\n/* ------------------------------\n\n   Stories\n\n------------------------------ */\n.stories--more-link {\n  margin-top: 10px; }\n\n/* ------------------------------\n\n   Story\n\n------------------------------ */\n.story {\n  position: relative;\n  min-height: 1px; }\n\n.story + .story {\n  margin-top: 0; }\n\n.story:not(:last-child) {\n  margin-bottom: 45px; }\n\n.story:not(:last-child)::after {\n  content: '';\n  position: absolute;\n  bottom: -45px;\n  left: 0;\n  right: 0;\n  margin: auto;\n  width: 0;\n  height: 0;\n  border-left: 35px solid transparent;\n  border-right: 35px solid transparent;\n  border-top: 45px solid #fafafa; }\n\n.story--illustration {\n  position: relative;\n  margin-top: 20px; }\n\n.story--illustration img {\n  display: block; }\n\n.story--message {\n  background-color: #e1e2e6;\n  color: #596174;\n  font-size: 1rem;\n  margin: 0;\n  padding: 5px;\n  text-align: center; }\n\n/* .button--group override (not ideal) */\n.story--related {\n  width: 100%;\n  margin-top: 10px;\n  margin-bottom: 20px;\n  /* Same as `.button + .button` spacing */ }\n\n/* ------------------------------\n\n   Supporter\n\n------------------------------ */\n.supporter--logo-group {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-wrap: wrap;\n  width: 100%;\n  padding: 20px 40px; }\n\n.supporter--logo {\n  height: 166px;\n  margin: 20px 40px; }\n\n@media screen and (max-width: 721px) {\n  .supporter--logo {\n    width: 100%;\n    margin: 10px 0px; } }\n\n/* ------------------------------\n\n   Helper\n\n------------------------------ */\n.block {\n  display: block; }\n\n.inset {\n  margin: 0 10px; }\n\n.desktop-only {\n  display: none; }\n\n@media screen and (min-width: 721px) {\n  .desktop-only {\n    display: inherit; }\n  .mobile-only {\n    display: none; } }\n", ""]);
 
 // exports
 
@@ -844,7 +844,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "/* Several icons in this set provided by Font Awesome by Dave Gandy - http://fontawesome.io */\n@font-face {\n  font-family: 'icomoon';\n  font-weight: normal;\n  font-style: normal;\n  src: url(" + escape(__webpack_require__(18)) + ");\n  /* IE9 */\n  src: url(" + escape(__webpack_require__(19)) + ") format(\"woff\"), url(" + escape(__webpack_require__(20)) + ") format(\"truetype\");\n  /* Mobile */ }\n\n[class^=\"icon-\"], [class*=\" icon-\"] {\n  /* use !important to prevent issues with browser extensions that change fonts */\n  font-family: 'icomoon' !important;\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n.icon-exit:before {\n  content: \"\\E905\"; }\n\n.icon-leaving:before {\n  content: \"\\E903\"; }\n\n.icon-police:before {\n  content: \"\\E904\"; }\n\n.icon-pound-note:before {\n  content: \"\\E900\"; }\n\n.icon-pound:before {\n  content: \"\\E901\"; }\n\n.icon-police-bold:before {\n  content: \"\\E906\"; }\n\n.icon-children:before {\n  content: \"\\E902\"; }\n\n.icon-question:before {\n  content: \"\\F128\"; }\n\n.icon-stories:before {\n  content: \"\\F02D\"; }\n\n.icon-question-circle:before {\n  content: \"\\F059\"; }\n\n.icon-arrow-right:before {\n  content: \"\\F061\"; }\n\n.icon-sign-out:before {\n  content: \"\\F08B\"; }\n\n.icon-call:before {\n  content: \"\\F095\"; }\n\n.icon-email:before {\n  content: \"\\F0E0\"; }\n\n.icon-question-circle-o:before {\n  content: \"\\F29C\"; }\n\n.icon-id-card:before {\n  content: \"\\F2C2\"; }\n", ""]);
+exports.push([module.i, "/* Several icons in this set provided by Font Awesome by Dave Gandy - http://fontawesome.io */\n@font-face {\n  font-family: 'icomoon';\n  font-weight: normal;\n  font-style: normal;\n  src: url(" + escape(__webpack_require__(18)) + ");\n  /* IE9 */\n  src: url(" + escape(__webpack_require__(19)) + ") format(\"woff\"), url(" + escape(__webpack_require__(20)) + ") format(\"truetype\");\n  /* Mobile */ }\n\n[class^=\"icon-\"], [class*=\" icon-\"] {\n  /* use !important to prevent issues with browser extensions that change fonts */\n  font-family: 'icomoon' !important;\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n.icon-exit-door:before {\n  content: \"\\E900\"; }\n\n.icon-family-large:before {\n  content: \"\\E901\"; }\n\n.icon-pound:before {\n  content: \"\\E902\"; }\n\n.icon-police-hat-large:before {\n  content: \"\\E903\"; }\n\n.icon-leaving-large:before {\n  content: \"\\E904\"; }\n\n.icon-pound-note-large:before {\n  content: \"\\E905\"; }\n\n.icon-organisation:before {\n  content: \"\\E906\"; }\n\n.icon-survey:before {\n  content: \"\\E907\"; }\n\n.icon-involved:before {\n  content: \"\\E908\"; }\n\n.icon-cost:before {\n  content: \"\\E909\"; }\n\n.icon-illustrations:before {\n  content: \"\\E90A\"; }\n\n.icon-information:before {\n  content: \"\\E90B\"; }\n\n.icon-book:before {\n  content: \"\\F02D\"; }\n\n.icon-arrow-left:before {\n  content: \"\\F060\"; }\n\n.icon-arrow-right:before {\n  content: \"\\F061\"; }\n\n.icon-envelope:before {\n  content: \"\\F0E0\"; }\n\n.icon-question-circle-o:before {\n  content: \"\\F29C\"; }\n\n.icon-phone:before {\n  content: \"\\F095\"; }\n", ""]);
 
 // exports
 
@@ -853,19 +853,19 @@ exports.push([module.i, "/* Several icons in this set provided by Font Awesome b
 /* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "icomoon.eot?551471df6110e04d1f2bd585cf0b4514";
+module.exports = __webpack_require__.p + "info-icons.eot?de51a7f36f42e2bb4d3d8080c38fbaf0";
 
 /***/ }),
 /* 19 */
 /***/ (function(module, exports) {
 
-module.exports = "data:application/font-woff;base64,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"
+module.exports = "data:application/font-woff;base64,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"
 
 /***/ }),
 /* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "icomoon.ttf?9380601fa2f48fe98eda1f4198212e63";
+module.exports = __webpack_require__.p + "info-icons.ttf?ba536f1bb4acf2883d119f51cab9ce95";
 
 /***/ }),
 /* 21 */
@@ -9490,7 +9490,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 			id: 1,
 			name: 'Bite size information',
 			slug: 'bitesize-information',
-			icon: 'call',
+			icon: 'information',
 			infoText: {
 				ctor: '::',
 				_0: 'We include bite size information relating to a small number of fears and barriers that are likely to be stopping people from taking the\n            next step. Keeping the language simple we aim to be open and honest, with a reassuring tone. We resist the temptation to provide all the\n            information people might need. Our goal is to offer just enough to help people reach out to support services. Other websites have excellent\n            longer content.',
@@ -9503,7 +9503,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 				id: 2,
 				name: 'Illustrations',
 				slug: 'illustrations',
-				icon: 'call',
+				icon: 'illustrations',
 				infoText: {
 					ctor: '::',
 					_0: 'Many organisations struggle with the same problem with stories. People often say that they want to hear stories from other people who\n             have been through the same problems as them, but when the organisation provides stories, no one looks at them. We believe that visual\n             storytelling can change this. We are testing whether the 4 image format engages people in a way that other storytelling might not do.',
@@ -9516,7 +9516,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 					id: 3,
 					name: 'What is the survey?',
 					slug: 'what-is-the-survey',
-					icon: 'call',
+					icon: 'survey',
 					infoText: {
 						ctor: '::',
 						_0: 'The survey is research with key staff in organisations that run helplines or web chats or text services. We want to know whether those\n            staff who work most closely with people seeking support think this approach could work. We also want to know what concerns or hopes they\n            might have, if they were to try creating an app like this within their organisation.',
@@ -9529,7 +9529,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 						id: 4,
 						name: 'Can my organisation try this?',
 						slug: 'try-this',
-						icon: 'call',
+						icon: 'organisation',
 						infoText: {
 							ctor: '::',
 							_0: 'We are currently working with 3 charities as well as The Haven, Wolverhampton whose app inspired the project. We are testing two things.\n            Firstly, can we get people from social media or other locations into the app. Secondly, if we do, does it encourage people to seek support.\n            When this trial is complete in the summer we will be looking for more organisations to work with. Please take the survey if you are interested.',
@@ -9542,7 +9542,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 							id: 5,
 							name: 'What does taking part cost?',
 							slug: 'cost',
-							icon: 'call',
+							icon: 'cost',
 							infoText: {
 								ctor: '::',
 								_0: 'At the moment, we have a budget to support the charities working with us and pay for new stories and illustrations that work for them.\n            We expect that all stages of testing whether this approach is useful will be free for any charities taking part. The testing is designed\n            to help us decide whether a free or low cost tool allowing charities to create their own content using this structure would be useful.',
@@ -9555,7 +9555,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 								id: 6,
 								name: 'Who is involved in this project?',
 								slug: 'who-is-involved',
-								icon: 'call',
+								icon: 'involved',
 								infoText: {
 									ctor: '::',
 									_0: 'This is a partnership between CAST - a charity driving social change through digital technology - and digital development agency\n            Neontribe. It is one of a number of projects aimed at supporting civic and social organisations to grow confident in using digital tools\n            to achieve their charitable objectives.  It is possible thanks to The Haven, Wolverhampton sharing technology developed for the people\n            they work with.',
@@ -10434,7 +10434,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 		ctor: '::',
 		_0: A2(_elm_lang$html$Html$h2, { ctor: '[]' }, {
 			ctor: '::',
-			_0: _elm_lang$html$Html$text('Privacy Policy and Cookies'),
+			_0: _elm_lang$html$Html$text('Contemplating Action Privacy Policy and Cookies'),
 			_1: { ctor: '[]' }
 		}),
 		_1: {
@@ -10443,118 +10443,310 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 				ctor: '::',
 				_0: A2(_elm_lang$html$Html$p, { ctor: '[]' }, {
 					ctor: '::',
-					_0: _elm_lang$html$Html$text('\n                    '),
+					_0: _elm_lang$html$Html$text('This policy relates to domain (“the Site”) which is owned by Neontribe whose registered address is lincoln street address (registered company XXX) and related content.\n                    '),
 					_1: { ctor: '[]' }
 				}),
 				_1: {
 					ctor: '::',
 					_0: A2(_elm_lang$html$Html$h3, { ctor: '[]' }, {
 						ctor: '::',
-						_0: _elm_lang$html$Html$text('What data do we collect?'),
+						_0: _elm_lang$html$Html$text('What information is collected?'),
 						_1: { ctor: '[]' }
 					}),
 					_1: {
 						ctor: '::',
 						_0: A2(_elm_lang$html$Html$p, { ctor: '[]' }, {
 							ctor: '::',
-							_0: _elm_lang$html$Html$text('\n                '),
+							_0: _elm_lang$html$Html$text('We collect the following information from people who use this website\n                '),
 							_1: { ctor: '[]' }
 						}),
 						_1: {
 							ctor: '::',
-							_0: A2(_elm_lang$html$Html$h3, { ctor: '[]' }, {
+							_0: A2(_elm_lang$html$Html$ul, {
 								ctor: '::',
-								_0: _elm_lang$html$Html$text('How is the information used?'),
+								_0: _elm_lang$html$Html_Attributes$class('ul--disc'),
 								_1: { ctor: '[]' }
-							}),
-							_1: {
+							}, {
 								ctor: '::',
-								_0: A2(_elm_lang$html$Html$p, { ctor: '[]' }, {
+								_0: A2(_elm_lang$html$Html$li, { ctor: '[]' }, {
 									ctor: '::',
-									_0: _elm_lang$html$Html$text(''),
+									_0: _elm_lang$html$Html$text('Email addresses of people who communicate with us via email'),
 									_1: { ctor: '[]' }
 								}),
 								_1: {
 									ctor: '::',
-									_0: A2(_elm_lang$html$Html$ul, {
+									_0: A2(_elm_lang$html$Html$li, { ctor: '[]' }, {
 										ctor: '::',
-										_0: _elm_lang$html$Html_Attributes$class('ul--disc'),
+										_0: _elm_lang$html$Html$text('Information volunteered by people in the course of using of the website (predominantly survey responses)'),
 										_1: { ctor: '[]' }
-									}, {
+									}),
+									_1: {
 										ctor: '::',
 										_0: A2(_elm_lang$html$Html$li, { ctor: '[]' }, {
 											ctor: '::',
-											_0: _elm_lang$html$Html$text(''),
+											_0: _elm_lang$html$Html$text('Analytics and tracking data about people’s site usage'),
 											_1: { ctor: '[]' }
 										}),
-										_1: {
+										_1: { ctor: '[]' }
+									}
+								}
+							}),
+							_1: {
+								ctor: '::',
+								_0: A2(_elm_lang$html$Html$h3, { ctor: '[]' }, {
+									ctor: '::',
+									_0: _elm_lang$html$Html$text('How is the information used?'),
+									_1: { ctor: '[]' }
+								}),
+								_1: {
+									ctor: '::',
+									_0: A2(_elm_lang$html$Html$p, { ctor: '[]' }, {
+										ctor: '::',
+										_0: _elm_lang$html$Html$text('Neontribe uses the information you provide to:'),
+										_1: { ctor: '[]' }
+									}),
+									_1: {
+										ctor: '::',
+										_0: A2(_elm_lang$html$Html$ul, {
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$class('ul--disc'),
+											_1: { ctor: '[]' }
+										}, {
 											ctor: '::',
 											_0: A2(_elm_lang$html$Html$li, { ctor: '[]' }, {
 												ctor: '::',
-												_0: _elm_lang$html$Html$text(''),
+												_0: _elm_lang$html$Html$text('Improve the usability of our web site'),
 												_1: { ctor: '[]' }
 											}),
 											_1: {
 												ctor: '::',
 												_0: A2(_elm_lang$html$Html$li, { ctor: '[]' }, {
 													ctor: '::',
-													_0: _elm_lang$html$Html$text(''),
+													_0: _elm_lang$html$Html$text('Design future projects'),
 													_1: { ctor: '[]' }
 												}),
-												_1: { ctor: '[]' }
+												_1: {
+													ctor: '::',
+													_0: A2(_elm_lang$html$Html$li, { ctor: '[]' }, {
+														ctor: '::',
+														_0: _elm_lang$html$Html$text('Contribute to research about third sector use of digital'),
+														_1: { ctor: '[]' }
+													}),
+													_1: {
+														ctor: '::',
+														_0: A2(_elm_lang$html$Html$li, { ctor: '[]' }, {
+															ctor: '::',
+															_0: _elm_lang$html$Html$text('Send you any information you have requested relating to the Contemplating Action project '),
+															_1: { ctor: '[]' }
+														}),
+														_1: { ctor: '[]' }
+													}
+												}
 											}
-										}
-									}),
-									_1: {
-										ctor: '::',
-										_0: A2(_elm_lang$html$Html$h3, { ctor: '[]' }, {
-											ctor: '::',
-											_0: _elm_lang$html$Html$text('Who is the information shared with?'),
-											_1: { ctor: '[]' }
 										}),
 										_1: {
 											ctor: '::',
 											_0: A2(_elm_lang$html$Html$p, { ctor: '[]' }, {
 												ctor: '::',
-												_0: _elm_lang$html$Html$text('\n                '),
+												_0: _elm_lang$html$Html$text('You can also tell us if you no longer wish to receive information from Neontribe'),
 												_1: { ctor: '[]' }
 											}),
 											_1: {
 												ctor: '::',
 												_0: A2(_elm_lang$html$Html$p, { ctor: '[]' }, {
 													ctor: '::',
-													_0: _elm_lang$html$Html$text('\n                '),
+													_0: _elm_lang$html$Html$text('Unless we obtain your permission, information that is identifiable as relating to you (i.e. it has not been edited to make it anonymous) is not shared with or sold to other organizations for commercial purposes, other than under the following circumstances:'),
 													_1: { ctor: '[]' }
 												}),
 												_1: {
 													ctor: '::',
-													_0: A2(_elm_lang$html$Html$h3, { ctor: '[]' }, {
+													_0: A2(_elm_lang$html$Html$ul, {
 														ctor: '::',
-														_0: _elm_lang$html$Html$text('Use of cookies'),
+														_0: _elm_lang$html$Html_Attributes$class('ul--disc'),
 														_1: { ctor: '[]' }
+													}, {
+														ctor: '::',
+														_0: A2(_elm_lang$html$Html$li, { ctor: '[]' }, {
+															ctor: '::',
+															_0: _elm_lang$html$Html$text('If it is necessary to share information in order to investigate, prevent, or take action regarding illegal activities, suspected fraud, situations involving potential threats to the physical safety of any person, violations of Terms of Service, or as otherwise required by law.'),
+															_1: { ctor: '[]' }
+														}),
+														_1: {
+															ctor: '::',
+															_0: A2(_elm_lang$html$Html$li, { ctor: '[]' }, {
+																ctor: '::',
+																_0: _elm_lang$html$Html$text('If we transfer information about you if Neontribe is acquired by or merged with another organisation, other than an organisation established by us and controlled by us.'),
+																_1: { ctor: '[]' }
+															}),
+															_1: {
+																ctor: '::',
+																_0: A2(_elm_lang$html$Html$li, { ctor: '[]' }, {
+																	ctor: '::',
+																	_0: _elm_lang$html$Html$text('You have explicitly chosen to have us share the information with CAST - the centre for acceleration of social technology whilst giving us the information - in which case it will be freely shared with them.'),
+																	_1: { ctor: '[]' }
+																}),
+																_1: { ctor: '[]' }
+															}
+														}
 													}),
 													_1: {
 														ctor: '::',
 														_0: A2(_elm_lang$html$Html$p, { ctor: '[]' }, {
 															ctor: '::',
-															_0: _elm_lang$html$Html$text('\n                '),
+															_0: _elm_lang$html$Html$text('In this event, Neontribe  will notify you before information about you is transferred and becomes subject to a different privacy policy.'),
 															_1: { ctor: '[]' }
 														}),
 														_1: {
 															ctor: '::',
 															_0: A2(_elm_lang$html$Html$h3, { ctor: '[]' }, {
 																ctor: '::',
-																_0: _elm_lang$html$Html$text('Your acceptance of these terms'),
+																_0: _elm_lang$html$Html$text('Where is the information stored?'),
 																_1: { ctor: '[]' }
 															}),
 															_1: {
 																ctor: '::',
-																_0: A2(_elm_lang$html$Html$p, { ctor: '[]' }, {
+																_0: A2(_elm_lang$html$Html$ul, {
 																	ctor: '::',
-																	_0: _elm_lang$html$Html$text('\n                '),
+																	_0: _elm_lang$html$Html_Attributes$class('ul--disc'),
 																	_1: { ctor: '[]' }
+																}, {
+																	ctor: '::',
+																	_0: A2(_elm_lang$html$Html$li, { ctor: '[]' }, {
+																		ctor: '::',
+																		_0: _elm_lang$html$Html$text('On our internal servers'),
+																		_1: { ctor: '[]' }
+																	}),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(_elm_lang$html$Html$li, { ctor: '[]' }, {
+																			ctor: '::',
+																			_0: _elm_lang$html$Html$text('On our survey provider Typeform’s servers'),
+																			_1: { ctor: '[]' }
+																		}),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(_elm_lang$html$Html$li, { ctor: '[]' }, {
+																				ctor: '::',
+																				_0: _elm_lang$html$Html$text('In google analytics and google drive'),
+																				_1: { ctor: '[]' }
+																			}),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(_elm_lang$html$Html$li, { ctor: '[]' }, {
+																					ctor: '::',
+																					_0: _elm_lang$html$Html$text('By our partner CAST on their servers if you have explicitly expressed the desire to share your information with them whilst using our site.'),
+																					_1: { ctor: '[]' }
+																				}),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(_elm_lang$html$Html$li, { ctor: '[]' }, {
+																						ctor: '::',
+																						_0: _elm_lang$html$Html$text('By our mailing service'),
+																						_1: { ctor: '[]' }
+																					}),
+																					_1: { ctor: '[]' }
+																				}
+																			}
+																		}
+																	}
 																}),
-																_1: { ctor: '[]' }
+																_1: {
+																	ctor: '::',
+																	_0: A2(_elm_lang$html$Html$h3, { ctor: '[]' }, {
+																		ctor: '::',
+																		_0: _elm_lang$html$Html$text('Your rights'),
+																		_1: { ctor: '[]' }
+																	}),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(_elm_lang$html$Html$p, { ctor: '[]' }, {
+																			ctor: '::',
+																			_0: _elm_lang$html$Html$text('The data we hold on you will be removed from our systems after a reasonable period, unless we need to keep the information for legal or auditing purposes. You have the right to request we remove all identifiable information we store on you. Including the removal of any email subscriptions. To do so, please email info@neontribe.co.uk\n                '),
+																			_1: { ctor: '[]' }
+																		}),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(_elm_lang$html$Html$h3, { ctor: '[]' }, {
+																				ctor: '::',
+																				_0: _elm_lang$html$Html$text('Use of cookies'),
+																				_1: { ctor: '[]' }
+																			}),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(_elm_lang$html$Html$p, { ctor: '[]' }, {
+																					ctor: '::',
+																					_0: _elm_lang$html$Html$text('Cookies are pieces of information that a website transfers to your hard drive. Most web browsers automatically accept cookies, but, if you prefer, you can change your browser to prevent that. (Need more info about whether they’ll be able to use CA or not if they do)\n                '),
+																					_1: { ctor: '[]' }
+																				}),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(_elm_lang$html$Html$p, { ctor: '[]' }, {
+																						ctor: '::',
+																						_0: _elm_lang$html$Html$text('Contemplating Action uses cookies to:\n                '),
+																						_1: { ctor: '[]' }
+																					}),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(_elm_lang$html$Html$ul, {
+																							ctor: '::',
+																							_0: _elm_lang$html$Html_Attributes$class('ul--disc'),
+																							_1: { ctor: '[]' }
+																						}, {
+																							ctor: '::',
+																							_0: A2(_elm_lang$html$Html$li, { ctor: '[]' }, {
+																								ctor: '::',
+																								_0: _elm_lang$html$Html$text('Monitor the number of visitors to our website'),
+																								_1: { ctor: '[]' }
+																							}),
+																							_1: {
+																								ctor: '::',
+																								_0: A2(_elm_lang$html$Html$li, { ctor: '[]' }, {
+																									ctor: '::',
+																									_0: _elm_lang$html$Html$text('Monitor how users use our website, i.e. which pages they have accessed'),
+																									_1: { ctor: '[]' }
+																								}),
+																								_1: {
+																									ctor: '::',
+																									_0: A2(_elm_lang$html$Html$li, { ctor: '[]' }, {
+																										ctor: '::',
+																										_0: _elm_lang$html$Html$text('To help improve our website'),
+																										_1: { ctor: '[]' }
+																									}),
+																									_1: {
+																										ctor: '::',
+																										_0: A2(_elm_lang$html$Html$li, { ctor: '[]' }, {
+																											ctor: '::',
+																											_0: _elm_lang$html$Html$text('For more data on Cookies visit www.aboutcookies.org. In addition to detailing extensive information on cookies this site also provides explanations on how to disable cookies on your computer.'),
+																											_1: { ctor: '[]' }
+																										}),
+																										_1: { ctor: '[]' }
+																									}
+																								}
+																							}
+																						}),
+																						_1: {
+																							ctor: '::',
+																							_0: A2(_elm_lang$html$Html$h3, { ctor: '[]' }, {
+																								ctor: '::',
+																								_0: _elm_lang$html$Html$text('Your acceptance of these terms'),
+																								_1: { ctor: '[]' }
+																							}),
+																							_1: {
+																								ctor: '::',
+																								_0: A2(_elm_lang$html$Html$p, { ctor: '[]' }, {
+																									ctor: '::',
+																									_0: _elm_lang$html$Html$text('By using this site, you consent to the collection and use of this information by Neontribe and to our privacy policy. Please send any questions, concerns or comments you have about these policies to info@neontribe.co.uk\n                '),
+																									_1: { ctor: '[]' }
+																								}),
+																								_1: { ctor: '[]' }
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
 															}
 														}
 													}
@@ -10789,7 +10981,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 									}
 								}, {
 									ctor: '::',
-									_0: A2(_neontribe$haven$Icon$getIcon, 'question-circle', _elm_lang$core$Maybe$Just('button--icon')),
+									_0: A2(_neontribe$haven$Icon$getIcon, 'question-circle-o', _elm_lang$core$Maybe$Just('button--icon')),
 									_1: {
 										ctor: '::',
 										_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
@@ -10917,7 +11109,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 													}
 												}, {
 													ctor: '::',
-													_0: A2(_neontribe$haven$Icon$getIcon, 'call', _elm_lang$core$Maybe$Just('button--icon')),
+													_0: A2(_neontribe$haven$Icon$getIcon, 'phone', _elm_lang$core$Maybe$Just('button--icon')),
 													_1: {
 														ctor: '::',
 														_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
@@ -10944,7 +11136,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 														}
 													}, {
 														ctor: '::',
-														_0: A2(_neontribe$haven$Icon$getIcon, 'email', _elm_lang$core$Maybe$Just('button--icon')),
+														_0: A2(_neontribe$haven$Icon$getIcon, 'envelope', _elm_lang$core$Maybe$Just('button--icon')),
 														_1: {
 															ctor: '::',
 															_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
@@ -11221,7 +11413,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 												ctor: '::',
 												_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
 													ctor: '::',
-													_0: A2(_neontribe$haven$Icon$getIcon, 'call', _elm_lang$core$Maybe$Just('button--icon')),
+													_0: A2(_neontribe$haven$Icon$getIcon, 'phone', _elm_lang$core$Maybe$Just('button--icon')),
 													_1: {
 														ctor: '::',
 														_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
@@ -11260,7 +11452,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 												}
 											}, {
 												ctor: '::',
-												_0: A2(_neontribe$haven$Icon$getIcon, 'call', _elm_lang$core$Maybe$Just('button--icon')),
+												_0: A2(_neontribe$haven$Icon$getIcon, 'phone', _elm_lang$core$Maybe$Just('button--icon')),
 												_1: {
 													ctor: '::',
 													_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
@@ -11477,10 +11669,10 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 				ctor: '::',
 				_0: A2(_elm_lang$html$Html$nav, { ctor: '[]' }, {
 					ctor: '::',
-					_0: A6(_neontribe$haven$Views_Nav$navItem, 'question-circle', '#/stories', 'find-out-more', 'view-list', 'Find Out More', 'Find Out More'),
+					_0: A6(_neontribe$haven$Views_Nav$navItem, 'question-circle-o', '#/stories', 'find-out-more', 'view-list', 'Find Out More', 'Find Out More'),
 					_1: {
 						ctor: '::',
-						_0: A6(_neontribe$haven$Views_Nav$navItem, 'email', A2(_elm_lang$core$Basics_ops['++'], 'mailto:', _neontribe$haven$Views_Config$email), 'contact', 'email', 'Email', _neontribe$haven$Views_Config$email),
+						_0: A6(_neontribe$haven$Views_Nav$navItem, 'envelope', A2(_elm_lang$core$Basics_ops['++'], 'mailto:', _neontribe$haven$Views_Config$email), 'contact', 'email', 'Email', _neontribe$haven$Views_Config$email),
 						_1: {
 							ctor: '::',
 							_0: A2(_elm_lang$html$Html$span, {
@@ -11489,7 +11681,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 								_1: { ctor: '[]' }
 							}, {
 								ctor: '::',
-								_0: A6(_neontribe$haven$Views_Nav$navItem, 'call', A2(_elm_lang$core$Basics_ops['++'], 'tel:', _neontribe$haven$Views_Config$helpline), 'contact', 'call', 'Call', _neontribe$haven$Views_Config$helplineDisplay),
+								_0: A6(_neontribe$haven$Views_Nav$navItem, 'phone', A2(_elm_lang$core$Basics_ops['++'], 'tel:', _neontribe$haven$Views_Config$helpline), 'contact', 'call', 'Call', _neontribe$haven$Views_Config$helplineDisplay),
 								_1: { ctor: '[]' }
 							}),
 							_1: {
@@ -11522,7 +11714,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 										}
 									}, {
 										ctor: '::',
-										_0: A2(_neontribe$haven$Icon$getIcon, 'exit', _elm_lang$core$Maybe$Just('nav-item-text nav-icon')),
+										_0: A2(_neontribe$haven$Icon$getIcon, 'exit-door', _elm_lang$core$Maybe$Just('nav-item-text nav-icon')),
 										_1: {
 											ctor: '::',
 											_0: A2(_elm_lang$html$Html$span, {
