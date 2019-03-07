@@ -10,7 +10,7 @@
 - `src\` - the app source files
 
 ### Sites
-- [Demo](http://katjam.github.io/elm-pic-story-site)
+- [Demo](https://neontribe.github.io/contemplating-action/)
 
 ## Installation
 - You will need `elm`, `node` and `yarn` follow the official install instructions if you don't have already
