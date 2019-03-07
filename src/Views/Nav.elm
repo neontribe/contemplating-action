@@ -29,7 +29,7 @@ view _ =
                 [ navItem "phone" ("tel:" ++ helpline) "contact" "call" "Call" helplineDisplay ]
             , span [ class "nav-item" ]
                 [ a [ class "btn ", href "https://google.com", target "_blank", rel "noopener", onClick (Exit True) ]
-                    [ getIcon "Exit-Door" (Just "nav-item-text nav-icon")
+                    [ getIcon "exit-door" (Just "nav-item-text nav-icon")
                     , span [ class " nav-item-text" ] [ text "Exit Site" ]
                     ]
                 ]
