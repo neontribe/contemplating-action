@@ -4,9 +4,9 @@
   font-family: 'icomoon';
   font-weight: normal;
   font-style: normal;
-  src: url('./fonts/icomoon.eot'); /* IE9 */
-  src: url('./fonts/icomoon.woff') format('woff'), /* Modern Browsers */
-       url('./fonts/icomoon.ttf') format('truetype'); /* Mobile */
+  src: url('./fonts/info-icons.eot'); /* IE9 */
+  src: url('./fonts/info-icons.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/info-icons.ttf') format('truetype'); /* Mobile */
 }
 
 [class^="icon-"], [class*=" icon-"] {
@@ -60,15 +60,21 @@
 .icon-information:before {
   content: "\e90b";
 }
-.icon-envelope:before {
-  content: "\f0e0";
+.icon-book:before {
+  content: "\f02d";
 }
-.icon-question-circle:before {
-  content: "\f059";
-}
-.icon-phone:before {
-  content: "\f095";
+.icon-arrow-left:before {
+  content: "\f060";
 }
 .icon-arrow-right:before {
   content: "\f061";
+}
+.icon-envelope:before {
+  content: "\f0e0";
+}
+.icon-question-circle-o:before {
+  content: "\f29c";
+}
+.icon-phone:before {
+  content: "\f095";
 }

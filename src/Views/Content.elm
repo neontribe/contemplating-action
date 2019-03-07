@@ -29,7 +29,7 @@ view model =
                         [ text "A project exploring how to encourage people to seek support. Can stories help change lives?" ]
                     , div [ class "button-group button-group--row" ]
                         [ a [ class "button button--alternate button--center button--default-width--desktop", href "#/stories" ]
-                            [ getIcon "question-circle" (Just "button--icon")
+                            [ getIcon "question-circle-o" (Just "button--icon")
                             , span [] [ text "Find out more" ]
                             ]
                         ]
