@@ -140,7 +140,7 @@ info =
       }
     , { id = 3
       , name = "Illustrations"
-      , slug = "Illustrations"
+      , slug = "illustrations"
       , icon = "illustrations"
       , infoText =
             [ """Many organisations struggle with the same problem with stories. We know stories can be powerful, we want to use them for many reasons.
