@@ -30,7 +30,7 @@ view _ =
             , span [ class "nav-item" ]
                 [ a [ class "btn ", href "https://google.com", target "_blank", rel "noopener", onClick (Exit True) ]
                     [ getIcon "exit-door" (Just "nav-item-text nav-icon")
-                    , span [ class " nav-item-text" ] [ text "Exit Site" ]
+                    , span [ class " nav-item-text text-selector" ] [ text "Exit Site" ]
                     ]
                 ]
             ]
@@ -44,7 +44,7 @@ navItem icon link category action shortLinkText longLinkText =
             [ getIcon icon (Just "nav-item-text nav-icon")
             , span [ class "nav-item-text" ]
                 [ span [ class "mobile-only" ] [ text shortLinkText ]
-                , span [ class "desktop-only" ] [ text longLinkText ]
+                , span [ class "desktop-only text-selector" ] [ text longLinkText ]
                 ]
             ]
         ]
