@@ -24,7 +24,7 @@ view model =
     case model.currentPage of
         Home ->
             div [ class "section--vertical-fill-center" ]
-                [ section [ class "section section--highlight section--align-bottom" ]
+                [ section [ class "section section--lighter section--align-bottom" ]
                     [ h2 []
                         [ text "A project exploring how to encourage people to seek support. Can stories help change lives?" ]
                     , div [ class "button-group button-group--row" ]
@@ -35,7 +35,7 @@ view model =
                         ]
                     , img [ class "block", src (path (AssetPath "banner.png")), alt "A description of banner image." ] []
                     ]
-                , section [ class "section section--vertical-fill-center section--lighter" ]
+                , section [ class "section section--vertical-fill-center" ]
                     [ h2 [] [ text "Breaking down fears and barriers." ]
                     , p []
                         [ text """In 2017, The Haven, Wolverhampton, Neontribe and women who had been through domestic violence co-designed a
@@ -99,12 +99,12 @@ view model =
 
         StoriesPage ->
             div [ class "section--vertical-fill-center" ]
-                [ div [ class "section section--darker section--vertical-fill-center" ]
+                [ div [ class "section section--lighter section--vertical-fill-center" ]
                     [ h2 [] [ text "Stories" ]
                     , storyTeaser 1
                     , storyTeaser 2
                     ]
-                , div [ class "section section--highlight" ]
+                , div [ class "section section--lighter" ]
                     [ div [ class "text-center" ]
                         [ a
                             [ class "button button--alternate button--full-width button--default-width--desktop"
@@ -118,7 +118,7 @@ view model =
 
         StoryPage id ->
             article [ class "section--vertical-fill-center" ]
-                [ div [ class "section section--darker section--vertical-fill-center" ]
+                [ div [ class "section section--lighter section--vertical-fill-center" ]
                     [ h2 []
                         [ text (storyTitle id) ]
                     , card id 1
@@ -126,7 +126,7 @@ view model =
                     , card id 3
                     , card id 4
                     ]
-                , div [ class "section section--highlight section--story-end" ]
+                , div [ class "section section--story-end" ]
                     [ p [ class "story--related" ] [ text "Every story is different. Let us help you discover yours." ]
                     , div [ class "button-group story--related" ] (storyRelatedInfo id)
                     , div [ class "button-group story--related" ]

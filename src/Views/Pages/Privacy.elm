@@ -11,7 +11,7 @@ import Views.Footer exposing (footerContent)
 
 privacyContent : Html Msg
 privacyContent =
-    div [ class "section section--lighter" ]
+    div [ class "section" ]
         [ h2 [] [ text "Contemplating Action Privacy Policy and Cookies" ]
         , div []
             [ p []

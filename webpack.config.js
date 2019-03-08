@@ -37,7 +37,7 @@ module.exports = {
             options: {
               module: 'Assets',
               tagger: 'AssetPath',
-              package: 'neontribe/haven',
+              package: 'neontribe/contemplating-action',
               localPath: function (url) {
                   return './assets/' + url;
               }
