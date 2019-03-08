@@ -1,8 +1,24 @@
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
+  font-weight: 600;
+  src: url('./fonts/Poppins-Medium.ttf') format('truetype'); 
+
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: bold;
+  src: url('./fonts/Poppins-SemiBold.ttf') format('truetype');
+
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
   font-weight: normal;
-  src: url('./fonts/Poppins-Medium.ttf') format('truetype'); /* Mobile */
+  src: url('./fonts/Poppins-Regular.ttf') format('truetype');
 }
 
 $nav-height-mobile: 71px;
@@ -25,6 +41,7 @@ $black: #3c3c3b;
 $white: #F5F5F5;
 $grey-light: #eee;
 $grey-light-purple: #E4E1E7;
+$lime-green: #93dd77;
 
 // Utility variables
 $white-pure: #ffffff;
@@ -36,6 +53,7 @@ $primary-colour: $blue-darkest;
 $secondary-colour: $blue-light;
 $text-colour: $black;
 $interaction-colour: $purple;
+$focus-colour: $lime-green;
 
 $max-width: 1044px;
 
@@ -52,7 +70,7 @@ $max-width: 1044px;
 }
 
 *:focus {
-  outline-color: $secondary-colour;
+  outline-color: $lime-green;
 }
 
 :root {
@@ -65,7 +83,7 @@ body {
   max-width: $max-width;
   padding: 0;
   margin: 0 auto;
-  font-size: 1.125rem;
+  font-size: 1.1rem;
   color: $text-colour;
   background-color: $white-pure;
 
@@ -106,6 +124,7 @@ ul, ol, li {
 
 p {
   margin: 0;
+  font-family: 'Poppins';
 }
 
 button + p {
@@ -120,21 +139,23 @@ p + p {
 h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
+  font-family: 'Poppins';
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.75em;
   line-height: 2.65;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   margin-bottom: 1em;
   line-height: 1.5;
+  font-weight: 600;
 }
 
 h3, h4, h5 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   margin-top: 1em;
 }
@@ -269,7 +290,7 @@ img {
 ------------------------------ */
 
 .link {
-  font-weight: bold;
+  font-family: 'Poppins-Medium';
   color: inherit;
   border-bottom: 1px solid currentColor;
   text-decoration: none;
@@ -502,16 +523,15 @@ nav,
   color: $white;
   text-align: center;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 1;
 }
 
 .nav-item--active,
-.nav-item:hover {
-  .nav-item-text {
+.text-selector:hover {
     color: $white;
+    text-decoration: underline;
   }
-}
 
 .nav-item a:active {
   .nav-item-text {
@@ -597,7 +617,7 @@ nav,
 
 .home .section--header {
   height: 120px;
-  font-size: 1.512rem;
+  font-size: 1.25rem;
   align-items: center;
 }
 
@@ -746,6 +766,7 @@ nav,
 
 .stories--more-link {
   margin-top: 10px;
+  font-size:  0.875rem;
 }
 
 /* ------------------------------
