@@ -210,15 +210,15 @@ placeholderCard =
 decks : List Deck
 decks =
     [ { id = 1
-      , title = "Our Project Story"
+      , title = "Our Project"
       , teaser = "This shows you how we believe shaping stories from real people can work so that they help people feel ready to take action"
       , teaserImgPath = AssetPath "story_images/ourproject-image1.jpg"
       , teaserImgAltText = "A man kneeling on the floor of a dark room with his head in his hands"
       , relatedInfo = [ 2, 5 ]
       , cards =
             [ { quoteText =
-                    """The story starts with some background. It gives us key pieces of information that make this person’s story clear and 
-                    relatable. It tends to deal with facts about the situation they were in rather than their feelings. It is always a situation 
+                    """The story starts with some background. It gives us key pieces of information that make this person’s story clear and
+                    relatable. It tends to deal with facts about the situation they were in rather than their feelings. It is always a situation
                     that clearly needed to change.
                     """
               , imagePath = AssetPath "story_images/ourproject-image1.jpg"
@@ -226,8 +226,8 @@ decks =
               , messageText = Nothing
               }
             , { quoteText =
-                    """Next the story moves on a little. It does one of two things. Either it tells us about a specific incident that began a 
-                    drive to change things, or it explores the person’s fears and other things that were holding them back. This section focuses 
+                    """Next the story moves on a little. It does one of two things. Either it tells us about a specific incident that began a
+                    drive to change things, or it explores the person’s fears and other things that were holding them back. This section focuses
                     on emotions and helps us connect with the person’s story.
                     """
               , imagePath = AssetPath "story_images/ourproject-image2.jpg"
@@ -235,16 +235,16 @@ decks =
               , messageText = Just "This bar is used to give a little extra insight into how the person was feeling."
               }
             , { quoteText =
-                    """Here the story starts to change for the better. The person becomes able to take a positive step and get some support. 
-                    The story tells us a little about what happened, how they managed to take the step and how they felt. 
+                    """Here the story starts to change for the better. The person becomes able to take a positive step and get some support.
+                    The story tells us a little about what happened, how they managed to take the step and how they felt.
                     """
               , imagePath = AssetPath "story_images/ourproject-image3.jpg"
               , altText = "The man starts climbing the stairs to reach a hand holding out a key."
               , messageText = Nothing
               }
             , { quoteText =
-                    """The final section of the story is about hope. It show that making a chance can be a positive choice. However it doesn’t 
-                    suggest that the person’s life is now perfect. It is designed to encourage others to believe they could make a move to a more 
+                    """The final section of the story is about hope. It show that making a chance can be a positive choice. However it doesn’t
+                    suggest that the person’s life is now perfect. It is designed to encourage others to believe they could make a move to a more
                     hopeful place too. It takes care not to sound out of reach.
                     """
               , imagePath = AssetPath "story_images/ourproject-image4.jpg"
@@ -254,38 +254,42 @@ decks =
             ]
       }
     , { id = 2
-      , title = "A story about trees"
-      , teaser = "The trees are not in a row."
-      , teaserImgPath = AssetPath "story_images/thumb_placeholder.png"
-      , teaserImgAltText = "Some text that describes the teaser image."
+      , title = "The Haven"
+      , teaser = "This is one of the six stories created for The Haven’s app. The story uses Ama’s words but the names have been changed, and the story has been shaped to help others."
+      , teaserImgPath = AssetPath "story_images/ama_1.jpg"
+      , teaserImgAltText = "A pregnant woman wrapped in chains"
       , relatedInfo = [ 2, 5 ]
       , cards =
             [ { quoteText =
-                    """Something inspiring about trees.
+                    """I was born in Senegal and had lived in Spain as well as the UK and I couldn’t speak English. My husband became abusive 
+                    after I got pregnant with our first child. For years I suffered so many different things
                     """
-              , imagePath = AssetPath "story_images/slide1.svg"
-              , altText = "Some text that describes the image"
+              , imagePath = AssetPath "story_images/ama_1.jpg"
+              , altText = "A pregnant woman wrapped in chains"
               , messageText = Nothing
               }
             , { quoteText =
-                    """Something suprising about trees.
+                    """I wanted to leave, but my husband told me without him I would be sent back to Africa. I was completely dependent on my 
+                    husband, I did not see any way out of my situation.
                     """
-              , imagePath = AssetPath "story_images/slide2.svg"
-              , altText = "Some text that describes the image."
-              , messageText = Just "Caption text."
+              , imagePath = AssetPath "story_images/ama_2.jpg"
+              , altText = "A pregnant woman chained to her husband"
+              , messageText = Just "I did not know my rights in the UK and had no money but soon I discovered I had choices."
               }
             , { quoteText =
-                    """Something magical about trees.
+                    """One day I broke down at my health care class. My teacher was so supportive. She told me about The Haven and they found me a 
+                    support worker who spoke Spanish. They talked to social services for me and found me an immigration solicitor.
                     """
-              , imagePath = AssetPath "story_images/slide3.svg"
-              , altText = "Some text that describes the image."
+              , imagePath = AssetPath "story_images/ama_3.jpg"
+              , altText = "A woman crying at a desk"
               , messageText = Nothing
               }
             , { quoteText =
-                    """Something interesting about trees.
+                    """I have a house now, with my children, and away from my abusive husband. My solicitor is helping me with immigration documents and divorce papers. 
+                    For the first time in a long time I can sleep and look forward to the future.
                     """
-              , imagePath = AssetPath "story_images/slide4.svg"
-              , altText = "Some text that describes the image."
+              , imagePath = AssetPath "story_images/ama_4.jpg"
+              , altText = "A smiling woman with two children"
               , messageText = Nothing
               }
             ]

@@ -26,21 +26,26 @@ view model =
             div [ class "section--vertical-fill-center" ]
                 [ section [ class "section section--lighter section--align-bottom" ]
                     [ h2 []
-                        [ text "Read some stories and find out more information" ]
+                        [ text "A project exploring how to encourage people to seek support. Can stories help change lives?" ]
                     , div [ class "button-group button-group--row" ]
                         [ a [ class "button button--alternate button--center button--default-width--desktop", href "#/stories" ]
-                            [ getIcon "stories" (Just "button--icon")
-                            , span [] [ text "Show me the stories" ]
+                            [ getIcon "question-circle-o" (Just "button--icon")
+                            , span [] [ text "Find out more" ]
                             ]
                         ]
                     , img [ class "block", src (path (AssetPath "banner.png")), alt "A description of banner image." ] []
                     ]
                 , section [ class "section section--vertical-fill-center" ]
-                    [ h2 [] [ text "Call to action here." ]
+                    [ h2 [] [ text "Breaking down fears and barriers." ]
                     , p []
-                        [ text """Short description of services.
+                        [ text """In 2017, The Haven, Wolverhampton, Neontribe and women who had been through domestic violence co-designed a
+                        web app to encourage other women in that situation to seek support and advice. We want to find out if the structure of
+                        that app could be used by different organisations to encourage people to use a helpline or web chat or text service. We
+                        believe that reassuring people that their fears and challenges are shared will help them take early steps on a journey of
+                        change. Explore the app and then take our survey to tell us what you think.
                         """
                         ]
+                    , p [] [ a [ class "link link--plain", href "https://neontribe.co.uk/blog" ] [ text "Read more about this project" ] ]
                     , div [ class "button-group" ]
                         [ div [ class "desktop-only" ]
                             [ div []
@@ -56,7 +61,7 @@ view model =
                             , href ("tel:" ++ helpline)
                             , onClick (ButtonPress "contact" "call" "call-button" True)
                             ]
-                            [ getIcon "call" (Just "button--icon")
+                            [ getIcon "phone" (Just "button--icon")
                             , span [] [ text "Call Us" ]
                             ]
                         , a
@@ -64,8 +69,8 @@ view model =
                             , href ("mailto:" ++ email)
                             , onClick (ButtonPress "contact" "email" "email-button" True)
                             ]
-                            [ getIcon "email" (Just "button--icon")
-                            , span [] [ text "Email Us" ]
+                            [ getIcon "envelope" (Just "button--icon")
+                            , span [] [ text "Email us" ]
                             ]
                         ]
                     ]
@@ -73,7 +78,7 @@ view model =
                     [ div [ class "inset" ]
                         [ div [ class "text-center text-small" ]
                             [ p []
-                                [ text "A bit more information. The small print." ]
+                                [ text "This space is used by The Haven to remind people to call the Police in emergency situations. It could be used for any kind of risk related reminder by other charities." ]
                             ]
                         ]
                     ]
@@ -98,8 +103,6 @@ view model =
                     [ h2 [] [ text "Stories" ]
                     , storyTeaser 1
                     , storyTeaser 2
-                    , storyTeaser 3
-                    , storyTeaser 4
                     ]
                 , div [ class "section section--lighter" ]
                     [ div [ class "text-center" ]
@@ -122,7 +125,6 @@ view model =
                     , card id 2
                     , card id 3
                     , card id 4
-                    , card id 5
                     ]
                 , div [ class "section section--story-end" ]
                     [ p [ class "story--related" ] [ text "Every story is different. Let us help you discover yours." ]
@@ -138,7 +140,7 @@ view model =
                     , div [ class "desktop-only" ]
                         [ div [ class "text-center" ]
                             [ span []
-                                [ getIcon "call" (Just "button--icon")
+                                [ getIcon "phone" (Just "button--icon")
                                 , span [] [ text "Call Us" ]
                                 ]
                             , span [] [ text helplineDisplay ]
@@ -149,7 +151,7 @@ view model =
                         , href ("tel:" ++ helpline)
                         , onClick (ButtonPress "contact" "call" "call-button" True)
                         ]
-                        [ getIcon "call" (Just "button--icon")
+                        [ getIcon "phone" (Just "button--icon")
                         , span [] [ text "Call Us" ]
                         ]
                     ]
@@ -167,6 +169,7 @@ view model =
                     , infoCard (getInfo 3)
                     , infoCard (getInfo 4)
                     , infoCard (getInfo 5)
+                    , infoCard (getInfo 6)
                     ]
                 ]
 
