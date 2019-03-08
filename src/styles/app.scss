@@ -357,6 +357,12 @@ img {
 
 .button--icon {
   margin-right: 10px;
+  vertical-align: middle;
+}
+
+.button--icon.icon-question-circle-o {
+  position: relative;
+  top: -2px;
 }
 
 .button-group {
