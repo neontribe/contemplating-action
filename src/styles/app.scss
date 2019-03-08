@@ -41,7 +41,7 @@ $black: #3c3c3b;
 $white: #F5F5F5;
 $grey-light: #eee;
 $grey-light-purple: #E4E1E7;
-$lime-green: #93dd77;
+$lime-green: #07c103;
 
 // Utility variables
 $white-pure: #ffffff;
@@ -70,7 +70,7 @@ $max-width: 1044px;
 }
 
 *:focus {
-  outline-color: $lime-green;
+  outline-color: $focus-colour;
 }
 
 :root {
@@ -292,7 +292,7 @@ img {
 .link {
   font-family: 'Poppins-Medium';
   color: inherit;
-  border-bottom: 1px solid currentColor;
+  border-bottom: 2px solid currentColor;
   text-decoration: none;
 
   &:hover,
@@ -528,9 +528,9 @@ nav,
 }
 
 .nav-item--active,
-.text-selector:hover {
+.nav-text-selector:hover {
     color: $white;
-    text-decoration: underline;
+    border-bottom: 2px solid $white;
   }
 
 .nav-item a:active {
