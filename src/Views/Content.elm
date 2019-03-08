@@ -38,14 +38,13 @@ view model =
                 , section [ class "section section--vertical-fill-center" ]
                     [ h2 [] [ text "Breaking down fears and barriers." ]
                     , p []
-                        [ text """In 2017, The Haven, Wolverhampton, Neontribe and women who had been through domestic violence co-designed a
-                        web app to encourage other women in that situation to seek support and advice. We want to find out if the structure of
-                        that app could be used by different organisations to encourage people to use a helpline or web chat or text service. We
-                        believe that reassuring people that their fears and challenges are shared will help them take early steps on a journey of
-                        change. Explore the app and then take our survey to tell us what you think.
+                        [ text """This is a demonstration version of a web app we believe could be used by different organisations to encourage people to use a helpline or web chat or
+                        text service. We believe that reassuring people that their fears and challenges are shared will help them take early steps on a
+                        journey of change.  In a live app the information in this section would be additional information about the organisation and it’s
+                        support services for people who did not follow the direct link to the stories.
                         """
                         ]
-                    , p [] [ a [ class "link link--plain", href "https://neontribe.co.uk/blog" ] [ text "Read more about this project" ] ]
+                    , p [] [ a [ class "link link--plain", href "https://neontribe.co.uk/blog" ] [ text "Read in depth about this project" ] ]
                     , div [ class "button-group" ]
                         [ div [ class "desktop-only" ]
                             [ div []
@@ -78,7 +77,7 @@ view model =
                     [ div [ class "inset" ]
                         [ div [ class "text-center text-small" ]
                             [ p []
-                                [ text "This space is used by The Haven to remind people to call the Police in emergency situations. It could be used for any kind of risk related reminder by other charities." ]
+                                [ text "This space is used to give a reminder about what to do in a crisis or high risk situation when the app is not the right support.." ]
                             ]
                         ]
                     ]

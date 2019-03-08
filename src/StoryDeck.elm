@@ -214,7 +214,7 @@ decks =
       , teaser = "This shows you how we believe shaping stories from real people can work so that they help people feel ready to take action"
       , teaserImgPath = AssetPath "story_images/ourproject-image1.jpg"
       , teaserImgAltText = "A man kneeling on the floor of a dark room with his head in his hands"
-      , relatedInfo = [ 2, 5 ]
+      , relatedInfo = [ 1, 3 ]
       , cards =
             [ { quoteText =
                     """The story starts with some background. It gives us key pieces of information that make this person’s story clear and
@@ -258,10 +258,10 @@ decks =
       , teaser = "This is one of the six stories created for The Haven’s app. The story uses Ama’s words but the names have been changed, and the story has been shaped to help others."
       , teaserImgPath = AssetPath "story_images/ama_1.jpg"
       , teaserImgAltText = "A pregnant woman wrapped in chains"
-      , relatedInfo = [ 2, 5 ]
+      , relatedInfo = [ 1, 3 ]
       , cards =
             [ { quoteText =
-                    """I was born in Senegal and had lived in Spain as well as the UK and I couldn’t speak English. My husband became abusive 
+                    """I was born in Senegal and had lived in Spain as well as the UK and I couldn’t speak English. My husband became abusive
                     after I got pregnant with our first child. For years I suffered so many different things
                     """
               , imagePath = AssetPath "story_images/ama_1.jpg"
@@ -269,7 +269,7 @@ decks =
               , messageText = Nothing
               }
             , { quoteText =
-                    """I wanted to leave, but my husband told me without him I would be sent back to Africa. I was completely dependent on my 
+                    """I wanted to leave, but my husband told me without him I would be sent back to Africa. I was completely dependent on my
                     husband, I did not see any way out of my situation.
                     """
               , imagePath = AssetPath "story_images/ama_2.jpg"
@@ -277,7 +277,7 @@ decks =
               , messageText = Just "I did not know my rights in the UK and had no money but soon I discovered I had choices."
               }
             , { quoteText =
-                    """One day I broke down at my health care class. My teacher was so supportive. She told me about The Haven and they found me a 
+                    """One day I broke down at my health care class. My teacher was so supportive. She told me about The Haven and they found me a
                     support worker who spoke Spanish. They talked to social services for me and found me an immigration solicitor.
                     """
               , imagePath = AssetPath "story_images/ama_3.jpg"
@@ -285,7 +285,7 @@ decks =
               , messageText = Nothing
               }
             , { quoteText =
-                    """I have a house now, with my children, and away from my abusive husband. My solicitor is helping me with immigration documents and divorce papers. 
+                    """I have a house now, with my children, and away from my abusive husband. My solicitor is helping me with immigration documents and divorce papers.
                     For the first time in a long time I can sleep and look forward to the future.
                     """
               , imagePath = AssetPath "story_images/ama_4.jpg"
