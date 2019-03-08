@@ -1,22 +1,4 @@
 @font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: normal;
-  src: url('./fonts/nunito.eot'); /* IE9 */
-  src: url('./fonts/nunito.woff') format('woff'), /* Modern Browsers */
-       url('./fonts/nunito.ttf') format('truetype'); /* Mobile */
-}
-
-@font-face {
-  font-family: 'Caveat';
-  font-style: normal;
-  font-weight: normal;
-  src: url('./fonts/caveat.eot'); /* IE9 */
-  src: url('./fonts/caveat.woff') format('woff'), /* Modern Browsers */
-       url('./fonts/caveat.ttf') format('truetype'); /* Mobile */
-}
-
-@font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: normal;
@@ -33,34 +15,27 @@ $nav-height-desktop--double-line: 77px;
 
 ------------------------------ */
 
-// Haven variables
-$old-blue: #4ab3ce;
-$old-blue-light: lighten($old-blue, 30%);
-$old-blue-dark: #0099be;
-$old-blue-darker: #007b99;
-$old-grey: #e1e2e6;;
-$old-shadow: rgba(89, 97, 116, 0.4);
-$old-white: #fafafa;
-
 // Contemplating Action variables
-$Purple: #662483;
-$LightBlue: #4575BA;
-$DarkBlue: #1A1E64;
-$Black: #3c3c3b;
-$White: #F5F5F5;
-$LightPurpleGrey: #E4E1E7;
-$LightGrey: #eee;
-$colour: #30336d;
+$purple: #662483;
+$purple-light: #8B1ABC;
+$blue-darkest: #1A1E64;
+$blue-dark: #30336d;
+$blue-light: #4575BA;
+$black: #3c3c3b;
+$white: #F5F5F5;
+$grey-light: #eee;
+$grey-light-purple: #E4E1E7;
 
 // Utility variables
 $white-pure: #ffffff;
 $black-pure: #000000;
+$shadow: rgba(89, 97, 116, 0.4);
 
 // Theme colours
-$primary-colour: $DarkBlue;
-$secondary-colour: $LightBlue;
-$text-colour: $Black;
-$interaction-colour: $Purple;
+$primary-colour: $blue-darkest;
+$secondary-colour: $blue-light;
+$text-colour: $black;
+$interaction-colour: $purple;
 
 $max-width: 1044px;
 
@@ -229,7 +204,7 @@ img {
   justify-content: center;
   height: 50px;
   width: 50px;
-  color: $White;
+  color: $white;
   font-size: 1.75rem;
   border-radius: 50%;
   background-color: $secondary-colour;
@@ -341,7 +316,7 @@ img {
 
 .button {
   display: inline-block;
-  color: $White;
+  color: $white;
   background-color: $interaction-colour;
   border-radius: 5em;
   padding: 15px 20px;
@@ -353,7 +328,7 @@ img {
 .button:active,
 .button:focus,
 .button:hover {
-  background-color: $interaction-colour;
+  background-color: $purple-light;
 }
 
 .button--center {
@@ -370,14 +345,14 @@ img {
 }
 
 .button--alternate {
-  color: $White;
+  color: $white;
   background-color: $interaction-colour;
 }
 
 .button--alternate:active,
 .button--alternate:focus,
 .button--alternate:hover {
-  background-color: $interaction-colour;
+  background-color: $purple-light;
 }
 
 .button--icon {
@@ -431,11 +406,11 @@ img {
 
 .section {
   padding: 40px 20px;
-  background-color: $White;
+  background-color: $white;
 }
 
 .section--darker {
-  background-color: $LightGrey;
+  background-color: $grey-light;
 }
 
 .section--lighter {
@@ -443,7 +418,7 @@ img {
 }
 .section--highlight {
   color: $text-colour;
-  background-color: $LightPurpleGrey;
+  background-color: $grey-light-purple;
 }
 
 .section--align-bottom {
@@ -508,7 +483,7 @@ img {
 }
 
 .nav-icon {
-  color: $old-grey;
+  color: $white;
 }
 
 nav,
@@ -524,7 +499,7 @@ nav,
 .nav-item a {
   flex: 1 0 auto;
   padding: 15px 10px;
-  color: $old-white;
+  color: $white;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
@@ -534,13 +509,13 @@ nav,
 .nav-item--active,
 .nav-item:hover {
   .nav-item-text {
-    color: $old-blue-light;
+    color: $white;
   }
 }
 
 .nav-item a:active {
   .nav-item-text {
-    color: $old-blue;
+    color: $white;
   }
 }
 
@@ -597,16 +572,16 @@ nav,
   justify-content: center;
   padding: 0;
   background: $secondary-colour;
-  color: $White;
+  color: $white;
 }
 
 .section--header a {
-  color: $White;
+  color: $white;
   text-decoration: none;
 }
 
 .section--header a:hover {
-  border-bottom: 5px solid $White;
+  border-bottom: 5px solid $white;
   cursor: pointer;
 }
 
@@ -617,7 +592,7 @@ nav,
   bottom: 1px;
   width: 100%;
   height: 4px;
-  box-shadow: 0 3px 4px 0 $old-shadow;
+  box-shadow: 0 3px 4px 0 $shadow;
 }
 
 .home .section--header {
@@ -661,7 +636,7 @@ nav,
   padding: 15px;
   border-radius: 10px;
   font-size: 1rem;
-  background-color: $White;
+  background-color: $white;
 }
 
 .card + .card {
@@ -729,7 +704,7 @@ nav,
 .info:active,
 .info:focus,
 .info:hover {
-  background-color: $old-blue-dark;
+  background-color: $purple;
 }
 
 .info--icon {
@@ -759,7 +734,7 @@ nav,
   and (max-device-width: 1024px)
   and (-webkit-min-device-pixel-ratio: 1) {
     .info:hover {
-      background-color: $old-blue-darker;
+      background-color: $purple;
     }
 }
 
@@ -804,7 +779,7 @@ nav,
   height: 0;
   border-left: 35px solid transparent;
   border-right: 35px solid transparent;
-  border-top: 45px solid $old-white;
+  border-top: 45px solid $white;
 }
 
 .story--illustration {
@@ -817,7 +792,7 @@ nav,
 }
 
 .story--message {
-  background-color: $old-grey;
+  background-color: $white;
   color: $text-colour;
   font-size: 1rem;
   margin: 0;
