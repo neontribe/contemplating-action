@@ -119,54 +119,52 @@ placeholderInfo =
 info : List Info
 info =
     [ { id = 1
-      , name = "Bite size information"
-      , slug = "bitesize-information"
-      , icon = "information"
+      , name = "About the project"
+      , slug = "about"
+      , icon = "question-circle-o"
       , infoText =
-            [ """We include bite size information relating to a small number of fears and barriers that are likely to be stopping people from taking the
-            next step. Keeping the language simple we aim to be open and honest, with a reassuring tone. We resist the temptation to provide all the
-            information people might need. Our goal is to offer just enough to help people reach out to support services. Other websites have excellent
-            longer content."""
+            [ """In 2017, The Haven, Wolverhampton, Neontribe and women who had been through domestic abuse co-designed a web app to encourage other women in
+            that situation to seek support and advice. We want to find out if the structure of that app could be used by different organisations. We believe
+            that reassuring people that their fears and challenges are shared could help them take early steps on a journey of change such as contacting a support service. """
             ]
       }
     , { id = 2
-      , name = "Illustrations"
-      , slug = "illustrations"
-      , icon = "illustrations"
+      , name = "Bite size information"
+      , slug = "bite-size-info"
+      , icon = "information"
       , infoText =
-            [ """Many organisations struggle with the same problem with stories. People often say that they want to hear stories from other people who
-             have been through the same problems as them, but when the organisation provides stories, no one looks at them. We believe that visual
-             storytelling can change this. We are testing whether the 4 image format engages people in a way that other storytelling might not do."""
+            [ """We include bite size information relating to a small number of fears and barriers that are likely to be stopping people from taking the next step. Keeping the
+            language simple we aim to be open and honest, with a reassuring tone. We resist the temptation to provide all the information people might need. Our goal is to offer just enough to
+            help people reach out to support services. Other websites have excellent longer content. """
             ]
       }
     , { id = 3
-      , name = "What is the survey?"
-      , slug = "what-is-the-survey"
-      , icon = "survey"
+      , name = "Illustrations"
+      , slug = "Illustrations"
+      , icon = "illustrations"
       , infoText =
-            [ """The survey is research with key staff in organisations that run helplines or web chats or text services. We want to know whether those
-            staff who work most closely with people seeking support think this approach could work. We also want to know what concerns or hopes they
-            might have, if they were to try creating an app like this within their organisation."""
+            [ """Many organisations struggle with the same problem with stories. We know stories can be powerful, we want to use them for many reasons.
+            Unfortunately people don’t always like to spend time reading them online. We believe that visual storytelling can change this. Contemplating Action has a budget for
+            artists, to test whether this 4 image story format can encourage more people to read them."""
             ]
       }
     , { id = 4
-      , name = "Can my organisation try this?"
-      , slug = "try-this"
-      , icon = "organisation"
+      , name = "What is the survey?"
+      , slug = "survey"
+      , icon = "survey"
       , infoText =
-            [ """We are currently working with 3 charities as well as The Haven, Wolverhampton whose app inspired the project. We are testing two things.
-            Firstly, can we get people from social media or other locations into the app. Secondly, if we do, does it encourage people to seek support.
-            When this trial is complete in the summer we will be looking for more organisations to work with. Please take the survey if you are interested."""
+            [ """We would like you to take our survey. We want to understand whether staff in organisations who work most closely with people seeking support think this approach
+            could work. We’re interested in your instincts as well as any evidence you might share. It will help us decide where to take the project next."""
             ]
       }
     , { id = 5
-      , name = "What does taking part cost?"
-      , slug = "cost"
-      , icon = "cost"
+      , name = "Can my organisation try this?"
+      , slug = "organisation"
+      , icon = "organisation"
       , infoText =
-            [ """At the moment, we have a budget to support the charities working with us and pay for new stories and illustrations that work for them.
-            We expect that all stages of testing whether this approach is useful will be free for any charities taking part. The testing is designed
-            to help us decide whether a free or low cost tool allowing charities to create their own content using this structure would be useful."""
+            [ """We’re actively looking for partner charities who want to explore the question “can visual storytelling help us encourage people to use support services”.
+            So if you have a helpline, webchat, messaging service or even a face to face service we could work together. We have small amounts of funding to support charities
+            getting involved. Please show your interest by taking the survey."""
             ]
       }
     , { id = 6
@@ -174,10 +172,8 @@ info =
       , slug = "who-is-involved"
       , icon = "involved"
       , infoText =
-            [ """This is a partnership between CAST - a charity driving social change through digital technology - and digital development agency
-            Neontribe. It is one of a number of projects aimed at supporting civic and social organisations to grow confident in using digital tools
-            to achieve their charitable objectives.  It is possible thanks to The Haven, Wolverhampton sharing technology developed for the people
-            they work with."""
+            [ """This is a partnership between CAST - a charity driving social change through digital technology - and digital development agency Neontribe. It is one of a number of projects aimed at supporting civic and social organisations to grow confident in using digital tools to achieve their charitable objectives.
+            It is possible thanks to The Haven, Wolverhampton sharing technology developed for and with the people they work with."""
             ]
       }
     ]

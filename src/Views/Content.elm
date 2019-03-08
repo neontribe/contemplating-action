@@ -44,7 +44,7 @@ view model =
                         support services for people who did not follow the direct link to the stories.
                         """
                         ]
-                    , p [] [ a [ class "link link--plain", href "https://neontribe.co.uk/blog" ] [ text "Read more about this project" ] ]
+                    , p [] [ a [ class "link link--plain", href "https://neontribe.co.uk/blog" ] [ text "Read in depth about this project" ] ]
                     , div [ class "button-group" ]
                         [ div [ class "desktop-only" ]
                             [ div []
@@ -77,7 +77,7 @@ view model =
                     [ div [ class "inset" ]
                         [ div [ class "text-center text-small" ]
                             [ p []
-                                [ text "This space is used by The Haven to remind people to call the Police in emergency situations. It could be used for any kind of risk related reminder by other charities." ]
+                                [ text "This space is used to give a reminder about what to do in a crisis or high risk situation when the app is not the right support.." ]
                             ]
                         ]
                     ]
