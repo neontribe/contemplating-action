@@ -224,7 +224,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(15);
+var	fixUrls = __webpack_require__(12);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -568,12 +568,15 @@ module.exports = __webpack_require__(6);
 __webpack_require__(7);
 
 // Requiring after app.scss ensures correct selector precedence
-__webpack_require__(16);
+__webpack_require__(13);
 
 // Require index.html so it gets copied to dist
-__webpack_require__(21);
+__webpack_require__(18);
 
 // Require icons
+__webpack_require__(19);
+__webpack_require__(20);
+__webpack_require__(21);
 __webpack_require__(22);
 __webpack_require__(23);
 __webpack_require__(24);
@@ -587,11 +590,8 @@ __webpack_require__(31);
 __webpack_require__(32);
 __webpack_require__(33);
 __webpack_require__(34);
-__webpack_require__(35);
-__webpack_require__(36);
-__webpack_require__(37);
 
-var Elm = __webpack_require__(38);
+var Elm = __webpack_require__(35);
 var mountNode = document.getElementById('main');
 
 // .embed() can take an optional second argument. This would be an object describing the data we need to start a program, i.e. a userID or some token
@@ -667,7 +667,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: 'Nunito';\n  font-style: normal;\n  font-weight: normal;\n  src: url(" + escape(__webpack_require__(9)) + ");\n  /* IE9 */\n  src: url(" + escape(__webpack_require__(10)) + ") format(\"woff\"), url(" + escape(__webpack_require__(11)) + ") format(\"truetype\");\n  /* Mobile */ }\n\n@font-face {\n  font-family: 'Caveat';\n  font-style: normal;\n  font-weight: normal;\n  src: url(" + escape(__webpack_require__(12)) + ");\n  /* IE9 */\n  src: url(" + escape(__webpack_require__(13)) + ") format(\"woff\"), url(" + escape(__webpack_require__(14)) + ") format(\"truetype\");\n  /* Mobile */ }\n\n/* ------------------------------\n\n   Variables\n\n------------------------------ */\n/* ------------------------------\n\n   Reset\n\n------------------------------ */\n*,\n*::before,\n*::after {\n  box-sizing: border-box; }\n\n*:focus {\n  outline-color: #a6e263; }\n\n:root {\n  font-size: 16px;\n  font-family: 'Nunito', sans-serif;\n  line-height: 1.5; }\n\nbody {\n  max-width: 1044px;\n  padding: 0;\n  margin: 0 auto;\n  font-size: 1.125rem;\n  color: #596174;\n  background-color: #fafafa;\n  /* Allow space for mobile nav without overlapping content */\n  margin-bottom: 71px; }\n\nbutton {\n  border: 0;\n  background: none;\n  padding: 0;\n  cursor: pointer;\n  font-size: inherit; }\n\ninput {\n  font: inherit;\n  border: none;\n  border-radius: 0;\n  padding: 0;\n  -webkit-appearance: none; }\n\nlabel {\n  cursor: pointer; }\n\nul, ol, li {\n  list-style: none;\n  margin: 0;\n  padding: 0; }\n\n.ul--disc li {\n  list-style: disc;\n  margin-left: 30px; }\n\np {\n  margin: 0; }\n\nbutton + p {\n  margin-top: 3em; }\n\np + p {\n  line-height: 1.5;\n  margin-top: 1em; }\n\nh1, h2, h3, h4, h5, h6 {\n  padding: 0;\n  margin: 0; }\n\nh1 {\n  font-size: 3.5rem;\n  line-height: 1.5; }\n\nh2 {\n  font-size: 1.5rem;\n  margin-bottom: 1em;\n  line-height: 1.5; }\n\nh3, h4, h5 {\n  font-size: 1.2rem;\n  line-height: 1.5;\n  margin-top: 1em; }\n\nbutton {\n  font-family: inherit;\n  color: inherit; }\n\nimg {\n  height: auto;\n  max-width: 100%; }\n\n@media screen and (min-width: 721px) {\n  :root {\n    font-size: 22px; }\n  body {\n    /* Remove spacing for lower navigation */\n    margin-bottom: 0; } }\n\n/* ------------------------------\n\n   Page\n\n------------------------------ */\n/* IE11 helper */\n.content {\n  min-height: 1px; }\n\n.page {\n  min-height: 100vh;\n  position: relative;\n  display: flex;\n  flex-direction: column; }\n\n@media screen and (min-width: 721px) {\n  .page {\n    /* Provide spacing for navigation */\n    padding-top: 77px; } }\n\n@media screen and (min-width: 860px) {\n  .page {\n    /* Provide spacing for navigation */\n    padding-top: 54px; } }\n\n/* ------------------------------\n\n   Icon\n\n------------------------------ */\n.icon {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 50px;\n  width: 50px;\n  color: #ffffff;\n  font-size: 1.75rem;\n  border-radius: 50%;\n  background-color: #b8e388; }\n\n.icon--large {\n  height: 100px;\n  width: 100px;\n  font-size: 100px; }\n\n.icon--alternate {\n  color: #a6e263;\n  margin-left: 10px; }\n\n/* ------------------------------\n\n   Text\n\n------------------------------ */\n.text-center {\n  text-align: center; }\n\n.text-right {\n  text-align: right; }\n\n.text-small {\n  font-size: 1rem; }\n\n.quote:before {\n  content: open-quote; }\n\n.quote:after {\n  content: close-quote; }\n\n/* ------------------------------\n\n   Title\n\n------------------------------ */\n.title--small {\n  font-size: 1.25rem;\n  margin-bottom: 10px; }\n\n.title--alternate {\n  color: #0099be; }\n\n/* ------------------------------\n\n   Link\n\n------------------------------ */\n.link {\n  font-weight: bold;\n  color: inherit;\n  border-bottom: 1px solid currentColor;\n  text-decoration: none; }\n  .link:hover, .link:active {\n    color: #0099be; }\n\n.link--plain {\n  color: #007b99;\n  border-bottom-color: transparent;\n  font-weight: normal;\n  text-decoration: none; }\n  .link--plain:hover, .link--plain:active {\n    color: #0099be;\n    border-bottom-color: currentColor; }\n\n.link--unstyled {\n  color: inherit;\n  text-decoration: none; }\n\n.link--stateless:hover, .link--stateless:active, .link--stateless:focus {\n  color: inherit !important;\n  border-bottom-color: inherit !important; }\n\n/* ------------------------------\n\n   Button\n\n------------------------------ */\n.button {\n  display: inline-block;\n  color: #ffffff;\n  background-color: #007b99;\n  border-radius: 5em;\n  padding: 15px 20px;\n  font-size: 1.125rem;\n  font-weight: bold;\n  text-decoration: none; }\n\n.button:active,\n.button:focus,\n.button:hover {\n  background-color: #0099be; }\n\n.button--center {\n  margin: auto; }\n\n.button + .button {\n  margin-top: 20px; }\n\n.button--full-width {\n  width: 100%;\n  text-align: center; }\n\n.button--alternate {\n  color: #ffffff;\n  background-color: #007b99; }\n\n.button--alternate:active,\n.button--alternate:focus,\n.button--alternate:hover {\n  background-color: #0099be; }\n\n.button--icon {\n  margin-right: 10px; }\n\n.button-group {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n  margin-top: 40px; }\n\n.button-group--row {\n  flex-direction: row; }\n\n@media screen and (min-width: 360px) {\n  .button {\n    white-space: nowrap; } }\n\n@media screen and (min-width: 800px) {\n  .button--default-width--desktop {\n    width: auto !important;\n    padding: 15px 50px; }\n  .button-group {\n    flex-direction: row; }\n  .button + .button {\n    margin-top: 0;\n    margin-left: 20px; } }\n\n/* ------------------------------\n\n   Section\n\n------------------------------ */\n.section {\n  padding: 40px 20px;\n  background-color: #fafafa; }\n\n.section--darker {\n  background-color: #f4f2f0; }\n\n.section--lighter {\n  background-color: #ffffff; }\n\n.section--highlight {\n  color: #596174;\n  background-color: #f2f4f8; }\n\n.section--align-bottom {\n  padding-bottom: 0; }\n\n.section--vertical-fill-center {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  flex: 1 0 auto;\n  min-height: 1px; }\n\n.section--info {\n  align-items: center; }\n\n.section--story-end {\n  padding-top: 0; }\n\n@media screen and (min-width: 721px) {\n  .home .section--header {\n    padding: 0; }\n  .section {\n    padding: 60px;\n    display: flex;\n    flex-direction: column;\n    justify-content: center; }\n  .section--align-bottom {\n    padding-bottom: 0; }\n  .section--story-end {\n    padding-top: 0; } }\n\n/* ------------------------------\n\n   Navigation\n\n------------------------------ */\n.nav-bar {\n  display: flex;\n  align-items: stretch;\n  background-color: #596174;\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  z-index: 100; }\n\n.nav-icon {\n  color: #e1e2e6; }\n\nnav,\n.nav-item {\n  display: flex;\n  flex: 1 0 auto;\n  justify-content: center;\n  align-items: center;\n  white-space: nowrap; }\n\n.nav-item--text-only,\n.nav-item a {\n  flex: 1 0 auto;\n  padding: 15px 10px;\n  color: #fafafa;\n  text-align: center;\n  text-decoration: none;\n  font-weight: bold;\n  line-height: 1; }\n\n.nav-item--active .nav-item-text,\n.nav-item:hover .nav-item-text {\n  color: #c2e6ef; }\n\n.nav-item a:active .nav-item-text {\n  color: #4ab3ce; }\n\n.nav-item-text {\n  display: block; }\n\n.nav-item-text + .nav-item-text {\n  margin-top: 5px; }\n\n@media screen and (min-width: 721px) {\n  .nav-bar {\n    top: 0;\n    bottom: auto;\n    left: auto;\n    right: auto;\n    margin: auto;\n    width: 100%;\n    max-width: 1044px; }\n  nav, .nav-bar {\n    justify-content: flex-end; }\n  .nav-item {\n    flex: 0 1 auto; }\n  .nav-item-text {\n    font-size: 0.7273rem;\n    margin: 5px;\n    vertical-align: middle; } }\n\n@media screen and (min-width: 860px) {\n  .nav-item-text {\n    display: inline;\n    font-size: 0.8181rem; } }\n\n/* ------------------------------\n\n   Header\n\n------------------------------ */\n.section--header {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  padding: 0;\n  font-family: 'Caveat', cursive;\n  background-image: radial-gradient(at bottom, #ffda8a, #ffa17b); }\n\n.section--header a {\n  color: #596174;\n  text-decoration: none; }\n\n.section--header a:hover {\n  border-bottom: 5px solid #596174;\n  cursor: pointer; }\n\n.section--header:after {\n  content: '';\n  position: absolute;\n  left: 0;\n  bottom: 1px;\n  width: 100%;\n  height: 4px;\n  box-shadow: 0 3px 4px 0 rgba(89, 97, 116, 0.4); }\n\n.home .section--header {\n  height: 120px;\n  font-size: 1.512rem;\n  align-items: center; }\n\n.home .section--header::after {\n  display: none; }\n\n/* ------------------------------\n\n   Footer\n\n------------------------------ */\n@media screen and (min-width: 721px) {\n  .section--footer {\n    padding: 40px 20px;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    width: 100%; }\n  .footer--item {\n    margin: 0 20px; } }\n\n/* ------------------------------\n\n   Card\n\n------------------------------ */\n.card {\n  width: 100%;\n  padding: 15px;\n  border-radius: 10px;\n  font-size: 1rem;\n  background-color: #fafafa; }\n\n.card + .card {\n  margin-top: 20px; }\n\n.card--alternate {\n  color: #ffffff;\n  background-color: #007b99; }\n\n.card--with-icon {\n  position: relative;\n  padding: 70px 20px 40px;\n  margin-top: 40px; }\n\n.card--icon {\n  position: absolute;\n  top: -50px;\n  left: 0;\n  right: 0;\n  margin: auto; }\n\n.card--thumbnail {\n  float: left;\n  margin-right: 15px;\n  width: 80px;\n  height: 80px; }\n\n.card--quote {\n  margin-left: 0;\n  margin-right: 0; }\n\n@media screen and (min-width: 721px) {\n  .card--thumbnail {\n    width: 210px;\n    height: 210px; } }\n\n/* ------------------------------\n\n    Info to help you\n\n------------------------------ */\n.section--info .card {\n  margin-top: 10px; }\n\n.info {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  width: 100%;\n  text-align: left;\n  line-height: 1.5;\n  text-decoration: none; }\n\n.info:active,\n.info:focus,\n.info:hover {\n  background-color: #0099be; }\n\n.info--icon {\n  flex-shrink: 0;\n  margin-right: 20px;\n  font-size: 50px; }\n\n.info--text {\n  flex: 1 1 auto;\n  margin-right: 10px; }\n\n.info--list {\n  width: 100%; }\n\n@media screen and (min-width: 721px) {\n  .info--list {\n    width: 60%; } }\n\n/* Stops hover issue on iPad */\n@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n  .info:hover {\n    background-color: #007b99; } }\n\n/* ------------------------------\n\n   Stories\n\n------------------------------ */\n.stories--more-link {\n  margin-top: 10px; }\n\n/* ------------------------------\n\n   Story\n\n------------------------------ */\n.story {\n  position: relative;\n  min-height: 1px; }\n\n.story + .story {\n  margin-top: 0; }\n\n.story:not(:last-child) {\n  margin-bottom: 45px; }\n\n.story:not(:last-child)::after {\n  content: '';\n  position: absolute;\n  bottom: -45px;\n  left: 0;\n  right: 0;\n  margin: auto;\n  width: 0;\n  height: 0;\n  border-left: 35px solid transparent;\n  border-right: 35px solid transparent;\n  border-top: 45px solid #fafafa; }\n\n.story--illustration {\n  position: relative;\n  margin-top: 20px; }\n\n.story--illustration img {\n  display: block; }\n\n.story--message {\n  background-color: #e1e2e6;\n  color: #596174;\n  font-size: 1rem;\n  margin: 0;\n  padding: 5px;\n  text-align: center; }\n\n/* .button--group override (not ideal) */\n.story--related {\n  width: 100%;\n  margin-top: 10px;\n  margin-bottom: 20px;\n  /* Same as `.button + .button` spacing */ }\n\n/* ------------------------------\n\n   Supporter\n\n------------------------------ */\n.supporter--logo-group {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-wrap: wrap;\n  width: 100%;\n  padding: 20px 40px; }\n\n.supporter--logo {\n  height: 166px;\n  margin: 20px 40px; }\n\n@media screen and (max-width: 721px) {\n  .supporter--logo {\n    width: 100%;\n    margin: 10px 0px; } }\n\n/* ------------------------------\n\n   Helper\n\n------------------------------ */\n.block {\n  display: block; }\n\n.inset {\n  margin: 0 10px; }\n\n.desktop-only {\n  display: none; }\n\n@media screen and (min-width: 721px) {\n  .desktop-only {\n    display: inherit; }\n  .mobile-only {\n    display: none; } }\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: 'Poppins';\n  font-style: normal;\n  font-weight: 600;\n  src: url(" + escape(__webpack_require__(9)) + ") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Poppins';\n  font-style: normal;\n  font-weight: bold;\n  src: url(" + escape(__webpack_require__(10)) + ") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Poppins';\n  font-style: normal;\n  font-weight: normal;\n  src: url(" + escape(__webpack_require__(11)) + ") format(\"truetype\"); }\n\n/* ------------------------------\n\n   Variables\n\n------------------------------ */\n/* ------------------------------\n\n   Reset\n\n------------------------------ */\n*,\n*::before,\n*::after {\n  box-sizing: border-box; }\n\n*:focus {\n  outline-color: #07c103; }\n\n:root {\n  font-size: 16px;\n  font-family: 'Poppins', sans-serif;\n  line-height: 1.5; }\n\nbody {\n  max-width: 1044px;\n  padding: 0;\n  margin: 0 auto;\n  font-size: 1.1rem;\n  color: #3c3c3b;\n  background-color: #ffffff;\n  /* Allow space for mobile nav without overlapping content */\n  margin-bottom: 71px; }\n\nbutton {\n  border: 0;\n  background: none;\n  padding: 0;\n  cursor: pointer;\n  font-size: inherit; }\n\ninput {\n  font: inherit;\n  border: none;\n  border-radius: 0;\n  padding: 0;\n  -webkit-appearance: none; }\n\nlabel {\n  cursor: pointer; }\n\nul, ol, li {\n  list-style: none;\n  margin: 0;\n  padding: 0; }\n\n.ul--disc li {\n  list-style: disc;\n  margin-left: 30px; }\n\np {\n  margin: 0;\n  font-family: 'Poppins'; }\n\nbutton + p {\n  margin-top: 3em; }\n\np + p {\n  line-height: 1.5;\n  margin-top: 1em; }\n\nh1, h2, h3, h4, h5, h6 {\n  padding: 0;\n  margin: 0;\n  font-family: 'Poppins'; }\n\nh1 {\n  font-size: 1.75em;\n  line-height: 2.65; }\n\nh2 {\n  font-size: 1.35rem;\n  margin-bottom: 1em;\n  line-height: 1.5;\n  font-weight: 600; }\n\nh3, h4, h5 {\n  font-size: 1.1rem;\n  line-height: 1.5;\n  margin-top: 1em; }\n\nbutton {\n  font-family: inherit;\n  color: inherit; }\n\nimg {\n  height: auto;\n  max-width: 100%; }\n\n@media screen and (min-width: 721px) {\n  :root {\n    font-size: 22px; }\n  body {\n    /* Remove spacing for lower navigation */\n    margin-bottom: 0; } }\n\n/* ------------------------------\n\n   Page\n\n------------------------------ */\n/* IE11 helper */\n.content {\n  min-height: 1px; }\n\n.page {\n  min-height: 100vh;\n  position: relative;\n  display: flex;\n  flex-direction: column; }\n\n@media screen and (min-width: 721px) {\n  .page {\n    /* Provide spacing for navigation */\n    padding-top: 77px; } }\n\n@media screen and (min-width: 860px) {\n  .page {\n    /* Provide spacing for navigation */\n    padding-top: 54px; } }\n\n/* ------------------------------\n\n   Icon\n\n------------------------------ */\n.icon {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 50px;\n  width: 50px;\n  color: #F5F5F5;\n  font-size: 1.75rem;\n  border-radius: 50%;\n  background-color: #4575BA; }\n\n.icon--large {\n  height: 100px;\n  width: 100px;\n  font-size: 100px; }\n\n.icon--alternate {\n  color: #3c3c3b;\n  margin-left: 10px; }\n\n/* ------------------------------\n\n   Text\n\n------------------------------ */\n.text-center {\n  text-align: center; }\n\n.text-right {\n  text-align: right; }\n\n.text-small {\n  font-size: 1rem; }\n\n.quote:before {\n  content: open-quote; }\n\n.quote:after {\n  content: close-quote; }\n\n/* ------------------------------\n\n   Title\n\n------------------------------ */\n.title--small {\n  font-size: 1.25rem;\n  margin-bottom: 10px; }\n\n.title--alternate {\n  color: #1A1E64; }\n\n/* ------------------------------\n\n   Link\n\n------------------------------ */\n.link {\n  font-family: 'Poppins';\n  color: inherit;\n  border-bottom: 2px solid currentColor;\n  text-decoration: none; }\n  .link:hover, .link:active {\n    color: #662483; }\n\n.link--plain {\n  color: #662483;\n  border-bottom-color: transparent;\n  font-weight: normal;\n  text-decoration: none; }\n  .link--plain:hover, .link--plain:active {\n    color: #662483;\n    border-bottom-color: currentColor; }\n\n.link--unstyled {\n  color: inherit;\n  text-decoration: none; }\n\n.link--stateless:hover, .link--stateless:active, .link--stateless:focus {\n  color: inherit !important;\n  border-bottom-color: inherit !important; }\n\n/* ------------------------------\n\n   Button\n\n------------------------------ */\n.button {\n  display: inline-block;\n  color: #F5F5F5;\n  background-color: #662483;\n  border-radius: 5em;\n  padding: 15px 20px;\n  font-size: 1.125rem;\n  font-weight: bold;\n  text-decoration: none; }\n\n.button:active,\n.button:focus,\n.button:hover {\n  background-color: #8B1ABC; }\n\n.button--center {\n  margin: auto; }\n\n.button + .button {\n  margin-top: 20px; }\n\n.button--full-width {\n  width: 100%;\n  text-align: center; }\n\n.button--alternate {\n  color: #F5F5F5;\n  background-color: #662483; }\n\n.button--alternate:active,\n.button--alternate:focus,\n.button--alternate:hover {\n  background-color: #8B1ABC; }\n\n.button--icon {\n  margin-right: 10px;\n  vertical-align: middle; }\n\n.button--icon.icon-question-circle-o {\n  position: relative;\n  top: -2px; }\n\n.button-group {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n  margin-top: 40px; }\n\n.button-group--row {\n  flex-direction: row; }\n\n@media screen and (min-width: 360px) {\n  .button {\n    white-space: nowrap; } }\n\n@media screen and (min-width: 800px) {\n  .button--default-width--desktop {\n    width: auto !important;\n    padding: 15px 50px; }\n  .button-group {\n    flex-direction: row; }\n  .button + .button {\n    margin-top: 0;\n    margin-left: 20px; } }\n\n/* ------------------------------\n\n   Section\n\n------------------------------ */\n.section {\n  padding: 40px 20px;\n  background-color: #F5F5F5; }\n\n.section--darker {\n  background-color: #eee; }\n\n.section--lighter {\n  background-color: #ffffff; }\n\n.section--highlight {\n  color: #3c3c3b;\n  background-color: #E4E1E7; }\n\n.section--align-bottom {\n  padding-bottom: 0; }\n\n.section--vertical-fill-center {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  flex: 1 0 auto;\n  min-height: 1px; }\n\n.section--info {\n  align-items: center; }\n\n.section--story-end {\n  padding-top: 0; }\n\n@media screen and (min-width: 721px) {\n  .home .section--header {\n    padding: 0; }\n  .section {\n    padding: 60px;\n    display: flex;\n    flex-direction: column;\n    justify-content: center; }\n  .section--align-bottom {\n    padding-bottom: 0; }\n  .section--story-end {\n    padding-top: 0; } }\n\n/* ------------------------------\n\n   Navigation\n\n------------------------------ */\n.nav-bar {\n  display: flex;\n  align-items: stretch;\n  background-color: #1A1E64;\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  z-index: 100; }\n\n.nav-icon {\n  color: #F5F5F5; }\n\nnav,\n.nav-item {\n  display: flex;\n  flex: 1 0 auto;\n  justify-content: center;\n  align-items: center;\n  white-space: nowrap; }\n\n.nav-item--text-only,\n.nav-item a {\n  flex: 1 0 auto;\n  padding: 15px 10px;\n  color: #F5F5F5;\n  text-align: center;\n  text-decoration: none;\n  font-weight: 600;\n  line-height: 1; }\n\n.nav-item--active,\n.nav-text-selector:hover {\n  color: #F5F5F5;\n  border-bottom: 2px solid #F5F5F5; }\n\n.nav-item a:active .nav-item-text {\n  color: #F5F5F5; }\n\n.nav-item-text {\n  display: block; }\n\n.nav-item-text + .nav-item-text {\n  margin-top: 5px; }\n\n@media screen and (min-width: 721px) {\n  .nav-bar {\n    top: 0;\n    bottom: auto;\n    left: auto;\n    right: auto;\n    margin: auto;\n    width: 100%;\n    max-width: 1044px; }\n  nav, .nav-bar {\n    justify-content: flex-end; }\n  .nav-item {\n    flex: 0 1 auto; }\n  .nav-item-text {\n    font-size: 0.7273rem;\n    margin: 5px;\n    vertical-align: middle; } }\n\n@media screen and (min-width: 860px) {\n  .nav-item-text {\n    display: inline;\n    font-size: 0.8181rem; } }\n\n/* ------------------------------\n\n   Header\n\n------------------------------ */\n.section--header {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  padding: 0;\n  background: #4575BA;\n  color: #F5F5F5; }\n\n.section--header a {\n  color: #F5F5F5;\n  text-decoration: none; }\n\n.section--header a:hover {\n  border-bottom: 5px solid #F5F5F5;\n  cursor: pointer; }\n\n.section--header:after {\n  content: '';\n  position: absolute;\n  left: 0;\n  bottom: 1px;\n  width: 100%;\n  height: 4px;\n  box-shadow: 0 3px 4px 0 rgba(89, 97, 116, 0.4); }\n\n.home .section--header {\n  height: 120px;\n  font-size: 1.25rem;\n  align-items: center; }\n\n.home .section--header::after {\n  display: none; }\n\n/* ------------------------------\n\n   Footer\n\n------------------------------ */\n@media screen and (min-width: 721px) {\n  .section--footer {\n    padding: 40px 20px;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    width: 100%; }\n  .footer--item {\n    margin: 0 20px; } }\n\n/* ------------------------------\n\n   Card\n\n------------------------------ */\n.card {\n  width: 100%;\n  padding: 15px;\n  border-radius: 10px;\n  font-size: 1rem;\n  background-color: #F5F5F5; }\n\n.card + .card {\n  margin-top: 20px; }\n\n.card--alternate {\n  color: #ffffff;\n  background-color: #1A1E64; }\n\n.card--with-icon {\n  position: relative;\n  padding: 70px 20px 40px;\n  margin-top: 40px; }\n\n.card--icon {\n  position: absolute;\n  top: -50px;\n  left: 0;\n  right: 0;\n  margin: auto; }\n\n.card--thumbnail {\n  float: left;\n  margin-right: 15px;\n  width: 80px;\n  height: 80px; }\n\n.card--quote {\n  margin-left: 0;\n  margin-right: 0; }\n\n@media screen and (min-width: 721px) {\n  .card--thumbnail {\n    width: 210px;\n    height: 210px; } }\n\n/* ------------------------------\n\n    Info to help you\n\n------------------------------ */\n.section--info .card {\n  margin-top: 10px; }\n\n.info {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  width: 100%;\n  text-align: left;\n  line-height: 1.5;\n  text-decoration: none; }\n\n.info:active,\n.info:focus,\n.info:hover {\n  background-color: #662483; }\n\n.info--icon {\n  flex-shrink: 0;\n  margin-right: 20px;\n  font-size: 50px; }\n\n.info--text {\n  flex: 1 1 auto;\n  margin-right: 10px; }\n\n.info--list {\n  width: 100%; }\n\n@media screen and (min-width: 721px) {\n  .info--list {\n    width: 60%; } }\n\n/* Stops hover issue on iPad */\n@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n  .info:hover {\n    background-color: #662483; } }\n\n/* ------------------------------\n\n   Stories\n\n------------------------------ */\n.stories--more-link {\n  margin-top: 10px;\n  font-size: 0.875rem; }\n\n/* ------------------------------\n\n   Story\n\n------------------------------ */\n.story {\n  position: relative;\n  min-height: 1px; }\n\n.story + .story {\n  margin-top: 0; }\n\n.story:not(:last-child) {\n  margin-bottom: 45px; }\n\n.story:not(:last-child)::after {\n  content: '';\n  position: absolute;\n  bottom: -45px;\n  left: 0;\n  right: 0;\n  margin: auto;\n  width: 0;\n  height: 0;\n  border-left: 35px solid transparent;\n  border-right: 35px solid transparent;\n  border-top: 45px solid #F5F5F5; }\n\n.story--illustration {\n  position: relative;\n  margin-top: 20px; }\n\n.story--illustration img {\n  display: block; }\n\n.story--message {\n  background-color: #F5F5F5;\n  color: #3c3c3b;\n  font-size: 1rem;\n  margin: 0;\n  padding: 5px;\n  text-align: center; }\n\n/* .button--group override (not ideal) */\n.story--related {\n  width: 100%;\n  margin-top: 10px;\n  margin-bottom: 20px;\n  /* Same as `.button + .button` spacing */ }\n\n/* ------------------------------\n\n   Supporter\n\n------------------------------ */\n.supporter--logo-group {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-wrap: wrap;\n  width: 100%;\n  padding: 20px 40px; }\n\n.supporter--logo {\n  height: 166px;\n  margin: 20px 40px; }\n\n@media screen and (max-width: 721px) {\n  .supporter--logo {\n    width: 100%;\n    margin: 10px 0px; } }\n\n/* ------------------------------\n\n   Helper\n\n------------------------------ */\n.block {\n  display: block; }\n\n.inset {\n  margin: 0 10px; }\n\n.desktop-only {\n  display: none; }\n\n@media screen and (min-width: 721px) {\n  .desktop-only {\n    display: inherit; }\n  .mobile-only {\n    display: none; } }\n", ""]);
 
 // exports
 
@@ -676,40 +676,22 @@ exports.push([module.i, "@font-face {\n  font-family: 'Nunito';\n  font-style: n
 /* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "nunito.eot?75cb2deae35a5d180317999e8e8cf952";
+module.exports = __webpack_require__.p + "Poppins-Medium.ttf?28bc024aa3164e0b0ff2d709f17b333f";
 
 /***/ }),
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "feb87cc98b5b4c5c706bd5745e1e3b14.woff";
+module.exports = __webpack_require__.p + "Poppins-SemiBold.ttf?5bb3128376ff7ca534d894e470f1c2e9";
 
 /***/ }),
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "nunito.ttf?daa2089f6a9fb8fd0bf8c5642f915039";
+module.exports = __webpack_require__.p + "Poppins-Regular.ttf?dd1aed50244d7243b9209dc901c8d1af";
 
 /***/ }),
 /* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "caveat.eot?7950921f31523b67a449b0d44066701c";
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "27dbe3599dcc09dd24d2afe553cb3494.woff";
-
-/***/ }),
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "caveat.ttf?a6152192fdc81fbb0c35e050eacf2da4";
-
-/***/ }),
-/* 15 */
 /***/ (function(module, exports) {
 
 
@@ -804,13 +786,13 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 16 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(17);
+var content = __webpack_require__(14);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -835,7 +817,7 @@ if(false) {
 }
 
 /***/ }),
-/* 17 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var escape = __webpack_require__(0);
@@ -844,133 +826,133 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "/* Several icons in this set provided by Font Awesome by Dave Gandy - http://fontawesome.io */\n@font-face {\n  font-family: 'icomoon';\n  font-weight: normal;\n  font-style: normal;\n  src: url(" + escape(__webpack_require__(18)) + ");\n  /* IE9 */\n  src: url(" + escape(__webpack_require__(19)) + ") format(\"woff\"), url(" + escape(__webpack_require__(20)) + ") format(\"truetype\");\n  /* Mobile */ }\n\n[class^=\"icon-\"], [class*=\" icon-\"] {\n  /* use !important to prevent issues with browser extensions that change fonts */\n  font-family: 'icomoon' !important;\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n.icon-exit-door:before {\n  content: \"\\E900\"; }\n\n.icon-family-large:before {\n  content: \"\\E901\"; }\n\n.icon-pound:before {\n  content: \"\\E902\"; }\n\n.icon-police-hat-large:before {\n  content: \"\\E903\"; }\n\n.icon-leaving-large:before {\n  content: \"\\E904\"; }\n\n.icon-pound-note-large:before {\n  content: \"\\E905\"; }\n\n.icon-organisation:before {\n  content: \"\\E906\"; }\n\n.icon-survey:before {\n  content: \"\\E907\"; }\n\n.icon-involved:before {\n  content: \"\\E908\"; }\n\n.icon-cost:before {\n  content: \"\\E909\"; }\n\n.icon-illustrations:before {\n  content: \"\\E90A\"; }\n\n.icon-information:before {\n  content: \"\\E90B\"; }\n\n.icon-book:before {\n  content: \"\\F02D\"; }\n\n.icon-arrow-left:before {\n  content: \"\\F060\"; }\n\n.icon-arrow-right:before {\n  content: \"\\F061\"; }\n\n.icon-envelope:before {\n  content: \"\\F0E0\"; }\n\n.icon-question-circle-o:before {\n  content: \"\\F29C\"; }\n\n.icon-phone:before {\n  content: \"\\F095\"; }\n", ""]);
+exports.push([module.i, "/* Several icons in this set provided by Font Awesome by Dave Gandy - http://fontawesome.io */\n@font-face {\n  font-family: 'icomoon';\n  font-weight: normal;\n  font-style: normal;\n  src: url(" + escape(__webpack_require__(15)) + ");\n  /* IE9 */\n  src: url(" + escape(__webpack_require__(16)) + ") format(\"woff\"), url(" + escape(__webpack_require__(17)) + ") format(\"truetype\");\n  /* Mobile */ }\n\n[class^=\"icon-\"], [class*=\" icon-\"] {\n  /* use !important to prevent issues with browser extensions that change fonts */\n  font-family: 'icomoon' !important;\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n.icon-exit-door:before {\n  content: \"\\E900\"; }\n\n.icon-family-large:before {\n  content: \"\\E901\"; }\n\n.icon-pound:before {\n  content: \"\\E902\"; }\n\n.icon-police-hat-large:before {\n  content: \"\\E903\"; }\n\n.icon-leaving-large:before {\n  content: \"\\E904\"; }\n\n.icon-pound-note-large:before {\n  content: \"\\E905\"; }\n\n.icon-organisation:before {\n  content: \"\\E906\"; }\n\n.icon-survey:before {\n  content: \"\\E907\"; }\n\n.icon-involved:before {\n  content: \"\\E908\"; }\n\n.icon-cost:before {\n  content: \"\\E909\"; }\n\n.icon-illustrations:before {\n  content: \"\\E90A\"; }\n\n.icon-information:before {\n  content: \"\\E90B\"; }\n\n.icon-book:before {\n  content: \"\\F02D\"; }\n\n.icon-arrow-left:before {\n  content: \"\\F060\"; }\n\n.icon-arrow-right:before {\n  content: \"\\F061\"; }\n\n.icon-envelope:before {\n  content: \"\\F0E0\"; }\n\n.icon-question-circle-o:before {\n  content: \"\\F29C\"; }\n\n.icon-phone:before {\n  content: \"\\F095\"; }\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 18 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "info-icons.eot?de51a7f36f42e2bb4d3d8080c38fbaf0";
 
 /***/ }),
-/* 19 */
+/* 16 */
 /***/ (function(module, exports) {
 
 module.exports = "data:application/font-woff;base64,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"
 
 /***/ }),
-/* 20 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "info-icons.ttf?ba536f1bb4acf2883d119f51cab9ce95";
 
 /***/ }),
-/* 21 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "index.html";
 
 /***/ }),
-/* 22 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "favicon.png?3c0be403e91869f70662a77544ea792b";
 
 /***/ }),
-/* 23 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "favicon.ico?87e525b0c6c67a14d99350e9e465e777";
 
 /***/ }),
-/* 24 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "apple-icon-57x57.png?0506aed680f37c10e44fb5e50f95e20d";
 
 /***/ }),
-/* 25 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "apple-icon-60x60.png?bab1dbfa24dfefc47eaaeb9207cbd624";
 
 /***/ }),
-/* 26 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "apple-icon-72x72.png?e6056204c16e71714a39d2eff8d07ed8";
 
 /***/ }),
-/* 27 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "apple-icon-76x76.png?c5eeeb7471d345f1e1e8b41b54767b12";
 
 /***/ }),
-/* 28 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "apple-icon-114x114.png?882ad41bb9d474c98affcb7bfa80aa4f";
 
 /***/ }),
-/* 29 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "apple-icon-120x120.png?3c0be403e91869f70662a77544ea792b";
 
 /***/ }),
-/* 30 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "apple-icon-144x144.png?e11b648977727da00f210bf8c606ab29";
 
 /***/ }),
-/* 31 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "apple-icon-152x152.png?d5591ff964df205662f1f68445ae60d3";
 
 /***/ }),
-/* 32 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "apple-icon-180x180.png?0aa6008b103de4e8d10372a14607a1ea";
 
 /***/ }),
-/* 33 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "android-icon-192x192.png?a9c0a1cc4633880fe3b6cb9810acda89";
 
 /***/ }),
-/* 34 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "favicon-32x32.png?180fb29837f0d323d474ad72cfa20277";
 
 /***/ }),
-/* 35 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "favicon-96x96.png?67eef14dce76d914e1edfa887a887432";
 
 /***/ }),
-/* 36 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "favicon-16x16.png?e0dad37e8d96e33c3fd287b2060437c7";
 
 /***/ }),
-/* 37 */
+/* 34 */
 /***/ (function(module, exports) {
 
 module.exports = {"name":"App","icons":[{"src":"/android-icon-36x36.png","sizes":"36x36","type":"image/png","density":"0.75"},{"src":"/android-icon-48x48.png","sizes":"48x48","type":"image/png","density":"1.0"},{"src":"/android-icon-72x72.png","sizes":"72x72","type":"image/png","density":"1.5"},{"src":"/android-icon-96x96.png","sizes":"96x96","type":"image/png","density":"2.0"},{"src":"/android-icon-144x144.png","sizes":"144x144","type":"image/png","density":"3.0"},{"src":"/android-icon-192x192.png","sizes":"192x192","type":"image/png","density":"4.0"}]}
 
 /***/ }),
-/* 38 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
@@ -9360,15 +9342,15 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 		}
 	};
 
-	var _neontribe$haven$Assets$path = function (_p0) {
+	var _neontribe$contemplating_action$Assets$path = function (_p0) {
 		var _p1 = _p0;
 		return _p1._0;
 	};
-	var _neontribe$haven$Assets$AssetPath = function (a) {
+	var _neontribe$contemplating_action$Assets$AssetPath = function (a) {
 		return { ctor: 'AssetPath', _0: a };
 	};
 
-	var _neontribe$haven$Icon$getIcon = F2(function (name, className) {
+	var _neontribe$contemplating_action$Icon$getIcon = F2(function (name, className) {
 		var _p0 = className;
 		if (_p0.ctor === 'Just') {
 			return A2(_elm_lang$html$Html$span, {
@@ -9393,42 +9375,42 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 		}
 	});
 
-	var _neontribe$haven$Route$InfoPage = function (a) {
+	var _neontribe$contemplating_action$Route$InfoPage = function (a) {
 		return { ctor: 'InfoPage', _0: a };
 	};
-	var _neontribe$haven$Route$InfoToHelpPage = { ctor: 'InfoToHelpPage' };
-	var _neontribe$haven$Route$PrivacyPage = { ctor: 'PrivacyPage' };
-	var _neontribe$haven$Route$StoryPage = function (a) {
+	var _neontribe$contemplating_action$Route$InfoToHelpPage = { ctor: 'InfoToHelpPage' };
+	var _neontribe$contemplating_action$Route$PrivacyPage = { ctor: 'PrivacyPage' };
+	var _neontribe$contemplating_action$Route$StoryPage = function (a) {
 		return { ctor: 'StoryPage', _0: a };
 	};
-	var _neontribe$haven$Route$StoriesPage = { ctor: 'StoriesPage' };
-	var _neontribe$haven$Route$SupportersPage = { ctor: 'SupportersPage' };
-	var _neontribe$haven$Route$Timeout = { ctor: 'Timeout' };
-	var _neontribe$haven$Route$Home = { ctor: 'Home' };
-	var _neontribe$haven$Route$route = _evancz$url_parser$UrlParser$oneOf({
+	var _neontribe$contemplating_action$Route$StoriesPage = { ctor: 'StoriesPage' };
+	var _neontribe$contemplating_action$Route$SupportersPage = { ctor: 'SupportersPage' };
+	var _neontribe$contemplating_action$Route$Timeout = { ctor: 'Timeout' };
+	var _neontribe$contemplating_action$Route$Home = { ctor: 'Home' };
+	var _neontribe$contemplating_action$Route$route = _evancz$url_parser$UrlParser$oneOf({
 		ctor: '::',
-		_0: A2(_evancz$url_parser$UrlParser$map, _neontribe$haven$Route$Home, _evancz$url_parser$UrlParser$top),
+		_0: A2(_evancz$url_parser$UrlParser$map, _neontribe$contemplating_action$Route$Home, _evancz$url_parser$UrlParser$top),
 		_1: {
 			ctor: '::',
-			_0: A2(_evancz$url_parser$UrlParser$map, _neontribe$haven$Route$Timeout, _evancz$url_parser$UrlParser$top),
+			_0: A2(_evancz$url_parser$UrlParser$map, _neontribe$contemplating_action$Route$Timeout, _evancz$url_parser$UrlParser$top),
 			_1: {
 				ctor: '::',
-				_0: A2(_evancz$url_parser$UrlParser$map, _neontribe$haven$Route$SupportersPage, _evancz$url_parser$UrlParser$s('supporters')),
+				_0: A2(_evancz$url_parser$UrlParser$map, _neontribe$contemplating_action$Route$SupportersPage, _evancz$url_parser$UrlParser$s('supporters')),
 				_1: {
 					ctor: '::',
-					_0: A2(_evancz$url_parser$UrlParser$map, _neontribe$haven$Route$StoriesPage, _evancz$url_parser$UrlParser$s('stories')),
+					_0: A2(_evancz$url_parser$UrlParser$map, _neontribe$contemplating_action$Route$StoriesPage, _evancz$url_parser$UrlParser$s('stories')),
 					_1: {
 						ctor: '::',
-						_0: A2(_evancz$url_parser$UrlParser$map, _neontribe$haven$Route$StoryPage, A2(_evancz$url_parser$UrlParser_ops['</>'], _evancz$url_parser$UrlParser$s('stories'), _evancz$url_parser$UrlParser$int)),
+						_0: A2(_evancz$url_parser$UrlParser$map, _neontribe$contemplating_action$Route$StoryPage, A2(_evancz$url_parser$UrlParser_ops['</>'], _evancz$url_parser$UrlParser$s('stories'), _evancz$url_parser$UrlParser$int)),
 						_1: {
 							ctor: '::',
-							_0: A2(_evancz$url_parser$UrlParser$map, _neontribe$haven$Route$PrivacyPage, _evancz$url_parser$UrlParser$s('privacy-policy')),
+							_0: A2(_evancz$url_parser$UrlParser$map, _neontribe$contemplating_action$Route$PrivacyPage, _evancz$url_parser$UrlParser$s('privacy-policy')),
 							_1: {
 								ctor: '::',
-								_0: A2(_evancz$url_parser$UrlParser$map, _neontribe$haven$Route$InfoToHelpPage, _evancz$url_parser$UrlParser$s('info-to-help')),
+								_0: A2(_evancz$url_parser$UrlParser$map, _neontribe$contemplating_action$Route$InfoToHelpPage, _evancz$url_parser$UrlParser$s('info-to-help')),
 								_1: {
 									ctor: '::',
-									_0: A2(_evancz$url_parser$UrlParser$map, _neontribe$haven$Route$InfoPage, A2(_evancz$url_parser$UrlParser_ops['</>'], _evancz$url_parser$UrlParser$s('info-to-help'), _evancz$url_parser$UrlParser$string)),
+									_0: A2(_evancz$url_parser$UrlParser$map, _neontribe$contemplating_action$Route$InfoPage, A2(_evancz$url_parser$UrlParser_ops['</>'], _evancz$url_parser$UrlParser$s('info-to-help'), _evancz$url_parser$UrlParser$string)),
 									_1: { ctor: '[]' }
 								}
 							}
@@ -9439,61 +9421,61 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 		}
 	});
 
-	var _neontribe$haven$Messages$gaEvent = F3(function (category, action, label) {
+	var _neontribe$contemplating_action$Messages$gaEvent = F3(function (category, action, label) {
 		return { category: category, action: action, label: label };
 	});
-	var _neontribe$haven$Messages$delay = F2(function (secs, msg) {
+	var _neontribe$contemplating_action$Messages$delay = F2(function (secs, msg) {
 		return A2(_elm_lang$core$Task$perform, function (_p0) {
 			return msg;
 		}, _elm_lang$core$Process$sleep(_elm_lang$core$Time$second * secs));
 	});
-	var _neontribe$haven$Messages$pageTimeoutSecs = 120;
-	var _neontribe$haven$Messages$updateAnalyticsPage = _elm_lang$core$Native_Platform.outgoingPort('updateAnalyticsPage', function (v) {
+	var _neontribe$contemplating_action$Messages$pageTimeoutSecs = 120;
+	var _neontribe$contemplating_action$Messages$updateAnalyticsPage = _elm_lang$core$Native_Platform.outgoingPort('updateAnalyticsPage', function (v) {
 		return v;
 	});
-	var _neontribe$haven$Messages$updateAnalyticsEvent = _elm_lang$core$Native_Platform.outgoingPort('updateAnalyticsEvent', function (v) {
+	var _neontribe$contemplating_action$Messages$updateAnalyticsEvent = _elm_lang$core$Native_Platform.outgoingPort('updateAnalyticsEvent', function (v) {
 		return { category: v.category, action: v.action, label: v.label };
 	});
-	var _neontribe$haven$Messages$hidePage = _elm_lang$core$Native_Platform.outgoingPort('hidePage', function (v) {
+	var _neontribe$contemplating_action$Messages$hidePage = _elm_lang$core$Native_Platform.outgoingPort('hidePage', function (v) {
 		return v.ctor === 'Nothing' ? null : v._0;
 	});
-	var _neontribe$haven$Messages$GaEvent = F3(function (a, b, c) {
+	var _neontribe$contemplating_action$Messages$GaEvent = F3(function (a, b, c) {
 		return { category: a, action: b, label: c };
 	});
-	var _neontribe$haven$Messages$IdleTimeout = F2(function (a, b) {
+	var _neontribe$contemplating_action$Messages$IdleTimeout = F2(function (a, b) {
 		return { ctor: 'IdleTimeout', _0: a, _1: b };
 	});
-	var _neontribe$haven$Messages$GoBack = { ctor: 'GoBack' };
-	var _neontribe$haven$Messages$Exit = function (a) {
+	var _neontribe$contemplating_action$Messages$GoBack = { ctor: 'GoBack' };
+	var _neontribe$contemplating_action$Messages$Exit = function (a) {
 		return { ctor: 'Exit', _0: a };
 	};
-	var _neontribe$haven$Messages$DoTimeout = { ctor: 'DoTimeout' };
-	var _neontribe$haven$Messages$UrlChange = function (a) {
+	var _neontribe$contemplating_action$Messages$DoTimeout = { ctor: 'DoTimeout' };
+	var _neontribe$contemplating_action$Messages$UrlChange = function (a) {
 		return { ctor: 'UrlChange', _0: a };
 	};
-	var _neontribe$haven$Messages$NewUrl = function (a) {
+	var _neontribe$contemplating_action$Messages$NewUrl = function (a) {
 		return { ctor: 'NewUrl', _0: a };
 	};
-	var _neontribe$haven$Messages$MouseAction = function (a) {
+	var _neontribe$contemplating_action$Messages$MouseAction = function (a) {
 		return { ctor: 'MouseAction', _0: a };
 	};
-	var _neontribe$haven$Messages$KeyPress = function (a) {
+	var _neontribe$contemplating_action$Messages$KeyPress = function (a) {
 		return { ctor: 'KeyPress', _0: a };
 	};
-	var _neontribe$haven$Messages$ButtonPress = F4(function (a, b, c, d) {
+	var _neontribe$contemplating_action$Messages$ButtonPress = F4(function (a, b, c, d) {
 		return { ctor: 'ButtonPress', _0: a, _1: b, _2: c, _3: d };
 	});
 
-	var _neontribe$haven$Info$info = {
+	var _neontribe$contemplating_action$Info$info = {
 		ctor: '::',
 		_0: {
 			id: 1,
-			name: 'Bite size information',
-			slug: 'bitesize-information',
-			icon: 'information',
+			name: 'About the project',
+			slug: 'about',
+			icon: 'question-circle-o',
 			infoText: {
 				ctor: '::',
-				_0: 'We include bite size information relating to a small number of fears and barriers that are likely to be stopping people from taking the\n            next step. Keeping the language simple we aim to be open and honest, with a reassuring tone. We resist the temptation to provide all the\n            information people might need. Our goal is to offer just enough to help people reach out to support services. Other websites have excellent\n            longer content.',
+				_0: 'In 2017, The Haven, Wolverhampton, Neontribe and women who had been through domestic abuse co-designed a web app to encourage other women in\n            that situation to seek support and advice. We want to find out if the structure of that app could be used by different organisations. We believe\n            that reassuring people that their fears and challenges are shared could help them take early steps on a journey of change such as contacting a support service. ',
 				_1: { ctor: '[]' }
 			}
 		},
@@ -9501,12 +9483,12 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 			ctor: '::',
 			_0: {
 				id: 2,
-				name: 'Illustrations',
-				slug: 'illustrations',
-				icon: 'illustrations',
+				name: 'Bite size information',
+				slug: 'bite-size-info',
+				icon: 'information',
 				infoText: {
 					ctor: '::',
-					_0: 'Many organisations struggle with the same problem with stories. People often say that they want to hear stories from other people who\n             have been through the same problems as them, but when the organisation provides stories, no one looks at them. We believe that visual\n             storytelling can change this. We are testing whether the 4 image format engages people in a way that other storytelling might not do.',
+					_0: 'We include bite size information relating to a small number of fears and barriers that are likely to be stopping people from taking the next step. Keeping the\n            language simple we aim to be open and honest, with a reassuring tone. We resist the temptation to provide all the information people might need. Our goal is to offer just enough to\n            help people reach out to support services. Other websites have excellent longer content. ',
 					_1: { ctor: '[]' }
 				}
 			},
@@ -9514,12 +9496,12 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 				ctor: '::',
 				_0: {
 					id: 3,
-					name: 'What is the survey?',
-					slug: 'what-is-the-survey',
-					icon: 'survey',
+					name: 'Illustrations',
+					slug: 'illustrations',
+					icon: 'illustrations',
 					infoText: {
 						ctor: '::',
-						_0: 'The survey is research with key staff in organisations that run helplines or web chats or text services. We want to know whether those\n            staff who work most closely with people seeking support think this approach could work. We also want to know what concerns or hopes they\n            might have, if they were to try creating an app like this within their organisation.',
+						_0: 'Many organisations struggle with the same problem with stories. We know stories can be powerful, we want to use them for many reasons.\n            Unfortunately people don’t always like to spend time reading them online. We believe that visual storytelling can change this. Contemplating Action has a budget for\n            artists, to test whether this 4 image story format can encourage more people to read them.',
 						_1: { ctor: '[]' }
 					}
 				},
@@ -9527,12 +9509,12 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 					ctor: '::',
 					_0: {
 						id: 4,
-						name: 'Can my organisation try this?',
-						slug: 'try-this',
-						icon: 'organisation',
+						name: 'What is the survey?',
+						slug: 'survey',
+						icon: 'survey',
 						infoText: {
 							ctor: '::',
-							_0: 'We are currently working with 3 charities as well as The Haven, Wolverhampton whose app inspired the project. We are testing two things.\n            Firstly, can we get people from social media or other locations into the app. Secondly, if we do, does it encourage people to seek support.\n            When this trial is complete in the summer we will be looking for more organisations to work with. Please take the survey if you are interested.',
+							_0: 'We would like you to take our survey. We want to understand whether staff in organisations who work most closely with people seeking support think this approach\n            could work. We’re interested in your instincts as well as any evidence you might share. It will help us decide where to take the project next.',
 							_1: { ctor: '[]' }
 						}
 					},
@@ -9540,12 +9522,12 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 						ctor: '::',
 						_0: {
 							id: 5,
-							name: 'What does taking part cost?',
-							slug: 'cost',
-							icon: 'cost',
+							name: 'Can my organisation try this?',
+							slug: 'organisation',
+							icon: 'organisation',
 							infoText: {
 								ctor: '::',
-								_0: 'At the moment, we have a budget to support the charities working with us and pay for new stories and illustrations that work for them.\n            We expect that all stages of testing whether this approach is useful will be free for any charities taking part. The testing is designed\n            to help us decide whether a free or low cost tool allowing charities to create their own content using this structure would be useful.',
+								_0: 'We’re actively looking for partner charities who want to explore the question “can visual storytelling help us encourage people to use support services”.\n            So if you have a helpline, webchat, messaging service or even a face to face service we could work together. We have small amounts of funding to support charities\n            getting involved. Please show your interest by taking the survey.',
 								_1: { ctor: '[]' }
 							}
 						},
@@ -9558,7 +9540,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 								icon: 'involved',
 								infoText: {
 									ctor: '::',
-									_0: 'This is a partnership between CAST - a charity driving social change through digital technology - and digital development agency\n            Neontribe. It is one of a number of projects aimed at supporting civic and social organisations to grow confident in using digital tools\n            to achieve their charitable objectives.  It is possible thanks to The Haven, Wolverhampton sharing technology developed for the people\n            they work with.',
+									_0: 'This is a partnership between CAST - a charity driving social change through digital technology - and digital development agency Neontribe. It is one of a number of projects aimed at supporting civic and social organisations to grow confident in using digital tools to achieve their charitable objectives.\n            It is possible thanks to The Haven, Wolverhampton sharing technology developed for and with the people they work with.',
 									_1: { ctor: '[]' }
 								}
 							},
@@ -9569,7 +9551,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 			}
 		}
 	};
-	var _neontribe$haven$Info$placeholderInfo = {
+	var _neontribe$contemplating_action$Info$placeholderInfo = {
 		id: 0,
 		name: 'Not found',
 		slug: 'not-found',
@@ -9584,7 +9566,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 			}
 		}
 	};
-	var _neontribe$haven$Info$renderParas = function (paras) {
+	var _neontribe$contemplating_action$Info$renderParas = function (paras) {
 		return A2(_elm_lang$core$List$map, function (t) {
 			return A2(_elm_lang$html$Html$p, { ctor: '[]' }, {
 				ctor: '::',
@@ -9593,7 +9575,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 			});
 		}, paras);
 	};
-	var _neontribe$haven$Info$infoPage = function (info) {
+	var _neontribe$contemplating_action$Info$infoPage = function (info) {
 		return A2(_elm_lang$html$Html$div, {
 			ctor: '::',
 			_0: _elm_lang$html$Html_Attributes$class('section--vertical-fill-center'),
@@ -9618,7 +9600,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 						_1: { ctor: '[]' }
 					}, {
 						ctor: '::',
-						_0: A2(_neontribe$haven$Icon$getIcon, info.icon, _elm_lang$core$Maybe$Just('icon icon--large card--icon')),
+						_0: A2(_neontribe$contemplating_action$Icon$getIcon, info.icon, _elm_lang$core$Maybe$Just('icon icon--large card--icon')),
 						_1: {
 							ctor: '::',
 							_0: A2(_elm_lang$html$Html$article, {
@@ -9634,7 +9616,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 								}),
 								_1: {
 									ctor: '::',
-									_0: A2(_elm_lang$html$Html$div, { ctor: '[]' }, _neontribe$haven$Info$renderParas(info.infoText)),
+									_0: A2(_elm_lang$html$Html$div, { ctor: '[]' }, _neontribe$contemplating_action$Info$renderParas(info.infoText)),
 									_1: { ctor: '[]' }
 								}
 							}),
@@ -9665,7 +9647,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 									_0: _elm_lang$html$Html_Attributes$href('#/info-to-help'),
 									_1: {
 										ctor: '::',
-										_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$haven$Messages$ButtonPress, 'information', 'view-list', 'more-info', true)),
+										_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$contemplating_action$Messages$ButtonPress, 'information', 'view-list', 'more-info', true)),
 										_1: { ctor: '[]' }
 									}
 								}
@@ -9684,7 +9666,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 			_1: { ctor: '[]' }
 		});
 	};
-	var _neontribe$haven$Info$infoCard = function (info) {
+	var _neontribe$contemplating_action$Info$infoCard = function (info) {
 		return A2(_elm_lang$html$Html$li, { ctor: '[]' }, {
 			ctor: '::',
 			_0: A2(_elm_lang$html$Html$a, {
@@ -9695,13 +9677,13 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 					_0: _elm_lang$html$Html_Attributes$href(A2(_elm_lang$core$Basics_ops['++'], '#/info-to-help/', info.slug)),
 					_1: {
 						ctor: '::',
-						_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$haven$Messages$ButtonPress, 'information', 'view-single', info.slug, true)),
+						_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$contemplating_action$Messages$ButtonPress, 'information', 'view-single', info.slug, true)),
 						_1: { ctor: '[]' }
 					}
 				}
 			}, {
 				ctor: '::',
-				_0: A2(_neontribe$haven$Icon$getIcon, info.icon, _elm_lang$core$Maybe$Just('icon info--icon')),
+				_0: A2(_neontribe$contemplating_action$Icon$getIcon, info.icon, _elm_lang$core$Maybe$Just('icon info--icon')),
 				_1: {
 					ctor: '::',
 					_0: A2(_elm_lang$html$Html$span, {
@@ -9727,7 +9709,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 							ctor: '::',
 							_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
 								ctor: '::',
-								_0: A2(_neontribe$haven$Icon$getIcon, 'arrow-right', _elm_lang$core$Maybe$Nothing),
+								_0: A2(_neontribe$contemplating_action$Icon$getIcon, 'arrow-right', _elm_lang$core$Maybe$Nothing),
 								_1: { ctor: '[]' }
 							}),
 							_1: { ctor: '[]' }
@@ -9739,33 +9721,33 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 			_1: { ctor: '[]' }
 		});
 	};
-	var _neontribe$haven$Info$getInfoBySlug = function (infoSlug) {
+	var _neontribe$contemplating_action$Info$getInfoBySlug = function (infoSlug) {
 		var foundInfo = _elm_lang$core$List$head(A2(_elm_lang$core$List$filter, function (i) {
 			return _elm_lang$core$Native_Utils.eq(i.slug, infoSlug);
-		}, _neontribe$haven$Info$info));
+		}, _neontribe$contemplating_action$Info$info));
 		var _p0 = foundInfo;
 		if (_p0.ctor === 'Just') {
 			return _p0._0;
 		} else {
-			return _neontribe$haven$Info$placeholderInfo;
+			return _neontribe$contemplating_action$Info$placeholderInfo;
 		}
 	};
-	var _neontribe$haven$Info$getInfo = function (infoId) {
+	var _neontribe$contemplating_action$Info$getInfo = function (infoId) {
 		var foundInfo = _elm_lang$core$List$head(A2(_elm_lang$core$List$filter, function (i) {
 			return _elm_lang$core$Native_Utils.eq(i.id, infoId);
-		}, _neontribe$haven$Info$info));
+		}, _neontribe$contemplating_action$Info$info));
 		var _p1 = foundInfo;
 		if (_p1.ctor === 'Just') {
 			return _p1._0;
 		} else {
-			return _neontribe$haven$Info$placeholderInfo;
+			return _neontribe$contemplating_action$Info$placeholderInfo;
 		}
 	};
-	var _neontribe$haven$Info$Info = F5(function (a, b, c, d, e) {
+	var _neontribe$contemplating_action$Info$Info = F5(function (a, b, c, d, e) {
 		return { id: a, icon: b, name: c, slug: d, infoText: e };
 	});
 
-	var _neontribe$haven$Model$pageSlug = function (page) {
+	var _neontribe$contemplating_action$Model$pageSlug = function (page) {
 		var _p0 = _hecrj$elm_slug$Slug$generate(_elm_lang$core$Basics$toString(page));
 		if (_p0.ctor === 'Just') {
 			return _hecrj$elm_slug$Slug$toString(_p0._0);
@@ -9773,38 +9755,38 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 			return '';
 		}
 	};
-	var _neontribe$haven$Model$Model = F4(function (a, b, c, d) {
+	var _neontribe$contemplating_action$Model$Model = F4(function (a, b, c, d) {
 		return { currentPage: a, idlePage: b, idleTimerCount: c, doExit: d };
 	});
-	var _neontribe$haven$Model$init = function (location) {
+	var _neontribe$contemplating_action$Model$init = function (location) {
 		var page = function () {
-			var _p1 = A2(_evancz$url_parser$UrlParser$parseHash, _neontribe$haven$Route$route, location);
+			var _p1 = A2(_evancz$url_parser$UrlParser$parseHash, _neontribe$contemplating_action$Route$route, location);
 			if (_p1.ctor === 'Nothing') {
-				return _neontribe$haven$Route$Home;
+				return _neontribe$contemplating_action$Route$Home;
 			} else {
 				return _p1._0;
 			}
 		}();
 		return {
 			ctor: '_Tuple2',
-			_0: A4(_neontribe$haven$Model$Model, page, _neontribe$haven$Route$Home, 0, false),
-			_1: A2(_neontribe$haven$Messages$delay, _neontribe$haven$Messages$pageTimeoutSecs, A2(_neontribe$haven$Messages$IdleTimeout, page, -1))
+			_0: A4(_neontribe$contemplating_action$Model$Model, page, _neontribe$contemplating_action$Route$Home, 0, false),
+			_1: A2(_neontribe$contemplating_action$Messages$delay, _neontribe$contemplating_action$Messages$pageTimeoutSecs, A2(_neontribe$contemplating_action$Messages$IdleTimeout, page, -1))
 		};
 	};
 
-	var _neontribe$haven$Subscriptions$subscriptions = function (_p0) {
+	var _neontribe$contemplating_action$Subscriptions$subscriptions = function (_p0) {
 		return _elm_lang$core$Platform_Sub$batch({
 			ctor: '::',
-			_0: _elm_lang$mouse$Mouse$clicks(_neontribe$haven$Messages$MouseAction),
+			_0: _elm_lang$mouse$Mouse$clicks(_neontribe$contemplating_action$Messages$MouseAction),
 			_1: {
 				ctor: '::',
-				_0: _elm_lang$keyboard$Keyboard$downs(_neontribe$haven$Messages$KeyPress),
+				_0: _elm_lang$keyboard$Keyboard$downs(_neontribe$contemplating_action$Messages$KeyPress),
 				_1: { ctor: '[]' }
 			}
 		});
 	};
 
-	var _neontribe$haven$Update$update = F2(function (msg, model) {
+	var _neontribe$contemplating_action$Update$update = F2(function (msg, model) {
 		var _p0 = msg;
 		switch (_p0.ctor) {
 			case 'ButtonPress':
@@ -9814,23 +9796,23 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 				return _p0._3 ? {
 					ctor: '_Tuple2',
 					_0: model,
-					_1: _neontribe$haven$Messages$updateAnalyticsEvent(A3(_neontribe$haven$Messages$gaEvent, _p2, _p1, A2(_elm_lang$core$Basics_ops['++'], _p3, A2(_elm_lang$core$Basics_ops['++'], '_', _neontribe$haven$Model$pageSlug(model.currentPage)))))
+					_1: _neontribe$contemplating_action$Messages$updateAnalyticsEvent(A3(_neontribe$contemplating_action$Messages$gaEvent, _p2, _p1, A2(_elm_lang$core$Basics_ops['++'], _p3, A2(_elm_lang$core$Basics_ops['++'], '_', _neontribe$contemplating_action$Model$pageSlug(model.currentPage)))))
 				} : {
 					ctor: '_Tuple2',
 					_0: model,
-					_1: _neontribe$haven$Messages$updateAnalyticsEvent(A3(_neontribe$haven$Messages$gaEvent, _p2, _p1, _p3))
+					_1: _neontribe$contemplating_action$Messages$updateAnalyticsEvent(A3(_neontribe$contemplating_action$Messages$gaEvent, _p2, _p1, _p3))
 				};
 			case 'KeyPress':
 				return {
 					ctor: '_Tuple2',
 					_0: _elm_lang$core$Native_Utils.update(model, { idleTimerCount: model.idleTimerCount + 1 }),
-					_1: A2(_neontribe$haven$Messages$delay, _neontribe$haven$Messages$pageTimeoutSecs, A2(_neontribe$haven$Messages$IdleTimeout, model.currentPage, model.idleTimerCount))
+					_1: A2(_neontribe$contemplating_action$Messages$delay, _neontribe$contemplating_action$Messages$pageTimeoutSecs, A2(_neontribe$contemplating_action$Messages$IdleTimeout, model.currentPage, model.idleTimerCount))
 				};
 			case 'MouseAction':
 				return {
 					ctor: '_Tuple2',
 					_0: _elm_lang$core$Native_Utils.update(model, { idleTimerCount: model.idleTimerCount + 1 }),
-					_1: A2(_neontribe$haven$Messages$delay, _neontribe$haven$Messages$pageTimeoutSecs, A2(_neontribe$haven$Messages$IdleTimeout, model.currentPage, model.idleTimerCount))
+					_1: A2(_neontribe$contemplating_action$Messages$delay, _neontribe$contemplating_action$Messages$pageTimeoutSecs, A2(_neontribe$contemplating_action$Messages$IdleTimeout, model.currentPage, model.idleTimerCount))
 				};
 			case 'NewUrl':
 				return {
@@ -9843,31 +9825,31 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 				if (_p4.ctor === 'Nothing') {
 					return {
 						ctor: '_Tuple2',
-						_0: _elm_lang$core$Native_Utils.update(model, { currentPage: _neontribe$haven$Route$Home }),
+						_0: _elm_lang$core$Native_Utils.update(model, { currentPage: _neontribe$contemplating_action$Route$Home }),
 						_1: _elm_lang$core$Platform_Cmd$none
 					};
 				} else {
 					var _p5 = _p4._0;
 					return A2(_elm_lang$core$Platform_Cmd_ops['!'], _elm_lang$core$Native_Utils.update(model, { currentPage: _p5, idleTimerCount: model.idleTimerCount + 1 }), {
 						ctor: '::',
-						_0: _neontribe$haven$Messages$updateAnalyticsPage(_neontribe$haven$Model$pageSlug(_p5)),
+						_0: _neontribe$contemplating_action$Messages$updateAnalyticsPage(_neontribe$contemplating_action$Model$pageSlug(_p5)),
 						_1: {
 							ctor: '::',
-							_0: A2(_neontribe$haven$Messages$delay, _neontribe$haven$Messages$pageTimeoutSecs, A2(_neontribe$haven$Messages$IdleTimeout, _p5, model.idleTimerCount)),
+							_0: A2(_neontribe$contemplating_action$Messages$delay, _neontribe$contemplating_action$Messages$pageTimeoutSecs, A2(_neontribe$contemplating_action$Messages$IdleTimeout, _p5, model.idleTimerCount)),
 							_1: { ctor: '[]' }
 						}
 					});
 				}
 			case 'DoTimeout':
-				return A2(_elm_lang$core$Platform_Cmd_ops['!'], _elm_lang$core$Native_Utils.update(model, { currentPage: _neontribe$haven$Route$Timeout, doExit: true }), {
+				return A2(_elm_lang$core$Platform_Cmd_ops['!'], _elm_lang$core$Native_Utils.update(model, { currentPage: _neontribe$contemplating_action$Route$Timeout, doExit: true }), {
 					ctor: '::',
-					_0: _neontribe$haven$Messages$updateAnalyticsPage(A2(_elm_lang$core$Basics_ops['++'], 'timeout-warning_', _neontribe$haven$Model$pageSlug(model.idlePage))),
+					_0: _neontribe$contemplating_action$Messages$updateAnalyticsPage(A2(_elm_lang$core$Basics_ops['++'], 'timeout-warning_', _neontribe$contemplating_action$Model$pageSlug(model.idlePage))),
 					_1: {
 						ctor: '::',
-						_0: _neontribe$haven$Messages$updateAnalyticsEvent(A3(_neontribe$haven$Messages$gaEvent, 'exit', 'auto', A2(_elm_lang$core$Basics_ops['++'], 'warning_', _neontribe$haven$Model$pageSlug(model.idlePage)))),
+						_0: _neontribe$contemplating_action$Messages$updateAnalyticsEvent(A3(_neontribe$contemplating_action$Messages$gaEvent, 'exit', 'auto', A2(_elm_lang$core$Basics_ops['++'], 'warning_', _neontribe$contemplating_action$Model$pageSlug(model.idlePage)))),
 						_1: {
 							ctor: '::',
-							_0: A2(_neontribe$haven$Messages$delay, 15, _neontribe$haven$Messages$Exit(false)),
+							_0: A2(_neontribe$contemplating_action$Messages$delay, 15, _neontribe$contemplating_action$Messages$Exit(false)),
 							_1: { ctor: '[]' }
 						}
 					}
@@ -9876,10 +9858,10 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 				if (_p0._0) {
 					return A2(_elm_lang$core$Platform_Cmd_ops['!'], model, {
 						ctor: '::',
-						_0: _neontribe$haven$Messages$hidePage(_elm_lang$core$Maybe$Nothing),
+						_0: _neontribe$contemplating_action$Messages$hidePage(_elm_lang$core$Maybe$Nothing),
 						_1: {
 							ctor: '::',
-							_0: _neontribe$haven$Messages$updateAnalyticsEvent(A3(_neontribe$haven$Messages$gaEvent, 'exit', 'force', A2(_elm_lang$core$Basics_ops['++'], 'exit-button_', _neontribe$haven$Model$pageSlug(model.currentPage)))),
+							_0: _neontribe$contemplating_action$Messages$updateAnalyticsEvent(A3(_neontribe$contemplating_action$Messages$gaEvent, 'exit', 'force', A2(_elm_lang$core$Basics_ops['++'], 'exit-button_', _neontribe$contemplating_action$Model$pageSlug(model.currentPage)))),
 							_1: {
 								ctor: '::',
 								_0: _elm_lang$navigation$Navigation$load('https://google.com'),
@@ -9890,7 +9872,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 				} else {
 					var cmds = model.doExit ? {
 						ctor: '::',
-						_0: _neontribe$haven$Messages$updateAnalyticsEvent(A3(_neontribe$haven$Messages$gaEvent, 'exit', 'auto', A2(_elm_lang$core$Basics_ops['++'], 'timed-out_', _neontribe$haven$Model$pageSlug(model.idlePage)))),
+						_0: _neontribe$contemplating_action$Messages$updateAnalyticsEvent(A3(_neontribe$contemplating_action$Messages$gaEvent, 'exit', 'auto', A2(_elm_lang$core$Basics_ops['++'], 'timed-out_', _neontribe$contemplating_action$Model$pageSlug(model.idlePage)))),
 						_1: {
 							ctor: '::',
 							_0: _elm_lang$navigation$Navigation$load('https://google.com'),
@@ -9906,13 +9888,13 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 			case 'GoBack':
 				return A2(_elm_lang$core$Platform_Cmd_ops['!'], _elm_lang$core$Native_Utils.update(model, { currentPage: model.idlePage, doExit: false, idleTimerCount: model.idleTimerCount + 1 }), {
 					ctor: '::',
-					_0: _neontribe$haven$Messages$updateAnalyticsPage('go-back-triggered'),
+					_0: _neontribe$contemplating_action$Messages$updateAnalyticsPage('go-back-triggered'),
 					_1: {
 						ctor: '::',
-						_0: _neontribe$haven$Messages$updateAnalyticsEvent(A3(_neontribe$haven$Messages$gaEvent, 'exit', 'cancel', A2(_elm_lang$core$Basics_ops['++'], 'keep-reading_', _neontribe$haven$Model$pageSlug(model.idlePage)))),
+						_0: _neontribe$contemplating_action$Messages$updateAnalyticsEvent(A3(_neontribe$contemplating_action$Messages$gaEvent, 'exit', 'cancel', A2(_elm_lang$core$Basics_ops['++'], 'keep-reading_', _neontribe$contemplating_action$Model$pageSlug(model.idlePage)))),
 						_1: {
 							ctor: '::',
-							_0: A2(_neontribe$haven$Messages$delay, _neontribe$haven$Messages$pageTimeoutSecs, A2(_neontribe$haven$Messages$IdleTimeout, model.idlePage, model.idleTimerCount)),
+							_0: A2(_neontribe$contemplating_action$Messages$delay, _neontribe$contemplating_action$Messages$pageTimeoutSecs, A2(_neontribe$contemplating_action$Messages$IdleTimeout, model.idlePage, model.idleTimerCount)),
 							_1: { ctor: '[]' }
 						}
 					}
@@ -9921,25 +9903,25 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 				return {
 					ctor: '_Tuple2',
 					_0: _elm_lang$core$Native_Utils.update(model, { idlePage: _p0._0 }),
-					_1: _elm_lang$core$Native_Utils.eq(model.idleTimerCount, _p0._1 + 1) ? A2(_neontribe$haven$Messages$delay, 0, _neontribe$haven$Messages$DoTimeout) : _elm_lang$core$Platform_Cmd$none
+					_1: _elm_lang$core$Native_Utils.eq(model.idleTimerCount, _p0._1 + 1) ? A2(_neontribe$contemplating_action$Messages$delay, 0, _neontribe$contemplating_action$Messages$DoTimeout) : _elm_lang$core$Platform_Cmd$none
 				};
 		}
 	});
 
-	var _neontribe$haven$StoryDeck$decks = {
+	var _neontribe$contemplating_action$StoryDeck$decks = {
 		ctor: '::',
 		_0: {
 			id: 1,
 			title: 'Our Project',
 			teaser: 'This shows you how we believe shaping stories from real people can work so that they help people feel ready to take action',
-			teaserImgPath: _neontribe$haven$Assets$AssetPath(__webpack_require__(3)),
+			teaserImgPath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(3)),
 			teaserImgAltText: 'A man kneeling on the floor of a dark room with his head in his hands',
 			relatedInfo: {
 				ctor: '::',
-				_0: 2,
+				_0: 1,
 				_1: {
 					ctor: '::',
-					_0: 5,
+					_0: 3,
 					_1: { ctor: '[]' }
 				}
 			},
@@ -9947,7 +9929,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 				ctor: '::',
 				_0: {
 					quoteText: 'The story starts with some background. It gives us key pieces of information that make this person’s story clear and\n                    relatable. It tends to deal with facts about the situation they were in rather than their feelings. It is always a situation\n                    that clearly needed to change.\n                    ',
-					imagePath: _neontribe$haven$Assets$AssetPath(__webpack_require__(3)),
+					imagePath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(3)),
 					altText: 'A man is kneeling on the floor of a dark room with his head in his hands',
 					messageText: _elm_lang$core$Maybe$Nothing
 				},
@@ -9955,7 +9937,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 					ctor: '::',
 					_0: {
 						quoteText: 'Next the story moves on a little. It does one of two things. Either it tells us about a specific incident that began a\n                    drive to change things, or it explores the person’s fears and other things that were holding them back. This section focuses\n                    on emotions and helps us connect with the person’s story.\n                    ',
-						imagePath: _neontribe$haven$Assets$AssetPath(__webpack_require__(39)),
+						imagePath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(36)),
 						altText: 'The man looks up a long staircase with a locked door at the top',
 						messageText: _elm_lang$core$Maybe$Just('This bar is used to give a little extra insight into how the person was feeling.')
 					},
@@ -9963,7 +9945,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 						ctor: '::',
 						_0: {
 							quoteText: 'Here the story starts to change for the better. The person becomes able to take a positive step and get some support.\n                    The story tells us a little about what happened, how they managed to take the step and how they felt.\n                    ',
-							imagePath: _neontribe$haven$Assets$AssetPath(__webpack_require__(40)),
+							imagePath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(37)),
 							altText: 'The man starts climbing the stairs to reach a hand holding out a key.',
 							messageText: _elm_lang$core$Maybe$Nothing
 						},
@@ -9971,7 +9953,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 							ctor: '::',
 							_0: {
 								quoteText: 'The final section of the story is about hope. It show that making a chance can be a positive choice. However it doesn’t\n                    suggest that the person’s life is now perfect. It is designed to encourage others to believe they could make a move to a more\n                    hopeful place too. It takes care not to sound out of reach.\n                    ',
-								imagePath: _neontribe$haven$Assets$AssetPath(__webpack_require__(41)),
+								imagePath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(38)),
 								altText: 'The door is open and the lock is on the floor. The man is outside in a bright and sunny environment holding onto the key.',
 								messageText: _elm_lang$core$Maybe$Just('sometimes the story highlights a worry that remains, and how the person is coping with it')
 							},
@@ -9987,46 +9969,46 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 				id: 2,
 				title: 'The Haven',
 				teaser: 'This is one of the six stories created for The Haven’s app. The story uses Ama’s words but the names have been changed, and the story has been shaped to help others.',
-				teaserImgPath: _neontribe$haven$Assets$AssetPath(__webpack_require__(4)),
+				teaserImgPath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(4)),
 				teaserImgAltText: 'A pregnant woman wrapped in chains',
 				relatedInfo: {
 					ctor: '::',
-					_0: 2,
+					_0: 1,
 					_1: {
 						ctor: '::',
-						_0: 5,
+						_0: 3,
 						_1: { ctor: '[]' }
 					}
 				},
 				cards: {
 					ctor: '::',
 					_0: {
-						quoteText: 'I was born in Senegal and had lived in Spain as well as the UK and I couldn’t speak English. My husband became abusive \n                    after I got pregnant with our first child. For years I suffered so many different things\n                    ',
-						imagePath: _neontribe$haven$Assets$AssetPath(__webpack_require__(4)),
+						quoteText: 'I was born in Senegal and had lived in Spain as well as the UK and I couldn’t speak English. My husband became abusive\n                    after I got pregnant with our first child. For years I suffered so many different things\n                    ',
+						imagePath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(4)),
 						altText: 'A pregnant woman wrapped in chains',
 						messageText: _elm_lang$core$Maybe$Nothing
 					},
 					_1: {
 						ctor: '::',
 						_0: {
-							quoteText: 'I wanted to leave, but my husband told me without him I would be sent back to Africa. I was completely dependent on my \n                    husband, I did not see any way out of my situation.\n                    ',
-							imagePath: _neontribe$haven$Assets$AssetPath(__webpack_require__(42)),
+							quoteText: 'I wanted to leave, but my husband told me without him I would be sent back to Africa. I was completely dependent on my\n                    husband, I did not see any way out of my situation.\n                    ',
+							imagePath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(39)),
 							altText: 'A pregnant woman chained to her husband',
 							messageText: _elm_lang$core$Maybe$Just('I did not know my rights in the UK and had no money but soon I discovered I had choices.')
 						},
 						_1: {
 							ctor: '::',
 							_0: {
-								quoteText: 'One day I broke down at my health care class. My teacher was so supportive. She told me about The Haven and they found me a \n                    support worker who spoke Spanish. They talked to social services for me and found me an immigration solicitor.\n                    ',
-								imagePath: _neontribe$haven$Assets$AssetPath(__webpack_require__(43)),
+								quoteText: 'One day I broke down at my health care class. My teacher was so supportive. She told me about The Haven and they found me a\n                    support worker who spoke Spanish. They talked to social services for me and found me an immigration solicitor.\n                    ',
+								imagePath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(40)),
 								altText: 'A woman crying at a desk',
 								messageText: _elm_lang$core$Maybe$Nothing
 							},
 							_1: {
 								ctor: '::',
 								_0: {
-									quoteText: 'I have a house now, with my children, and away from my abusive husband. My solicitor is helping me with immigration documents and divorce papers. \n                    For the first time in a long time I can sleep and look forward to the future.\n                    ',
-									imagePath: _neontribe$haven$Assets$AssetPath(__webpack_require__(44)),
+									quoteText: 'I have a house now, with my children, and away from my abusive husband. My solicitor is helping me with immigration documents and divorce papers.\n                    For the first time in a long time I can sleep and look forward to the future.\n                    ',
+									imagePath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(41)),
 									altText: 'A smiling woman with two children',
 									messageText: _elm_lang$core$Maybe$Nothing
 								},
@@ -10039,17 +10021,17 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 			_1: { ctor: '[]' }
 		}
 	};
-	var _neontribe$haven$StoryDeck$placeholderCard = {
+	var _neontribe$contemplating_action$StoryDeck$placeholderCard = {
 		quoteText: 'Story coming soon.',
-		imagePath: _neontribe$haven$Assets$AssetPath(__webpack_require__(45)),
+		imagePath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(42)),
 		altText: 'Placeholder image',
 		messageText: _elm_lang$core$Maybe$Just('Check back soon')
 	};
-	var _neontribe$haven$StoryDeck$placeholderDeck = {
+	var _neontribe$contemplating_action$StoryDeck$placeholderDeck = {
 		id: 0,
 		title: 'Coming soon',
 		teaser: 'We\'re working on it',
-		teaserImgPath: _neontribe$haven$Assets$AssetPath(__webpack_require__(46)),
+		teaserImgPath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(43)),
 		teaserImgAltText: 'Placeholder image',
 		relatedInfo: {
 			ctor: '::',
@@ -10058,11 +10040,11 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 		},
 		cards: {
 			ctor: '::',
-			_0: _neontribe$haven$StoryDeck$placeholderCard,
+			_0: _neontribe$contemplating_action$StoryDeck$placeholderCard,
 			_1: { ctor: '[]' }
 		}
 	};
-	var _neontribe$haven$StoryDeck$getDeck = F2(function (deckId, decks) {
+	var _neontribe$contemplating_action$StoryDeck$getDeck = F2(function (deckId, decks) {
 		var foundDeck = _elm_lang$core$List$head(A2(_elm_lang$core$List$filter, function (i) {
 			return _elm_lang$core$Native_Utils.eq(i.id, deckId);
 		}, decks));
@@ -10070,28 +10052,28 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 		if (_p0.ctor === 'Just') {
 			return _p0._0;
 		} else {
-			return _neontribe$haven$StoryDeck$placeholderDeck;
+			return _neontribe$contemplating_action$StoryDeck$placeholderDeck;
 		}
 	});
-	var _neontribe$haven$StoryDeck$getRelatedInfo = function (deckId) {
-		return A2(_neontribe$haven$StoryDeck$getDeck, deckId, _neontribe$haven$StoryDeck$decks).relatedInfo;
+	var _neontribe$contemplating_action$StoryDeck$getRelatedInfo = function (deckId) {
+		return A2(_neontribe$contemplating_action$StoryDeck$getDeck, deckId, _neontribe$contemplating_action$StoryDeck$decks).relatedInfo;
 	};
-	var _neontribe$haven$StoryDeck$getCard = F2(function (deckId, cardId) {
+	var _neontribe$contemplating_action$StoryDeck$getCard = F2(function (deckId, cardId) {
 		var foundCard = A2(_elm_lang$core$Array$get, cardId - 1, _elm_lang$core$Array$fromList(function (_) {
 			return _.cards;
-		}(A2(_neontribe$haven$StoryDeck$getDeck, deckId, _neontribe$haven$StoryDeck$decks))));
+		}(A2(_neontribe$contemplating_action$StoryDeck$getDeck, deckId, _neontribe$contemplating_action$StoryDeck$decks))));
 		var _p1 = foundCard;
 		if (_p1.ctor === 'Just') {
 			return _p1._0;
 		} else {
-			return _neontribe$haven$StoryDeck$placeholderCard;
+			return _neontribe$contemplating_action$StoryDeck$placeholderCard;
 		}
 	});
-	var _neontribe$haven$StoryDeck$cardImgPath = F2(function (deckId, cardId) {
-		return _neontribe$haven$Assets$path(A2(_neontribe$haven$StoryDeck$getCard, deckId, cardId).imagePath);
+	var _neontribe$contemplating_action$StoryDeck$cardImgPath = F2(function (deckId, cardId) {
+		return _neontribe$contemplating_action$Assets$path(A2(_neontribe$contemplating_action$StoryDeck$getCard, deckId, cardId).imagePath);
 	});
-	var _neontribe$haven$StoryDeck$cardMessage = F2(function (deckId, cardId) {
-		var message = A2(_neontribe$haven$StoryDeck$getCard, deckId, cardId).messageText;
+	var _neontribe$contemplating_action$StoryDeck$cardMessage = F2(function (deckId, cardId) {
+		var message = A2(_neontribe$contemplating_action$StoryDeck$getCard, deckId, cardId).messageText;
 		var _p2 = message;
 		if (_p2.ctor === 'Nothing') {
 			return A2(_elm_lang$html$Html$p, {
@@ -10111,7 +10093,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 			});
 		}
 	});
-	var _neontribe$haven$StoryDeck$card = F2(function (deckId, cardId) {
+	var _neontribe$contemplating_action$StoryDeck$card = F2(function (deckId, cardId) {
 		return A2(_elm_lang$html$Html$div, {
 			ctor: '::',
 			_0: _elm_lang$html$Html_Attributes$class('card story'),
@@ -10135,7 +10117,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 					_1: { ctor: '[]' }
 				}, {
 					ctor: '::',
-					_0: _elm_lang$html$Html$text(A2(_neontribe$haven$StoryDeck$getCard, deckId, cardId).quoteText),
+					_0: _elm_lang$html$Html$text(A2(_neontribe$contemplating_action$StoryDeck$getCard, deckId, cardId).quoteText),
 					_1: { ctor: '[]' }
 				}),
 				_1: {
@@ -10148,16 +10130,16 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 						ctor: '::',
 						_0: A2(_elm_lang$html$Html$img, {
 							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$src(A2(_neontribe$haven$StoryDeck$cardImgPath, deckId, cardId)),
+							_0: _elm_lang$html$Html_Attributes$src(A2(_neontribe$contemplating_action$StoryDeck$cardImgPath, deckId, cardId)),
 							_1: {
 								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$alt(A2(_neontribe$haven$StoryDeck$getCard, deckId, cardId).altText),
+								_0: _elm_lang$html$Html_Attributes$alt(A2(_neontribe$contemplating_action$StoryDeck$getCard, deckId, cardId).altText),
 								_1: { ctor: '[]' }
 							}
 						}, { ctor: '[]' }),
 						_1: {
 							ctor: '::',
-							_0: A2(_neontribe$haven$StoryDeck$cardMessage, deckId, cardId),
+							_0: A2(_neontribe$contemplating_action$StoryDeck$cardMessage, deckId, cardId),
 							_1: { ctor: '[]' }
 						}
 					}),
@@ -10166,38 +10148,38 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 			}
 		});
 	});
-	var _neontribe$haven$StoryDeck$getInfoButtons = function (id) {
+	var _neontribe$contemplating_action$StoryDeck$getInfoButtons = function (id) {
 		return A2(_elm_lang$html$Html$a, {
 			ctor: '::',
-			_0: _elm_lang$html$Html_Attributes$href(A2(_elm_lang$core$Basics_ops['++'], '#/info-to-help/', _neontribe$haven$Info$getInfo(id).slug)),
+			_0: _elm_lang$html$Html_Attributes$href(A2(_elm_lang$core$Basics_ops['++'], '#/info-to-help/', _neontribe$contemplating_action$Info$getInfo(id).slug)),
 			_1: {
 				ctor: '::',
 				_0: _elm_lang$html$Html_Attributes$class('button button--alternate button--full-width'),
 				_1: {
 					ctor: '::',
-					_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$haven$Messages$ButtonPress, 'information', 'view-single', _neontribe$haven$Info$getInfo(id).slug, true)),
+					_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$contemplating_action$Messages$ButtonPress, 'information', 'view-single', _neontribe$contemplating_action$Info$getInfo(id).slug, true)),
 					_1: { ctor: '[]' }
 				}
 			}
 		}, {
 			ctor: '::',
-			_0: _elm_lang$html$Html$text(_neontribe$haven$Info$getInfo(id).name),
+			_0: _elm_lang$html$Html$text(_neontribe$contemplating_action$Info$getInfo(id).name),
 			_1: { ctor: '[]' }
 		});
 	};
-	var _neontribe$haven$StoryDeck$storyRelatedInfo = function (deckId) {
-		return A2(_elm_lang$core$List$map, _neontribe$haven$StoryDeck$getInfoButtons, _neontribe$haven$StoryDeck$getRelatedInfo(deckId));
+	var _neontribe$contemplating_action$StoryDeck$storyRelatedInfo = function (deckId) {
+		return A2(_elm_lang$core$List$map, _neontribe$contemplating_action$StoryDeck$getInfoButtons, _neontribe$contemplating_action$StoryDeck$getRelatedInfo(deckId));
 	};
-	var _neontribe$haven$StoryDeck$storyTeaserImgAltText = function (deckId) {
-		return A2(_neontribe$haven$StoryDeck$getDeck, deckId, _neontribe$haven$StoryDeck$decks).teaserImgAltText;
+	var _neontribe$contemplating_action$StoryDeck$storyTeaserImgAltText = function (deckId) {
+		return A2(_neontribe$contemplating_action$StoryDeck$getDeck, deckId, _neontribe$contemplating_action$StoryDeck$decks).teaserImgAltText;
 	};
-	var _neontribe$haven$StoryDeck$storyTeaserImgPath = function (deckId) {
-		return _neontribe$haven$Assets$path(A2(_neontribe$haven$StoryDeck$getDeck, deckId, _neontribe$haven$StoryDeck$decks).teaserImgPath);
+	var _neontribe$contemplating_action$StoryDeck$storyTeaserImgPath = function (deckId) {
+		return _neontribe$contemplating_action$Assets$path(A2(_neontribe$contemplating_action$StoryDeck$getDeck, deckId, _neontribe$contemplating_action$StoryDeck$decks).teaserImgPath);
 	};
-	var _neontribe$haven$StoryDeck$storyTitle = function (deckId) {
-		return A2(_neontribe$haven$StoryDeck$getDeck, deckId, _neontribe$haven$StoryDeck$decks).title;
+	var _neontribe$contemplating_action$StoryDeck$storyTitle = function (deckId) {
+		return A2(_neontribe$contemplating_action$StoryDeck$getDeck, deckId, _neontribe$contemplating_action$StoryDeck$decks).title;
 	};
-	var _neontribe$haven$StoryDeck$storyTeaser = function (deckId) {
+	var _neontribe$contemplating_action$StoryDeck$storyTeaser = function (deckId) {
 		return A2(_elm_lang$html$Html$div, {
 			ctor: '::',
 			_0: _elm_lang$html$Html_Attributes$class('card'),
@@ -10209,7 +10191,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 				_0: _elm_lang$html$Html_Attributes$href(A2(_elm_lang$core$Basics_ops['++'], '#/stories/', _elm_lang$core$Basics$toString(deckId))),
 				_1: {
 					ctor: '::',
-					_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$haven$Messages$ButtonPress, 'story', 'view-single', _neontribe$haven$StoryDeck$storyTitle(deckId), false)),
+					_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$contemplating_action$Messages$ButtonPress, 'story', 'view-single', _neontribe$contemplating_action$StoryDeck$storyTitle(deckId), false)),
 					_1: { ctor: '[]' }
 				}
 			}, {
@@ -10219,10 +10201,10 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 					_0: _elm_lang$html$Html_Attributes$class('card--thumbnail'),
 					_1: {
 						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$src(_neontribe$haven$StoryDeck$storyTeaserImgPath(deckId)),
+						_0: _elm_lang$html$Html_Attributes$src(_neontribe$contemplating_action$StoryDeck$storyTeaserImgPath(deckId)),
 						_1: {
 							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$alt(_neontribe$haven$StoryDeck$storyTeaserImgAltText(deckId)),
+							_0: _elm_lang$html$Html_Attributes$alt(_neontribe$contemplating_action$StoryDeck$storyTeaserImgAltText(deckId)),
 							_1: { ctor: '[]' }
 						}
 					}
@@ -10239,7 +10221,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 						_0: _elm_lang$html$Html_Attributes$href(A2(_elm_lang$core$Basics_ops['++'], '#/stories/', _elm_lang$core$Basics$toString(deckId))),
 						_1: {
 							ctor: '::',
-							_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$haven$Messages$ButtonPress, 'story', 'view-single', _neontribe$haven$StoryDeck$storyTitle(deckId), false)),
+							_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$contemplating_action$Messages$ButtonPress, 'story', 'view-single', _neontribe$contemplating_action$StoryDeck$storyTitle(deckId), false)),
 							_1: { ctor: '[]' }
 						}
 					}
@@ -10251,7 +10233,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 						_1: { ctor: '[]' }
 					}, {
 						ctor: '::',
-						_0: _elm_lang$html$Html$text(_neontribe$haven$StoryDeck$storyTitle(deckId)),
+						_0: _elm_lang$html$Html$text(_neontribe$contemplating_action$StoryDeck$storyTitle(deckId)),
 						_1: { ctor: '[]' }
 					}),
 					_1: { ctor: '[]' }
@@ -10264,7 +10246,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 						_1: { ctor: '[]' }
 					}, {
 						ctor: '::',
-						_0: _elm_lang$html$Html$text(A2(_neontribe$haven$StoryDeck$getDeck, deckId, _neontribe$haven$StoryDeck$decks).teaser),
+						_0: _elm_lang$html$Html$text(A2(_neontribe$contemplating_action$StoryDeck$getDeck, deckId, _neontribe$contemplating_action$StoryDeck$decks).teaser),
 						_1: { ctor: '[]' }
 					}),
 					_1: {
@@ -10283,13 +10265,13 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 									_0: _elm_lang$html$Html_Attributes$href(A2(_elm_lang$core$Basics_ops['++'], '#/stories/', _elm_lang$core$Basics$toString(deckId))),
 									_1: {
 										ctor: '::',
-										_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$haven$Messages$ButtonPress, 'story', 'view-single', _neontribe$haven$StoryDeck$storyTitle(deckId), false)),
+										_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$contemplating_action$Messages$ButtonPress, 'story', 'view-single', _neontribe$contemplating_action$StoryDeck$storyTitle(deckId), false)),
 										_1: { ctor: '[]' }
 									}
 								}
 							}, {
 								ctor: '::',
-								_0: _elm_lang$html$Html$text(A2(_elm_lang$core$Basics_ops['++'], 'See ', A2(_elm_lang$core$Basics_ops['++'], _neontribe$haven$StoryDeck$storyTitle(deckId), '\'s Story'))),
+								_0: _elm_lang$html$Html$text(A2(_elm_lang$core$Basics_ops['++'], 'See ', A2(_elm_lang$core$Basics_ops['++'], _neontribe$contemplating_action$StoryDeck$storyTitle(deckId), '\'s Story'))),
 								_1: { ctor: '[]' }
 							}),
 							_1: {
@@ -10302,13 +10284,13 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 										_0: _elm_lang$html$Html_Attributes$href(A2(_elm_lang$core$Basics_ops['++'], '#/stories/', _elm_lang$core$Basics$toString(deckId))),
 										_1: {
 											ctor: '::',
-											_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$haven$Messages$ButtonPress, 'story', 'view-single', _neontribe$haven$StoryDeck$storyTitle(deckId), false)),
+											_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$contemplating_action$Messages$ButtonPress, 'story', 'view-single', _neontribe$contemplating_action$StoryDeck$storyTitle(deckId), false)),
 											_1: { ctor: '[]' }
 										}
 									}
 								}, {
 									ctor: '::',
-									_0: A2(_neontribe$haven$Icon$getIcon, 'arrow-right', _elm_lang$core$Maybe$Just('icon--alternate')),
+									_0: A2(_neontribe$contemplating_action$Icon$getIcon, 'arrow-right', _elm_lang$core$Maybe$Just('icon--alternate')),
 									_1: { ctor: '[]' }
 								}),
 								_1: { ctor: '[]' }
@@ -10320,19 +10302,19 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 			}
 		});
 	};
-	var _neontribe$haven$StoryDeck$Deck = F7(function (a, b, c, d, e, f, g) {
+	var _neontribe$contemplating_action$StoryDeck$Deck = F7(function (a, b, c, d, e, f, g) {
 		return { id: a, title: b, teaser: c, teaserImgPath: d, teaserImgAltText: e, relatedInfo: f, cards: g };
 	});
-	var _neontribe$haven$StoryDeck$Card = F4(function (a, b, c, d) {
+	var _neontribe$contemplating_action$StoryDeck$Card = F4(function (a, b, c, d) {
 		return { imagePath: a, messageText: b, quoteText: c, altText: d };
 	});
 
-	var _neontribe$haven$Views_Config$helplineDisplay = A2(_elm_lang$core$Basics_ops['++'], '0000', A2(_elm_lang$core$Basics_ops['++'], ' ', A2(_elm_lang$core$Basics_ops['++'], '000', A2(_elm_lang$core$Basics_ops['++'], ' ', '000'))));
-	var _neontribe$haven$Views_Config$helpline = '0000000000';
-	var _neontribe$haven$Views_Config$email = 'ca@neontribe.co.uk';
-	var _neontribe$haven$Views_Config$appTitle = 'Contemplating Action';
+	var _neontribe$contemplating_action$Views_Config$helplineDisplay = A2(_elm_lang$core$Basics_ops['++'], '0000', A2(_elm_lang$core$Basics_ops['++'], ' ', A2(_elm_lang$core$Basics_ops['++'], '000', A2(_elm_lang$core$Basics_ops['++'], ' ', '000'))));
+	var _neontribe$contemplating_action$Views_Config$helpline = '0000000000';
+	var _neontribe$contemplating_action$Views_Config$email = 'ca@neontribe.co.uk';
+	var _neontribe$contemplating_action$Views_Config$appTitle = 'Contemplating Action';
 
-	var _neontribe$haven$Views_Footer$footerContent = A2(_elm_lang$html$Html$footer, {
+	var _neontribe$contemplating_action$Views_Footer$footerContent = A2(_elm_lang$html$Html$footer, {
 		ctor: '::',
 		_0: _elm_lang$html$Html_Attributes$class('section section--footer text-center text-small'),
 		_1: { ctor: '[]' }
@@ -10409,7 +10391,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 								_0: _elm_lang$html$Html_Attributes$href('http://www.neontribe.co.uk/'),
 								_1: {
 									ctor: '::',
-									_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$haven$Messages$ButtonPress, 'contact', 'website', 'neontribe-website-footer', true)),
+									_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$contemplating_action$Messages$ButtonPress, 'contact', 'website', 'neontribe-website-footer', true)),
 									_1: { ctor: '[]' }
 								}
 							}
@@ -10426,9 +10408,9 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 		}
 	});
 
-	var _neontribe$haven$Views_Pages_Privacy$privacyContent = A2(_elm_lang$html$Html$div, {
+	var _neontribe$contemplating_action$Views_Pages_Privacy$privacyContent = A2(_elm_lang$html$Html$div, {
 		ctor: '::',
-		_0: _elm_lang$html$Html_Attributes$class('section section--lighter'),
+		_0: _elm_lang$html$Html_Attributes$class('section'),
 		_1: { ctor: '[]' }
 	}, {
 		ctor: '::',
@@ -10762,15 +10744,15 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 			}),
 			_1: {
 				ctor: '::',
-				_0: _neontribe$haven$Views_Footer$footerContent,
+				_0: _neontribe$contemplating_action$Views_Footer$footerContent,
 				_1: { ctor: '[]' }
 			}
 		}
 	});
 
-	var _neontribe$haven$Views_Pages_Supporters$supportersContent = A2(_elm_lang$html$Html$div, {
+	var _neontribe$contemplating_action$Views_Pages_Supporters$supportersContent = A2(_elm_lang$html$Html$div, {
 		ctor: '::',
-		_0: _elm_lang$html$Html_Attributes$class(' section section--lighter'),
+		_0: _elm_lang$html$Html_Attributes$class('section'),
 		_1: { ctor: '[]' }
 	}, {
 		ctor: '::',
@@ -10801,7 +10783,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 							_0: _elm_lang$html$Html_Attributes$class('supporter--logo'),
 							_1: {
 								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$src(_neontribe$haven$Assets$path(_neontribe$haven$Assets$AssetPath(__webpack_require__(47)))),
+								_0: _elm_lang$html$Html_Attributes$src(_neontribe$contemplating_action$Assets$path(_neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(44)))),
 								_1: {
 									ctor: '::',
 									_0: _elm_lang$html$Html_Attributes$alt('Cast Logo'),
@@ -10831,7 +10813,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 									_0: _elm_lang$html$Html_Attributes$class('supporter--logo'),
 									_1: {
 										ctor: '::',
-										_0: _elm_lang$html$Html_Attributes$src(_neontribe$haven$Assets$path(_neontribe$haven$Assets$AssetPath(__webpack_require__(48)))),
+										_0: _elm_lang$html$Html_Attributes$src(_neontribe$contemplating_action$Assets$path(_neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(45)))),
 										_1: {
 											ctor: '::',
 											_0: _elm_lang$html$Html_Attributes$alt('Comic Relief'),
@@ -10846,7 +10828,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 										_0: _elm_lang$html$Html_Attributes$class('supporter--logo'),
 										_1: {
 											ctor: '::',
-											_0: _elm_lang$html$Html_Attributes$src(_neontribe$haven$Assets$path(_neontribe$haven$Assets$AssetPath(__webpack_require__(49)))),
+											_0: _elm_lang$html$Html_Attributes$src(_neontribe$contemplating_action$Assets$path(_neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(46)))),
 											_1: {
 												ctor: '::',
 												_0: _elm_lang$html$Html_Attributes$alt('Department for Culture Media & Sport'),
@@ -10861,7 +10843,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 											_0: _elm_lang$html$Html_Attributes$class('supporter--logo'),
 											_1: {
 												ctor: '::',
-												_0: _elm_lang$html$Html_Attributes$src(_neontribe$haven$Assets$path(_neontribe$haven$Assets$AssetPath(__webpack_require__(50)))),
+												_0: _elm_lang$html$Html_Attributes$src(_neontribe$contemplating_action$Assets$path(_neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(47)))),
 												_1: {
 													ctor: '::',
 													_0: _elm_lang$html$Html_Attributes$alt('Big Lottery Fund'),
@@ -10893,7 +10875,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 											_0: _elm_lang$html$Html_Attributes$class('supporter--logo'),
 											_1: {
 												ctor: '::',
-												_0: _elm_lang$html$Html_Attributes$src(_neontribe$haven$Assets$path(_neontribe$haven$Assets$AssetPath(__webpack_require__(51)))),
+												_0: _elm_lang$html$Html_Attributes$src(_neontribe$contemplating_action$Assets$path(_neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(48)))),
 												_1: {
 													ctor: '::',
 													_0: _elm_lang$html$Html_Attributes$alt('Neontribe'),
@@ -10908,7 +10890,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 												_0: _elm_lang$html$Html_Attributes$class('supporter--logo'),
 												_1: {
 													ctor: '::',
-													_0: _elm_lang$html$Html_Attributes$src(_neontribe$haven$Assets$path(_neontribe$haven$Assets$AssetPath(__webpack_require__(52)))),
+													_0: _elm_lang$html$Html_Attributes$src(_neontribe$contemplating_action$Assets$path(_neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(49)))),
 													_1: {
 														ctor: '::',
 														_0: _elm_lang$html$Html_Attributes$alt('The Haven Wolverhampton'),
@@ -10937,12 +10919,12 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 		}),
 		_1: {
 			ctor: '::',
-			_0: _neontribe$haven$Views_Footer$footerContent,
+			_0: _neontribe$contemplating_action$Views_Footer$footerContent,
 			_1: { ctor: '[]' }
 		}
 	});
 
-	var _neontribe$haven$Views_Content$view = function (model) {
+	var _neontribe$contemplating_action$Views_Content$view = function (model) {
 		var _p0 = model.currentPage;
 		switch (_p0.ctor) {
 			case 'Home':
@@ -10954,7 +10936,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 					ctor: '::',
 					_0: A2(_elm_lang$html$Html$section, {
 						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$class('section section--highlight section--align-bottom'),
+						_0: _elm_lang$html$Html_Attributes$class('section section--lighter section--align-bottom'),
 						_1: { ctor: '[]' }
 					}, {
 						ctor: '::',
@@ -10981,7 +10963,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 									}
 								}, {
 									ctor: '::',
-									_0: A2(_neontribe$haven$Icon$getIcon, 'question-circle-o', _elm_lang$core$Maybe$Just('button--icon')),
+									_0: A2(_neontribe$contemplating_action$Icon$getIcon, 'question-circle-o', _elm_lang$core$Maybe$Just('button--icon')),
 									_1: {
 										ctor: '::',
 										_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
@@ -11001,7 +10983,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 									_0: _elm_lang$html$Html_Attributes$class('block'),
 									_1: {
 										ctor: '::',
-										_0: _elm_lang$html$Html_Attributes$src(_neontribe$haven$Assets$path(_neontribe$haven$Assets$AssetPath(__webpack_require__(53)))),
+										_0: _elm_lang$html$Html_Attributes$src(_neontribe$contemplating_action$Assets$path(_neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(50)))),
 										_1: {
 											ctor: '::',
 											_0: _elm_lang$html$Html_Attributes$alt('A description of banner image.'),
@@ -11017,7 +10999,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 						ctor: '::',
 						_0: A2(_elm_lang$html$Html$section, {
 							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('section section--vertical-fill-center section--lighter'),
+							_0: _elm_lang$html$Html_Attributes$class('section section--vertical-fill-center'),
 							_1: { ctor: '[]' }
 						}, {
 							ctor: '::',
@@ -11030,7 +11012,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 								ctor: '::',
 								_0: A2(_elm_lang$html$Html$p, { ctor: '[]' }, {
 									ctor: '::',
-									_0: _elm_lang$html$Html$text('In 2017, The Haven, Wolverhampton, Neontribe and women who had been through domestic violence co-designed a\n                        web app to encourage other women in that situation to seek support and advice. We want to find out if the structure of\n                        that app could be used by different organisations to encourage people to use a helpline or web chat or text service. We\n                        believe that reassuring people that their fears and challenges are shared will help them take early steps on a journey of\n                        change. Explore the app and then take our survey to tell us what you think.\n                        '),
+									_0: _elm_lang$html$Html$text('This is a demonstration version of a web app we believe could be used by different organisations to encourage people to use a helpline or web chat or\n                        text service. We believe that reassuring people that their fears and challenges are shared will help them take early steps on a\n                        journey of change.  In a live app the information in this section would be additional information about the organisation and it’s\n                        support services for people who did not follow the direct link to the stories.\n                        '),
 									_1: { ctor: '[]' }
 								}),
 								_1: {
@@ -11047,7 +11029,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 											}
 										}, {
 											ctor: '::',
-											_0: _elm_lang$html$Html$text('Read more about this project'),
+											_0: _elm_lang$html$Html$text('Read in depth about this project'),
 											_1: { ctor: '[]' }
 										}),
 										_1: { ctor: '[]' }
@@ -11070,7 +11052,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 													ctor: '::',
 													_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
 														ctor: '::',
-														_0: A2(_neontribe$haven$Icon$getIcon, 'phone', _elm_lang$core$Maybe$Just('button--icon')),
+														_0: A2(_neontribe$contemplating_action$Icon$getIcon, 'phone', _elm_lang$core$Maybe$Just('button--icon')),
 														_1: {
 															ctor: '::',
 															_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
@@ -11085,7 +11067,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 														ctor: '::',
 														_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
 															ctor: '::',
-															_0: _elm_lang$html$Html$text(_neontribe$haven$Views_Config$helplineDisplay),
+															_0: _elm_lang$html$Html$text(_neontribe$contemplating_action$Views_Config$helplineDisplay),
 															_1: { ctor: '[]' }
 														}),
 														_1: { ctor: '[]' }
@@ -11100,16 +11082,16 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 													_0: _elm_lang$html$Html_Attributes$class('mobile-only button button--full-width button--default-width--desktop'),
 													_1: {
 														ctor: '::',
-														_0: _elm_lang$html$Html_Attributes$href(A2(_elm_lang$core$Basics_ops['++'], 'tel:', _neontribe$haven$Views_Config$helpline)),
+														_0: _elm_lang$html$Html_Attributes$href(A2(_elm_lang$core$Basics_ops['++'], 'tel:', _neontribe$contemplating_action$Views_Config$helpline)),
 														_1: {
 															ctor: '::',
-															_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$haven$Messages$ButtonPress, 'contact', 'call', 'call-button', true)),
+															_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$contemplating_action$Messages$ButtonPress, 'contact', 'call', 'call-button', true)),
 															_1: { ctor: '[]' }
 														}
 													}
 												}, {
 													ctor: '::',
-													_0: A2(_neontribe$haven$Icon$getIcon, 'phone', _elm_lang$core$Maybe$Just('button--icon')),
+													_0: A2(_neontribe$contemplating_action$Icon$getIcon, 'phone', _elm_lang$core$Maybe$Just('button--icon')),
 													_1: {
 														ctor: '::',
 														_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
@@ -11127,16 +11109,16 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 														_0: _elm_lang$html$Html_Attributes$class('button button--full-width button--default-width--desktop'),
 														_1: {
 															ctor: '::',
-															_0: _elm_lang$html$Html_Attributes$href(A2(_elm_lang$core$Basics_ops['++'], 'mailto:', _neontribe$haven$Views_Config$email)),
+															_0: _elm_lang$html$Html_Attributes$href(A2(_elm_lang$core$Basics_ops['++'], 'mailto:', _neontribe$contemplating_action$Views_Config$email)),
 															_1: {
 																ctor: '::',
-																_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$haven$Messages$ButtonPress, 'contact', 'email', 'email-button', true)),
+																_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$contemplating_action$Messages$ButtonPress, 'contact', 'email', 'email-button', true)),
 																_1: { ctor: '[]' }
 															}
 														}
 													}, {
 														ctor: '::',
-														_0: A2(_neontribe$haven$Icon$getIcon, 'envelope', _elm_lang$core$Maybe$Just('button--icon')),
+														_0: A2(_neontribe$contemplating_action$Icon$getIcon, 'envelope', _elm_lang$core$Maybe$Just('button--icon')),
 														_1: {
 															ctor: '::',
 															_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
@@ -11178,7 +11160,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 										ctor: '::',
 										_0: A2(_elm_lang$html$Html$p, { ctor: '[]' }, {
 											ctor: '::',
-											_0: _elm_lang$html$Html$text('This space is used by The Haven to remind people to call the Police in emergency situations. It could be used for any kind of risk related reminder by other charities.'),
+											_0: _elm_lang$html$Html$text('This space is used to give a reminder about what to do in a crisis or high risk situation when the app is not the right support..'),
 											_1: { ctor: '[]' }
 										}),
 										_1: { ctor: '[]' }
@@ -11189,7 +11171,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 							}),
 							_1: {
 								ctor: '::',
-								_0: _neontribe$haven$Views_Footer$footerContent,
+								_0: _neontribe$contemplating_action$Views_Footer$footerContent,
 								_1: { ctor: '[]' }
 							}
 						}
@@ -11213,7 +11195,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 							ctor: '::',
 							_0: A2(_elm_lang$html$Html$button, {
 								ctor: '::',
-								_0: _elm_lang$html$Html_Events$onClick(_neontribe$haven$Messages$GoBack),
+								_0: _elm_lang$html$Html_Events$onClick(_neontribe$contemplating_action$Messages$GoBack),
 								_1: {
 									ctor: '::',
 									_0: _elm_lang$html$Html_Attributes$class('button button--default-width--desktop'),
@@ -11242,7 +11224,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 					}
 				});
 			case 'SupportersPage':
-				return _neontribe$haven$Views_Pages_Supporters$supportersContent;
+				return _neontribe$contemplating_action$Views_Pages_Supporters$supportersContent;
 			case 'StoriesPage':
 				return A2(_elm_lang$html$Html$div, {
 					ctor: '::',
@@ -11252,7 +11234,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 					ctor: '::',
 					_0: A2(_elm_lang$html$Html$div, {
 						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$class('section section--darker section--vertical-fill-center'),
+						_0: _elm_lang$html$Html_Attributes$class('section section--lighter section--vertical-fill-center'),
 						_1: { ctor: '[]' }
 					}, {
 						ctor: '::',
@@ -11263,10 +11245,10 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 						}),
 						_1: {
 							ctor: '::',
-							_0: _neontribe$haven$StoryDeck$storyTeaser(1),
+							_0: _neontribe$contemplating_action$StoryDeck$storyTeaser(1),
 							_1: {
 								ctor: '::',
-								_0: _neontribe$haven$StoryDeck$storyTeaser(2),
+								_0: _neontribe$contemplating_action$StoryDeck$storyTeaser(2),
 								_1: { ctor: '[]' }
 							}
 						}
@@ -11275,7 +11257,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 						ctor: '::',
 						_0: A2(_elm_lang$html$Html$div, {
 							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('section section--highlight'),
+							_0: _elm_lang$html$Html_Attributes$class('section section--lighter'),
 							_1: { ctor: '[]' }
 						}, {
 							ctor: '::',
@@ -11293,7 +11275,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 										_0: _elm_lang$html$Html_Attributes$href('#/info-to-help'),
 										_1: {
 											ctor: '::',
-											_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$haven$Messages$ButtonPress, 'information', 'view-list', 'more-info', true)),
+											_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$contemplating_action$Messages$ButtonPress, 'information', 'view-list', 'more-info', true)),
 											_1: { ctor: '[]' }
 										}
 									}
@@ -11319,27 +11301,27 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 					ctor: '::',
 					_0: A2(_elm_lang$html$Html$div, {
 						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$class('section section--darker section--vertical-fill-center'),
+						_0: _elm_lang$html$Html_Attributes$class('section section--lighter section--vertical-fill-center'),
 						_1: { ctor: '[]' }
 					}, {
 						ctor: '::',
 						_0: A2(_elm_lang$html$Html$h2, { ctor: '[]' }, {
 							ctor: '::',
-							_0: _elm_lang$html$Html$text(_neontribe$haven$StoryDeck$storyTitle(_p1)),
+							_0: _elm_lang$html$Html$text(_neontribe$contemplating_action$StoryDeck$storyTitle(_p1)),
 							_1: { ctor: '[]' }
 						}),
 						_1: {
 							ctor: '::',
-							_0: A2(_neontribe$haven$StoryDeck$card, _p1, 1),
+							_0: A2(_neontribe$contemplating_action$StoryDeck$card, _p1, 1),
 							_1: {
 								ctor: '::',
-								_0: A2(_neontribe$haven$StoryDeck$card, _p1, 2),
+								_0: A2(_neontribe$contemplating_action$StoryDeck$card, _p1, 2),
 								_1: {
 									ctor: '::',
-									_0: A2(_neontribe$haven$StoryDeck$card, _p1, 3),
+									_0: A2(_neontribe$contemplating_action$StoryDeck$card, _p1, 3),
 									_1: {
 										ctor: '::',
-										_0: A2(_neontribe$haven$StoryDeck$card, _p1, 4),
+										_0: A2(_neontribe$contemplating_action$StoryDeck$card, _p1, 4),
 										_1: { ctor: '[]' }
 									}
 								}
@@ -11350,7 +11332,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 						ctor: '::',
 						_0: A2(_elm_lang$html$Html$div, {
 							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('section section--highlight section--story-end'),
+							_0: _elm_lang$html$Html_Attributes$class('section section--story-end'),
 							_1: { ctor: '[]' }
 						}, {
 							ctor: '::',
@@ -11369,7 +11351,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 									ctor: '::',
 									_0: _elm_lang$html$Html_Attributes$class('button-group story--related'),
 									_1: { ctor: '[]' }
-								}, _neontribe$haven$StoryDeck$storyRelatedInfo(_p1)),
+								}, _neontribe$contemplating_action$StoryDeck$storyRelatedInfo(_p1)),
 								_1: {
 									ctor: '::',
 									_0: A2(_elm_lang$html$Html$div, {
@@ -11386,7 +11368,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 												_0: _elm_lang$html$Html_Attributes$class('button button--alternate button--full-width'),
 												_1: {
 													ctor: '::',
-													_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$haven$Messages$ButtonPress, 'information', 'view-list', 'more-info', true)),
+													_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$contemplating_action$Messages$ButtonPress, 'information', 'view-list', 'more-info', true)),
 													_1: { ctor: '[]' }
 												}
 											}
@@ -11413,7 +11395,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 												ctor: '::',
 												_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
 													ctor: '::',
-													_0: A2(_neontribe$haven$Icon$getIcon, 'phone', _elm_lang$core$Maybe$Just('button--icon')),
+													_0: A2(_neontribe$contemplating_action$Icon$getIcon, 'phone', _elm_lang$core$Maybe$Just('button--icon')),
 													_1: {
 														ctor: '::',
 														_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
@@ -11428,7 +11410,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 													ctor: '::',
 													_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
 														ctor: '::',
-														_0: _elm_lang$html$Html$text(_neontribe$haven$Views_Config$helplineDisplay),
+														_0: _elm_lang$html$Html$text(_neontribe$contemplating_action$Views_Config$helplineDisplay),
 														_1: { ctor: '[]' }
 													}),
 													_1: { ctor: '[]' }
@@ -11443,16 +11425,16 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 												_0: _elm_lang$html$Html_Attributes$class('mobile-only button button--alternate button--full-width'),
 												_1: {
 													ctor: '::',
-													_0: _elm_lang$html$Html_Attributes$href(A2(_elm_lang$core$Basics_ops['++'], 'tel:', _neontribe$haven$Views_Config$helpline)),
+													_0: _elm_lang$html$Html_Attributes$href(A2(_elm_lang$core$Basics_ops['++'], 'tel:', _neontribe$contemplating_action$Views_Config$helpline)),
 													_1: {
 														ctor: '::',
-														_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$haven$Messages$ButtonPress, 'contact', 'call', 'call-button', true)),
+														_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$contemplating_action$Messages$ButtonPress, 'contact', 'call', 'call-button', true)),
 														_1: { ctor: '[]' }
 													}
 												}
 											}, {
 												ctor: '::',
-												_0: A2(_neontribe$haven$Icon$getIcon, 'phone', _elm_lang$core$Maybe$Just('button--icon')),
+												_0: A2(_neontribe$contemplating_action$Icon$getIcon, 'phone', _elm_lang$core$Maybe$Just('button--icon')),
 												_1: {
 													ctor: '::',
 													_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
@@ -11473,7 +11455,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 					}
 				});
 			case 'PrivacyPage':
-				return _neontribe$haven$Views_Pages_Privacy$privacyContent;
+				return _neontribe$contemplating_action$Views_Pages_Privacy$privacyContent;
 			case 'InfoToHelpPage':
 				return A2(_elm_lang$html$Html$div, {
 					ctor: '::',
@@ -11494,22 +11476,22 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 							_1: { ctor: '[]' }
 						}, {
 							ctor: '::',
-							_0: _neontribe$haven$Info$infoCard(_neontribe$haven$Info$getInfo(1)),
+							_0: _neontribe$contemplating_action$Info$infoCard(_neontribe$contemplating_action$Info$getInfo(1)),
 							_1: {
 								ctor: '::',
-								_0: _neontribe$haven$Info$infoCard(_neontribe$haven$Info$getInfo(2)),
+								_0: _neontribe$contemplating_action$Info$infoCard(_neontribe$contemplating_action$Info$getInfo(2)),
 								_1: {
 									ctor: '::',
-									_0: _neontribe$haven$Info$infoCard(_neontribe$haven$Info$getInfo(3)),
+									_0: _neontribe$contemplating_action$Info$infoCard(_neontribe$contemplating_action$Info$getInfo(3)),
 									_1: {
 										ctor: '::',
-										_0: _neontribe$haven$Info$infoCard(_neontribe$haven$Info$getInfo(4)),
+										_0: _neontribe$contemplating_action$Info$infoCard(_neontribe$contemplating_action$Info$getInfo(4)),
 										_1: {
 											ctor: '::',
-											_0: _neontribe$haven$Info$infoCard(_neontribe$haven$Info$getInfo(5)),
+											_0: _neontribe$contemplating_action$Info$infoCard(_neontribe$contemplating_action$Info$getInfo(5)),
 											_1: {
 												ctor: '::',
-												_0: _neontribe$haven$Info$infoCard(_neontribe$haven$Info$getInfo(6)),
+												_0: _neontribe$contemplating_action$Info$infoCard(_neontribe$contemplating_action$Info$getInfo(6)),
 												_1: { ctor: '[]' }
 											}
 										}
@@ -11521,11 +11503,11 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 					}
 				});
 			default:
-				return _neontribe$haven$Info$infoPage(_neontribe$haven$Info$getInfoBySlug(_p0._0));
+				return _neontribe$contemplating_action$Info$infoPage(_neontribe$contemplating_action$Info$getInfoBySlug(_p0._0));
 		}
 	};
 
-	var _neontribe$haven$Views_Header$view = function (model) {
+	var _neontribe$contemplating_action$Views_Header$view = function (model) {
 		var _p0 = model.currentPage;
 		if (_p0.ctor === 'Home') {
 			return A2(_elm_lang$html$Html$header, {
@@ -11536,7 +11518,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 				ctor: '::',
 				_0: A2(_elm_lang$html$Html$h1, { ctor: '[]' }, {
 					ctor: '::',
-					_0: _elm_lang$html$Html$text(_neontribe$haven$Views_Config$appTitle),
+					_0: _elm_lang$html$Html$text(_neontribe$contemplating_action$Views_Config$appTitle),
 					_1: { ctor: '[]' }
 				}),
 				_1: { ctor: '[]' }
@@ -11556,7 +11538,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 						_1: { ctor: '[]' }
 					}, {
 						ctor: '::',
-						_0: _elm_lang$html$Html$text(_neontribe$haven$Views_Config$appTitle),
+						_0: _elm_lang$html$Html$text(_neontribe$contemplating_action$Views_Config$appTitle),
 						_1: { ctor: '[]' }
 					}),
 					_1: { ctor: '[]' }
@@ -11566,7 +11548,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 		}
 	};
 
-	var _neontribe$haven$Views_Nav$navItem = F6(function (icon, link, category, action, shortLinkText, longLinkText) {
+	var _neontribe$contemplating_action$Views_Nav$navItem = F6(function (icon, link, category, action, shortLinkText, longLinkText) {
 		return A2(_elm_lang$html$Html$span, {
 			ctor: '::',
 			_0: _elm_lang$html$Html_Attributes$class('nav-item'),
@@ -11578,12 +11560,12 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 				_0: _elm_lang$html$Html_Attributes$href(link),
 				_1: {
 					ctor: '::',
-					_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$haven$Messages$ButtonPress, category, action, A2(_elm_lang$core$Basics_ops['++'], action, '-nav'), true)),
+					_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$contemplating_action$Messages$ButtonPress, category, action, A2(_elm_lang$core$Basics_ops['++'], action, '-nav'), true)),
 					_1: { ctor: '[]' }
 				}
 			}, {
 				ctor: '::',
-				_0: A2(_neontribe$haven$Icon$getIcon, icon, _elm_lang$core$Maybe$Just('nav-item-text nav-icon')),
+				_0: A2(_neontribe$contemplating_action$Icon$getIcon, icon, _elm_lang$core$Maybe$Just('nav-item-text nav-icon')),
 				_1: {
 					ctor: '::',
 					_0: A2(_elm_lang$html$Html$span, {
@@ -11605,7 +11587,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 							ctor: '::',
 							_0: A2(_elm_lang$html$Html$span, {
 								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$class('desktop-only'),
+								_0: _elm_lang$html$Html_Attributes$class('desktop-only nav-text-selector'),
 								_1: { ctor: '[]' }
 							}, {
 								ctor: '::',
@@ -11621,7 +11603,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 			_1: { ctor: '[]' }
 		});
 	});
-	var _neontribe$haven$Views_Nav$view = function (_p0) {
+	var _neontribe$contemplating_action$Views_Nav$view = function (_p0) {
 		return A2(_elm_lang$html$Html$div, {
 			ctor: '::',
 			_0: _elm_lang$html$Html_Attributes$class('nav-bar'),
@@ -11657,7 +11639,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 							_1: { ctor: '[]' }
 						}, {
 							ctor: '::',
-							_0: _elm_lang$html$Html$text(_neontribe$haven$Views_Config$helplineDisplay),
+							_0: _elm_lang$html$Html$text(_neontribe$contemplating_action$Views_Config$helplineDisplay),
 							_1: { ctor: '[]' }
 						}),
 						_1: { ctor: '[]' }
@@ -11669,10 +11651,10 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 				ctor: '::',
 				_0: A2(_elm_lang$html$Html$nav, { ctor: '[]' }, {
 					ctor: '::',
-					_0: A6(_neontribe$haven$Views_Nav$navItem, 'question-circle-o', '#/stories', 'find-out-more', 'view-list', 'Find Out More', 'Find Out More'),
+					_0: A6(_neontribe$contemplating_action$Views_Nav$navItem, 'question-circle-o', '#/stories', 'find-out-more', 'view-list', 'Find Out More', 'Find Out More'),
 					_1: {
 						ctor: '::',
-						_0: A6(_neontribe$haven$Views_Nav$navItem, 'envelope', A2(_elm_lang$core$Basics_ops['++'], 'mailto:', _neontribe$haven$Views_Config$email), 'contact', 'email', 'Email', _neontribe$haven$Views_Config$email),
+						_0: A6(_neontribe$contemplating_action$Views_Nav$navItem, 'envelope', A2(_elm_lang$core$Basics_ops['++'], 'mailto:', _neontribe$contemplating_action$Views_Config$email), 'contact', 'email', 'Email', _neontribe$contemplating_action$Views_Config$email),
 						_1: {
 							ctor: '::',
 							_0: A2(_elm_lang$html$Html$span, {
@@ -11681,7 +11663,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 								_1: { ctor: '[]' }
 							}, {
 								ctor: '::',
-								_0: A6(_neontribe$haven$Views_Nav$navItem, 'phone', A2(_elm_lang$core$Basics_ops['++'], 'tel:', _neontribe$haven$Views_Config$helpline), 'contact', 'call', 'Call', _neontribe$haven$Views_Config$helplineDisplay),
+								_0: A6(_neontribe$contemplating_action$Views_Nav$navItem, 'phone', A2(_elm_lang$core$Basics_ops['++'], 'tel:', _neontribe$contemplating_action$Views_Config$helpline), 'contact', 'call', 'Call', _neontribe$contemplating_action$Views_Config$helplineDisplay),
 								_1: { ctor: '[]' }
 							}),
 							_1: {
@@ -11706,7 +11688,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 													_0: _elm_lang$html$Html_Attributes$rel('noopener'),
 													_1: {
 														ctor: '::',
-														_0: _elm_lang$html$Html_Events$onClick(_neontribe$haven$Messages$Exit(true)),
+														_0: _elm_lang$html$Html_Events$onClick(_neontribe$contemplating_action$Messages$Exit(true)),
 														_1: { ctor: '[]' }
 													}
 												}
@@ -11714,12 +11696,12 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 										}
 									}, {
 										ctor: '::',
-										_0: A2(_neontribe$haven$Icon$getIcon, 'exit-door', _elm_lang$core$Maybe$Just('nav-item-text nav-icon')),
+										_0: A2(_neontribe$contemplating_action$Icon$getIcon, 'exit-door', _elm_lang$core$Maybe$Just('nav-item-text nav-icon')),
 										_1: {
 											ctor: '::',
 											_0: A2(_elm_lang$html$Html$span, {
 												ctor: '::',
-												_0: _elm_lang$html$Html_Attributes$class(' nav-item-text'),
+												_0: _elm_lang$html$Html_Attributes$class(' nav-item-text nav-text-selector'),
 												_1: { ctor: '[]' }
 											}, {
 												ctor: '::',
@@ -11741,17 +11723,17 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 		});
 	};
 
-	var _neontribe$haven$View$view = function (model) {
+	var _neontribe$contemplating_action$View$view = function (model) {
 		return A2(_elm_lang$html$Html$div, {
 			ctor: '::',
-			_0: _elm_lang$html$Html_Attributes$class(A2(_elm_lang$core$Basics_ops['++'], 'page ', _neontribe$haven$Model$pageSlug(model.currentPage))),
+			_0: _elm_lang$html$Html_Attributes$class(A2(_elm_lang$core$Basics_ops['++'], 'page ', _neontribe$contemplating_action$Model$pageSlug(model.currentPage))),
 			_1: { ctor: '[]' }
 		}, {
 			ctor: '::',
-			_0: _neontribe$haven$Views_Header$view(model),
+			_0: _neontribe$contemplating_action$Views_Header$view(model),
 			_1: {
 				ctor: '::',
-				_0: _neontribe$haven$Views_Nav$view(model),
+				_0: _neontribe$contemplating_action$Views_Nav$view(model),
 				_1: {
 					ctor: '::',
 					_0: A2(_elm_lang$html$Html$div, {
@@ -11764,7 +11746,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 						}
 					}, {
 						ctor: '::',
-						_0: _neontribe$haven$Views_Content$view(model),
+						_0: _neontribe$contemplating_action$Views_Content$view(model),
 						_1: { ctor: '[]' }
 					}),
 					_1: { ctor: '[]' }
@@ -11773,15 +11755,15 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 		});
 	};
 
-	var _neontribe$haven$Main$locChange = function (location) {
-		return _neontribe$haven$Messages$UrlChange(A2(_evancz$url_parser$UrlParser$parseHash, _neontribe$haven$Route$route, location));
+	var _neontribe$contemplating_action$Main$locChange = function (location) {
+		return _neontribe$contemplating_action$Messages$UrlChange(A2(_evancz$url_parser$UrlParser$parseHash, _neontribe$contemplating_action$Route$route, location));
 	};
-	var _neontribe$haven$Main$main = A2(_elm_lang$navigation$Navigation$program, _neontribe$haven$Main$locChange, { init: _neontribe$haven$Model$init, view: _neontribe$haven$View$view, update: _neontribe$haven$Update$update, subscriptions: _neontribe$haven$Subscriptions$subscriptions })();
+	var _neontribe$contemplating_action$Main$main = A2(_elm_lang$navigation$Navigation$program, _neontribe$contemplating_action$Main$locChange, { init: _neontribe$contemplating_action$Model$init, view: _neontribe$contemplating_action$View$view, update: _neontribe$contemplating_action$Update$update, subscriptions: _neontribe$contemplating_action$Subscriptions$subscriptions })();
 
 	var Elm = {};
 	Elm['Main'] = Elm['Main'] || {};
-	if (typeof _neontribe$haven$Main$main !== 'undefined') {
-		_neontribe$haven$Main$main(Elm['Main'], 'Main', undefined);
+	if (typeof _neontribe$contemplating_action$Main$main !== 'undefined') {
+		_neontribe$contemplating_action$Main$main(Elm['Main'], 'Main', undefined);
 	}
 
 	if (true) {
@@ -11812,91 +11794,91 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 }).call(this);
 
 /***/ }),
-/* 39 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "ourproject-image2.jpg?c9ac9614f8ad1f1ce1ee3875570a26e4";
 
 /***/ }),
-/* 40 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "ourproject-image3.jpg?473b2314a245320a3b56f265bc2cdd6d";
 
 /***/ }),
-/* 41 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "ourproject-image4.jpg?ba223b1146b19074b33d782aacc9f4bb";
 
 /***/ }),
-/* 42 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "ama_2.jpg?a78ea6e454052fac10c25b0c95215817";
 
 /***/ }),
-/* 43 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "ama_3.jpg?88f4cb965bc55a51c6d3feb266321fe4";
 
 /***/ }),
-/* 44 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "ama_4.jpg?ba9594ec58404c00526caddfd505feb6";
 
 /***/ }),
-/* 45 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "slide1.svg?174d4e36746d5a1bf711f6e7c7293046";
 
 /***/ }),
-/* 46 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "thumb_placeholder.png?5a37c6a2b4c26f96bbc3aa9e1dba4982";
 
 /***/ }),
-/* 47 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "Castlogo.png?60a10767e1334bcd877cba09c802e832";
 
 /***/ }),
-/* 48 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "comicrelief.svg?bdaa58e8cbdd18891d22d435c23e6456";
 
 /***/ }),
-/* 49 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "DCMSlogo.svg?ed978020b1899a1cb8a23a41d456d351";
 
 /***/ }),
-/* 50 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "biglottery.svg?9ad1254b0f0d56591028d90637c5567c";
 
 /***/ }),
-/* 51 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "neontribelogo.svg?458fc0b0dc6b101e8c0c917109ab7f4e";
 
 /***/ }),
-/* 52 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "havenlogo.svg?9151f243117ff6def60b409f5cb9c1fd";
 
 /***/ }),
-/* 53 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "banner.png?b019b9a4c748fa886fe9eacf34b9842b";
