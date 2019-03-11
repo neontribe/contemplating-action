@@ -8,7 +8,7 @@ appTitle =
 
 email : String
 email =
-    "ca@neontribe.co.uk"
+    "hello@contemplatingaction.org.uk"
 
 
 helpline : String
