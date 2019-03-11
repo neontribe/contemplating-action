@@ -543,13 +543,13 @@ function updateLink (link, options, obj) {
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "ourproject-image1.jpg?a8817eae407a978b0c253aea602bd03c";
+module.exports = __webpack_require__.p + "ourproject-image1.jpg?e4ed6253384105fe90f1e130daceb668";
 
 /***/ }),
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "ama_1.jpg?29b97a0fd04364118924b8b467255ca3";
+module.exports = __webpack_require__.p + "ama_1.jpg?2e9591dd1923f1b2c1670653a844780e";
 
 /***/ }),
 /* 5 */
@@ -10311,7 +10311,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 
 	var _neontribe$contemplating_action$Views_Config$helplineDisplay = A2(_elm_lang$core$Basics_ops['++'], '0000', A2(_elm_lang$core$Basics_ops['++'], ' ', A2(_elm_lang$core$Basics_ops['++'], '000', A2(_elm_lang$core$Basics_ops['++'], ' ', '000'))));
 	var _neontribe$contemplating_action$Views_Config$helpline = '0000000000';
-	var _neontribe$contemplating_action$Views_Config$email = 'ca@neontribe.co.uk';
+	var _neontribe$contemplating_action$Views_Config$email = 'hello@contemplatingaction.org.uk';
 	var _neontribe$contemplating_action$Views_Config$appTitle = 'Contemplating Action';
 
 	var _neontribe$contemplating_action$Views_Footer$footerContent = A2(_elm_lang$html$Html$footer, {
@@ -11797,37 +11797,37 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 /* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "ourproject-image2.jpg?c9ac9614f8ad1f1ce1ee3875570a26e4";
+module.exports = __webpack_require__.p + "ourproject-image2.jpg?e64b4a0b8c449146f49d831680622a62";
 
 /***/ }),
 /* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "ourproject-image3.jpg?473b2314a245320a3b56f265bc2cdd6d";
+module.exports = __webpack_require__.p + "ourproject-image3.jpg?7311312ee2c48f39a318c5e49ea3a2b4";
 
 /***/ }),
 /* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "ourproject-image4.jpg?ba223b1146b19074b33d782aacc9f4bb";
+module.exports = __webpack_require__.p + "ourproject-image4.jpg?762d038572ed3955777d9c328390a8f8";
 
 /***/ }),
 /* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "ama_2.jpg?a78ea6e454052fac10c25b0c95215817";
+module.exports = __webpack_require__.p + "ama_2.jpg?43c3172d9b8a7eab8456cf4058a53ec5";
 
 /***/ }),
 /* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "ama_3.jpg?88f4cb965bc55a51c6d3feb266321fe4";
+module.exports = __webpack_require__.p + "ama_3.jpg?af8288c61c89d2b58d1145a320d7c658";
 
 /***/ }),
 /* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "ama_4.jpg?ba9594ec58404c00526caddfd505feb6";
+module.exports = __webpack_require__.p + "ama_4.jpg?3051a8b3c9cf70490162bfe1261d11ef";
 
 /***/ }),
 /* 42 */
