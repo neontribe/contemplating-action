@@ -11881,7 +11881,7 @@ module.exports = __webpack_require__.p + "havenlogo.svg?9151f243117ff6def60b409f
 /* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "banner.png?b019b9a4c748fa886fe9eacf34b9842b";
+module.exports = __webpack_require__.p + "banner.png?edd5932c20f013405a36aa1c023f5b68";
 
 /***/ })
 /******/ ]);
