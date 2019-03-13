@@ -13,7 +13,7 @@ import Messages exposing (Msg(..))
 import Model exposing (Model)
 import Route exposing (Page(..))
 import StoryDeck exposing (card, storyRelatedInfo, storyTeaser, storyTitle)
-import Views.Config exposing (email, helpline, helplineDisplay)
+import Views.Config exposing (callToAction, email)
 import Views.Footer exposing (footerContent)
 import Views.Pages.Privacy exposing (privacyContent)
 import Views.Pages.Supporters exposing (supportersContent)
@@ -52,12 +52,12 @@ view model =
                                     [ getIcon "phone" (Just "button--icon")
                                     , span [] [ text "Call Us" ]
                                     ]
-                                , span [] [ text helplineDisplay ]
+                                , span [] [ text callToAction.promptLong ]
                                 ]
                             ]
                         , a
                             [ class "mobile-only button button--full-width button--default-width--desktop"
-                            , href ("tel:" ++ helpline)
+                            , href ("tel:" ++ callToAction.href)
                             , onClick (ButtonPress "contact" "call" "call-button" True)
                             ]
                             [ getIcon "phone" (Just "button--icon")
@@ -142,12 +142,12 @@ view model =
                                 [ getIcon "phone" (Just "button--icon")
                                 , span [] [ text "Call Us" ]
                                 ]
-                            , span [] [ text helplineDisplay ]
+                            , span [] [ text callToAction.promptShort ]
                             ]
                         ]
                     , a
                         [ class "mobile-only button button--alternate button--full-width"
-                        , href ("tel:" ++ helpline)
+                        , href ("tel:" ++ callToAction.href)
                         , onClick (ButtonPress "contact" "call" "call-button" True)
                         ]
                         [ getIcon "phone" (Just "button--icon")

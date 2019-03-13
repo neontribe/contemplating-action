@@ -1,4 +1,6 @@
-module Views.Config exposing (appTitle, email, helpline, helplineDisplay)
+module Views.Config exposing (appTitle, callToAction, email)
+
+import CallToAction exposing (CallToAction, CallToActionType(..), callToActionConstructor)
 
 
 appTitle : String
@@ -11,11 +13,6 @@ email =
     "hello@contemplatingaction.org.uk"
 
 
-helpline : String
-helpline =
-    "0000000000"
-
-
-helplineDisplay : String
-helplineDisplay =
-    "0000" ++ " " ++ "000" ++ " " ++ "000"
+callToAction : CallToAction
+callToAction =
+    callToActionConstructor Survey "https://mysurvey.example.com" ""
