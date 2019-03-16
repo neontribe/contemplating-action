@@ -598,7 +598,7 @@ var mountNode = document.getElementById('main');
 var app = Elm.Main.embed(mountNode);
 
 app.ports.updateAnalyticsPage.subscribe(function (page) {
-    gtag('config', 'UA-000000000-0', { 'page_path': page });
+    gtag('config', 'UA-30970110-10', { 'page_path': page });
 });
 
 // Todo make sure multiple events are recording with same category/ action.
