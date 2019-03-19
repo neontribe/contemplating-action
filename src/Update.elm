@@ -17,6 +17,7 @@ update msg model =
                 ( model
                 , updateAnalyticsEvent (gaEvent category action (label ++ "_" ++ pageSlug model.currentPage))
                 )
+
             else
                 ( model
                 , updateAnalyticsEvent (gaEvent category action label)
@@ -76,6 +77,7 @@ update msg model =
                       -- Then redirect to Google
                       , Navigation.load "https://google.com"
                       ]
+
             else
                 let
                     cmds =
@@ -83,10 +85,11 @@ update msg model =
                             [ updateAnalyticsEvent (gaEvent "exit" "auto" ("timed-out_" ++ pageSlug model.idlePage))
                             , Navigation.load "https://google.com"
                             ]
+
                         else
                             [ Cmd.none ]
                 in
-                    (model ! cmds)
+                model ! cmds
 
         GoBack ->
             -- We pressed go back to stop the timeout. Go back to the page we came from, stop exit, restart idle timer.
@@ -101,6 +104,7 @@ update msg model =
             , -- Only load the timeout screen if this is the most recent idle timer.
               if model.idleTimerCount == (idleTimerCount + 1) then
                 delay 0 DoTimeout
+
               else
                 Cmd.none
             )

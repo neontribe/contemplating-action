@@ -1,6 +1,11 @@
-module Views.Config exposing (appTitle, callToAction, email)
+module Views.Config exposing (Display(..), appTitle, callToAction, email)
 
 import CallToAction exposing (CallToAction, CallToActionType(..), callToActionConstructor)
+
+
+type Display
+    = Desktop
+    | Mobile
 
 
 appTitle : String

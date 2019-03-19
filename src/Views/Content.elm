@@ -4,6 +4,7 @@
 module Views.Content exposing (view)
 
 import Assets exposing (AssetPath(..), path)
+import CallToAction exposing (CallToAction, callToActionButton)
 import Html exposing (Html, a, article, button, div, h2, img, p, section, span, text, ul)
 import Html.Attributes exposing (alt, class, href, src)
 import Html.Events exposing (onClick)
@@ -46,22 +47,39 @@ view model =
                         ]
                     , p [] [ a [ class "link link--plain", href "https://neontribe.co.uk/blog" ] [ text "Read in depth about this project" ] ]
                     , div [ class "button-group" ]
-                        [ div [ class "desktop-only" ]
-                            [ div []
-                                [ span []
-                                    [ getIcon "phone" (Just "button--icon")
-                                    , span [] [ text "Call Us" ]
+                        [ if callToAction.action == CallToAction.Phone then
+                            div [ class "desktop-only" ]
+                                [ div []
+                                    [ span []
+                                        [ getIcon callToAction.icon (Just "button--icon")
+                                        , span [] [ text callToAction.promptLong ]
+                                        ]
+                                    , span []
+                                        [ text callToAction.displayHref ]
                                     ]
-                                , span [] [ text callToAction.promptLong ]
                                 ]
-                            ]
+
+                          else
+                            div [] []
                         , a
-                            [ class "mobile-only button button--full-width button--default-width--desktop"
-                            , href ("tel:" ++ callToAction.href)
-                            , onClick (ButtonPress "contact" "call" "call-button" True)
+                            [ class
+                                (if callToAction.action == CallToAction.Phone then
+                                    "mobile-only button button--full-width button--default-width--desktop"
+
+                                 else
+                                    "button button--full-width button--default-width--desktop"
+                                )
+                            , href
+                                (if callToAction.action == CallToAction.Phone then
+                                    "tel:" ++ callToAction.href
+
+                                 else
+                                    callToAction.href
+                                )
+                            , onClick (ButtonPress "call-to-action" callToAction.category "button" True)
                             ]
-                            [ getIcon "phone" (Just "button--icon")
-                            , span [] [ text "Call Us" ]
+                            [ getIcon callToAction.icon (Just "button--icon")
+                            , span [] [ text callToAction.promptLong ]
                             ]
                         , a
                             [ class "button button--full-width button--default-width--desktop"
