@@ -1,6 +1,4 @@
-module CallToAction exposing (CallToAction, CallToActionType(..), callToActionButton, callToActionConstructor)
-
-import Html exposing (Html, div, text)
+module CallToAction exposing (CallToAction, CallToActionType(..), callToActionConstructor)
 
 
 type CallToActionType
@@ -41,13 +39,3 @@ callToActionConstructor actionType href displayHref =
             , promptLong = "Take part in our Survey"
             , promptShort = "Survey"
             }
-
-
-callToActionButton : CallToAction -> Html msg
-callToActionButton cta =
-    case cta.action of
-        Phone ->
-            div [] [ text "phone" ]
-
-        Survey ->
-            div [] [ text "survey" ]

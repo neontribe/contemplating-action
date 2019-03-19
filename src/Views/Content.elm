@@ -4,7 +4,7 @@
 module Views.Content exposing (view)
 
 import Assets exposing (AssetPath(..), path)
-import CallToAction exposing (CallToAction, callToActionButton)
+import CallToAction exposing (CallToAction)
 import Html exposing (Html, a, article, button, div, h2, img, p, section, span, text, ul)
 import Html.Attributes exposing (alt, class, href, src)
 import Html.Events exposing (onClick)
