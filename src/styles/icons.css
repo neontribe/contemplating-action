@@ -1,17 +1,18 @@
 /* Several icons in this set provided by Font Awesome by Dave Gandy - http://fontawesome.io */
+/* Several icons in this set provided by Icomoon by http://keyamoon.com */
 
 @font-face {
-  font-family: 'icomoon';
+  font-family: 'info-fonts';
   font-weight: normal;
   font-style: normal;
-  src: url('./fonts/info-icons.eot'); /* IE9 */
-  src: url('./fonts/info-icons.woff') format('woff'), /* Modern Browsers */
+  src: url('./fonts/info-icons.eot') format('eot'), /* IE9 */
+       url('./fonts/info-icons.woff') format('woff'), /* Modern Browsers */
        url('./fonts/info-icons.ttf') format('truetype'); /* Mobile */
 }
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: 'info-fonts' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;

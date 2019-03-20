@@ -60,7 +60,7 @@ view model =
                                 ]
 
                           else
-                            div [] []
+                            text ""
                         , a
                             [ class
                                 (if callToAction.action == CallToAction.Phone then
@@ -154,22 +154,37 @@ view model =
                             ]
                             [ text "I'd like some other information" ]
                         ]
-                    , div [ class "desktop-only" ]
-                        [ div [ class "text-center" ]
+                    , div
+                        [ class "desktop-only" ]
+                        [ div
+                            [ class
+                                (if callToAction.action == CallToAction.Phone then
+                                    "text-center"
+
+                                 else
+                                    "button button--alternate button--full-width"
+                                )
+                            ]
                             [ span []
-                                [ getIcon "phone" (Just "button--icon")
-                                , span [] [ text "Call Us" ]
+                                [ getIcon callToAction.icon (Just "button--icon")
+                                , span [] [ text callToAction.promptLong ]
                                 ]
-                            , span [] [ text callToAction.promptShort ]
+                            , span [] [ text callToAction.displayHref ]
                             ]
                         ]
                     , a
                         [ class "mobile-only button button--alternate button--full-width"
-                        , href ("tel:" ++ callToAction.href)
-                        , onClick (ButtonPress "contact" "call" "call-button" True)
+                        , href
+                            (if callToAction.action == CallToAction.Phone then
+                                "tel:" ++ callToAction.href
+
+                             else
+                                callToAction.href
+                            )
+                        , onClick (ButtonPress "call-to-action" callToAction.category "button" True)
                         ]
-                        [ getIcon "phone" (Just "button--icon")
-                        , span [] [ text "Call Us" ]
+                        [ getIcon callToAction.icon (Just "button--icon")
+                        , span [] [ text callToAction.promptLong ]
                         ]
                     ]
                 ]
