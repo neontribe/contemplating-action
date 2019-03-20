@@ -1,4 +1,4 @@
-module CallToAction exposing (CallToAction, CallToActionType(..), callToActionConstructor)
+module CallToAction exposing (CallToAction, CallToActionType(..), callToActionConstructor, callToActionNoDesktopButton)
 
 
 type CallToActionType
@@ -39,3 +39,12 @@ callToActionConstructor actionType href displayHref =
             , promptLong = "Take part in our Survey"
             , promptShort = "Survey"
             }
+
+
+callToActionNoDesktopButton : CallToActionType -> Bool
+callToActionNoDesktopButton actionType =
+    if actionType == Phone then
+        True
+
+    else
+        False

@@ -4,7 +4,7 @@
 module Views.Content exposing (view)
 
 import Assets exposing (AssetPath(..), path)
-import CallToAction exposing (CallToAction)
+import CallToAction exposing (CallToAction, callToActionNoDesktopButton)
 import Html exposing (Html, a, article, button, div, h2, img, p, section, span, text, ul)
 import Html.Attributes exposing (alt, class, href, src)
 import Html.Events exposing (onClick)
@@ -47,7 +47,7 @@ view model =
                         ]
                     , p [] [ a [ class "link link--plain", href "https://neontribe.co.uk/blog" ] [ text "Read in depth about this project" ] ]
                     , div [ class "button-group" ]
-                        [ if callToAction.action == CallToAction.Phone then
+                        [ if callToActionNoDesktopButton callToAction.action then
                             div [ class "desktop-only" ]
                                 [ div []
                                     [ span []
@@ -63,14 +63,14 @@ view model =
                             text ""
                         , a
                             [ class
-                                (if callToAction.action == CallToAction.Phone then
+                                (if callToActionNoDesktopButton callToAction.action then
                                     "mobile-only button button--full-width button--default-width--desktop"
 
                                  else
                                     "button button--full-width button--default-width--desktop"
                                 )
                             , href
-                                (if callToAction.action == CallToAction.Phone then
+                                (if callToActionNoDesktopButton callToAction.action then
                                     "tel:" ++ callToAction.href
 
                                  else
@@ -158,7 +158,7 @@ view model =
                         [ class "desktop-only" ]
                         [ div
                             [ class
-                                (if callToAction.action == CallToAction.Phone then
+                                (if callToActionNoDesktopButton callToAction.action then
                                     "text-center"
 
                                  else
@@ -175,7 +175,7 @@ view model =
                     , a
                         [ class "mobile-only button button--alternate button--full-width"
                         , href
-                            (if callToAction.action == CallToAction.Phone then
+                            (if callToActionNoDesktopButton callToAction.action then
                                 "tel:" ++ callToAction.href
 
                              else
