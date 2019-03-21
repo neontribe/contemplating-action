@@ -224,7 +224,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(12);
+var	fixUrls = __webpack_require__(18);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -568,18 +568,12 @@ module.exports = __webpack_require__(6);
 __webpack_require__(7);
 
 // Requiring after app.scss ensures correct selector precedence
-__webpack_require__(13);
+__webpack_require__(19);
 
 // Require index.html so it gets copied to dist
-__webpack_require__(18);
+__webpack_require__(24);
 
 // Require icons
-__webpack_require__(19);
-__webpack_require__(20);
-__webpack_require__(21);
-__webpack_require__(22);
-__webpack_require__(23);
-__webpack_require__(24);
 __webpack_require__(25);
 __webpack_require__(26);
 __webpack_require__(27);
@@ -590,8 +584,14 @@ __webpack_require__(31);
 __webpack_require__(32);
 __webpack_require__(33);
 __webpack_require__(34);
+__webpack_require__(35);
+__webpack_require__(36);
+__webpack_require__(37);
+__webpack_require__(38);
+__webpack_require__(39);
+__webpack_require__(40);
 
-var Elm = __webpack_require__(35);
+var Elm = __webpack_require__(41);
 var mountNode = document.getElementById('main');
 
 // .embed() can take an optional second argument. This would be an object describing the data we need to start a program, i.e. a userID or some token
@@ -667,7 +667,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: 'Poppins';\n  font-style: normal;\n  font-weight: 600;\n  src: url(" + escape(__webpack_require__(9)) + ") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Poppins';\n  font-style: normal;\n  font-weight: bold;\n  src: url(" + escape(__webpack_require__(10)) + ") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Poppins';\n  font-style: normal;\n  font-weight: normal;\n  src: url(" + escape(__webpack_require__(11)) + ") format(\"truetype\"); }\n\n/* ------------------------------\n\n   Variables\n\n------------------------------ */\n/* ------------------------------\n\n   Reset\n\n------------------------------ */\n*,\n*::before,\n*::after {\n  box-sizing: border-box; }\n\n*:focus {\n  outline-color: #07c103; }\n\n:root {\n  font-size: 16px;\n  font-family: 'Poppins', sans-serif;\n  line-height: 1.5; }\n\nbody {\n  max-width: 1044px;\n  padding: 0;\n  margin: 0 auto;\n  font-size: 1.1rem;\n  color: #3c3c3b;\n  background-color: #ffffff;\n  /* Allow space for mobile nav without overlapping content */\n  margin-bottom: 71px; }\n\nbutton {\n  border: 0;\n  background: none;\n  padding: 0;\n  cursor: pointer;\n  font-size: inherit; }\n\ninput {\n  font: inherit;\n  border: none;\n  border-radius: 0;\n  padding: 0;\n  -webkit-appearance: none; }\n\nlabel {\n  cursor: pointer; }\n\nul, ol, li {\n  list-style: none;\n  margin: 0;\n  padding: 0; }\n\n.ul--disc li {\n  list-style: disc;\n  margin-left: 30px; }\n\np {\n  margin: 0;\n  font-family: 'Poppins'; }\n\nbutton + p {\n  margin-top: 3em; }\n\np + p {\n  line-height: 1.5;\n  margin-top: 1em; }\n\nh1, h2, h3, h4, h5, h6 {\n  padding: 0;\n  margin: 0;\n  font-family: 'Poppins'; }\n\nh1 {\n  font-size: 1.75em;\n  line-height: 2.65; }\n\nh2 {\n  font-size: 1.35rem;\n  margin-bottom: 1em;\n  line-height: 1.5;\n  font-weight: 600; }\n\nh3, h4, h5 {\n  font-size: 1.1rem;\n  line-height: 1.5;\n  margin-top: 1em; }\n\nbutton {\n  font-family: inherit;\n  color: inherit; }\n\nimg {\n  height: auto;\n  max-width: 100%; }\n\n@media screen and (min-width: 721px) {\n  :root {\n    font-size: 22px; }\n  body {\n    /* Remove spacing for lower navigation */\n    margin-bottom: 0; } }\n\n/* ------------------------------\n\n   Page\n\n------------------------------ */\n/* IE11 helper */\n.content {\n  min-height: 1px; }\n\n.page {\n  min-height: 100vh;\n  position: relative;\n  display: flex;\n  flex-direction: column; }\n\n@media screen and (min-width: 721px) {\n  .page {\n    /* Provide spacing for navigation */\n    padding-top: 77px; } }\n\n@media screen and (min-width: 860px) {\n  .page {\n    /* Provide spacing for navigation */\n    padding-top: 54px; } }\n\n/* ------------------------------\n\n   Icon\n\n------------------------------ */\n.icon {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 50px;\n  width: 50px;\n  color: #F5F5F5;\n  font-size: 1.75rem;\n  border-radius: 50%;\n  background-color: #4575BA; }\n\n.icon--large {\n  height: 100px;\n  width: 100px;\n  font-size: 100px; }\n\n.icon--alternate {\n  color: #3c3c3b;\n  margin-left: 10px; }\n\n/* ------------------------------\n\n   Text\n\n------------------------------ */\n.text-center {\n  text-align: center; }\n\n.text-right {\n  text-align: right; }\n\n.text-small {\n  font-size: 1rem; }\n\n.quote:before {\n  content: open-quote; }\n\n.quote:after {\n  content: close-quote; }\n\n/* ------------------------------\n\n   Title\n\n------------------------------ */\n.title--small {\n  font-size: 1.25rem;\n  margin-bottom: 10px; }\n\n.title--alternate {\n  color: #1A1E64; }\n\n/* ------------------------------\n\n   Link\n\n------------------------------ */\n.link {\n  font-family: 'Poppins';\n  color: inherit;\n  border-bottom: 2px solid currentColor;\n  text-decoration: none; }\n  .link:hover, .link:active {\n    color: #662483; }\n\n.link--plain {\n  color: #662483;\n  border-bottom-color: transparent;\n  font-weight: normal;\n  text-decoration: none; }\n  .link--plain:hover, .link--plain:active {\n    color: #662483;\n    border-bottom-color: currentColor; }\n\n.link--unstyled {\n  color: inherit;\n  text-decoration: none; }\n\n.link--stateless:hover, .link--stateless:active, .link--stateless:focus {\n  color: inherit !important;\n  border-bottom-color: inherit !important; }\n\n/* ------------------------------\n\n   Button\n\n------------------------------ */\n.button {\n  display: inline-block;\n  color: #F5F5F5;\n  background-color: #662483;\n  border-radius: 5em;\n  padding: 15px 20px;\n  font-size: 1.125rem;\n  font-weight: bold;\n  text-decoration: none; }\n\n.button:active,\n.button:focus,\n.button:hover {\n  background-color: #8B1ABC; }\n\n.button--center {\n  margin: auto; }\n\n.button + .button {\n  margin-top: 20px; }\n\n.button--full-width {\n  width: 100%;\n  text-align: center; }\n\n.button--alternate {\n  color: #F5F5F5;\n  background-color: #662483; }\n\n.button--alternate:active,\n.button--alternate:focus,\n.button--alternate:hover {\n  background-color: #8B1ABC; }\n\n.button--icon {\n  margin-right: 10px;\n  vertical-align: middle; }\n\n.button--icon.icon-question-circle-o {\n  position: relative;\n  top: -2px; }\n\n.button-group {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n  margin-top: 40px; }\n\n.button-group--row {\n  flex-direction: row; }\n\n@media screen and (min-width: 360px) {\n  .button {\n    white-space: nowrap; } }\n\n@media screen and (min-width: 800px) {\n  .button--default-width--desktop {\n    width: auto !important;\n    padding: 15px 50px; }\n  .button-group {\n    flex-direction: row; }\n  .button + .button {\n    margin-top: 0;\n    margin-left: 20px; } }\n\n/* ------------------------------\n\n   Section\n\n------------------------------ */\n.section {\n  padding: 40px 20px;\n  background-color: #F5F5F5; }\n\n.section--darker {\n  background-color: #eee; }\n\n.section--lighter {\n  background-color: #ffffff; }\n\n.section--highlight {\n  color: #3c3c3b;\n  background-color: #E4E1E7; }\n\n.section--align-bottom {\n  padding-bottom: 0; }\n\n.section--vertical-fill-center {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  flex: 1 0 auto;\n  min-height: 1px; }\n\n.section--info {\n  align-items: center; }\n\n.section--story-end {\n  padding-top: 0; }\n\n@media screen and (min-width: 721px) {\n  .home .section--header {\n    padding: 0; }\n  .section {\n    padding: 60px;\n    display: flex;\n    flex-direction: column;\n    justify-content: center; }\n  .section--align-bottom {\n    padding-bottom: 0; }\n  .section--story-end {\n    padding-top: 0; } }\n\n/* ------------------------------\n\n   Navigation\n\n------------------------------ */\n.nav-bar {\n  display: flex;\n  align-items: stretch;\n  background-color: #1A1E64;\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  z-index: 100; }\n\n.nav-icon {\n  color: #F5F5F5; }\n\nnav,\n.nav-item {\n  display: flex;\n  flex: 1 0 auto;\n  justify-content: center;\n  align-items: center;\n  white-space: nowrap; }\n\n.nav-item--text-only,\n.nav-item a {\n  flex: 1 0 auto;\n  padding: 15px 10px;\n  color: #F5F5F5;\n  text-align: center;\n  text-decoration: none;\n  font-weight: 600;\n  line-height: 1; }\n\n.nav-item--active,\n.nav-text-selector:hover {\n  color: #F5F5F5;\n  border-bottom: 2px solid #F5F5F5; }\n\n.nav-item a:active .nav-item-text {\n  color: #F5F5F5; }\n\n.nav-item-text {\n  display: block; }\n\n.nav-item-text + .nav-item-text {\n  margin-top: 5px; }\n\n@media screen and (min-width: 721px) {\n  .nav-bar {\n    top: 0;\n    bottom: auto;\n    left: auto;\n    right: auto;\n    margin: auto;\n    width: 100%;\n    max-width: 1044px; }\n  nav, .nav-bar {\n    justify-content: flex-end; }\n  .nav-item {\n    flex: 0 1 auto; }\n  .nav-item-text {\n    font-size: 0.7273rem;\n    margin: 5px;\n    vertical-align: middle; } }\n\n@media screen and (min-width: 860px) {\n  .nav-item-text {\n    display: inline;\n    font-size: 0.8181rem; } }\n\n/* ------------------------------\n\n   Header\n\n------------------------------ */\n.section--header {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  padding: 0;\n  background: #4575BA;\n  color: #F5F5F5; }\n\n.section--header a {\n  color: #F5F5F5;\n  text-decoration: none; }\n\n.section--header a:hover {\n  border-bottom: 5px solid #F5F5F5;\n  cursor: pointer; }\n\n.section--header:after {\n  content: '';\n  position: absolute;\n  left: 0;\n  bottom: 1px;\n  width: 100%;\n  height: 4px;\n  box-shadow: 0 3px 4px 0 rgba(89, 97, 116, 0.4); }\n\n.home .section--header {\n  height: 120px;\n  font-size: 1.25rem;\n  align-items: center; }\n\n.home .section--header::after {\n  display: none; }\n\n/* ------------------------------\n\n   Footer\n\n------------------------------ */\n@media screen and (min-width: 721px) {\n  .section--footer {\n    padding: 40px 20px;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    width: 100%; }\n  .footer--item {\n    margin: 0 20px; } }\n\n/* ------------------------------\n\n   Card\n\n------------------------------ */\n.card {\n  width: 100%;\n  padding: 15px;\n  border-radius: 10px;\n  font-size: 1rem;\n  background-color: #F5F5F5; }\n\n.card + .card {\n  margin-top: 20px; }\n\n.card--alternate {\n  color: #ffffff;\n  background-color: #1A1E64; }\n\n.card--with-icon {\n  position: relative;\n  padding: 70px 20px 40px;\n  margin-top: 40px; }\n\n.card--icon {\n  position: absolute;\n  top: -50px;\n  left: 0;\n  right: 0;\n  margin: auto; }\n\n.card--thumbnail {\n  float: left;\n  margin-right: 15px;\n  width: 80px;\n  height: 80px; }\n\n.card--quote {\n  margin-left: 0;\n  margin-right: 0; }\n\n@media screen and (min-width: 721px) {\n  .card--thumbnail {\n    width: 210px;\n    height: 210px; } }\n\n/* ------------------------------\n\n    Info to help you\n\n------------------------------ */\n.section--info .card {\n  margin-top: 10px; }\n\n.info {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  width: 100%;\n  text-align: left;\n  line-height: 1.5;\n  text-decoration: none; }\n\n.info:active,\n.info:focus,\n.info:hover {\n  background-color: #662483; }\n\n.info--icon {\n  flex-shrink: 0;\n  margin-right: 20px;\n  font-size: 50px; }\n\n.info--text {\n  flex: 1 1 auto;\n  margin-right: 10px; }\n\n.info--list {\n  width: 100%; }\n\n@media screen and (min-width: 721px) {\n  .info--list {\n    width: 60%; } }\n\n/* Stops hover issue on iPad */\n@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n  .info:hover {\n    background-color: #662483; } }\n\n/* ------------------------------\n\n   Stories\n\n------------------------------ */\n.stories--more-link {\n  margin-top: 10px;\n  font-size: 0.875rem; }\n\n/* ------------------------------\n\n   Story\n\n------------------------------ */\n.story {\n  position: relative;\n  min-height: 1px; }\n\n.story + .story {\n  margin-top: 0; }\n\n.story:not(:last-child) {\n  margin-bottom: 45px; }\n\n.story:not(:last-child)::after {\n  content: '';\n  position: absolute;\n  bottom: -45px;\n  left: 0;\n  right: 0;\n  margin: auto;\n  width: 0;\n  height: 0;\n  border-left: 35px solid transparent;\n  border-right: 35px solid transparent;\n  border-top: 45px solid #F5F5F5; }\n\n.story--illustration {\n  position: relative;\n  margin-top: 20px; }\n\n.story--illustration img {\n  display: block; }\n\n.story--message {\n  background-color: #F5F5F5;\n  color: #3c3c3b;\n  font-size: 1rem;\n  margin: 0;\n  padding: 5px;\n  text-align: center; }\n\n/* .button--group override (not ideal) */\n.story--related {\n  width: 100%;\n  margin-top: 10px;\n  margin-bottom: 20px;\n  /* Same as `.button + .button` spacing */ }\n\n/* ------------------------------\n\n   Supporter\n\n------------------------------ */\n.supporter--logo-group {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-wrap: wrap;\n  width: 100%;\n  padding: 20px 40px; }\n\n.supporter--logo {\n  height: 166px;\n  margin: 20px 40px; }\n\n@media screen and (max-width: 721px) {\n  .supporter--logo {\n    width: 100%;\n    margin: 10px 0px; } }\n\n/* ------------------------------\n\n   Helper\n\n------------------------------ */\n.block {\n  display: block; }\n\n.inset {\n  margin: 0 10px; }\n\n.desktop-only {\n  display: none; }\n\n@media screen and (min-width: 721px) {\n  .desktop-only {\n    display: inherit; }\n  .mobile-only {\n    display: none; } }\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: 'Poppins';\n  font-style: normal;\n  font-weight: 600;\n  src: url(" + escape(__webpack_require__(9)) + ") format(\"truetype\"), url(" + escape(__webpack_require__(10)) + ") format(\"woff\"), url(" + escape(__webpack_require__(11)) + ") format(\"woff2\"); }\n\n@font-face {\n  font-family: 'Poppins';\n  font-style: normal;\n  font-weight: bold;\n  src: url(" + escape(__webpack_require__(12)) + ") format(\"truetype\"), url(" + escape(__webpack_require__(13)) + ") format(\"woff\"), url(" + escape(__webpack_require__(14)) + ") format(\"woff2\"); }\n\n@font-face {\n  font-family: 'Poppins';\n  font-style: normal;\n  font-weight: normal;\n  src: url(" + escape(__webpack_require__(15)) + ") format(\"truetype\"), url(" + escape(__webpack_require__(16)) + ") format(\"woff2\"), url(" + escape(__webpack_require__(17)) + ") format(\"woff\"); }\n\n/* ------------------------------\n\n   Variables\n\n------------------------------ */\n/* ------------------------------\n\n   Reset\n\n------------------------------ */\n*,\n*::before,\n*::after {\n  box-sizing: border-box; }\n\n*:focus {\n  outline-color: #07c103; }\n\n:root {\n  font-size: 16px;\n  font-family: 'Poppins', 'Arial';\n  line-height: 1.5; }\n\nbody {\n  max-width: 1044px;\n  padding: 0;\n  margin: 0 auto;\n  font-size: 1.1rem;\n  color: #3c3c3b;\n  background-color: #ffffff;\n  /* Allow space for mobile nav without overlapping content */\n  margin-bottom: 71px; }\n\nbutton {\n  border: 0;\n  background: none;\n  padding: 0;\n  cursor: pointer;\n  font-size: inherit; }\n\ninput {\n  font: inherit;\n  border: none;\n  border-radius: 0;\n  padding: 0;\n  -webkit-appearance: none; }\n\nlabel {\n  cursor: pointer; }\n\nul, ol, li {\n  list-style: none;\n  margin: 0;\n  padding: 0; }\n\n.ul--disc li {\n  list-style: disc;\n  margin-left: 30px; }\n\np {\n  margin: 0;\n  font-family: 'Poppins', 'Arial'; }\n\nbutton + p {\n  margin-top: 3em; }\n\np + p {\n  line-height: 1.5;\n  margin-top: 1em; }\n\nh1, h2, h3, h4, h5, h6 {\n  padding: 0;\n  margin: 0;\n  font-family: 'Poppins', 'Arial'; }\n\nh1 {\n  font-size: 1.75em;\n  line-height: 2.65; }\n\nh2 {\n  font-size: 1.35rem;\n  margin-bottom: 1em;\n  line-height: 1.5;\n  font-weight: 600; }\n\nh3, h4, h5 {\n  font-size: 1.1rem;\n  line-height: 1.5;\n  margin-top: 1em; }\n\nbutton {\n  font-family: inherit;\n  color: inherit; }\n\nimg {\n  height: auto;\n  max-width: 100%; }\n\n@media screen and (min-width: 721px) {\n  :root {\n    font-size: 22px; }\n  body {\n    /* Remove spacing for lower navigation */\n    margin-bottom: 0; } }\n\n/* ------------------------------\n\n   Page\n\n------------------------------ */\n/* IE11 helper */\n.content {\n  min-height: 1px; }\n\n.page {\n  min-height: 100vh;\n  position: relative;\n  display: flex;\n  flex-direction: column; }\n\n@media screen and (min-width: 721px) {\n  .page {\n    /* Provide spacing for navigation */\n    padding-top: 77px; } }\n\n@media screen and (min-width: 860px) {\n  .page {\n    /* Provide spacing for navigation */\n    padding-top: 54px; } }\n\n/* ------------------------------\n\n   Icon\n\n------------------------------ */\n.icon {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 50px;\n  width: 50px;\n  color: #F5F5F5;\n  font-size: 1.75rem;\n  border-radius: 50%;\n  background-color: #4575BA; }\n\n.icon--large {\n  height: 100px;\n  width: 100px;\n  font-size: 100px; }\n\n.icon--alternate {\n  color: #3c3c3b;\n  margin-left: 10px; }\n\n/* ------------------------------\n\n   Text\n\n------------------------------ */\n.text-center {\n  text-align: center; }\n\n.text-right {\n  text-align: right; }\n\n.text-small {\n  font-size: 1rem; }\n\n.quote:before {\n  content: open-quote; }\n\n.quote:after {\n  content: close-quote; }\n\n/* ------------------------------\n\n   Title\n\n------------------------------ */\n.title--small {\n  font-size: 1.25rem;\n  margin-bottom: 10px; }\n\n.title--alternate {\n  color: #1A1E64; }\n\n/* ------------------------------\n\n   Link\n\n------------------------------ */\n.link {\n  font-family: 'Poppins', 'Arial';\n  color: inherit;\n  border-bottom: 2px solid currentColor;\n  text-decoration: none; }\n  .link:hover, .link:active {\n    color: #662483; }\n\n.link--plain {\n  color: #662483;\n  border-bottom-color: transparent;\n  font-weight: normal;\n  text-decoration: none; }\n  .link--plain:hover, .link--plain:active {\n    color: #662483;\n    border-bottom-color: currentColor; }\n\n.link--unstyled {\n  color: inherit;\n  text-decoration: none; }\n\n.link--stateless:hover, .link--stateless:active, .link--stateless:focus {\n  color: inherit !important;\n  border-bottom-color: inherit !important; }\n\n/* ------------------------------\n\n   Button\n\n------------------------------ */\n.button {\n  display: inline-block;\n  color: #F5F5F5;\n  background-color: #662483;\n  border-radius: 5em;\n  padding: 15px 20px;\n  font-size: 1.125rem;\n  font-weight: bold;\n  text-decoration: none; }\n\n.button:active,\n.button:focus,\n.button:hover {\n  background-color: #8B1ABC; }\n\n.button--center {\n  margin: auto; }\n\n.button + .button {\n  margin-top: 20px; }\n\n.button--full-width {\n  width: 100%;\n  text-align: center; }\n\n.button--alternate {\n  color: #F5F5F5;\n  background-color: #662483; }\n\n.button--alternate:active,\n.button--alternate:focus,\n.button--alternate:hover {\n  background-color: #8B1ABC; }\n\n.button--icon {\n  margin-right: 10px;\n  vertical-align: middle; }\n\n.button--icon.icon-question-circle-o {\n  position: relative;\n  top: -2px; }\n\n.button-group {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n  margin-top: 40px; }\n\n.button-group--row {\n  flex-direction: row; }\n\n@media screen and (min-width: 360px) {\n  .button {\n    white-space: nowrap; } }\n\n@media screen and (min-width: 800px) {\n  .button--default-width--desktop {\n    width: auto !important;\n    padding: 15px 50px; }\n  .button-group {\n    flex-direction: row; }\n  .button + .button {\n    margin-top: 0;\n    margin-left: 20px; } }\n\n/* ------------------------------\n\n   Section\n\n------------------------------ */\n.section {\n  padding: 40px 20px;\n  background-color: #F5F5F5; }\n\n.section--darker {\n  background-color: #eee; }\n\n.section--lighter {\n  background-color: #ffffff; }\n\n.section--highlight {\n  color: #3c3c3b;\n  background-color: #E4E1E7; }\n\n.section--align-bottom {\n  padding-bottom: 0; }\n\n.section--vertical-fill-center {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  flex: 1 0 auto;\n  min-height: 1px; }\n\n.section--info {\n  align-items: center; }\n\n.section--story-end {\n  padding-top: 0; }\n\n@media screen and (min-width: 721px) {\n  .home .section--header {\n    padding: 0; }\n  .section {\n    padding: 60px;\n    display: flex;\n    flex-direction: column;\n    justify-content: center; }\n  .section--align-bottom {\n    padding-bottom: 0; }\n  .section--story-end {\n    padding-top: 0; } }\n\n/* ------------------------------\n\n   Navigation\n\n------------------------------ */\n.nav-bar {\n  display: flex;\n  align-items: stretch;\n  background-color: #1A1E64;\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  z-index: 100; }\n\n.nav-icon {\n  color: #F5F5F5; }\n\nnav,\n.nav-item {\n  display: flex;\n  flex: 1 0 auto;\n  justify-content: center;\n  align-items: center;\n  white-space: nowrap; }\n\n.nav-item--text-only,\n.nav-item a {\n  flex: 1 0 auto;\n  padding: 15px 10px;\n  color: #F5F5F5;\n  text-align: center;\n  text-decoration: none;\n  font-weight: 600;\n  line-height: 1; }\n\n.nav-item--active,\n.nav-text-selector:hover {\n  color: #F5F5F5;\n  border-bottom: 2px solid #F5F5F5; }\n\n.nav-item a:active .nav-item-text {\n  color: #F5F5F5; }\n\n.nav-item-text {\n  display: block; }\n\n.nav-item-text + .nav-item-text {\n  margin-top: 5px; }\n\n@media screen and (min-width: 721px) {\n  .nav-bar {\n    top: 0;\n    bottom: auto;\n    left: auto;\n    right: auto;\n    margin: auto;\n    width: 100%;\n    max-width: 1044px; }\n  nav, .nav-bar {\n    justify-content: flex-end; }\n  .nav-item {\n    flex: 0 1 auto; }\n  .nav-item-text {\n    font-size: 0.7273rem;\n    margin: 5px;\n    vertical-align: middle; } }\n\n@media screen and (min-width: 860px) {\n  .nav-item-text {\n    display: inline;\n    font-size: 0.8181rem; } }\n\n/* ------------------------------\n\n   Header\n\n------------------------------ */\n.section--header {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  padding: 0;\n  background: #4575BA;\n  color: #F5F5F5; }\n\n.section--header a {\n  color: #F5F5F5;\n  text-decoration: none; }\n\n.section--header a:hover {\n  border-bottom: 5px solid #F5F5F5;\n  cursor: pointer; }\n\n.section--header:after {\n  content: '';\n  position: absolute;\n  left: 0;\n  bottom: 1px;\n  width: 100%;\n  height: 4px;\n  box-shadow: 0 3px 4px 0 rgba(89, 97, 116, 0.4); }\n\n.home .section--header {\n  height: 120px;\n  font-size: 1.25rem;\n  align-items: center; }\n\n.home .section--header::after {\n  display: none; }\n\n/* ------------------------------\n\n   Footer\n\n------------------------------ */\n@media screen and (min-width: 721px) {\n  .section--footer {\n    padding: 40px 20px;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    width: 100%; }\n  .footer--item {\n    margin: 0 20px; } }\n\n/* ------------------------------\n\n   Card\n\n------------------------------ */\n.card {\n  width: 100%;\n  padding: 15px;\n  border-radius: 10px;\n  font-size: 1rem;\n  background-color: #F5F5F5; }\n\n.card + .card {\n  margin-top: 20px; }\n\n.card--alternate {\n  color: #ffffff;\n  background-color: #1A1E64; }\n\n.card--with-icon {\n  position: relative;\n  padding: 70px 20px 40px;\n  margin-top: 40px; }\n\n.card--icon {\n  position: absolute;\n  top: -50px;\n  left: 0;\n  right: 0;\n  margin: auto; }\n\n.card--thumbnail {\n  float: left;\n  margin-right: 15px;\n  width: 80px;\n  height: 80px; }\n\n.card--quote {\n  margin-left: 0;\n  margin-right: 0; }\n\n@media screen and (min-width: 721px) {\n  .card--thumbnail {\n    width: 210px;\n    height: 210px; } }\n\n/* ------------------------------\n\n    Info to help you\n\n------------------------------ */\n.section--info .card {\n  margin-top: 10px; }\n\n.info {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  width: 100%;\n  text-align: left;\n  line-height: 1.5;\n  text-decoration: none; }\n\n.info:active,\n.info:focus,\n.info:hover {\n  background-color: #662483; }\n\n.info--icon {\n  flex-shrink: 0;\n  margin-right: 20px;\n  font-size: 50px; }\n\n.info--text {\n  flex: 1 1 auto;\n  margin-right: 10px; }\n\n.info--list {\n  width: 100%; }\n\n@media screen and (min-width: 721px) {\n  .info--list {\n    width: 60%; } }\n\n/* Stops hover issue on iPad */\n@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n  .info:hover {\n    background-color: #662483; } }\n\n/* ------------------------------\n\n   Stories\n\n------------------------------ */\n.stories--more-link {\n  margin-top: 10px;\n  font-size: 0.875rem; }\n\n/* ------------------------------\n\n   Story\n\n------------------------------ */\n.story {\n  position: relative;\n  min-height: 1px; }\n\n.story + .story {\n  margin-top: 0; }\n\n.story:not(:last-child) {\n  margin-bottom: 45px; }\n\n.story:not(:last-child)::after {\n  content: '';\n  position: absolute;\n  bottom: -45px;\n  left: 0;\n  right: 0;\n  margin: auto;\n  width: 0;\n  height: 0;\n  border-left: 35px solid transparent;\n  border-right: 35px solid transparent;\n  border-top: 45px solid #F5F5F5; }\n\n.story--illustration {\n  position: relative;\n  margin-top: 20px; }\n\n.story--illustration img {\n  display: block; }\n\n.story--message {\n  background-color: #F5F5F5;\n  color: #3c3c3b;\n  font-size: 1rem;\n  margin: 0;\n  padding: 5px;\n  text-align: center; }\n\n/* .button--group override (not ideal) */\n.story--related {\n  width: 100%;\n  margin-top: 10px;\n  margin-bottom: 20px;\n  /* Same as `.button + .button` spacing */ }\n\n/* ------------------------------\n\n   Supporter\n\n------------------------------ */\n.supporter--logo-group {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-wrap: wrap;\n  width: 100%;\n  padding: 20px 40px; }\n\n.supporter--logo {\n  height: 166px;\n  margin: 20px 40px; }\n\n@media screen and (max-width: 721px) {\n  .supporter--logo {\n    width: 100%;\n    margin: 10px 0px; } }\n\n/* ------------------------------\n\n   Helper\n\n------------------------------ */\n.block {\n  display: block; }\n\n.inset {\n  margin: 0 10px; }\n\n.desktop-only {\n  display: none; }\n\n@media screen and (min-width: 721px) {\n  .desktop-only {\n    display: inherit; }\n  .mobile-only {\n    display: none; } }\n", ""]);
 
 // exports
 
@@ -682,16 +682,52 @@ module.exports = __webpack_require__.p + "Poppins-Medium.ttf?28bc024aa3164e0b0ff
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "Poppins-SemiBold.ttf?5bb3128376ff7ca534d894e470f1c2e9";
+module.exports = __webpack_require__.p + "c8032847102343eb401d50bcf94f7431.woff";
 
 /***/ }),
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "Poppins-Regular.ttf?dd1aed50244d7243b9209dc901c8d1af";
+module.exports = __webpack_require__.p + "c012bd6c340f212c06c35c3210d7e161.woff2";
 
 /***/ }),
 /* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "Poppins-SemiBold.ttf?5bb3128376ff7ca534d894e470f1c2e9";
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "24bacb510e6330638c8913bd79366818.woff";
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "fe853e05a1b23ff645cd84b1d51db68b.woff2";
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "Poppins-Regular.ttf?dd1aed50244d7243b9209dc901c8d1af";
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "aa9229d46ea3e91bfeaaafacacccc4d2.woff2";
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "7da32f28f8d422860135191b0b003586.woff";
+
+/***/ }),
+/* 18 */
 /***/ (function(module, exports) {
 
 
@@ -786,13 +822,13 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 13 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(14);
+var content = __webpack_require__(20);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -817,7 +853,7 @@ if(false) {
 }
 
 /***/ }),
-/* 14 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var escape = __webpack_require__(0);
@@ -826,133 +862,133 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "/* Several icons in this set provided by Font Awesome by Dave Gandy - http://fontawesome.io */\n@font-face {\n  font-family: 'icomoon';\n  font-weight: normal;\n  font-style: normal;\n  src: url(" + escape(__webpack_require__(15)) + ");\n  /* IE9 */\n  src: url(" + escape(__webpack_require__(16)) + ") format(\"woff\"), url(" + escape(__webpack_require__(17)) + ") format(\"truetype\");\n  /* Mobile */ }\n\n[class^=\"icon-\"], [class*=\" icon-\"] {\n  /* use !important to prevent issues with browser extensions that change fonts */\n  font-family: 'icomoon' !important;\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n.icon-exit-door:before {\n  content: \"\\E900\"; }\n\n.icon-family-large:before {\n  content: \"\\E901\"; }\n\n.icon-pound:before {\n  content: \"\\E902\"; }\n\n.icon-police-hat-large:before {\n  content: \"\\E903\"; }\n\n.icon-leaving-large:before {\n  content: \"\\E904\"; }\n\n.icon-pound-note-large:before {\n  content: \"\\E905\"; }\n\n.icon-organisation:before {\n  content: \"\\E906\"; }\n\n.icon-survey:before {\n  content: \"\\E907\"; }\n\n.icon-involved:before {\n  content: \"\\E908\"; }\n\n.icon-cost:before {\n  content: \"\\E909\"; }\n\n.icon-illustrations:before {\n  content: \"\\E90A\"; }\n\n.icon-information:before {\n  content: \"\\E90B\"; }\n\n.icon-book:before {\n  content: \"\\F02D\"; }\n\n.icon-arrow-left:before {\n  content: \"\\F060\"; }\n\n.icon-arrow-right:before {\n  content: \"\\F061\"; }\n\n.icon-envelope:before {\n  content: \"\\F0E0\"; }\n\n.icon-question-circle-o:before {\n  content: \"\\F29C\"; }\n\n.icon-phone:before {\n  content: \"\\F095\"; }\n", ""]);
+exports.push([module.i, "/* Several icons in this set provided by Font Awesome by Dave Gandy - http://fontawesome.io */\n/* Several icons in this set provided by Icomoon by http://keyamoon.com */\n@font-face {\n  font-family: 'info-fonts';\n  font-weight: normal;\n  font-style: normal;\n  src: url(" + escape(__webpack_require__(21)) + ");\n  /* IE9 */\n  src: url(" + escape(__webpack_require__(22)) + ") format(\"woff\"), url(" + escape(__webpack_require__(23)) + ") format(\"truetype\");\n  /* Mobile */ }\n\n[class^=\"icon-\"], [class*=\" icon-\"] {\n  /* use !important to prevent issues with browser extensions that change fonts */\n  font-family: 'info-fonts' !important;\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n.icon-exit-door:before {\n  content: \"\\E900\"; }\n\n.icon-family-large:before {\n  content: \"\\E901\"; }\n\n.icon-pound:before {\n  content: \"\\E902\"; }\n\n.icon-police-hat-large:before {\n  content: \"\\E903\"; }\n\n.icon-leaving-large:before {\n  content: \"\\E904\"; }\n\n.icon-pound-note-large:before {\n  content: \"\\E905\"; }\n\n.icon-organisation:before {\n  content: \"\\E906\"; }\n\n.icon-survey:before {\n  content: \"\\E907\"; }\n\n.icon-involved:before {\n  content: \"\\E908\"; }\n\n.icon-cost:before {\n  content: \"\\E909\"; }\n\n.icon-illustrations:before {\n  content: \"\\E90A\"; }\n\n.icon-information:before {\n  content: \"\\E90B\"; }\n\n.icon-book:before {\n  content: \"\\F02D\"; }\n\n.icon-arrow-left:before {\n  content: \"\\F060\"; }\n\n.icon-arrow-right:before {\n  content: \"\\F061\"; }\n\n.icon-envelope:before {\n  content: \"\\F0E0\"; }\n\n.icon-question-circle-o:before {\n  content: \"\\F29C\"; }\n\n.icon-phone:before {\n  content: \"\\F095\"; }\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 15 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "info-icons.eot?de51a7f36f42e2bb4d3d8080c38fbaf0";
 
 /***/ }),
-/* 16 */
+/* 22 */
 /***/ (function(module, exports) {
 
 module.exports = "data:application/font-woff;base64,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"
 
 /***/ }),
-/* 17 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "info-icons.ttf?ba536f1bb4acf2883d119f51cab9ce95";
 
 /***/ }),
-/* 18 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "index.html";
 
 /***/ }),
-/* 19 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "favicon.png?3c0be403e91869f70662a77544ea792b";
-
-/***/ }),
-/* 20 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "favicon.ico?87e525b0c6c67a14d99350e9e465e777";
-
-/***/ }),
-/* 21 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "apple-icon-57x57.png?0506aed680f37c10e44fb5e50f95e20d";
-
-/***/ }),
-/* 22 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "apple-icon-60x60.png?bab1dbfa24dfefc47eaaeb9207cbd624";
-
-/***/ }),
-/* 23 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "apple-icon-72x72.png?e6056204c16e71714a39d2eff8d07ed8";
-
-/***/ }),
-/* 24 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "apple-icon-76x76.png?c5eeeb7471d345f1e1e8b41b54767b12";
-
-/***/ }),
 /* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "apple-icon-114x114.png?882ad41bb9d474c98affcb7bfa80aa4f";
+module.exports = __webpack_require__.p + "favicon.png?965614d75c5cb248a386d01fb2fc30f5";
 
 /***/ }),
 /* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "apple-icon-120x120.png?3c0be403e91869f70662a77544ea792b";
+module.exports = __webpack_require__.p + "favicon.ico?ea08599d457476dab3ffd3bf3a98bc8a";
 
 /***/ }),
 /* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "apple-icon-144x144.png?e11b648977727da00f210bf8c606ab29";
+module.exports = __webpack_require__.p + "apple-icon-57x57.png?f9e79b90dadae96c4caa84772ab13f84";
 
 /***/ }),
 /* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "apple-icon-152x152.png?d5591ff964df205662f1f68445ae60d3";
+module.exports = __webpack_require__.p + "apple-icon-60x60.png?5161cc0afdec1f39f6c25b003481f58d";
 
 /***/ }),
 /* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "apple-icon-180x180.png?0aa6008b103de4e8d10372a14607a1ea";
+module.exports = __webpack_require__.p + "apple-icon-72x72.png?e9f2f58f2eca1168e80013ae49f4a456";
 
 /***/ }),
 /* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "android-icon-192x192.png?a9c0a1cc4633880fe3b6cb9810acda89";
+module.exports = __webpack_require__.p + "apple-icon-76x76.png?18a1a614ad76fdfa872a6bb859686eac";
 
 /***/ }),
 /* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "favicon-32x32.png?180fb29837f0d323d474ad72cfa20277";
+module.exports = __webpack_require__.p + "apple-icon-114x114.png?1b844a287e23ff195c448c5cf2f33a76";
 
 /***/ }),
 /* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "favicon-96x96.png?67eef14dce76d914e1edfa887a887432";
+module.exports = __webpack_require__.p + "apple-icon-120x120.png?965614d75c5cb248a386d01fb2fc30f5";
 
 /***/ }),
 /* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "favicon-16x16.png?e0dad37e8d96e33c3fd287b2060437c7";
+module.exports = __webpack_require__.p + "apple-icon-144x144.png?44750c6132acf33b978bab9f48813677";
 
 /***/ }),
 /* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "apple-icon-152x152.png?68056d052013319a63c2c69ba5a7ad8d";
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "apple-icon-180x180.png?d8f827e82e4d60ff84a9956e383d0bdf";
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "android-icon-192x192.png?bd158c03ddd2cbc13f4a656a8a0d8bd3";
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "favicon-32x32.png?aaaae8a01904a5b88b7f8cbf627d9a1f";
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "favicon-96x96.png?09af2b629ae81709bc412669379dc775";
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "favicon-16x16.png?925abce0176ba9e496c6198ec7e47d5e";
+
+/***/ }),
+/* 40 */
 /***/ (function(module, exports) {
 
 module.exports = {"name":"App","icons":[{"src":"/android-icon-36x36.png","sizes":"36x36","type":"image/png","density":"0.75"},{"src":"/android-icon-48x48.png","sizes":"48x48","type":"image/png","density":"1.0"},{"src":"/android-icon-72x72.png","sizes":"72x72","type":"image/png","density":"1.5"},{"src":"/android-icon-96x96.png","sizes":"96x96","type":"image/png","density":"2.0"},{"src":"/android-icon-144x144.png","sizes":"144x144","type":"image/png","density":"3.0"},{"src":"/android-icon-192x192.png","sizes":"192x192","type":"image/png","density":"4.0"}]}
 
 /***/ }),
-/* 35 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
@@ -9350,6 +9386,31 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 		return { ctor: 'AssetPath', _0: a };
 	};
 
+	var _neontribe$contemplating_action$CallToAction$CallToAction = F7(function (a, b, c, d, e, f, g) {
+		return { action: a, category: b, href: c, icon: d, displayHref: e, promptLong: f, promptShort: g };
+	});
+	var _neontribe$contemplating_action$CallToAction$Survey = { ctor: 'Survey' };
+	var _neontribe$contemplating_action$CallToAction$Phone = { ctor: 'Phone' };
+	var _neontribe$contemplating_action$CallToAction$callToActionConstructor = F3(function (actionType, href, displayHref) {
+		var _p0 = actionType;
+		if (_p0.ctor === 'Phone') {
+			return {
+				action: _neontribe$contemplating_action$CallToAction$Phone,
+				category: 'phone',
+				href: A2(_elm_lang$core$Basics_ops['++'], 'tel:', href),
+				icon: 'phone',
+				displayHref: displayHref,
+				promptLong: 'Call Us',
+				promptShort: 'Call'
+			};
+		} else {
+			return { action: _neontribe$contemplating_action$CallToAction$Survey, category: 'survey', href: href, icon: 'survey', displayHref: displayHref, promptLong: 'Take part in our Survey', promptShort: 'Survey' };
+		}
+	});
+	var _neontribe$contemplating_action$CallToAction$callToActionNoDesktopButton = function (actionType) {
+		return _elm_lang$core$Native_Utils.eq(actionType, _neontribe$contemplating_action$CallToAction$Phone) ? true : false;
+	};
+
 	var _neontribe$contemplating_action$Icon$getIcon = F2(function (name, className) {
 		var _p0 = className;
 		if (_p0.ctor === 'Just') {
@@ -9937,7 +9998,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 					ctor: '::',
 					_0: {
 						quoteText: 'Next the story moves on a little. It does one of two things. Either it tells us about a specific incident that began a\n                    drive to change things, or it explores the person’s fears and other things that were holding them back. This section focuses\n                    on emotions and helps us connect with the person’s story.\n                    ',
-						imagePath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(36)),
+						imagePath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(42)),
 						altText: 'The man looks up a long staircase with a locked door at the top',
 						messageText: _elm_lang$core$Maybe$Just('This bar is used to give a little extra insight into how the person was feeling.')
 					},
@@ -9945,7 +10006,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 						ctor: '::',
 						_0: {
 							quoteText: 'Here the story starts to change for the better. The person becomes able to take a positive step and get some support.\n                    The story tells us a little about what happened, how they managed to take the step and how they felt.\n                    ',
-							imagePath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(37)),
+							imagePath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(43)),
 							altText: 'The man starts climbing the stairs to reach a hand holding out a key.',
 							messageText: _elm_lang$core$Maybe$Nothing
 						},
@@ -9953,7 +10014,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 							ctor: '::',
 							_0: {
 								quoteText: 'The final section of the story is about hope. It show that making a chance can be a positive choice. However it doesn’t\n                    suggest that the person’s life is now perfect. It is designed to encourage others to believe they could make a move to a more\n                    hopeful place too. It takes care not to sound out of reach.\n                    ',
-								imagePath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(38)),
+								imagePath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(44)),
 								altText: 'The door is open and the lock is on the floor. The man is outside in a bright and sunny environment holding onto the key.',
 								messageText: _elm_lang$core$Maybe$Just('sometimes the story highlights a worry that remains, and how the person is coping with it')
 							},
@@ -9992,7 +10053,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 						ctor: '::',
 						_0: {
 							quoteText: 'I wanted to leave, but my husband told me without him I would be sent back to Africa. I was completely dependent on my\n                    husband, I did not see any way out of my situation.\n                    ',
-							imagePath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(39)),
+							imagePath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(45)),
 							altText: 'A pregnant woman chained to her husband',
 							messageText: _elm_lang$core$Maybe$Just('I did not know my rights in the UK and had no money but soon I discovered I had choices.')
 						},
@@ -10000,7 +10061,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 							ctor: '::',
 							_0: {
 								quoteText: 'One day I broke down at my health care class. My teacher was so supportive. She told me about The Haven and they found me a\n                    support worker who spoke Spanish. They talked to social services for me and found me an immigration solicitor.\n                    ',
-								imagePath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(40)),
+								imagePath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(46)),
 								altText: 'A woman crying at a desk',
 								messageText: _elm_lang$core$Maybe$Nothing
 							},
@@ -10008,7 +10069,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 								ctor: '::',
 								_0: {
 									quoteText: 'I have a house now, with my children, and away from my abusive husband. My solicitor is helping me with immigration documents and divorce papers.\n                    For the first time in a long time I can sleep and look forward to the future.\n                    ',
-									imagePath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(41)),
+									imagePath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(47)),
 									altText: 'A smiling woman with two children',
 									messageText: _elm_lang$core$Maybe$Nothing
 								},
@@ -10023,7 +10084,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 	};
 	var _neontribe$contemplating_action$StoryDeck$placeholderCard = {
 		quoteText: 'Story coming soon.',
-		imagePath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(42)),
+		imagePath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(48)),
 		altText: 'Placeholder image',
 		messageText: _elm_lang$core$Maybe$Just('Check back soon')
 	};
@@ -10031,7 +10092,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 		id: 0,
 		title: 'Coming soon',
 		teaser: 'We\'re working on it',
-		teaserImgPath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(43)),
+		teaserImgPath: _neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(49)),
 		teaserImgAltText: 'Placeholder image',
 		relatedInfo: {
 			ctor: '::',
@@ -10309,8 +10370,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 		return { imagePath: a, messageText: b, quoteText: c, altText: d };
 	});
 
-	var _neontribe$contemplating_action$Views_Config$helplineDisplay = A2(_elm_lang$core$Basics_ops['++'], '0000', A2(_elm_lang$core$Basics_ops['++'], ' ', A2(_elm_lang$core$Basics_ops['++'], '000', A2(_elm_lang$core$Basics_ops['++'], ' ', '000'))));
-	var _neontribe$contemplating_action$Views_Config$helpline = '0000000000';
+	var _neontribe$contemplating_action$Views_Config$callToAction = A3(_neontribe$contemplating_action$CallToAction$callToActionConstructor, _neontribe$contemplating_action$CallToAction$Survey, 'https://contemplating-action.typeform.com/to/zUOTYA', '');
 	var _neontribe$contemplating_action$Views_Config$email = 'hello@contemplatingaction.org.uk';
 	var _neontribe$contemplating_action$Views_Config$appTitle = 'Contemplating Action';
 
@@ -10783,7 +10843,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 							_0: _elm_lang$html$Html_Attributes$class('supporter--logo'),
 							_1: {
 								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$src(_neontribe$contemplating_action$Assets$path(_neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(44)))),
+								_0: _elm_lang$html$Html_Attributes$src(_neontribe$contemplating_action$Assets$path(_neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(50)))),
 								_1: {
 									ctor: '::',
 									_0: _elm_lang$html$Html_Attributes$alt('Cast Logo'),
@@ -10813,7 +10873,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 									_0: _elm_lang$html$Html_Attributes$class('supporter--logo'),
 									_1: {
 										ctor: '::',
-										_0: _elm_lang$html$Html_Attributes$src(_neontribe$contemplating_action$Assets$path(_neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(45)))),
+										_0: _elm_lang$html$Html_Attributes$src(_neontribe$contemplating_action$Assets$path(_neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(51)))),
 										_1: {
 											ctor: '::',
 											_0: _elm_lang$html$Html_Attributes$alt('Comic Relief'),
@@ -10828,7 +10888,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 										_0: _elm_lang$html$Html_Attributes$class('supporter--logo'),
 										_1: {
 											ctor: '::',
-											_0: _elm_lang$html$Html_Attributes$src(_neontribe$contemplating_action$Assets$path(_neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(46)))),
+											_0: _elm_lang$html$Html_Attributes$src(_neontribe$contemplating_action$Assets$path(_neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(52)))),
 											_1: {
 												ctor: '::',
 												_0: _elm_lang$html$Html_Attributes$alt('Department for Culture Media & Sport'),
@@ -10843,7 +10903,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 											_0: _elm_lang$html$Html_Attributes$class('supporter--logo'),
 											_1: {
 												ctor: '::',
-												_0: _elm_lang$html$Html_Attributes$src(_neontribe$contemplating_action$Assets$path(_neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(47)))),
+												_0: _elm_lang$html$Html_Attributes$src(_neontribe$contemplating_action$Assets$path(_neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(53)))),
 												_1: {
 													ctor: '::',
 													_0: _elm_lang$html$Html_Attributes$alt('Big Lottery Fund'),
@@ -10875,7 +10935,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 											_0: _elm_lang$html$Html_Attributes$class('supporter--logo'),
 											_1: {
 												ctor: '::',
-												_0: _elm_lang$html$Html_Attributes$src(_neontribe$contemplating_action$Assets$path(_neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(48)))),
+												_0: _elm_lang$html$Html_Attributes$src(_neontribe$contemplating_action$Assets$path(_neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(54)))),
 												_1: {
 													ctor: '::',
 													_0: _elm_lang$html$Html_Attributes$alt('Neontribe'),
@@ -10890,7 +10950,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 												_0: _elm_lang$html$Html_Attributes$class('supporter--logo'),
 												_1: {
 													ctor: '::',
-													_0: _elm_lang$html$Html_Attributes$src(_neontribe$contemplating_action$Assets$path(_neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(49)))),
+													_0: _elm_lang$html$Html_Attributes$src(_neontribe$contemplating_action$Assets$path(_neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(55)))),
 													_1: {
 														ctor: '::',
 														_0: _elm_lang$html$Html_Attributes$alt('The Haven Wolverhampton'),
@@ -10983,7 +11043,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 									_0: _elm_lang$html$Html_Attributes$class('block'),
 									_1: {
 										ctor: '::',
-										_0: _elm_lang$html$Html_Attributes$src(_neontribe$contemplating_action$Assets$path(_neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(50)))),
+										_0: _elm_lang$html$Html_Attributes$src(_neontribe$contemplating_action$Assets$path(_neontribe$contemplating_action$Assets$AssetPath(__webpack_require__(56)))),
 										_1: {
 											ctor: '::',
 											_0: _elm_lang$html$Html_Attributes$alt('A description of banner image.'),
@@ -11042,7 +11102,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 											_1: { ctor: '[]' }
 										}, {
 											ctor: '::',
-											_0: A2(_elm_lang$html$Html$div, {
+											_0: _neontribe$contemplating_action$CallToAction$callToActionNoDesktopButton(_neontribe$contemplating_action$Views_Config$callToAction.action) ? A2(_elm_lang$html$Html$div, {
 												ctor: '::',
 												_0: _elm_lang$html$Html_Attributes$class('desktop-only'),
 												_1: { ctor: '[]' }
@@ -11052,12 +11112,12 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 													ctor: '::',
 													_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
 														ctor: '::',
-														_0: A2(_neontribe$contemplating_action$Icon$getIcon, 'phone', _elm_lang$core$Maybe$Just('button--icon')),
+														_0: A2(_neontribe$contemplating_action$Icon$getIcon, _neontribe$contemplating_action$Views_Config$callToAction.icon, _elm_lang$core$Maybe$Just('button--icon')),
 														_1: {
 															ctor: '::',
 															_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
 																ctor: '::',
-																_0: _elm_lang$html$Html$text('Call Us'),
+																_0: _elm_lang$html$Html$text(_neontribe$contemplating_action$Views_Config$callToAction.promptLong),
 																_1: { ctor: '[]' }
 															}),
 															_1: { ctor: '[]' }
@@ -11067,36 +11127,36 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 														ctor: '::',
 														_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
 															ctor: '::',
-															_0: _elm_lang$html$Html$text(_neontribe$contemplating_action$Views_Config$helplineDisplay),
+															_0: _elm_lang$html$Html$text(_neontribe$contemplating_action$Views_Config$callToAction.displayHref),
 															_1: { ctor: '[]' }
 														}),
 														_1: { ctor: '[]' }
 													}
 												}),
 												_1: { ctor: '[]' }
-											}),
+											}) : _elm_lang$html$Html$text(''),
 											_1: {
 												ctor: '::',
 												_0: A2(_elm_lang$html$Html$a, {
 													ctor: '::',
-													_0: _elm_lang$html$Html_Attributes$class('mobile-only button button--full-width button--default-width--desktop'),
+													_0: _elm_lang$html$Html_Attributes$class(_neontribe$contemplating_action$CallToAction$callToActionNoDesktopButton(_neontribe$contemplating_action$Views_Config$callToAction.action) ? 'mobile-only button button--full-width button--default-width--desktop' : 'button button--full-width button--default-width--desktop'),
 													_1: {
 														ctor: '::',
-														_0: _elm_lang$html$Html_Attributes$href(A2(_elm_lang$core$Basics_ops['++'], 'tel:', _neontribe$contemplating_action$Views_Config$helpline)),
+														_0: _elm_lang$html$Html_Attributes$href(_neontribe$contemplating_action$CallToAction$callToActionNoDesktopButton(_neontribe$contemplating_action$Views_Config$callToAction.action) ? A2(_elm_lang$core$Basics_ops['++'], 'tel:', _neontribe$contemplating_action$Views_Config$callToAction.href) : _neontribe$contemplating_action$Views_Config$callToAction.href),
 														_1: {
 															ctor: '::',
-															_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$contemplating_action$Messages$ButtonPress, 'contact', 'call', 'call-button', true)),
+															_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$contemplating_action$Messages$ButtonPress, 'call-to-action', _neontribe$contemplating_action$Views_Config$callToAction.category, 'button', true)),
 															_1: { ctor: '[]' }
 														}
 													}
 												}, {
 													ctor: '::',
-													_0: A2(_neontribe$contemplating_action$Icon$getIcon, 'phone', _elm_lang$core$Maybe$Just('button--icon')),
+													_0: A2(_neontribe$contemplating_action$Icon$getIcon, _neontribe$contemplating_action$Views_Config$callToAction.icon, _elm_lang$core$Maybe$Just('button--icon')),
 													_1: {
 														ctor: '::',
 														_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
 															ctor: '::',
-															_0: _elm_lang$html$Html$text('Call Us'),
+															_0: _elm_lang$html$Html$text(_neontribe$contemplating_action$Views_Config$callToAction.promptLong),
 															_1: { ctor: '[]' }
 														}),
 														_1: { ctor: '[]' }
@@ -11389,18 +11449,18 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 											ctor: '::',
 											_0: A2(_elm_lang$html$Html$div, {
 												ctor: '::',
-												_0: _elm_lang$html$Html_Attributes$class('text-center'),
+												_0: _elm_lang$html$Html_Attributes$class(_neontribe$contemplating_action$CallToAction$callToActionNoDesktopButton(_neontribe$contemplating_action$Views_Config$callToAction.action) ? 'text-center' : 'button button--alternate button--full-width'),
 												_1: { ctor: '[]' }
 											}, {
 												ctor: '::',
 												_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
 													ctor: '::',
-													_0: A2(_neontribe$contemplating_action$Icon$getIcon, 'phone', _elm_lang$core$Maybe$Just('button--icon')),
+													_0: A2(_neontribe$contemplating_action$Icon$getIcon, _neontribe$contemplating_action$Views_Config$callToAction.icon, _elm_lang$core$Maybe$Just('button--icon')),
 													_1: {
 														ctor: '::',
 														_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
 															ctor: '::',
-															_0: _elm_lang$html$Html$text('Call Us'),
+															_0: _elm_lang$html$Html$text(_neontribe$contemplating_action$Views_Config$callToAction.promptLong),
 															_1: { ctor: '[]' }
 														}),
 														_1: { ctor: '[]' }
@@ -11410,7 +11470,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 													ctor: '::',
 													_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
 														ctor: '::',
-														_0: _elm_lang$html$Html$text(_neontribe$contemplating_action$Views_Config$helplineDisplay),
+														_0: _elm_lang$html$Html$text(_neontribe$contemplating_action$Views_Config$callToAction.displayHref),
 														_1: { ctor: '[]' }
 													}),
 													_1: { ctor: '[]' }
@@ -11425,21 +11485,21 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 												_0: _elm_lang$html$Html_Attributes$class('mobile-only button button--alternate button--full-width'),
 												_1: {
 													ctor: '::',
-													_0: _elm_lang$html$Html_Attributes$href(A2(_elm_lang$core$Basics_ops['++'], 'tel:', _neontribe$contemplating_action$Views_Config$helpline)),
+													_0: _elm_lang$html$Html_Attributes$href(_neontribe$contemplating_action$CallToAction$callToActionNoDesktopButton(_neontribe$contemplating_action$Views_Config$callToAction.action) ? A2(_elm_lang$core$Basics_ops['++'], 'tel:', _neontribe$contemplating_action$Views_Config$callToAction.href) : _neontribe$contemplating_action$Views_Config$callToAction.href),
 													_1: {
 														ctor: '::',
-														_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$contemplating_action$Messages$ButtonPress, 'contact', 'call', 'call-button', true)),
+														_0: _elm_lang$html$Html_Events$onClick(A4(_neontribe$contemplating_action$Messages$ButtonPress, 'call-to-action', _neontribe$contemplating_action$Views_Config$callToAction.category, 'button', true)),
 														_1: { ctor: '[]' }
 													}
 												}
 											}, {
 												ctor: '::',
-												_0: A2(_neontribe$contemplating_action$Icon$getIcon, 'phone', _elm_lang$core$Maybe$Just('button--icon')),
+												_0: A2(_neontribe$contemplating_action$Icon$getIcon, _neontribe$contemplating_action$Views_Config$callToAction.icon, _elm_lang$core$Maybe$Just('button--icon')),
 												_1: {
 													ctor: '::',
 													_0: A2(_elm_lang$html$Html$span, { ctor: '[]' }, {
 														ctor: '::',
-														_0: _elm_lang$html$Html$text('Call Us'),
+														_0: _elm_lang$html$Html$text(_neontribe$contemplating_action$Views_Config$callToAction.promptLong),
 														_1: { ctor: '[]' }
 													}),
 													_1: { ctor: '[]' }
@@ -11603,7 +11663,51 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 			_1: { ctor: '[]' }
 		});
 	});
-	var _neontribe$contemplating_action$Views_Nav$view = function (_p0) {
+	var _neontribe$contemplating_action$Views_Nav$callToActionNavItemDesktop = function (cta) {
+		var _p0 = cta.action;
+		if (_p0.ctor === 'Phone') {
+			return A2(_elm_lang$html$Html$div, {
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class('nav-item--text-only'),
+				_1: { ctor: '[]' }
+			}, {
+				ctor: '::',
+				_0: A2(_elm_lang$html$Html$span, {
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('nav-item-text'),
+					_1: { ctor: '[]' }
+				}, {
+					ctor: '::',
+					_0: _elm_lang$html$Html$text(cta.promptLong),
+					_1: { ctor: '[]' }
+				}),
+				_1: {
+					ctor: '::',
+					_0: A2(_elm_lang$html$Html$span, {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('nav-item-text'),
+						_1: { ctor: '[]' }
+					}, {
+						ctor: '::',
+						_0: _elm_lang$html$Html$text(cta.displayHref),
+						_1: { ctor: '[]' }
+					}),
+					_1: { ctor: '[]' }
+				}
+			});
+		} else {
+			return A6(_neontribe$contemplating_action$Views_Nav$navItem, cta.icon, cta.href, 'call-to-action', cta.category, cta.promptShort, cta.promptLong);
+		}
+	};
+	var _neontribe$contemplating_action$Views_Nav$callToActionNavItemMobile = function (cta) {
+		var _p1 = cta.action;
+		if (_p1.ctor === 'Phone') {
+			return A6(_neontribe$contemplating_action$Views_Nav$navItem, cta.icon, A2(_elm_lang$core$Basics_ops['++'], 'tel:', cta.href), 'call-to-action', cta.category, cta.promptShort, cta.promptLong);
+		} else {
+			return A6(_neontribe$contemplating_action$Views_Nav$navItem, cta.icon, cta.href, 'call-to-action', cta.category, cta.promptShort, cta.promptLong);
+		}
+	};
+	var _neontribe$contemplating_action$Views_Nav$view = function (_p2) {
 		return A2(_elm_lang$html$Html$div, {
 			ctor: '::',
 			_0: _elm_lang$html$Html_Attributes$class('nav-bar'),
@@ -11616,35 +11720,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 				_1: { ctor: '[]' }
 			}, {
 				ctor: '::',
-				_0: A2(_elm_lang$html$Html$div, {
-					ctor: '::',
-					_0: _elm_lang$html$Html_Attributes$class('nav-item--text-only'),
-					_1: { ctor: '[]' }
-				}, {
-					ctor: '::',
-					_0: A2(_elm_lang$html$Html$span, {
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$class('nav-item-text'),
-						_1: { ctor: '[]' }
-					}, {
-						ctor: '::',
-						_0: _elm_lang$html$Html$text('Call Us'),
-						_1: { ctor: '[]' }
-					}),
-					_1: {
-						ctor: '::',
-						_0: A2(_elm_lang$html$Html$span, {
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('nav-item-text'),
-							_1: { ctor: '[]' }
-						}, {
-							ctor: '::',
-							_0: _elm_lang$html$Html$text(_neontribe$contemplating_action$Views_Config$helplineDisplay),
-							_1: { ctor: '[]' }
-						}),
-						_1: { ctor: '[]' }
-					}
-				}),
+				_0: _neontribe$contemplating_action$Views_Nav$callToActionNavItemDesktop(_neontribe$contemplating_action$Views_Config$callToAction),
 				_1: { ctor: '[]' }
 			}),
 			_1: {
@@ -11663,7 +11739,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 								_1: { ctor: '[]' }
 							}, {
 								ctor: '::',
-								_0: A6(_neontribe$contemplating_action$Views_Nav$navItem, 'phone', A2(_elm_lang$core$Basics_ops['++'], 'tel:', _neontribe$contemplating_action$Views_Config$helpline), 'contact', 'call', 'Call', _neontribe$contemplating_action$Views_Config$helplineDisplay),
+								_0: _neontribe$contemplating_action$Views_Nav$callToActionNavItemMobile(_neontribe$contemplating_action$Views_Config$callToAction),
 								_1: { ctor: '[]' }
 							}),
 							_1: {
@@ -11794,91 +11870,91 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 }).call(this);
 
 /***/ }),
-/* 36 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "ourproject-image2.jpg?e64b4a0b8c449146f49d831680622a62";
 
 /***/ }),
-/* 37 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "ourproject-image3.jpg?7311312ee2c48f39a318c5e49ea3a2b4";
 
 /***/ }),
-/* 38 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "ourproject-image4.jpg?762d038572ed3955777d9c328390a8f8";
 
 /***/ }),
-/* 39 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "ama_2.jpg?43c3172d9b8a7eab8456cf4058a53ec5";
 
 /***/ }),
-/* 40 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "ama_3.jpg?af8288c61c89d2b58d1145a320d7c658";
 
 /***/ }),
-/* 41 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "ama_4.jpg?3051a8b3c9cf70490162bfe1261d11ef";
 
 /***/ }),
-/* 42 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "slide1.svg?174d4e36746d5a1bf711f6e7c7293046";
 
 /***/ }),
-/* 43 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "thumb_placeholder.png?5a37c6a2b4c26f96bbc3aa9e1dba4982";
 
 /***/ }),
-/* 44 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "Castlogo.png?60a10767e1334bcd877cba09c802e832";
 
 /***/ }),
-/* 45 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "comicrelief.svg?bdaa58e8cbdd18891d22d435c23e6456";
 
 /***/ }),
-/* 46 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "DCMSlogo.svg?ed978020b1899a1cb8a23a41d456d351";
 
 /***/ }),
-/* 47 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "biglottery.svg?9ad1254b0f0d56591028d90637c5567c";
 
 /***/ }),
-/* 48 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "neontribelogo.svg?458fc0b0dc6b101e8c0c917109ab7f4e";
 
 /***/ }),
-/* 49 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "havenlogo.svg?9151f243117ff6def60b409f5cb9c1fd";
 
 /***/ }),
-/* 50 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "banner.png?edd5932c20f013405a36aa1c023f5b68";
