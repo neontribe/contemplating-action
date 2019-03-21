@@ -170,7 +170,7 @@ info =
     , { id = 6
       , name = "Who is involved in this project?"
       , slug = "who-is-involved"
-      , icon = "organisation"
+      , icon = "involved"
       , infoText =
             [ """This is a partnership between CAST - a charity driving social change through digital technology - and digital development agency Neontribe. It is one of a number of projects aimed at supporting civic and social organisations to grow confident in using digital tools to achieve their charitable objectives.
             It is possible thanks to The Haven, Wolverhampton sharing technology developed for and with the people they work with."""
