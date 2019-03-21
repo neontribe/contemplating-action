@@ -15,4 +15,4 @@ email =
 
 callToAction : CallToAction
 callToAction =
-    callToActionConstructor Survey "https://mysurvey.example.com" ""
+    callToActionConstructor Survey "https://contemplating-action.typeform.com/to/zUOTYA" ""
