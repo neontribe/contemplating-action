@@ -1,11 +1,14 @@
+/* Several icons in this set provided by Font Awesome by Dave Gandy - http://fontawesome.io */
+/* Several icons in this set provided by Icomoon by http://keyamoon.com */
+
 @font-face {
   font-family: 'info-icons';
+  font-weight: normal;
+  font-style: normal;
   src:  url('fonts/info-icons.eot');
   src:  url('fonts/info-icons.eot') format('embedded-opentype'),
     url('fonts/info-icons.ttf') format('truetype'),
     url('fonts/info-icons.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
