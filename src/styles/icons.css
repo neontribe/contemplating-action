@@ -5,8 +5,8 @@
   font-family: 'info-fonts';
   font-weight: normal;
   font-style: normal;
-  src: url('./fonts/info-icons.eot') format('eot'), /* IE9 */
-       url('./fonts/info-icons.woff') format('woff'), /* Modern Browsers */
+  src: url('./fonts/info-icons.eot'); /* IE9 */
+  src: url('./fonts/info-icons.woff') format('woff'), /* Modern Browsers */
        url('./fonts/info-icons.ttf') format('truetype'); /* Mobile */
 }
 
