@@ -34,7 +34,7 @@ callToActionConstructor actionType href displayHref =
             { action = Survey
             , category = "survey"
             , href = href
-            , icon = "survey"
+            , icon = "check-square-o"
             , displayHref = displayHref
             , promptLong = "Take part in our Survey"
             , promptShort = "Survey"
@@ -45,6 +45,5 @@ callToActionNoDesktopButton : CallToActionType -> Bool
 callToActionNoDesktopButton actionType =
     if actionType == Phone then
         True
-
     else
         False
