@@ -6,9 +6,9 @@
   font-weight: normal;
   font-style: normal;
   src:  url('fonts/info-icons.eot');
-  src:  url('fonts/info-icons.eot') format('embedded-opentype'),
-    url('fonts/info-icons.ttf') format('truetype'),
-    url('fonts/info-icons.woff') format('woff');
+  src:  url('fonts/info-icons.eot') format('embedded-opentype'), /* IE9 */
+    url('fonts/info-icons.ttf') format('truetype'), /* Mobile */
+    url('fonts/info-icons.woff') format('woff'); /* Modern Browsers */
 }
 
 [class^="icon-"], [class*=" icon-"] {
