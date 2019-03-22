@@ -131,7 +131,7 @@ info =
     , { id = 2
       , name = "Bite size information"
       , slug = "bite-size-info"
-      , icon = "information"
+      , icon = "info-circle"
       , infoText =
             [ """We include bite size information relating to a small number of fears and barriers that are likely to be stopping people from taking the next step. Keeping the
             language simple we aim to be open and honest, with a reassuring tone. We resist the temptation to provide all the information people might need. Our goal is to offer just enough to
@@ -141,7 +141,7 @@ info =
     , { id = 3
       , name = "Illustrations"
       , slug = "illustrations"
-      , icon = "illustrations"
+      , icon = "pencil"
       , infoText =
             [ """Many organisations struggle with the same problem with stories. We know stories can be powerful, we want to use them for many reasons.
             Unfortunately people don’t always like to spend time reading them online. We believe that visual storytelling can change this. Contemplating Action has a budget for
@@ -151,7 +151,7 @@ info =
     , { id = 4
       , name = "What is the survey?"
       , slug = "survey"
-      , icon = "survey"
+      , icon = "check-square-o"
       , infoText =
             [ """We would like you to take our survey. We want to understand whether staff in organisations who work most closely with people seeking support think this approach
             could work. We’re interested in your instincts as well as any evidence you might share. It will help us decide where to take the project next."""
@@ -159,8 +159,8 @@ info =
       }
     , { id = 5
       , name = "Can my organisation try this?"
-      , slug = "organisation"
-      , icon = "organisation"
+      , slug = "try-this"
+      , icon = "group"
       , infoText =
             [ """We’re actively looking for partner charities who want to explore the question “can visual storytelling help us encourage people to use support services”.
             So if you have a helpline, webchat, messaging service or even a face to face service we could work together. We have small amounts of funding to support charities

@@ -2,17 +2,18 @@
 /* Several icons in this set provided by Icomoon by http://keyamoon.com */
 
 @font-face {
-  font-family: 'info-fonts';
+  font-family: 'info-icons';
   font-weight: normal;
   font-style: normal;
-  src: url('./fonts/info-icons.eot'); /* IE9 */
-  src: url('./fonts/info-icons.woff') format('woff'), /* Modern Browsers */
-       url('./fonts/info-icons.ttf') format('truetype'); /* Mobile */
+  src:  url('fonts/info-icons.eot'); /* IE9 */
+  src:  url('fonts/info-icons.eot') format('embedded-opentype'), /* IE9 */
+    url('fonts/info-icons.ttf') format('truetype'), /* Mobile */
+    url('fonts/info-icons.woff') format('woff'); /* Modern Browsers */
 }
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'info-fonts' !important;
+  font-family: 'info-icons' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -25,6 +26,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-involved:before {
+  content: "\e906";
+}
 .icon-exit-door:before {
   content: "\e900";
 }
@@ -43,26 +47,20 @@
 .icon-pound-note-large:before {
   content: "\e905";
 }
-.icon-organisation:before {
-  content: "\e906";
-}
-.icon-survey:before {
-  content: "\e907";
-}
-.icon-involved:before {
-  content: "\e908";
-}
-.icon-cost:before {
-  content: "\e909";
-}
-.icon-illustrations:before {
-  content: "\e90a";
-}
-.icon-information:before {
-  content: "\e90b";
+.icon-user:before {
+  content: "\f007";
 }
 .icon-book:before {
   content: "\f02d";
+}
+.icon-pencil:before {
+  content: "\f040";
+}
+.icon-check-square-o:before {
+  content: "\f046";
+}
+.icon-info-circle:before {
+  content: "\f05a";
 }
 .icon-arrow-left:before {
   content: "\f060";
@@ -70,12 +68,21 @@
 .icon-arrow-right:before {
   content: "\f061";
 }
+.icon-phone:before {
+  content: "\f095";
+}
+.icon-group:before {
+  content: "\f0c0";
+}
+.icon-users:before {
+  content: "\f0c0";
+}
 .icon-envelope:before {
   content: "\f0e0";
 }
+.icon-gbp:before {
+  content: "\f154";
+}
 .icon-question-circle-o:before {
   content: "\f29c";
-}
-.icon-phone:before {
-  content: "\f095";
 }
