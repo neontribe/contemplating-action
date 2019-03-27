@@ -25,7 +25,7 @@ import Views.Pages.Supporters exposing (supportersContent)
 
 
 callToActionButton : CallToAction -> String -> Html Msg
-callToActionButton callToAction widthClass =
+callToActionButton callToAction aClass =
     div []
         [ if callToActionNoDesktopButton callToAction.action then
             div [ class "desktop-only" ]
@@ -44,10 +44,10 @@ callToActionButton callToAction widthClass =
         , a
             [ class
                 (if callToActionNoDesktopButton callToAction.action then
-                    "mobile-only button button--full-width " ++ widthClass
+                    "mobile-only button button--full-width " ++ aClass
 
                  else
-                    "button button--full-width " ++ widthClass
+                    "button button--full-width " ++ aClass
                 )
             , href
                 (if callToActionNoDesktopButton callToAction.action then
