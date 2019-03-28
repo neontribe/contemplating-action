@@ -34,3 +34,6 @@ We're using [elm-format](https://github.com/avh4/elm-format) to standardise form
 ## Deployment
 - Build to `dist\` with `yarn build`
 - Push `dist\*` to gh-pages branch
+
+## Copy Documents
+- [Flow Copy] (https://docs.google.com/document/d/1E8rn_y2SWBOJQJzgICyCFYpCxgJPH_7Z4B1YOcsmWB8/edit)
