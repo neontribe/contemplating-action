@@ -3,6 +3,7 @@
     "build": "./node_modules/.bin/webpack",
     "dev": "./node_modules/.bin/webpack-dev-server --port 3000 --hot",
     "format": "./node_modules/.bin/elm-format",
+    "start" : "node server.js",
     "test": "./node_modules/.bin/elm-test"
   },
   "devDependencies": {
@@ -23,5 +24,8 @@
     "url-loader": "^0.6.2",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.4"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
   }
 }
