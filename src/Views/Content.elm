@@ -45,7 +45,7 @@ view model =
                         support services for people who did not follow the direct link to the stories.
                         """
                         ]
-                    , p [] [ a [ class "link link--plain", href "https://neontribe.co.uk/blog" ] [ text "Read in depth about this project" ] ]
+                    , p [] [ a [ class "link link--plain", href "https://neontribe.co.uk/contemplating-action" ] [ text "Read in depth about this project" ] ]
                     , div [ class "button-group" ]
                         [ if callToActionNoDesktopButton callToAction.action then
                             div [ class "desktop-only" ]
@@ -58,18 +58,21 @@ view model =
                                         [ text callToAction.displayHref ]
                                     ]
                                 ]
+
                           else
                             text ""
                         , a
                             [ class
                                 (if callToActionNoDesktopButton callToAction.action then
                                     "mobile-only button button--full-width button--default-width--desktop"
+
                                  else
                                     "button button--full-width button--default-width--desktop"
                                 )
                             , href
                                 (if callToActionNoDesktopButton callToAction.action then
                                     "tel:" ++ callToAction.href
+
                                  else
                                     callToAction.href
                                 )
@@ -157,6 +160,7 @@ view model =
                             [ class
                                 (if callToActionNoDesktopButton callToAction.action then
                                     "text-center"
+
                                  else
                                     "button button--alternate button--full-width"
                                 )
@@ -173,6 +177,7 @@ view model =
                         , href
                             (if callToActionNoDesktopButton callToAction.action then
                                 "tel:" ++ callToAction.href
+
                              else
                                 callToAction.href
                             )
