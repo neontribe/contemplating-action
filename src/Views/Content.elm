@@ -20,6 +20,49 @@ import Views.Pages.Privacy exposing (privacyContent)
 import Views.Pages.Supporters exposing (supportersContent)
 
 
+
+-- Helper: Call to action button markup
+
+
+callToActionButton : CallToAction -> String -> List (Html Msg)
+callToActionButton callToAction aClass =
+    [ if callToActionNoDesktopButton callToAction.action then
+        div [ class "desktop-only" ]
+            [ div []
+                [ span []
+                    [ getIcon callToAction.icon (Just "button--icon")
+                    , span [] [ text callToAction.promptLong ]
+                    ]
+                , span []
+                    [ text callToAction.displayHref ]
+                ]
+            ]
+
+      else
+        text ""
+    , a
+        [ class
+            (if callToActionNoDesktopButton callToAction.action then
+                "mobile-only button button--full-width " ++ aClass
+
+             else
+                "button button--full-width " ++ aClass
+            )
+        , href
+            (if callToActionNoDesktopButton callToAction.action then
+                "tel:" ++ callToAction.href
+
+             else
+                callToAction.href
+            )
+        , onClick (ButtonPress "call-to-action" callToAction.category "button" True)
+        ]
+        [ getIcon callToAction.icon (Just "button--icon")
+        , span [] [ text callToAction.promptLong ]
+        ]
+    ]
+
+
 view : Model -> Html Msg
 view model =
     case model.currentPage of
@@ -47,49 +90,19 @@ view model =
                         ]
                     , p [] [ a [ class "link link--plain", href "https://neontribe.co.uk/contemplating-action" ] [ text "Read in depth about this project" ] ]
                     , div [ class "button-group" ]
-                        [ if callToActionNoDesktopButton callToAction.action then
-                            div [ class "desktop-only" ]
-                                [ div []
-                                    [ span []
-                                        [ getIcon callToAction.icon (Just "button--icon")
-                                        , span [] [ text callToAction.promptLong ]
-                                        ]
-                                    , span []
-                                        [ text callToAction.displayHref ]
+                        (List.concat
+                            [ callToActionButton callToAction "button--default-width--desktop"
+                            , [ a
+                                    [ class "button button--full-width button--default-width--desktop"
+                                    , href ("mailto:" ++ email)
+                                    , onClick (ButtonPress "contact" "email" "email-button" True)
                                     ]
-                                ]
-
-                          else
-                            text ""
-                        , a
-                            [ class
-                                (if callToActionNoDesktopButton callToAction.action then
-                                    "mobile-only button button--full-width button--default-width--desktop"
-
-                                 else
-                                    "button button--full-width button--default-width--desktop"
-                                )
-                            , href
-                                (if callToActionNoDesktopButton callToAction.action then
-                                    "tel:" ++ callToAction.href
-
-                                 else
-                                    callToAction.href
-                                )
-                            , onClick (ButtonPress "call-to-action" callToAction.category "button" True)
+                                    [ getIcon "envelope" (Just "button--icon")
+                                    , span [] [ text "Email us" ]
+                                    ]
+                              ]
                             ]
-                            [ getIcon callToAction.icon (Just "button--icon")
-                            , span [] [ text callToAction.promptLong ]
-                            ]
-                        , a
-                            [ class "button button--full-width button--default-width--desktop"
-                            , href ("mailto:" ++ email)
-                            , onClick (ButtonPress "contact" "email" "email-button" True)
-                            ]
-                            [ getIcon "envelope" (Just "button--icon")
-                            , span [] [ text "Email us" ]
-                            ]
-                        ]
+                        )
                     ]
                 , div [ class "section section--highlight" ]
                     [ div [ class "inset" ]
@@ -154,38 +167,7 @@ view model =
                             ]
                             [ text "I'd like some other information" ]
                         ]
-                    , div
-                        [ class "desktop-only" ]
-                        [ div
-                            [ class
-                                (if callToActionNoDesktopButton callToAction.action then
-                                    "text-center"
-
-                                 else
-                                    "button button--alternate button--full-width"
-                                )
-                            ]
-                            [ span []
-                                [ getIcon callToAction.icon (Just "button--icon")
-                                , span [] [ text callToAction.promptLong ]
-                                ]
-                            , span [] [ text callToAction.displayHref ]
-                            ]
-                        ]
-                    , a
-                        [ class "mobile-only button button--alternate button--full-width"
-                        , href
-                            (if callToActionNoDesktopButton callToAction.action then
-                                "tel:" ++ callToAction.href
-
-                             else
-                                callToAction.href
-                            )
-                        , onClick (ButtonPress "call-to-action" callToAction.category "button" True)
-                        ]
-                        [ getIcon callToAction.icon (Just "button--icon")
-                        , span [] [ text callToAction.promptLong ]
-                        ]
+                    , div [] (callToActionButton callToAction "")
                     ]
                 ]
 
