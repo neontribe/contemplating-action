@@ -1,10 +1,10 @@
 module Info exposing (Info, getInfo, getInfoBySlug, infoCard, infoPage)
 
-import Icon exposing (getIcon)
-import List
 import Html exposing (Html, a, article, div, h2, li, p, span, text)
 import Html.Attributes exposing (class, href)
 import Html.Events exposing (onClick)
+import Icon exposing (getIcon)
+import List
 import Messages exposing (Msg(ButtonPress))
 
 
@@ -27,12 +27,12 @@ getInfo infoId =
         foundInfo =
             List.head (List.filter (\i -> i.id == infoId) info)
     in
-        case foundInfo of
-            Just info ->
-                info
+    case foundInfo of
+        Just info ->
+            info
 
-            Nothing ->
-                placeholderInfo
+        Nothing ->
+            placeholderInfo
 
 
 getInfoBySlug : String -> Info
@@ -41,12 +41,12 @@ getInfoBySlug infoSlug =
         foundInfo =
             List.head (List.filter (\i -> i.slug == infoSlug) info)
     in
-        case foundInfo of
-            Just info ->
-                info
+    case foundInfo of
+        Just info ->
+            info
 
-            Nothing ->
-                placeholderInfo
+        Nothing ->
+            placeholderInfo
 
 
 
@@ -139,8 +139,8 @@ info =
             ]
       }
     , { id = 3
-      , name = "Illustrations"
-      , slug = "illustrations"
+      , name = "Visual Storytelling"
+      , slug = "visual-storytelling"
       , icon = "pencil"
       , infoText =
             [ """Many organisations struggle with the same problem with stories. We know stories can be powerful, we want to use them for many reasons.
