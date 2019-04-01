@@ -143,7 +143,8 @@ button + p {
   margin-top: 3em;
 }
 
-p + p {
+p + p,
+ul + p {
   line-height: 1.5;
   margin-top: 1em;
 }
