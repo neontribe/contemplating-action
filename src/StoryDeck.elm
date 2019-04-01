@@ -243,9 +243,8 @@ decks =
               , messageText = Nothing
               }
             , { quoteText =
-                    """The final section of the story is about hope. It show that making a chance can be a positive choice. However it doesn’t
-                    suggest that the person’s life is now perfect. It is designed to encourage others to believe they could make a move to a more
-                    hopeful place too. It takes care not to sound out of reach.
+                    """The final section of the story is about hope. It shows that taking a chance can be a positive choice. However it doesn’t suggest that the person’s life is now perfect.
+                    It is designed to encourage others to believe they could make a move to a more hopeful place too. It takes care not to sound out of reach.
                     """
               , imagePath = AssetPath "story_images/ourproject-image4.jpg"
               , altText = "The door is open and the lock is on the floor. The man is outside in a bright and sunny environment holding onto the key."

@@ -88,7 +88,7 @@ view model =
                         support services for people who did not follow the direct link to the stories.
                         """
                         ]
-                    , p [] [ a [ class "link link--plain", href "https://neontribe.co.uk/blog" ] [ text "Read in depth about this project" ] ]
+                    , p [] [ a [ class "link link--plain", href "https://neontribe.co.uk/contemplating-action" ] [ text "Read in depth about this project" ] ]
                     , div [ class "button-group" ]
                         (List.concat
                             [ callToActionButton callToAction "button--default-width--desktop"
