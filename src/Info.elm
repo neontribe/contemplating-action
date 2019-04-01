@@ -162,9 +162,8 @@ info =
       , slug = "try-this"
       , icon = "group"
       , infoText =
-            [ """We’re actively looking for partner charities who want to explore the question “can visual storytelling help us encourage people to use support services”.
-            So if you have a helpline, webchat, messaging service or even a face to face service we could work together. We have small amounts of funding to support charities
-            getting involved. Please show your interest by taking the survey."""
+            [ """We’re actively looking for partner charities interested in experimenting with this visual storytelling format. So if you have a helpline, webchat, messaging service or even a face to face
+            service, we could work together on whether an app could help people connect to those services. We have small amounts of funding to support charities getting involved. Please show your interest by taking the survey."""
             ]
       }
     , { id = 6
