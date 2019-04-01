@@ -27,7 +27,7 @@ view model =
             div [ class "section--vertical-fill-center" ]
                 [ section [ class "section section--lighter section--align-bottom" ]
                     [ h2 []
-                        [ text "A project exploring how to encourage people to seek support. Can stories help change lives?" ]
+                        [ text "A project exploring how to encourage people to seek support. Can visual stories help change lives?" ]
                     , div [ class "button-group button-group--row" ]
                         [ a [ class "button button--alternate button--center button--default-width--desktop", href "#/stories" ]
                             [ getIcon "question-circle-o" (Just "button--icon")
@@ -58,21 +58,18 @@ view model =
                                         [ text callToAction.displayHref ]
                                     ]
                                 ]
-
                           else
                             text ""
                         , a
                             [ class
                                 (if callToActionNoDesktopButton callToAction.action then
                                     "mobile-only button button--full-width button--default-width--desktop"
-
                                  else
                                     "button button--full-width button--default-width--desktop"
                                 )
                             , href
                                 (if callToActionNoDesktopButton callToAction.action then
                                     "tel:" ++ callToAction.href
-
                                  else
                                     callToAction.href
                                 )
@@ -160,7 +157,6 @@ view model =
                             [ class
                                 (if callToActionNoDesktopButton callToAction.action then
                                     "text-center"
-
                                  else
                                     "button button--alternate button--full-width"
                                 )
@@ -177,7 +173,6 @@ view model =
                         , href
                             (if callToActionNoDesktopButton callToAction.action then
                                 "tel:" ++ callToAction.href
-
                              else
                                 callToAction.href
                             )
