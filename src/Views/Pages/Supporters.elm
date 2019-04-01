@@ -15,6 +15,7 @@ supportersContent =
     div [ class "section" ]
         [ div []
             [ h2 [] [ text "Our Supporters" ]
+            , p [] [ text "This page, available in the landing page footer, allows organisations to thank their partners." ]
             , p [] [ text "We are grateful to all the partners that have made this project possible." ]
             , div [ class "supporter--logo-group" ]
                 [ img [ class "supporter--logo", src (path (AssetPath "supporters_logos/Castlogo.png")), alt "Cast Logo" ] []
