@@ -123,7 +123,7 @@ info =
       , slug = "about"
       , icon = "question-circle-o"
       , infoText =
-            [ """In 2017, The Haven, Wolverhampton worked with Neontribe and women who had been through domestic abuse. We co-designed a web app to encourage other women in that situation to seek support and advice.
+            [ """In 2017, The Haven Wolverhampton, worked with Neontribe and women who had been through domestic abuse. We co-designed a web app to encourage other women in that situation to seek support and advice.
             We want to find out if the structure of that app could be used by different organisations. We believe
             that reassuring people that their fears and challenges are shared could help them take early steps on a journey of change such as contacting a support service. """
             ]
