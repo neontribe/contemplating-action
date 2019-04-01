@@ -3,8 +3,8 @@
 
 module Views.Pages.Privacy exposing (privacyContent)
 
-import Html exposing (Html, div, h2, h3, li, p, text, ul)
-import Html.Attributes exposing (class)
+import Html exposing (Html, a, div, h2, h3, li, p, text, ul)
+import Html.Attributes exposing (class, href)
 import Messages exposing (Msg(..))
 import Views.Footer exposing (footerContent)
 
@@ -58,13 +58,30 @@ privacyContent =
             , h3 [] [ text "Where is the information stored?" ]
             , ul [ class "ul--disc" ]
                 [ li [] [ text "On our computers " ]
-                , li [] [ text "On our survey provider Typeform’s servers ()" ]
-                , li [] [ text "In google analytics and google drive ()" ]
-                , li [] [ text "By our partner CAST on their servers if you have explicitly expressed the desire to share your information with them whilst using our site. ()" ]
+                , li []
+                    [ text "On our survey provider Typeform’s servers. For more information see "
+                    , a [ class "link link--plain", href "https://www.typeform.com/help/gdpr-rights-for-respondents/" ]
+                        [ text "Typeform's privacy policy" ]
+                    , text "."
+                    ]
+                , li []
+                    [ text "In Google Analytics. For more information see "
+                    , a [ class "link link--plain", href "https://www.typeform.com/help/gdpr-rights-for-respondents/" ]
+                        [ text "Google's privacy policy" ]
+                    , text "."
+                    ]
+                , li []
+                    [ text "By our partner CAST on their servers if you have explicitly expressed the desire to share your information with them whilst using our site. For more information see "
+                    , a [ class "link link--plain", href "https://www.castsoftware.com/privacy" ]
+                        [ text "CAST's privacy policy" ]
+                    , text "."
+                    ]
                 ]
             , h3 [] [ text "Your rights" ]
             , p []
-                [ text """We guarantee to meet your rights in compliance with GDPR. Find out about those rights from the ICO: https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/individual-rights/ To exercise any of your rights, please contact us at hello@contemplatingaction.org.uk
+                [ text """We guarantee to meet your rights in compliance with GDPR. Find out about those rights from the """
+                , a [ class "link link--plain", href "https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/individual-rights/" ] [ text "ICO GDPR indvidual rights guide" ]
+                , text """. To exercise any of your rights, please contact us at hello@contemplatingaction.org.uk
                 """
                 ]
             , h3 [] [ text "Use of cookies" ]
