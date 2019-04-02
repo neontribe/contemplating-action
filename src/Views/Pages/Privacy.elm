@@ -66,7 +66,7 @@ privacyContent =
                     ]
                 , li []
                     [ text "In Google Analytics. For more information see "
-                    , a [ class "link link--plain", href "https://www.typeform.com/help/gdpr-rights-for-respondents/" ]
+                    , a [ class "link link--plain", href "https://support.google.com/analytics/answer/6004245" ]
                         [ text "Google's privacy policy" ]
                     , text "."
                     ]
