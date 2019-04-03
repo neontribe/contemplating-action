@@ -37,7 +37,7 @@ type alias GaEvent =
 
 pageTimeoutSecs : Float
 pageTimeoutSecs =
-    120
+    900
 
 
 delay : Float -> msg -> Cmd msg
