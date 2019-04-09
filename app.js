@@ -9490,7 +9490,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 			return msg;
 		}, _elm_lang$core$Process$sleep(_elm_lang$core$Time$second * secs));
 	});
-	var _neontribe$contemplating_action$Messages$pageTimeoutSecs = 900;
+	var _neontribe$contemplating_action$Messages$pageTimeoutSecs = 3600;
 	var _neontribe$contemplating_action$Messages$updateAnalyticsPage = _elm_lang$core$Native_Platform.outgoingPort('updateAnalyticsPage', function (v) {
 		return v;
 	});
