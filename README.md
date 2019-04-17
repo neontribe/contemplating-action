@@ -1,6 +1,6 @@
 # Picture Stories and Info
 
-## Site urls
+## Site URLs
 - [Staging](https://neontribe.github.io/contemplating-action/)
 - [Production](https://www.contemplatingaction.org.uk)
 
