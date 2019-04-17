@@ -33,7 +33,7 @@ We're using [elm-format](https://github.com/avh4/elm-format) to standardise form
 
 ## Deployment
 
-### To staging (github pages)
+### To staging (GitHub pages)
 - Build to `dist\` with `yarn build`
 - Push `dist\*` to gh-pages branch
 
