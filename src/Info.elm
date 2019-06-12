@@ -27,12 +27,12 @@ getInfo infoId =
         foundInfo =
             List.head (List.filter (\i -> i.id == infoId) info)
     in
-    case foundInfo of
-        Just info ->
-            info
+        case foundInfo of
+            Just info ->
+                info
 
-        Nothing ->
-            placeholderInfo
+            Nothing ->
+                placeholderInfo
 
 
 getInfoBySlug : String -> Info
@@ -41,12 +41,12 @@ getInfoBySlug infoSlug =
         foundInfo =
             List.head (List.filter (\i -> i.slug == infoSlug) info)
     in
-    case foundInfo of
-        Just info ->
-            info
+        case foundInfo of
+            Just info ->
+                info
 
-        Nothing ->
-            placeholderInfo
+            Nothing ->
+                placeholderInfo
 
 
 

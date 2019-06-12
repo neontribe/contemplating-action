@@ -20,7 +20,6 @@ import Views.Pages.Privacy exposing (privacyContent)
 import Views.Pages.Supporters exposing (supportersContent)
 
 
-
 -- Helper: Call to action button markup
 
 
@@ -37,21 +36,18 @@ callToActionButton callToAction aClass =
                     [ text callToAction.displayHref ]
                 ]
             ]
-
       else
         text ""
     , a
         [ class
             (if callToActionNoDesktopButton callToAction.action then
                 "mobile-only button button--full-width " ++ aClass
-
              else
                 "button button--full-width " ++ aClass
             )
         , href
             (if callToActionNoDesktopButton callToAction.action then
                 "tel:" ++ callToAction.href
-
              else
                 callToAction.href
             )
