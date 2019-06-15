@@ -5,7 +5,7 @@ import Html.Attributes exposing (class, href)
 import Html.Events exposing (onClick)
 import Icon exposing (getIcon)
 import List
-import Messages exposing (Msg(ButtonPress))
+import Messages exposing (Msg(..))
 
 
 type alias Info =
@@ -25,28 +25,28 @@ getInfo : Int -> Info
 getInfo infoId =
     let
         foundInfo =
-            List.head (List.filter (\i -> i.id == infoId) info)
+            List.head (List.filter (\i -> i.id == infoId) infoList)
     in
-        case foundInfo of
-            Just info ->
-                info
+    case foundInfo of
+        Just info ->
+            info
 
-            Nothing ->
-                placeholderInfo
+        Nothing ->
+            placeholderInfo
 
 
 getInfoBySlug : String -> Info
 getInfoBySlug infoSlug =
     let
         foundInfo =
-            List.head (List.filter (\i -> i.slug == infoSlug) info)
+            List.head (List.filter (\i -> i.slug == infoSlug) infoList)
     in
-        case foundInfo of
-            Just info ->
-                info
+    case foundInfo of
+        Just info ->
+            info
 
-            Nothing ->
-                placeholderInfo
+        Nothing ->
+            placeholderInfo
 
 
 
@@ -116,8 +116,8 @@ placeholderInfo =
     }
 
 
-info : List Info
-info =
+infoList : List Info
+infoList =
     [ { id = 1
       , name = "About the project"
       , slug = "about"

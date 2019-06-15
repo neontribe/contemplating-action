@@ -1,22 +1,21 @@
 port module Messages exposing (Msg(..), delay, gaEvent, hidePage, pageTimeoutSecs, updateAnalyticsEvent, updateAnalyticsPage)
 
-import Keyboard
-import Mouse
+import Browser
 import Process
 import Route exposing (Page)
-import Task
-import Time
+import Task exposing (perform)
+import Url
 
 
 type
     Msg
     -- Action
     = ButtonPress String String String Bool
-    | KeyPress Keyboard.KeyCode
-    | MouseAction Mouse.Position
+    | KeyPress String
+    | MouseAction
       -- Navigation
-    | NewUrl String
-    | UrlChange (Maybe Page)
+    | UrlChanged Url.Url
+    | LinkClicked Browser.UrlRequest
       -- Timeout
     | DoTimeout
     | Exit Bool
@@ -42,7 +41,7 @@ pageTimeoutSecs =
 
 delay : Float -> msg -> Cmd msg
 delay secs msg =
-    Process.sleep (Time.second * secs)
+    Process.sleep (1000 * secs)
         |> Task.perform (\_ -> msg)
 
 

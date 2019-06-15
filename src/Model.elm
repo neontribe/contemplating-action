@@ -1,37 +1,40 @@
 module Model exposing (Model, init, pageSlug)
 
+import Browser.Navigation as Navigation
 import Messages exposing (Msg(..), delay, pageTimeoutSecs)
-import Navigation
-import Route exposing (Page(..), route)
+import Route exposing (Page(..), pageFromUrl, pageToString)
 import Slug
-import UrlParser exposing (parseHash)
+import Url
 
 
 type alias Model =
     { currentPage : Page
     , idlePage : Page
     , idleTimerCount : Int
+    , navKey : Navigation.Key
+    , url : Url.Url
     , doExit : Bool
     }
 
 
-init : Navigation.Location -> ( Model, Cmd Msg )
-init location =
+init : () -> Url.Url -> Navigation.Key -> ( Model, Cmd Msg )
+init _ url navKey =
     let
-        page =
-            case parseHash route location of
+        maybePage =
+            case pageFromUrl url of
                 Nothing ->
+                    -- 404 to home
                     Home
 
                 Just aPage ->
                     aPage
     in
-        ( Model page Home 0 False, delay pageTimeoutSecs (IdleTimeout page -1) )
+    ( Model maybePage Home 0 navKey url False, delay pageTimeoutSecs (IdleTimeout maybePage -1) )
 
 
 pageSlug : Page -> String
 pageSlug page =
-    case Slug.generate (toString page) of
+    case Slug.generate (pageToString page) of
         Just slug ->
             Slug.toString slug
 

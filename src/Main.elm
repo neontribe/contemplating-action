@@ -1,26 +1,34 @@
 module Main exposing (main)
 
-import Messages exposing (Msg(UrlChange))
+import Browser
+import Browser.Events exposing (onClick, onKeyDown)
+import Json.Decode as D
+import Messages exposing (Msg(..))
 import Model exposing (Model)
-import Navigation
-import Route exposing (route)
-import Subscriptions
 import Update
-import UrlParser exposing (parseHash)
 import View
 
 
-main : Program Never Model Msg
+main : Program () Model Msg
 main =
-    Navigation.program locChange
+    Browser.application
         { init = Model.init
         , view = View.view
         , update = Update.update
-        , subscriptions = Subscriptions.subscriptions
+        , subscriptions = subscriptions
+        , onUrlRequest = Messages.LinkClicked
+        , onUrlChange = Messages.UrlChanged
         }
 
 
-locChange : Navigation.Location -> Msg
-locChange location =
-    parseHash route location
-        |> UrlChange
+subscriptions : Model -> Sub Msg
+subscriptions _ =
+    Sub.batch
+        [ onKeyDown (D.map KeyPress keyDecoder)
+        , onClick (D.succeed MouseAction)
+        ]
+
+
+keyDecoder : D.Decoder String
+keyDecoder =
+    D.field "key" D.string
