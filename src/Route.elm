@@ -45,7 +45,6 @@ pageToString page =
         Timeout ->
             "Timeout"
 
-
         SupportersPage ->
             "Supporters Page"
 

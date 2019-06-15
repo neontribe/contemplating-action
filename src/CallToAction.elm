@@ -45,5 +45,6 @@ callToActionNoDesktopButton : CallToActionType -> Bool
 callToActionNoDesktopButton actionType =
     if actionType == Phone then
         True
+
     else
         False
