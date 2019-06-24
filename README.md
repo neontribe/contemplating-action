@@ -4,16 +4,15 @@
 - [Staging](https://neontribe.github.io/contemplating-action/)
 - [Production](https://www.contemplatingaction.org.uk)
 
-
-### Built with Elm, Webpack and Yarn
-- `elm-package.json` for elm packages
+### Elm with Webpack and Yarn
+- `elm.json` for elm packages
 - `package.json` for node packages
 - `yarn.lock` current versions of node packages
 - `webpack.config.js` - build and compile config
 - `src\` - the app source files
 
 ## Installation
-- You will need `elm`, `node` and `yarn` follow the official install instructions if you don't have already
+- You will need `elm@0.19`, `node` and `yarn` follow the official install instructions if you don't have already
 - Clone this repo
 - `yarn` to install
 
@@ -27,7 +26,8 @@ We're using [elm-test](https://github.com/rtfeldman/node-test-runner/releases/ta
 - Todo add to build process
 
 ## Code Style
-We're using [elm-format](https://github.com/avh4/elm-format) to standardise formatting. The output of different versions of elm-format varies significantly, so please use version 0.6.1-alpha.
+We're using [elm-format](https://github.com/avh4/elm-format) to standardise formatting.
+The output of different versions of elm-format varies significantly, so please use version `0.8.1`.
 - e.g. run over all src files `yarn format src` from the root of the site
 - Todo add to commit or push
 

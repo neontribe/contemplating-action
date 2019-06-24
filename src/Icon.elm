@@ -5,6 +5,7 @@ import Html.Attributes exposing (class)
 import Html.Attributes.Aria exposing (ariaHidden)
 
 
+
 {-
    Pass a string to get an icon. Optionally pass an additional class - useful for matching style
    or hover state of adjacent elements.

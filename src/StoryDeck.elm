@@ -8,7 +8,7 @@ import Html.Events exposing (onClick)
 import Icon exposing (getIcon)
 import Info exposing (getInfo)
 import List
-import Messages exposing (Msg(ButtonPress))
+import Messages exposing (Msg(..))
 
 
 type alias Deck =
@@ -53,14 +53,14 @@ storyTeaser : Int -> Html Msg
 storyTeaser deckId =
     div [ class "card" ]
         [ a
-            [ href ("#/stories/" ++ toString deckId)
+            [ href ("#/stories/" ++ String.fromInt deckId)
             , onClick (ButtonPress "story" "view-single" (storyTitle deckId) False)
             ]
             [ img [ class "card--thumbnail", src (storyTeaserImgPath deckId), alt (storyTeaserImgAltText deckId) ] []
             ]
         , a
             [ class "link--unstyled"
-            , href ("#/stories/" ++ toString deckId)
+            , href ("#/stories/" ++ String.fromInt deckId)
             , onClick (ButtonPress "story" "view-single" (storyTitle deckId) False)
             ]
             [ h3 [ class "title--small" ] [ text (storyTitle deckId) ]
@@ -70,14 +70,14 @@ storyTeaser deckId =
         , div [ class "text-right text-with-icon--right stories--more-link" ]
             [ a
                 [ class "link"
-                , href ("#/stories/" ++ toString deckId)
+                , href ("#/stories/" ++ String.fromInt deckId)
                 , onClick (ButtonPress "story" "view-single" (storyTitle deckId) False)
                 ]
                 [ text ("See " ++ storyTitle deckId ++ "'s Story")
                 ]
             , a
                 [ class "link--unstyled"
-                , href ("#/stories/" ++ toString deckId)
+                , href ("#/stories/" ++ String.fromInt deckId)
                 , onClick (ButtonPress "story" "view-single" (storyTitle deckId) False)
                 ]
                 [ getIcon "arrow-right" (Just "icon--alternate")
@@ -105,7 +105,7 @@ card : Int -> Int -> Html msg
 card deckId cardId =
     div [ class "card story" ]
         [ h3 [ class "title--small title--alternate" ]
-            [ text ("Part " ++ toString cardId ++ " of 4") ]
+            [ text ("Part " ++ String.fromInt cardId ++ " of 4") ]
         , blockquote [ class "card--quote quote" ]
             [ text (getCard deckId cardId).quoteText ]
         , div [ class "story--illustration" ]
@@ -119,16 +119,16 @@ card deckId cardId =
 cardMessage : Int -> Int -> Html msg
 cardMessage deckId cardId =
     let
-        message =
+        maybeMessage =
             (getCard deckId cardId).messageText
     in
-        case message of
-            -- Easiest to return an empty p here. Class in case we need to style.
-            Nothing ->
-                p [ class "no-message" ] []
+    case maybeMessage of
+        -- Easiest to return an empty p here. Class in case we need to style.
+        Nothing ->
+            p [ class "no-message" ] []
 
-            Just message ->
-                blockquote [ class "story--message quote" ] [ text message ]
+        Just aMessage ->
+            blockquote [ class "story--message quote" ] [ text aMessage ]
 
 
 cardImgPath : Int -> Int -> String
@@ -151,26 +151,26 @@ getCard deckId cardId =
                 |> Array.fromList
                 |> Array.get (cardId - 1)
     in
-        case foundCard of
-            Just card ->
-                card
+    case foundCard of
+        Just aCard ->
+            aCard
 
-            Nothing ->
-                placeholderCard
+        Nothing ->
+            placeholderCard
 
 
 getDeck : Int -> List Deck -> Deck
-getDeck deckId decks =
+getDeck deckId deckList =
     let
         foundDeck =
-            List.head (List.filter (\i -> i.id == deckId) decks)
+            List.head (List.filter (\i -> i.id == deckId) deckList)
     in
-        case foundDeck of
-            Just deck ->
-                deck
+    case foundDeck of
+        Just deck ->
+            deck
 
-            Nothing ->
-                placeholderDeck
+        Nothing ->
+            placeholderDeck
 
 
 getRelatedInfo : Int -> List Int

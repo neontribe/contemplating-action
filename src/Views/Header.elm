@@ -7,7 +7,7 @@ import Html exposing (Html, a, h1, header, text)
 import Html.Attributes exposing (class, href)
 import Messages exposing (Msg)
 import Model exposing (Model)
-import Route exposing (Page(Home))
+import Route exposing (Page(..))
 import Views.Config exposing (appTitle)
 
 

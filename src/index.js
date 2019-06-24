@@ -5,9 +5,6 @@ require('./styles/app.scss');
 // Requiring after app.scss ensures correct selector precedence
 require('./styles/icons.css');
 
-// Require index.html so it gets copied to dist
-require('./index.html');
-
 // Require icons
 require('./favicon.png');
 require('./favicon.ico');
@@ -27,10 +24,7 @@ require('./favicon-16x16.png');
 require('./manifest.json');
 
 var Elm = require('./Main.elm');
-var mountNode = document.getElementById('main');
-
-// .embed() can take an optional second argument. This would be an object describing the data we need to start a program, i.e. a userID or some token
-var app = Elm.Main.embed(mountNode);
+var app = Elm.Elm.Main.init({});
 
 app.ports.updateAnalyticsPage.subscribe(function (page) {
     gtag('config', 'UA-30970110-10', { 'page_path': page });
@@ -43,7 +37,7 @@ app.ports.updateAnalyticsEvent.subscribe(function (gaEvent) {
 });
 
 app.ports.hidePage.subscribe(function() {
-    mountNode.style.display = "none";
+    document.getElementById('page-wrapper').style.display = "none";
 });
 
 // Options for the observer (which mutations to observe)
@@ -58,4 +52,4 @@ var callback = function(mutationsList) {
 var observer = new MutationObserver(callback);
 
 // Start observing the target node for configured mutations
-observer.observe(mountNode, config);
+observer.observe(document.getElementById('page-wrapper'), config);
