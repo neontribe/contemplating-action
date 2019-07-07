@@ -26,7 +26,7 @@ view _ =
                 [ callToActionNavItemMobile callToAction
                 ]
             , span [ class "nav-item" ]
-                [ a [ class "btn ", href "https://google.com", target "_blank", rel "noopener", onClick (Exit True) ]
+                [ a [ class "btn ", href "https://google.com", target "_blank", rel "noopener", onClick Exit ]
                     [ getIcon "exit-door" (Just "nav-item-text nav-icon")
                     , span [ class " nav-item-text nav-text-selector" ] [ text "Exit Site" ]
                     ]

@@ -5,7 +5,7 @@ module Views.Content exposing (view)
 
 import Assets exposing (AssetPath(..), path)
 import CallToAction exposing (CallToAction, callToActionNoDesktopButton)
-import Html exposing (Html, a, article, button, div, h2, img, p, section, span, text, ul)
+import Html exposing (Html, a, article, div, h2, img, p, section, span, text, ul)
 import Html.Attributes exposing (alt, class, href, src)
 import Html.Events exposing (onClick)
 import Icon exposing (getIcon)
@@ -113,15 +113,6 @@ view model =
                         ]
                     ]
                 , footerContent
-                ]
-
-        Timeout ->
-            div [ class "section" ]
-                [ h2 [] [ text "This app will close in 15 seconds. Do you want to keep reading?" ]
-                , div []
-                    [ button [ onClick GoBack, class "button button--default-width--desktop" ] [ text "Keep reading" ]
-                    , p [ class "text-small" ] [ text "So that no-one else can see you have been using this app, it closes automatically when it thinks you have stopped reading." ]
-                    ]
                 ]
 
         SupportersPage ->

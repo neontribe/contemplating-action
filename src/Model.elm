@@ -1,7 +1,7 @@
 module Model exposing (Model, init, pageSlug)
 
 import Browser.Navigation as Navigation
-import Messages exposing (Msg(..), delay, pageTimeoutSecs)
+import Messages exposing (Msg(..))
 import Route exposing (Page(..), pageFromUrl, pageToString)
 import Slug
 import Url
@@ -10,10 +10,8 @@ import Url
 type alias Model =
     { currentPage : Page
     , idlePage : Page
-    , idleTimerCount : Int
     , navKey : Navigation.Key
     , url : Url.Url
-    , doExit : Bool
     }
 
 
@@ -29,7 +27,7 @@ init _ url navKey =
                 Just aPage ->
                     aPage
     in
-    ( Model maybePage Home 0 navKey url False, delay pageTimeoutSecs (IdleTimeout maybePage -1) )
+    ( Model maybePage Home navKey url, Cmd.none )
 
 
 pageSlug : Page -> String
