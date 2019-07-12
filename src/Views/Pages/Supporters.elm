@@ -5,7 +5,7 @@ module Views.Pages.Supporters exposing (supportersContent)
 
 import Assets exposing (AssetPath(..), path)
 import Html exposing (Html, div, h2, img, p, text)
-import Html.Attributes exposing (alt, class, href, src)
+import Html.Attributes exposing (alt, class, src)
 import Messages exposing (Msg(..))
 import Views.Footer exposing (footerContent)
 

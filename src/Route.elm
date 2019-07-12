@@ -6,7 +6,6 @@ import Url.Parser as Parser exposing ((</>), Parser, int, map, oneOf, s, string,
 
 type Page
     = Home
-    | Timeout
     | SupportersPage
     | StoriesPage
     | StoryPage Int
@@ -19,7 +18,6 @@ routeParser : Parser (Page -> a) a
 routeParser =
     oneOf
         [ map Home top
-        , map Timeout top
         , map SupportersPage (s "supporters")
         , map StoriesPage (s "stories")
         , map StoryPage (s "stories" </> int)
@@ -41,9 +39,6 @@ pageToString page =
     case page of
         Home ->
             "Home"
-
-        Timeout ->
-            "Timeout"
 
         SupportersPage ->
             "Supporters Page"
