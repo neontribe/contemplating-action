@@ -1,10 +1,12 @@
-module StoryDeck exposing (card, getInfoButtons, storyRelatedInfo, storyTeaser, storyTitle)
+module StoryDeck exposing (card, storyRelatedInfo, storyTeaser, storyTitle)
 
 import Array
 import Assets exposing (AssetPath(..), path)
 import Html exposing (Html, a, blockquote, div, h3, img, p, text)
 import Html.Attributes exposing (alt, class, href, src)
 import Html.Events exposing (onClick)
+import I18n.Keys exposing (Key(..))
+import I18n.Translate exposing (Language(..), translate)
 import Icon exposing (getIcon)
 import Info exposing (getInfo)
 import List
@@ -13,10 +15,10 @@ import Messages exposing (Msg(..))
 
 type alias Deck =
     { id : Int
-    , title : String
-    , teaser : String
+    , title : Key
+    , teaser : Key
     , teaserImgPath : AssetPath
-    , teaserImgAltText : String
+    , teaserImgAltText : Key
     , relatedInfo : List Int
     , cards : List Card
     }
@@ -24,9 +26,9 @@ type alias Deck =
 
 type alias Card =
     { imagePath : AssetPath
-    , messageText : Maybe String
-    , quoteText : String
-    , altText : String
+    , messageText : Maybe Key
+    , quoteText : Key
+    , altText : Key
     }
 
 
@@ -34,7 +36,7 @@ type alias Card =
 -- Accessors for Story Deck content
 
 
-storyTitle : Int -> String
+storyTitle : Int -> Key
 storyTitle deckId =
     (getDeck deckId decks).title
 
@@ -44,41 +46,45 @@ storyTeaserImgPath deckId =
     path (getDeck deckId decks).teaserImgPath
 
 
-storyTeaserImgAltText : Int -> String
+storyTeaserImgAltText : Int -> Key
 storyTeaserImgAltText deckId =
     (getDeck deckId decks).teaserImgAltText
 
 
-storyTeaser : Int -> Html Msg
-storyTeaser deckId =
+storyTeaser : Language -> Int -> Html Msg
+storyTeaser language deckId =
+    let
+        t =
+            translate
+    in
     div [ class "card" ]
         [ a
             [ href ("#/stories/" ++ String.fromInt deckId)
-            , onClick (ButtonPress "story" "view-single" (storyTitle deckId) False)
+            , onClick (ButtonPress "story" "view-single" (t English (storyTitle deckId)) False)
             ]
-            [ img [ class "card--thumbnail", src (storyTeaserImgPath deckId), alt (storyTeaserImgAltText deckId) ] []
+            [ img [ class "card--thumbnail", src (storyTeaserImgPath deckId), alt (t language (storyTeaserImgAltText deckId)) ] []
             ]
         , a
             [ class "link--unstyled"
             , href ("#/stories/" ++ String.fromInt deckId)
-            , onClick (ButtonPress "story" "view-single" (storyTitle deckId) False)
+            , onClick (ButtonPress "story" "view-single" (t English (storyTitle deckId)) False)
             ]
-            [ h3 [ class "title--small" ] [ text (storyTitle deckId) ]
+            [ h3 [ class "title--small" ] [ text (t language (storyTitle deckId)) ]
             ]
         , blockquote [ class "card--quote" ]
-            [ text (getDeck deckId decks).teaser ]
+            [ text (t language (getDeck deckId decks).teaser) ]
         , div [ class "text-right text-with-icon--right stories--more-link" ]
             [ a
                 [ class "link"
                 , href ("#/stories/" ++ String.fromInt deckId)
-                , onClick (ButtonPress "story" "view-single" (storyTitle deckId) False)
+                , onClick (ButtonPress "story" "view-single" (t English (storyTitle deckId)) False)
                 ]
-                [ text ("See " ++ storyTitle deckId ++ "'s Story")
+                [ text (t language (StoriesTeaserMoreLink (t language (storyTitle deckId))))
                 ]
             , a
                 [ class "link--unstyled"
                 , href ("#/stories/" ++ String.fromInt deckId)
-                , onClick (ButtonPress "story" "view-single" (storyTitle deckId) False)
+                , onClick (ButtonPress "story" "view-single" (t English (storyTitle deckId)) False)
                 ]
                 [ getIcon "arrow-right" (Just "icon--alternate")
                 ]
@@ -86,38 +92,42 @@ storyTeaser deckId =
         ]
 
 
-storyRelatedInfo : Int -> List (Html Msg)
-storyRelatedInfo deckId =
-    List.map getInfoButtons (getRelatedInfo deckId)
+storyRelatedInfo : Language -> Int -> List (Html Msg)
+storyRelatedInfo language deckId =
+    List.map getInfoButtons (getRelatedInfoIds ( language, deckId ))
 
 
-getInfoButtons : Int -> Html Msg
-getInfoButtons id =
+getInfoButtons : ( Language, Int ) -> Html Msg
+getInfoButtons ( language, id ) =
     a
-        [ href ("#/info-to-help/" ++ (getInfo id).slug)
+        [ href ("#/info-to-help/" ++ (getInfo language id).slug)
         , class "button button--alternate button--full-width"
-        , onClick (ButtonPress "information" "view-single" (getInfo id).slug True)
+        , onClick (ButtonPress "information" "view-single" (getInfo language id).slug True)
         ]
-        [ text (getInfo id).name ]
+        [ text (getInfo language id).name ]
 
 
-card : Int -> Int -> Html msg
-card deckId cardId =
+card : Language -> Int -> Int -> Html msg
+card language deckId cardId =
+    let
+        t =
+            translate language
+    in
     div [ class "card story" ]
         [ h3 [ class "title--small title--alternate" ]
-            [ text ("Part " ++ String.fromInt cardId ++ " of 4") ]
+            [ text (t (StoryCardH3 cardId)) ]
         , blockquote [ class "card--quote quote" ]
-            [ text (getCard deckId cardId).quoteText ]
+            [ text (t (getCard deckId cardId).quoteText) ]
         , div [ class "story--illustration" ]
-            [ img [ src (cardImgPath deckId cardId), alt (getCard deckId cardId).altText ]
+            [ img [ src (cardImgPath deckId cardId), alt (t (getCard deckId cardId).altText) ]
                 []
-            , cardMessage deckId cardId
+            , cardMessage language deckId cardId
             ]
         ]
 
 
-cardMessage : Int -> Int -> Html msg
-cardMessage deckId cardId =
+cardMessage : Language -> Int -> Int -> Html msg
+cardMessage language deckId cardId =
     let
         maybeMessage =
             (getCard deckId cardId).messageText
@@ -128,16 +138,12 @@ cardMessage deckId cardId =
             p [ class "no-message" ] []
 
         Just aMessage ->
-            blockquote [ class "story--message quote" ] [ text aMessage ]
+            blockquote [ class "story--message quote" ] [ text (translate language aMessage) ]
 
 
 cardImgPath : Int -> Int -> String
 cardImgPath deckId cardId =
     path (getCard deckId cardId).imagePath
-
-
-
--- Helpers to get card and deck records
 
 
 getCard : Int -> Int -> Card
@@ -173,9 +179,9 @@ getDeck deckId deckList =
             placeholderDeck
 
 
-getRelatedInfo : Int -> List Int
-getRelatedInfo deckId =
-    (getDeck deckId decks).relatedInfo
+getRelatedInfoIds : ( Language, Int ) -> List ( Language, Int )
+getRelatedInfoIds ( language, deckId ) =
+    List.map (\n -> ( language, n )) (getDeck deckId decks).relatedInfo
 
 
 
@@ -185,10 +191,10 @@ getRelatedInfo deckId =
 placeholderDeck : Deck
 placeholderDeck =
     { id = 0
-    , title = "Coming soon"
-    , teaser = "We're working on it"
+    , title = StoryNotFoundTitle
+    , teaser = StoryNotFoundTeaser
     , teaserImgPath = AssetPath "story_images/thumb_placeholder.png"
-    , teaserImgAltText = "Placeholder image"
+    , teaserImgAltText = StoryNotFoundImageAlt
     , relatedInfo = [ 1 ]
     , cards = [ placeholderCard ]
     }
@@ -196,10 +202,10 @@ placeholderDeck =
 
 placeholderCard : Card
 placeholderCard =
-    { quoteText = "Story coming soon."
+    { quoteText = StoryNotFoundQuote
     , imagePath = AssetPath "story_images/slide1.svg"
-    , altText = "Placeholder image"
-    , messageText = Just "Check back soon"
+    , altText = StoryNotFoundImageAlt
+    , messageText = Just StoryNotFoundMessage
     }
 
 
@@ -209,86 +215,205 @@ placeholderCard =
 
 decks : List Deck
 decks =
-    [ { id = 1
-      , title = "Our Project"
-      , teaser = "This shows you how we believe shaping stories from real people can work so that they help people feel ready to take action"
-      , teaserImgPath = AssetPath "story_images/ourproject-image1.jpg"
-      , teaserImgAltText = "A man kneeling on the floor of a dark room with his head in his hands"
-      , relatedInfo = [ 1, 3 ]
+    [ { id = 7
+      , title = StoryMelissaTitle
+      , teaser = StoryMelissaTeaser
+      , teaserImgPath = AssetPath "story_images/melissa/melissa_thumbnail.jpg"
+      , teaserImgAltText = StoryMelissaTeaserImageAlt
+      , relatedInfo = [ 3, 6 ]
       , cards =
-            [ { quoteText =
-                    """The story starts with some background. It gives us key pieces of information that make this person’s story clear and
-                    relatable. It tends to deal with facts about the situation they were in rather than their feelings. It is always a situation
-                    that clearly needed to change.
-                    """
-              , imagePath = AssetPath "story_images/ourproject-image1.jpg"
-              , altText = "A man is kneeling on the floor of a dark room with his head in his hands"
+            [ { quoteText = StoryMelissa1Quote
+              , imagePath = AssetPath "story_images/melissa/melissa_1.jpg"
+              , altText = StoryMelissa1ImageAlt
+              , messageText = Just StoryMelissa1Message
+              }
+            , { quoteText = StoryMelissa2Quote
+              , imagePath = AssetPath "story_images/melissa/melissa_2.jpg"
+              , altText = StoryMelissa2ImageAlt
               , messageText = Nothing
               }
-            , { quoteText =
-                    """Next the story moves on a little. It does one of two things. Either it tells us about a specific incident that began a
-                    drive to change things, or it explores the person’s fears and other things that were holding them back. This section focuses
-                    on emotions and helps us connect with the person’s story.
-                    """
-              , imagePath = AssetPath "story_images/ourproject-image2.jpg"
-              , altText = "The man looks up a long staircase with a locked door at the top"
-              , messageText = Just "This bar is used to give a little extra insight into how the person was feeling."
+            , { quoteText = StoryMelissa3Quote
+              , imagePath = AssetPath "story_images/melissa/melissa_3.jpg"
+              , altText = StoryMelissa3ImageAlt
+              , messageText = Just StoryMelissa3Message
               }
-            , { quoteText =
-                    """Here the story starts to change for the better. The person becomes able to take a positive step and get some support.
-                    The story tells us a little about what happened, how they managed to take the step and how they felt.
-                    """
-              , imagePath = AssetPath "story_images/ourproject-image3.jpg"
-              , altText = "The man starts climbing the stairs to reach a hand holding out a key."
+            , { quoteText = StoryMelissa4Quote
+              , imagePath = AssetPath "story_images/melissa/melissa_4.jpg"
+              , altText = StoryMelissa4ImageAlt
+              , messageText = Just StoryMelissa4Message
+              }
+            ]
+      }
+    , { id = 1
+      , title = StoryAmaTitle
+      , teaser = StoryAmaTeaser
+      , teaserImgPath = AssetPath "story_images/ama/ama_thumbnail.jpg"
+      , teaserImgAltText = StoryAmaTeaserImageAlt
+      , relatedInfo = [ 2, 5 ]
+      , cards =
+            [ { quoteText = StoryAma1Quote
+              , imagePath = AssetPath "story_images/ama/ama_1.jpg"
+              , altText = StoryAma1ImageAlt
               , messageText = Nothing
               }
-            , { quoteText =
-                    """The final section of the story is about hope. It shows that taking a chance can be a positive choice. However it doesn’t suggest that the person’s life is now perfect.
-                    It is designed to encourage others to believe they could make a move to a more hopeful place too. It takes care not to sound out of reach.
-                    """
-              , imagePath = AssetPath "story_images/ourproject-image4.jpg"
-              , altText = "The door is open and the lock is on the floor. The man is outside in a bright and sunny environment holding onto the key."
-              , messageText = Just "sometimes the story highlights a worry that remains, and how the person is coping with it"
+            , { quoteText = StoryAma2Quote
+              , imagePath = AssetPath "story_images/ama/ama_2.jpg"
+              , altText = StoryAma2ImageAlt
+              , messageText = Just StoryAma2Message
+              }
+            , { quoteText = StoryAma3Quote
+              , imagePath = AssetPath "story_images/ama/ama_3.jpg"
+              , altText = StoryAma3ImageAlt
+              , messageText = Nothing
+              }
+            , { quoteText = StoryAma4Quote
+              , imagePath = AssetPath "story_images/ama/ama_4.jpg"
+              , altText = StoryAma4ImageAlt
+              , messageText = Nothing
               }
             ]
       }
     , { id = 2
-      , title = "The Haven"
-      , teaser = "This is one of the six stories created for The Haven’s app. The story uses Ama’s words but the names have been changed, and the story has been shaped to help others."
-      , teaserImgPath = AssetPath "story_images/ama_1.jpg"
-      , teaserImgAltText = "A pregnant woman wrapped in chains"
+      , title = StoryRebeccaTitle
+      , teaser = StoryRebeccaTeaser
+      , teaserImgPath = AssetPath "story_images/rebecca/rebecca_thumbnail.jpg"
+      , teaserImgAltText = StoryRebeccaTeaserImageAlt
+      , relatedInfo = [ 6 ]
+      , cards =
+            [ { quoteText = StoryRebecca1Quote
+              , imagePath = AssetPath "story_images/rebecca/rebecca_1.jpg"
+              , altText = StoryRebecca1ImageAlt
+              , messageText = Just StoryRebecca1Message
+              }
+            , { quoteText = StoryRebecca2Quote
+              , imagePath = AssetPath "story_images/rebecca/rebecca_2.jpg"
+              , altText = StoryRebecca2ImageAlt
+              , messageText = Just StoryRebecca2Message
+              }
+            , { quoteText = StoryRebecca3Quote
+              , imagePath = AssetPath "story_images/rebecca/rebecca_3.jpg"
+              , altText = StoryRebecca3ImageAlt
+              , messageText = Just StoryRebecca3Message
+              }
+            , { quoteText = StoryRebecca4Quote
+              , imagePath = AssetPath "story_images/rebecca/rebecca_4.jpg"
+              , altText = StoryRebecca4ImageAlt
+              , messageText = Nothing
+              }
+            ]
+      }
+    , { id = 3
+      , title = StoryTinaTitle
+      , teaser = StoryTinaTeaser
+      , teaserImgPath = AssetPath "story_images/tina/tina_thumbnail.jpg"
+      , teaserImgAltText = StoryTinaTeaserImageAlt
+      , relatedInfo = [ 6, 3 ]
+      , cards =
+            [ { quoteText = StoryTina1Quote
+              , imagePath = AssetPath "story_images/tina/tina_1.jpg"
+              , altText = StoryTina1ImageAlt
+              , messageText = Nothing
+              }
+            , { quoteText = StoryTina2Quote
+              , imagePath = AssetPath "story_images/tina/tina_2.jpg"
+              , altText = StoryTina2ImageAlt
+              , messageText = Just StoryTina2Message
+              }
+            , { quoteText = StoryTina3Quote
+              , imagePath = AssetPath "story_images/tina/tina_3.jpg"
+              , altText = StoryTina3ImageAlt
+              , messageText = Just StoryTina3Message
+              }
+            , { quoteText = StoryTina4Quote
+              , imagePath = AssetPath "story_images/tina/tina_4.jpg"
+              , altText = StoryTina4ImageAlt
+              , messageText = Just StoryTina4Message
+              }
+            ]
+      }
+    , { id = 4
+      , title = StoryHeleneTitle
+      , teaser = StoryHeleneTeaser
+      , teaserImgPath = AssetPath "story_images/helene/helene_thumbnail.png"
+      , teaserImgAltText = StoryHeleneTeaserImageAlt
+      , relatedInfo = [ 5 ]
+      , cards =
+            [ { quoteText = StoryHelene1Quote
+              , imagePath = AssetPath "story_images/helene/helene_1.jpg"
+              , altText = StoryHelene1ImageAlt
+              , messageText = Nothing
+              }
+            , { quoteText = StoryHelene2Quote
+              , imagePath = AssetPath "story_images/helene/helene_2.jpg"
+              , altText = StoryHelene2ImageAlt
+              , messageText = Just StoryHelene2Message
+              }
+            , { quoteText = StoryHelene3Quote
+              , imagePath = AssetPath "story_images/helene/helene_3.jpg"
+              , altText = StoryHelene3ImageAlt
+              , messageText = Nothing
+              }
+            , { quoteText = StoryHelene4Quote
+              , imagePath = AssetPath "story_images/helene/helene_4.jpg"
+              , altText = StoryHelene4ImageAlt
+              , messageText = Nothing
+              }
+            ]
+      }
+    , { id = 5
+      , title = StoryEmmaTitle
+      , teaser = StoryEmmaTeaser
+      , teaserImgPath = AssetPath "story_images/emma/emma_thumbnail.jpg"
+      , teaserImgAltText = StoryEmmaTeaserImageAlt
+      , relatedInfo = [ 6, 4 ]
+      , cards =
+            [ { quoteText = StoryEmma1Quote
+              , imagePath = AssetPath "story_images/emma/emma_1.jpg"
+              , altText = StoryEmma1ImageAlt
+              , messageText = Just StoryEmma1Message
+              }
+            , { quoteText = StoryEmma2Quote
+              , imagePath = AssetPath "story_images/emma/emma_2.jpg"
+              , altText = StoryEmma2ImageAlt
+              , messageText = Just StoryEmma2Message
+              }
+            , { quoteText = StoryEmma3Quote
+              , imagePath = AssetPath "story_images/emma/emma_3.jpg"
+              , altText = StoryEmma3ImageAlt
+              , messageText = Just StoryEmma3Message
+              }
+            , { quoteText = StoryEmma4Quote
+              , imagePath = AssetPath "story_images/emma/emma_4.jpg"
+              , altText = StoryEmma4ImageAlt
+              , messageText = Nothing
+              }
+            ]
+      }
+    , { id = 6
+      , title = StoryAmirahTitle
+      , teaser = StoryAmirahTeaser
+      , teaserImgPath = AssetPath "story_images/amirah/amirah_thumbnail.jpg"
+      , teaserImgAltText = StoryAmirahTeaserImageAlt
       , relatedInfo = [ 1, 3 ]
       , cards =
-            [ { quoteText =
-                    """I was born in Senegal and had lived in Spain as well as the UK and I couldn’t speak English. My husband became abusive
-                    after I got pregnant with our first child. For years I suffered so many different things
-                    """
-              , imagePath = AssetPath "story_images/ama_1.jpg"
-              , altText = "A pregnant woman wrapped in chains"
+            [ { quoteText = StoryAmirah1Quote
+              , imagePath = AssetPath "story_images/amirah/amirah_1.jpg"
+              , altText = StoryAmirah1ImageAlt
               , messageText = Nothing
               }
-            , { quoteText =
-                    """I wanted to leave, but my husband told me without him I would be sent back to Africa. I was completely dependent on my
-                    husband, I did not see any way out of my situation.
-                    """
-              , imagePath = AssetPath "story_images/ama_2.jpg"
-              , altText = "A pregnant woman chained to her husband"
-              , messageText = Just "I did not know my rights in the UK and had no money but soon I discovered I had choices."
+            , { quoteText = StoryAmirah2Quote
+              , imagePath = AssetPath "story_images/amirah/amirah_2.jpg"
+              , altText = StoryAmirah2ImageAlt
+              , messageText = Just StoryAmirah2Message
               }
-            , { quoteText =
-                    """One day I broke down at my health care class. My teacher was so supportive. She told me about The Haven and they found me a
-                    support worker who spoke Spanish. They talked to social services for me and found me an immigration solicitor.
-                    """
-              , imagePath = AssetPath "story_images/ama_3.jpg"
-              , altText = "A woman crying at a desk"
-              , messageText = Nothing
+            , { quoteText = StoryAmirah3Quote
+              , imagePath = AssetPath "story_images/amirah/amirah_3.jpg"
+              , altText = StoryAmirah3ImageAlt
+              , messageText = Just StoryAmirah3Message
               }
-            , { quoteText =
-                    """I have a house now, with my children, and away from my abusive husband. My solicitor is helping me with immigration documents and divorce papers.
-                    For the first time in a long time I can sleep and look forward to the future.
-                    """
-              , imagePath = AssetPath "story_images/ama_4.jpg"
-              , altText = "A smiling woman with two children"
+            , { quoteText = StoryAmirah4Quote
+              , imagePath = AssetPath "story_images/amirah/amirah_4.jpg"
+              , altText = StoryAmirah4ImageAlt
               , messageText = Nothing
               }
             ]

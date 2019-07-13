@@ -3,6 +3,8 @@ module Info exposing (Info, getInfo, getInfoBySlug, infoCard, infoPage)
 import Html exposing (Html, a, article, div, h2, li, p, span, text)
 import Html.Attributes exposing (class, href)
 import Html.Events exposing (onClick)
+import I18n.Keys exposing (Key(..))
+import I18n.Translate exposing (Language(..), translate)
 import Icon exposing (getIcon)
 import List
 import Messages exposing (Msg(..))
@@ -21,32 +23,32 @@ type alias Info =
 -- Helpers
 
 
-getInfo : Int -> Info
-getInfo infoId =
+getInfo : Language -> Int -> Info
+getInfo language infoId =
     let
         foundInfo =
-            List.head (List.filter (\i -> i.id == infoId) infoList)
+            List.head (List.filter (\i -> i.id == infoId) (infoList language))
     in
     case foundInfo of
         Just info ->
             info
 
         Nothing ->
-            placeholderInfo
+            placeholderInfo language
 
 
-getInfoBySlug : String -> Info
-getInfoBySlug infoSlug =
+getInfoBySlug : Language -> String -> Info
+getInfoBySlug language infoSlug =
     let
         foundInfo =
-            List.head (List.filter (\i -> i.slug == infoSlug) infoList)
+            List.head (List.filter (\i -> i.slug == infoSlug) (infoList language))
     in
     case foundInfo of
         Just info ->
             info
 
         Nothing ->
-            placeholderInfo
+            placeholderInfo language
 
 
 
@@ -71,8 +73,12 @@ infoCard info =
         ]
 
 
-infoPage : Info -> Html Msg
-infoPage info =
+infoPage : Language -> Info -> Html Msg
+infoPage language info =
+    let
+        t =
+            translate language
+    in
     div [ class "section--vertical-fill-center" ]
         [ div [ class "section section--align-bottom" ]
             [ div [ class "card card--alternate card--with-icon" ]
@@ -87,7 +93,7 @@ infoPage info =
             , div [ class "section" ]
                 [ div [ class "text-center" ]
                     [ a [ class "link", href "#/info-to-help", onClick (ButtonPress "information" "view-list" "more-info" True) ]
-                        [ text "Other information to help you" ]
+                        [ text (t InfoOtherInfoLink) ]
                     ]
                 ]
             ]
@@ -103,76 +109,83 @@ renderParas paras =
 -- Info records
 
 
-placeholderInfo : Info
-placeholderInfo =
+placeholderInfo : Language -> Info
+placeholderInfo language =
+    let
+        t =
+            translate language
+    in
     { id = 0
-    , name = "Not found"
+    , name = t InfoNotFoundName
     , slug = "not-found"
     , icon = "question"
     , infoText =
-        [ "We can't find a page with that title, sorry."
-        , "Please use the 'Other information to help you' page to see if we have the topic you are looking for."
+        [ t InfoNotFoundP1
+        , t InfoNotFoundP2
         ]
     }
 
 
-infoList : List Info
-infoList =
+infoList : Language -> List Info
+infoList language =
+    let
+        t =
+            translate language
+    in
     [ { id = 1
-      , name = "About the project"
-      , slug = "about"
-      , icon = "question-circle-o"
+      , name = t InfoCallName
+      , slug = "helpline"
+      , icon = "call"
       , infoText =
-            [ """In 2017, The Haven Wolverhampton, worked with Neontribe and women who had been through domestic abuse. We co-designed a web app to encourage other women in that situation to seek support and advice.
-            We want to find out if the structure of that app could be used by different organisations. We believe
-            that reassuring people that their fears and challenges are shared could help them take early steps on a journey of change such as contacting a support service. """
+            [ t (InfoCallP1 (t CallToActionDestinationDisplay))
+            , t InfoCallP2
             ]
       }
     , { id = 2
-      , name = "Bite size information"
-      , slug = "bite-size-info"
-      , icon = "info-circle"
+      , name = t InfoImmigrationName
+      , slug = "worried-about-immigration"
+      , icon = "id-card"
       , infoText =
-            [ """We include bite size information relating to a small number of fears and barriers that are likely to be stopping people from taking the next step. Keeping the
-            language simple we aim to be open and honest, with a reassuring tone. We resist the temptation to provide all the information people might need. Our goal is to offer just enough to
-            help people reach out to support services. Other websites have excellent longer content. """
+            [ t (InfoImmigrationP1 (t CallToActionDestinationDisplay))
             ]
       }
     , { id = 3
-      , name = "Visual Storytelling"
-      , slug = "visual-storytelling"
-      , icon = "pencil"
+      , name = t InfoLeavingName
+      , slug = "thinking-about-leaving"
+      , icon = "leaving"
       , infoText =
-            [ """Many organisations struggle with the same problem with stories. We know stories can be powerful, we want to use them for many reasons.
-            Unfortunately people don’t always like to spend time reading them online. We believe that visual storytelling can change this. Contemplating Action has a budget for
-            artists, to test whether this 4 image story format can encourage more people to read them."""
+            [ t InfoLeavingP1
+            , t InfoLeavingP2
+            , t (InfoLeavingP3 (t CallToActionDestinationDisplay))
             ]
       }
     , { id = 4
-      , name = "What is the survey?"
-      , slug = "survey"
-      , icon = "check-square-o"
+      , name = t InfoSocialServicesName
+      , slug = "social-services"
+      , icon = "children"
       , infoText =
-            [ """We would like you to take our survey. We want to understand whether staff in organisations who work most closely with people seeking support think this approach
-            could work. We’re interested in your instincts as well as any evidence you might share. It will help us decide where to take the project next."""
+            [ t InfoSocialServicesP1
+            , t InfoSocialServicesP2
+            , t InfoSocialServicesP3
             ]
       }
     , { id = 5
-      , name = "Can my organisation try this?"
-      , slug = "try-this"
-      , icon = "group"
+      , name = t InfoMoneyName
+      , slug = "worried-about-money"
+      , icon = "pound"
       , infoText =
-            [ """We’re actively looking for partner charities interested in experimenting with this visual storytelling format. So if you have a helpline, webchat, messaging service or even a face to face
-            service, we could work together on whether an app could help people connect to those services. We have small amounts of funding to support charities getting involved. Please show your interest by taking the survey."""
+            [ t InfoMoneyP1
+            , t (InfoMoneyP2 (t CallToActionDestinationDisplay))
             ]
       }
     , { id = 6
-      , name = "Who is involved in this project?"
-      , slug = "who-is-involved"
-      , icon = "involved"
+      , name = t InfoPoliceName
+      , slug = "talking-to-police"
+      , icon = "police"
       , infoText =
-            [ """This is a partnership between CAST - a charity driving social change through digital technology - and digital development agency Neontribe. It is one of a number of projects aimed at supporting civic and social organisations to grow confident in using digital tools to achieve their charitable objectives.
-            It is possible thanks to The Haven, Wolverhampton sharing technology developed for and with the people they work with."""
+            [ t InfoPoliceP1
+            , t InfoPoliceP2
+            , t InfoPoliceP3
             ]
       }
     ]
