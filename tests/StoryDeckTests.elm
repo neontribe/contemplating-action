@@ -28,13 +28,4 @@ all =
                 \() ->
                     storyTitle 500 |> Expect.equal "Coming soon"
             ]
-        , describe "Getting Story Teaser"
-            [ todo "get a teaser"
-            ]
-        , describe "Getting Story Related Info"
-            [ todo "get related info list"
-            ]
-        , describe "Getting a Card"
-            [ todo "get a card"
-            ]
         ]
