@@ -1,8 +1,8 @@
-module StoryDeckTests exposing (..)
+module StoryDeckTests exposing (all)
 
-import Test exposing (Test, describe, test, todo)
 import Expect
 import StoryDeck exposing (card, storyRelatedInfo, storyTeaser, storyTitle)
+import Test exposing (Test, describe, test, todo)
 
 
 all : Test

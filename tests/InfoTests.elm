@@ -1,8 +1,8 @@
-module InfoTests exposing (..)
+module InfoTests exposing (all)
 
-import Test exposing (Test, describe, test, todo)
 import Expect
 import Info exposing (getInfo)
+import Test exposing (Test, describe, test, todo)
 
 
 all : Test
