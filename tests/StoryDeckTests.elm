@@ -11,13 +11,13 @@ all =
         [ describe "Getting Story Title"
             [ test "Index of 1" <|
                 \() ->
-                    storyTitle 1 |> Expect.equal "A story about rivers"
+                    storyTitle 1 |> Expect.equal "Our Project"
             , test "Index of 2" <|
                 \() ->
-                    storyTitle 2 |> Expect.equal "A story about trees"
+                    storyTitle 2 |> Expect.equal "The Haven"
             , test "Index of 3" <|
                 \() ->
-                    storyTitle 3 |> Expect.equal "A story about rocks"
+                    storyTitle 3 |> Expect.equal "Coming soon"
             , test "Index of 4" <|
                 \() ->
                     storyTitle 4 |> Expect.equal "Coming soon"

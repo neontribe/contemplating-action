@@ -2,7 +2,7 @@
   "scripts": {
     "build": "./node_modules/.bin/webpack --config webpack.config.build.js",
     "dev": "./node_modules/.bin/webpack-dev-server --config webpack.config.dev.js --port 3000 --hot",
-    "format": "./node_modules/.bin/elm-format",
+    "format": "./node_modules/.bin/elm-format --validate .",
     "start" : "node server.js",
     "test": "./node_modules/.bin/elm-test"
   },

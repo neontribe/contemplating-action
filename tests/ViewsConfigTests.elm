@@ -2,7 +2,7 @@ module ViewsConfigTests exposing (all)
 
 import Expect
 import Test exposing (Test, describe, test, todo)
-import Views.Config exposing (appTitle, helpline, helplineDisplay)
+import Views.Config exposing (appTitle, email)
 
 
 all : Test
@@ -11,12 +11,9 @@ all =
         [ describe "Constants"
             [ test "App title" <|
                 \() ->
-                    appTitle |> Expect.equal "Pics, stories & info"
-            , test "Helpline phone number" <|
+                    appTitle |> Expect.equal "Contemplating Action"
+            , test "Email" <|
                 \() ->
-                    helpline |> Expect.equal "0000000000"
-            , test "Helpline phone number display" <|
-                \() ->
-                    helplineDisplay |> Expect.equal ("0000" ++ "\u{00A0}" ++ "000" ++ "\u{00A0}" ++ "000")
+                    email |> Expect.equal "hello@contemplatingaction.org.uk"
             ]
         ]
