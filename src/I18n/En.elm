@@ -191,22 +191,22 @@ enStrings key =
             "xXx"
 
         FooterSupportersText ->
-            "xXx"
+            "Find out about our"
 
         FooterSupportersLink ->
-            "xXx"
+            "supporters"
 
         FooterPrivacyText ->
-            "xXx"
+            "Read our"
 
         FooterPrivacyLink ->
-            "xXx"
+            "privacy policy"
 
         FooterRegisteredText ->
-            "xXx"
+            ""
 
-        FooterCopyrightHavenLink ->
-            "xXx"
+        FooterCopyrightLink ->
+            "neontribe.co.uk"
 
         InfoTitleH2 ->
             "xXx"

@@ -32,11 +32,11 @@ footerContent language =
             [ text "© 2019 - "
             , a
                 [ class "link link--plain"
-                , href "http://www.havenrefuge.org.uk/"
-                , onClick (ButtonPress "contact" "website" "haven-website-footer" True)
+                , href "http://www.neontribe.co.uk/"
+                , onClick (ButtonPress "contact" "website" "neontribe-website-footer" True)
                 ]
-                [ text (t FooterCopyrightHavenLink) ]
+                [ text (t FooterCopyrightLink) ]
             ]
         , div [ class "footer--item" ]
-            [ text (t FooterRegisteredText ++ " - 1065427") ]
+            [ text (t FooterRegisteredText) ]
         ]

@@ -74,7 +74,7 @@ type Key
     | FooterPrivacyText
     | FooterPrivacyLink
     | FooterRegisteredText
-    | FooterCopyrightHavenLink
+    | FooterCopyrightLink
       --Info
     | InfoTitleH2
     | InfoLikeMoreInfoLink
