@@ -13,10 +13,10 @@ enStrings key =
             "Contemplating Action"
 
         CallToActionDestination ->
-            "xXx"
+            "https://contemplating-action.typeform.com/to/zUOTYA"
 
         CallToActionDestinationDisplay ->
-            "xXx"
+            ""
 
         CallToActionLong ->
             "Take part in our survey"
@@ -152,7 +152,7 @@ enStrings key =
 
         PrivacyCookiesLi4 ->
             "xXx"
-            
+
         PrivacyTermsH3 ->
             "xXx"
 
@@ -489,6 +489,7 @@ enStrings key =
 
         StoryHelene1Quote ->
             "xXx"
+
         StoryHelene1ImageAlt ->
             "xXx"
 
@@ -509,6 +510,7 @@ enStrings key =
 
         StoryHelene4Quote ->
             "xXx"
+
         StoryHelene4ImageAlt ->
             "xXx"
 
