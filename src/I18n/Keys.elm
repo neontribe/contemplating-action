@@ -17,16 +17,19 @@ type Key
     | ContactLinkShort
     | ExitSite
     | LanguageButton
+      -- Icons
+    | IconCallToAction
+    | IconStories
+    | IconContact
+    | IconExit
       -- Home page
     | HomeReadAboutH2
     | HomeBannerImageAlt
     | HomeTalkToSomeoneH2
     | HomeP1
+    | HomeLinkDisplay
+    | HomeLinkDestination
     | HomeP2
-      -- Timeout
-    | TimeoutH2
-    | TimeoutBackButton
-    | TimeoutP
       -- Chat
     | ChatH2
     | ChatP1

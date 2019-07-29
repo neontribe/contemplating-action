@@ -48,30 +48,38 @@ enStrings key =
         LanguageButton ->
             "xXx"
 
+        IconCallToAction ->
+            "check-square-o"
+
+        IconStories ->
+            "question-circle-o"
+
+        IconContact ->
+            "envelope"
+
+        IconExit ->
+            "exit-door"
+
         HomeReadAboutH2 ->
             "A project exploring how to encourage people to seek support. Can visual stories help change lives?"
 
         HomeBannerImageAlt ->
-            "xXx"
+            "A description of banner image."
 
         HomeTalkToSomeoneH2 ->
-            "xXx"
+            "Breaking down fears and barriers."
 
         HomeP1 ->
-            "xXx"
+            "This is a demonstration version of a web app we believe could be used by different organisations to encourage people to use a helpline or web chat or text service. We believe that reassuring people that their fears and challenges are shared will help them take early steps on a journey of change. In a live app the information in this section would be additional information about the organisation and it’s support services for people who did not follow the direct link to the stories."
+
+        HomeLinkDisplay ->
+            "Read in depth about this project"
+
+        HomeLinkDestination ->
+            "https://neontribe.co.uk/contemplating-action"
 
         HomeP2 ->
-            "xXx"
-
-        -- Timeout Page
-        TimeoutH2 ->
-            "xXx"
-
-        TimeoutBackButton ->
-            "xXx"
-
-        TimeoutP ->
-            "xXx"
+            "This space is used to give a reminder about what to do in a crisis or high risk situation when the app is not the right support."
 
         -- Chat Page
         ChatH2 ->

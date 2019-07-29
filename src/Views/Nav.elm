@@ -25,13 +25,13 @@ view model =
         [ div [ class "desktop-only" ]
             [ callToActionNavItemDesktop (callToActionConstructor Survey (t CallToActionDestination) (t CallToActionDestinationDisplay)) ]
         , nav []
-            [ navItem "question-circle-o" "#/stories" "find-out-more" "view-list" (t ContentLinkShort) (t ContentLinkMedium)
-            , navItem "envelope" (t ContactLinkDestination) "contact" "email" (t ContactLinkShort) (t ContactLinkLong)
+            [ navItem (t IconStories) "#/stories" "find-out-more" "view-list" (t ContentLinkShort) (t ContentLinkMedium)
+            , navItem (t IconContact) (t ContactLinkDestination) "contact" "email" (t ContactLinkShort) (t ContactLinkLong)
             , span [ class "nav-item mobile-only" ]
                 [ callToActionNavItemMobile (callToActionConstructor Survey (t CallToActionDestination) (t CallToActionDestinationDisplay)) ]
             , span [ class "nav-item" ]
                 [ a [ class "btn ", href "https://google.com", target "_blank", rel "noopener", onClick Exit ]
-                    [ getIcon "exit-door" (Just "nav-item-text nav-icon")
+                    [ getIcon (t IconExit) (Just "nav-item-text nav-icon")
                     , span [ class " nav-item-text" ] [ text (t ExitSite) ]
                     ]
                 ]
