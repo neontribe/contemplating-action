@@ -215,205 +215,60 @@ placeholderCard =
 
 decks : List Deck
 decks =
-    [ { id = 7
-      , title = StoryMelissaTitle
-      , teaser = StoryMelissaTeaser
-      , teaserImgPath = AssetPath "story_images/melissa/melissa_thumbnail.jpg"
-      , teaserImgAltText = StoryMelissaTeaserImageAlt
+    [ { id = 1
+      , title = StoryOneTitle
+      , teaser = StoryOneTeaser
+      , teaserImgPath = AssetPath "story_images/ourproject-image1.jpg"
+      , teaserImgAltText = StoryOneTeaserImageAlt
       , relatedInfo = [ 3, 6 ]
       , cards =
-            [ { quoteText = StoryMelissa1Quote
-              , imagePath = AssetPath "story_images/melissa/melissa_1.jpg"
-              , altText = StoryMelissa1ImageAlt
-              , messageText = Just StoryMelissa1Message
-              }
-            , { quoteText = StoryMelissa2Quote
-              , imagePath = AssetPath "story_images/melissa/melissa_2.jpg"
-              , altText = StoryMelissa2ImageAlt
+            [ { quoteText = StoryOne1Quote
+              , imagePath = AssetPath "story_images/ourproject-image1.jpg"
+              , altText = StoryOne1ImageAlt
               , messageText = Nothing
               }
-            , { quoteText = StoryMelissa3Quote
-              , imagePath = AssetPath "story_images/melissa/melissa_3.jpg"
-              , altText = StoryMelissa3ImageAlt
-              , messageText = Just StoryMelissa3Message
+            , { quoteText = StoryOne2Quote
+              , imagePath = AssetPath "story_images/ourproject-image2.jpg"
+              , altText = StoryOne2ImageAlt
+              , messageText = Just StoryOne2Message
               }
-            , { quoteText = StoryMelissa4Quote
-              , imagePath = AssetPath "story_images/melissa/melissa_4.jpg"
-              , altText = StoryMelissa4ImageAlt
-              , messageText = Just StoryMelissa4Message
-              }
-            ]
-      }
-    , { id = 1
-      , title = StoryAmaTitle
-      , teaser = StoryAmaTeaser
-      , teaserImgPath = AssetPath "story_images/ama/ama_thumbnail.jpg"
-      , teaserImgAltText = StoryAmaTeaserImageAlt
-      , relatedInfo = [ 2, 5 ]
-      , cards =
-            [ { quoteText = StoryAma1Quote
-              , imagePath = AssetPath "story_images/ama/ama_1.jpg"
-              , altText = StoryAma1ImageAlt
+            , { quoteText = StoryOne3Quote
+              , imagePath = AssetPath "story_images/ourproject-image3.jpg"
+              , altText = StoryOne3ImageAlt
               , messageText = Nothing
               }
-            , { quoteText = StoryAma2Quote
-              , imagePath = AssetPath "story_images/ama/ama_2.jpg"
-              , altText = StoryAma2ImageAlt
-              , messageText = Just StoryAma2Message
-              }
-            , { quoteText = StoryAma3Quote
-              , imagePath = AssetPath "story_images/ama/ama_3.jpg"
-              , altText = StoryAma3ImageAlt
-              , messageText = Nothing
-              }
-            , { quoteText = StoryAma4Quote
-              , imagePath = AssetPath "story_images/ama/ama_4.jpg"
-              , altText = StoryAma4ImageAlt
-              , messageText = Nothing
+            , { quoteText = StoryOne4Quote
+              , imagePath = AssetPath "story_images/ourproject-image4.jpg"
+              , altText = StoryOne4ImageAlt
+              , messageText = Just StoryOne4Message
               }
             ]
       }
     , { id = 2
-      , title = StoryRebeccaTitle
-      , teaser = StoryRebeccaTeaser
-      , teaserImgPath = AssetPath "story_images/rebecca/rebecca_thumbnail.jpg"
-      , teaserImgAltText = StoryRebeccaTeaserImageAlt
-      , relatedInfo = [ 6 ]
+      , title = StoryTwoTitle
+      , teaser = StoryTwoTeaser
+      , teaserImgPath = AssetPath "story_images/ama_1.jpg"
+      , teaserImgAltText = StoryTwoTeaserImageAlt
+      , relatedInfo = [ 2, 5 ]
       , cards =
-            [ { quoteText = StoryRebecca1Quote
-              , imagePath = AssetPath "story_images/rebecca/rebecca_1.jpg"
-              , altText = StoryRebecca1ImageAlt
-              , messageText = Just StoryRebecca1Message
-              }
-            , { quoteText = StoryRebecca2Quote
-              , imagePath = AssetPath "story_images/rebecca/rebecca_2.jpg"
-              , altText = StoryRebecca2ImageAlt
-              , messageText = Just StoryRebecca2Message
-              }
-            , { quoteText = StoryRebecca3Quote
-              , imagePath = AssetPath "story_images/rebecca/rebecca_3.jpg"
-              , altText = StoryRebecca3ImageAlt
-              , messageText = Just StoryRebecca3Message
-              }
-            , { quoteText = StoryRebecca4Quote
-              , imagePath = AssetPath "story_images/rebecca/rebecca_4.jpg"
-              , altText = StoryRebecca4ImageAlt
+            [ { quoteText = StoryTwo1Quote
+              , imagePath = AssetPath "story_images/ama_1.jpg"
+              , altText = StoryTwo1ImageAlt
               , messageText = Nothing
               }
-            ]
-      }
-    , { id = 3
-      , title = StoryTinaTitle
-      , teaser = StoryTinaTeaser
-      , teaserImgPath = AssetPath "story_images/tina/tina_thumbnail.jpg"
-      , teaserImgAltText = StoryTinaTeaserImageAlt
-      , relatedInfo = [ 6, 3 ]
-      , cards =
-            [ { quoteText = StoryTina1Quote
-              , imagePath = AssetPath "story_images/tina/tina_1.jpg"
-              , altText = StoryTina1ImageAlt
+            , { quoteText = StoryTwo2Quote
+              , imagePath = AssetPath "story_images/ama_2.jpg"
+              , altText = StoryTwo2ImageAlt
+              , messageText = Just StoryTwo2Message
+              }
+            , { quoteText = StoryTwo3Quote
+              , imagePath = AssetPath "story_images/ama_3.jpg"
+              , altText = StoryTwo3ImageAlt
               , messageText = Nothing
               }
-            , { quoteText = StoryTina2Quote
-              , imagePath = AssetPath "story_images/tina/tina_2.jpg"
-              , altText = StoryTina2ImageAlt
-              , messageText = Just StoryTina2Message
-              }
-            , { quoteText = StoryTina3Quote
-              , imagePath = AssetPath "story_images/tina/tina_3.jpg"
-              , altText = StoryTina3ImageAlt
-              , messageText = Just StoryTina3Message
-              }
-            , { quoteText = StoryTina4Quote
-              , imagePath = AssetPath "story_images/tina/tina_4.jpg"
-              , altText = StoryTina4ImageAlt
-              , messageText = Just StoryTina4Message
-              }
-            ]
-      }
-    , { id = 4
-      , title = StoryHeleneTitle
-      , teaser = StoryHeleneTeaser
-      , teaserImgPath = AssetPath "story_images/helene/helene_thumbnail.png"
-      , teaserImgAltText = StoryHeleneTeaserImageAlt
-      , relatedInfo = [ 5 ]
-      , cards =
-            [ { quoteText = StoryHelene1Quote
-              , imagePath = AssetPath "story_images/helene/helene_1.jpg"
-              , altText = StoryHelene1ImageAlt
-              , messageText = Nothing
-              }
-            , { quoteText = StoryHelene2Quote
-              , imagePath = AssetPath "story_images/helene/helene_2.jpg"
-              , altText = StoryHelene2ImageAlt
-              , messageText = Just StoryHelene2Message
-              }
-            , { quoteText = StoryHelene3Quote
-              , imagePath = AssetPath "story_images/helene/helene_3.jpg"
-              , altText = StoryHelene3ImageAlt
-              , messageText = Nothing
-              }
-            , { quoteText = StoryHelene4Quote
-              , imagePath = AssetPath "story_images/helene/helene_4.jpg"
-              , altText = StoryHelene4ImageAlt
-              , messageText = Nothing
-              }
-            ]
-      }
-    , { id = 5
-      , title = StoryEmmaTitle
-      , teaser = StoryEmmaTeaser
-      , teaserImgPath = AssetPath "story_images/emma/emma_thumbnail.jpg"
-      , teaserImgAltText = StoryEmmaTeaserImageAlt
-      , relatedInfo = [ 6, 4 ]
-      , cards =
-            [ { quoteText = StoryEmma1Quote
-              , imagePath = AssetPath "story_images/emma/emma_1.jpg"
-              , altText = StoryEmma1ImageAlt
-              , messageText = Just StoryEmma1Message
-              }
-            , { quoteText = StoryEmma2Quote
-              , imagePath = AssetPath "story_images/emma/emma_2.jpg"
-              , altText = StoryEmma2ImageAlt
-              , messageText = Just StoryEmma2Message
-              }
-            , { quoteText = StoryEmma3Quote
-              , imagePath = AssetPath "story_images/emma/emma_3.jpg"
-              , altText = StoryEmma3ImageAlt
-              , messageText = Just StoryEmma3Message
-              }
-            , { quoteText = StoryEmma4Quote
-              , imagePath = AssetPath "story_images/emma/emma_4.jpg"
-              , altText = StoryEmma4ImageAlt
-              , messageText = Nothing
-              }
-            ]
-      }
-    , { id = 6
-      , title = StoryAmirahTitle
-      , teaser = StoryAmirahTeaser
-      , teaserImgPath = AssetPath "story_images/amirah/amirah_thumbnail.jpg"
-      , teaserImgAltText = StoryAmirahTeaserImageAlt
-      , relatedInfo = [ 1, 3 ]
-      , cards =
-            [ { quoteText = StoryAmirah1Quote
-              , imagePath = AssetPath "story_images/amirah/amirah_1.jpg"
-              , altText = StoryAmirah1ImageAlt
-              , messageText = Nothing
-              }
-            , { quoteText = StoryAmirah2Quote
-              , imagePath = AssetPath "story_images/amirah/amirah_2.jpg"
-              , altText = StoryAmirah2ImageAlt
-              , messageText = Just StoryAmirah2Message
-              }
-            , { quoteText = StoryAmirah3Quote
-              , imagePath = AssetPath "story_images/amirah/amirah_3.jpg"
-              , altText = StoryAmirah3ImageAlt
-              , messageText = Just StoryAmirah3Message
-              }
-            , { quoteText = StoryAmirah4Quote
-              , imagePath = AssetPath "story_images/amirah/amirah_4.jpg"
-              , altText = StoryAmirah4ImageAlt
+            , { quoteText = StoryTwo4Quote
+              , imagePath = AssetPath "story_images/ama_4.jpg"
+              , altText = StoryTwo4ImageAlt
               , messageText = Nothing
               }
             ]

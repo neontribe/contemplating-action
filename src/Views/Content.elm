@@ -122,13 +122,8 @@ view model =
             div [ class "section--vertical-fill-center" ]
                 [ div [ class "section section--darker section--vertical-fill-center" ]
                     [ h2 [] [ text (t StoriesTitleH2) ]
-                    , storyTeaser model.language 7
                     , storyTeaser model.language 1
                     , storyTeaser model.language 2
-                    , storyTeaser model.language 3
-                    , storyTeaser model.language 4
-                    , storyTeaser model.language 5
-                    , storyTeaser model.language 6
                     ]
                 , div [ class "section section--highlight" ]
                     [ div [ class "text-center" ]

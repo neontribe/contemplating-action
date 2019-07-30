@@ -333,307 +333,111 @@ enStrings key =
             "xXx"
 
         StoriesTitleH2 ->
-            "xXx"
+            "Stories"
 
         StoriesTeaserMoreLink title ->
-            "xXx"
+            "See " ++ title ++ "'s Story"
 
         StoryCardH3 cardId ->
-            "xXx"
+            "Part " ++ String.fromInt cardId ++ " of 4"
 
         StoryCardStartJourneyPrompt ->
-            "xXx"
+            "Every story is different. Let us help you discover yours."
 
         StoryNotFoundTitle ->
-            "xXx"
+            "Not found Title"
 
         StoryNotFoundTeaser ->
-            "xXx"
+            "Not found teaser"
 
         StoryNotFoundQuote ->
-            "xXx"
+            "Not Found Quote"
 
         StoryNotFoundImageAlt ->
-            "xXx"
+            "Not found Image"
 
         StoryNotFoundMessage ->
-            "xXx"
+            "Not found Message"
 
-        StoryMelissaTitle ->
-            "xXx"
+        StoryOneTitle ->
+            "Our Project"
 
-        StoryMelissaTeaser ->
-            "xXx"
+        StoryOneTeaser ->
+            "This shows you how we believe shaping stories from real people can work so that they help people feel ready to take action"
 
-        StoryMelissaTeaserImageAlt ->
-            "xXx"
+        StoryOneTeaserImageAlt ->
+            "A man kneeling on the floor of a dark room with his head in his hands"
 
-        StoryMelissa1Quote ->
-            "xXx"
+        StoryOne1Quote ->
+            "The story starts with some background. It gives us key pieces of information that make this person’s story clear and relatable. It tends to deal with facts about the situation they were in rather than their feelings. It is always a situation that clearly needed to change."
 
-        StoryMelissa1ImageAlt ->
-            "xXx"
+        StoryOne1ImageAlt ->
+            "A man is kneeling on the floor of a dark room with his head in his hands"
 
-        StoryMelissa1Message ->
-            "xXx"
+        StoryOne2Quote ->
+            "Next the story moves on a little. It does one of two things. Either it tells us about a specific incident that began a drive to change things, or it explores the person’s fears and other things that were holding them back. This section focuses on emotions and helps us connect with the person’s story."
 
-        StoryMelissa2Quote ->
-            "xXx"
+        StoryOne2ImageAlt ->
+            "The man looks up a long staircase with a locked door at the top"
 
-        StoryMelissa2ImageAlt ->
-            "xXx"
+        StoryOne2Message ->
+            "This bar is used to give a little extra insight into how the person was feeling."
 
-        StoryMelissa3Quote ->
-            "xXx"
+        StoryOne3Quote ->
+            "Here the story starts to change for the better. The person becomes able to take a positive step and get some support. The story tells us a little about what happened, how they managed to take the step and how they felt."
 
-        StoryMelissa3ImageAlt ->
-            "xXx"
+        StoryOne3ImageAlt ->
+            "The man starts climbing the stairs to reach a hand holding out a key."
 
-        StoryMelissa3Message ->
-            "xXx"
+        StoryOne4Quote ->
+            "The final section of the story is about hope. It shows that taking a chance can be a positive choice. However it doesn’t suggest that the person’s life is now perfect. It is designed to encourage others to believe they could make a move to a more hopeful place too. It takes care not to sound out of reach."
 
-        StoryMelissa4Quote ->
-            "xXx"
+        StoryOne4ImageAlt ->
+            "The door is open and the lock is on the floor. The man is outside in a bright and sunny environment holding onto the key."
 
-        StoryMelissa4ImageAlt ->
-            "xXx"
+        StoryOne4Message ->
+            "sometimes the story highlights a worry that remains, and how the person is coping with it"
 
-        StoryMelissa4Message ->
-            "xXx"
+        StoryTwoTitle ->
+            "The Haven"
 
-        StoryAmaTitle ->
-            "xXx"
+        StoryTwoTeaser ->
+            "This is one of the six stories created for The Haven’s app. The story uses Two’s words but the names have been changed, and the story has been shaped to help others."
 
-        StoryAmaTeaser ->
-            "xXx"
+        StoryTwoTeaserImageAlt ->
+            "A pregnant woman wrapped in chains"
 
-        StoryAmaTeaserImageAlt ->
-            "xXx"
+        StoryTwo1Quote ->
+            """I was born in Senegal and had lived in Spain as well as the UK and I couldn’t
+            speak English. My husband became abusive after I got pregnant with our first
+            child. For years I suffered so many different things."""
 
-        StoryAma1Quote ->
-            "xXx"
+        StoryTwo1ImageAlt ->
+            "A pregnant woman wrapped in chains"
 
-        StoryAma1ImageAlt ->
-            "xXx"
+        StoryTwo2Quote ->
+            """I wanted to leave, but my husband told me without him I would be sent back to
+            Africa. I was completely dependent on my husband, I did not see any way out of
+            my situation."""
 
-        StoryAma2Quote ->
-            "xXx"
+        StoryTwo2ImageAlt ->
+            "A pregnant woman chained to her husband"
 
-        StoryAma2ImageAlt ->
-            "xXx"
+        StoryTwo2Message ->
+            "I did not know my rights in the UK and had no money but soon I discovered I had choices."
 
-        StoryAma2Message ->
-            "xXx"
+        StoryTwo3Quote ->
+            """One day I broke down at my health care class. My teacher was so supportive. She
+            told me about The Haven and they found me a support worker who spoke Spanish. They
+            talked to social services for me and found me an immigration solicitor."""
 
-        StoryAma3Quote ->
-            "xXx"
+        StoryTwo3ImageAlt ->
+            "A woman crying at a desk"
 
-        StoryAma3ImageAlt ->
-            "xXx"
+        StoryTwo4Quote ->
+            """I have a house now, with my children, and away from my abusive husband. My
+            solicitor is helping me with immigration documents and divorce papers. For the
+            first time in a long time I can sleep and look forward to the future."""
 
-        StoryAma4Quote ->
-            "xXx"
-
-        StoryAma4ImageAlt ->
-            "xXx"
-
-        StoryRebeccaTitle ->
-            "xXx"
-
-        StoryRebeccaTeaser ->
-            "xXx"
-
-        StoryRebeccaTeaserImageAlt ->
-            "xXx"
-
-        StoryRebecca1Quote ->
-            "xXx"
-
-        StoryRebecca1ImageAlt ->
-            "xXx"
-
-        StoryRebecca1Message ->
-            "xXx"
-
-        StoryRebecca2Quote ->
-            "xXx"
-
-        StoryRebecca2ImageAlt ->
-            "xXx"
-
-        StoryRebecca2Message ->
-            "xXx"
-
-        StoryRebecca3Quote ->
-            "xXx"
-
-        StoryRebecca3ImageAlt ->
-            "xXx"
-
-        StoryRebecca3Message ->
-            "xXx"
-
-        StoryRebecca4Quote ->
-            "xXx"
-
-        StoryRebecca4ImageAlt ->
-            "xXx"
-
-        StoryTinaTitle ->
-            "xXx"
-
-        StoryTinaTeaser ->
-            "xXx"
-
-        StoryTinaTeaserImageAlt ->
-            "xXx"
-
-        StoryTina1Quote ->
-            "xXx"
-
-        StoryTina1ImageAlt ->
-            "xXx"
-
-        StoryTina2Quote ->
-            "xXx"
-
-        StoryTina2ImageAlt ->
-            "xXx"
-
-        StoryTina2Message ->
-            "xXx"
-
-        StoryTina3Quote ->
-            "xXx"
-
-        StoryTina3ImageAlt ->
-            "xXx"
-
-        StoryTina3Message ->
-            "xXx"
-
-        StoryTina4Quote ->
-            "xXx"
-
-        StoryTina4ImageAlt ->
-            "xXx"
-
-        StoryTina4Message ->
-            "xXx"
-
-        StoryHeleneTitle ->
-            "xXx"
-
-        StoryHeleneTeaser ->
-            "xXx"
-
-        StoryHeleneTeaserImageAlt ->
-            "xXx"
-
-        StoryHelene1Quote ->
-            "xXx"
-
-        StoryHelene1ImageAlt ->
-            "xXx"
-
-        StoryHelene2Quote ->
-            "xXx"
-
-        StoryHelene2ImageAlt ->
-            "xXx"
-
-        StoryHelene2Message ->
-            "xXx"
-
-        StoryHelene3Quote ->
-            "xXx"
-
-        StoryHelene3ImageAlt ->
-            "xXx"
-
-        StoryHelene4Quote ->
-            "xXx"
-
-        StoryHelene4ImageAlt ->
-            "xXx"
-
-        StoryEmmaTitle ->
-            "xXx"
-
-        StoryEmmaTeaser ->
-            "xXx"
-
-        StoryEmmaTeaserImageAlt ->
-            "xXx"
-
-        StoryEmma1Quote ->
-            "xXx"
-
-        StoryEmma1ImageAlt ->
-            "xXx"
-
-        StoryEmma1Message ->
-            "xXx"
-
-        StoryEmma2Quote ->
-            "xXx"
-
-        StoryEmma2ImageAlt ->
-            "xXx"
-
-        StoryEmma2Message ->
-            "xXx"
-
-        StoryEmma3Quote ->
-            "xXx"
-
-        StoryEmma3ImageAlt ->
-            "xXx"
-
-        StoryEmma3Message ->
-            "xXx"
-
-        StoryEmma4Quote ->
-            "xXx"
-
-        StoryEmma4ImageAlt ->
-            "xXx"
-
-        StoryAmirahTitle ->
-            "xXx"
-
-        StoryAmirahTeaser ->
-            "xXx"
-
-        StoryAmirahTeaserImageAlt ->
-            "xXx"
-
-        StoryAmirah1Quote ->
-            "xXx"
-
-        StoryAmirah1ImageAlt ->
-            "xXx"
-
-        StoryAmirah2Quote ->
-            "xXx"
-
-        StoryAmirah2ImageAlt ->
-            "xXx"
-
-        StoryAmirah2Message ->
-            "xXx"
-
-        StoryAmirah3Quote ->
-            "xXx"
-
-        StoryAmirah3ImageAlt ->
-            "xXx"
-
-        StoryAmirah3Message ->
-            "xXx"
-
-        StoryAmirah4Quote ->
-            "xXx"
-
-        StoryAmirah4ImageAlt ->
-            "xXx"
+        StoryTwo4ImageAlt ->
+            "A smiling woman with two children"
