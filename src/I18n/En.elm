@@ -252,25 +252,25 @@ enStrings key =
             "neontribe.co.uk"
 
         InfoTitleH2 ->
-            "xXx"
+            "Information to help you"
 
         InfoLikeMoreInfoLink ->
-            "xXx"
+            "I'd like some more information"
 
         InfoLikeOtherInfoLink ->
-            "xXx"
+            "I'd like some other information"
 
         InfoOtherInfoLink ->
-            "xXx"
+            "Other information to help you"
 
         InfoNotFoundName ->
-            "xXx"
+            "Not found"
 
         InfoNotFoundP1 ->
-            "xXx"
+            "We can't find a page with that title, sorry."
 
         InfoNotFoundP2 ->
-            "xXx"
+            "Please use the 'Other information to help you' page to see if we have the topic you are looking for."
 
         InfoCallName ->
             "xXx"
