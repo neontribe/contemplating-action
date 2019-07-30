@@ -22,7 +22,7 @@ enStrings key =
             "Take part in our survey"
 
         CallToActionShort ->
-            "xXx"
+            "Survey"
 
         ContentLinkLong ->
             "Find out more"
@@ -31,22 +31,19 @@ enStrings key =
             "Find Out More"
 
         ContentLinkShort ->
-            "xXx"
+            "Find Out More"
 
         ContactLinkLong ->
             "hello@contemplatingaction.org.uk"
 
         ContactLinkShort ->
-            "xXx"
+            "Email"
 
         ContactLinkDestination ->
             "mailto:hello@contemplatingaction.org.uk"
 
         ExitSite ->
             "Exit Site"
-
-        LanguageButton ->
-            "xXx"
 
         IconCallToAction ->
             "check-square-o"

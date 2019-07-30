@@ -16,7 +16,6 @@ type Key
     | ContactLinkLong
     | ContactLinkShort
     | ExitSite
-    | LanguageButton
       -- Icons
     | IconCallToAction
     | IconStories
