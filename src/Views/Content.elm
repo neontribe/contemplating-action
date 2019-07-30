@@ -158,23 +158,7 @@ view model =
                             ]
                             [ text (t InfoLikeOtherInfoLink) ]
                         ]
-                    , div [ class "desktop-only" ]
-                        [ div [ class "text-center" ]
-                            [ span []
-                                [ getIcon (t IconCallToAction) (Just "button--icon")
-                                , span [] [ text (t CallToActionLong ++ " ") ]
-                                ]
-                            , span [] [ text (t CallToActionDestinationDisplay) ]
-                            ]
-                        ]
-                    , a
-                        [ class "mobile-only button button--alternate button--full-width"
-                        , href ("tel:" ++ t CallToActionDestination)
-                        , onClick (ButtonPress "contact" "call" "call-button" True)
-                        ]
-                        [ getIcon (t IconCallToAction) (Just "button--icon")
-                        , span [] [ text (t CallToActionLong) ]
-                        ]
+                    , div [] (callToActionButton (callToActionConstructor Survey (t CallToActionDestination) (t CallToActionDestinationDisplay)) "")
                     ]
                 ]
 
