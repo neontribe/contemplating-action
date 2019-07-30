@@ -16,7 +16,7 @@ type Key
     | ContactLinkLong
     | ContactLinkShort
     | ExitSite
-      -- Icons
+      -- Nav Icons
     | IconCallToAction
     | IconStories
     | IconContact
@@ -97,26 +97,30 @@ type Key
     | InfoNotFoundName
     | InfoNotFoundP1
     | InfoNotFoundP2
-    | InfoCallName
-    | InfoCallP1 String
-    | InfoCallP2
-    | InfoImmigrationName
-    | InfoImmigrationP1 String
-    | InfoLeavingName
-    | InfoLeavingP1
-    | InfoLeavingP2
-    | InfoLeavingP3 String
-    | InfoSocialServicesName
-    | InfoSocialServicesP1
-    | InfoSocialServicesP2
-    | InfoSocialServicesP3
-    | InfoMoneyName
-    | InfoMoneyP1
-    | InfoMoneyP2 String
-    | InfoPoliceName
-    | InfoPoliceP1
-    | InfoPoliceP2
-    | InfoPoliceP3
+    | InfoOneName
+    | InfoOneSlug
+    | InfoOneIcon
+    | InfoOneP1
+    | InfoTwoName
+    | InfoTwoSlug
+    | InfoTwoIcon
+    | InfoTwoP1
+    | InfoThreeName
+    | InfoThreeSlug
+    | InfoThreeIcon
+    | InfoThreeP1
+    | InfoFourName
+    | InfoFourSlug
+    | InfoFourIcon
+    | InfoFourP1
+    | InfoFiveName
+    | InfoFiveSlug
+    | InfoFiveIcon
+    | InfoFiveP1
+    | InfoSixName
+    | InfoSixSlug
+    | InfoSixIcon
+    | InfoSixP1
       --Stories
     | StoriesTitleH2
     | StoriesTeaserMoreLink String

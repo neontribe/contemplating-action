@@ -272,65 +272,77 @@ enStrings key =
         InfoNotFoundP2 ->
             "Please use the 'Other information to help you' page to see if we have the topic you are looking for."
 
-        InfoCallName ->
-            "xXx"
+        InfoOneName ->
+            "About the project"
 
-        InfoCallP1 displayNumber ->
-            "xXx"
+        InfoOneSlug ->
+            "about"
 
-        InfoCallP2 ->
-            "xXx"
+        InfoOneIcon ->
+            "question-circle-o"
 
-        InfoImmigrationName ->
-            "xXx"
+        InfoOneP1 ->
+            "In 2017, The Haven Wolverhampton, worked with Neontribe and women who had been through domestic abuse. We co-designed a web app to encourage other women in that situation to seek support and advice. We want to find out if the structure of that app could be used by different organisations. We believe that reassuring people that their fears and challenges are shared could help them take early steps on a journey of change such as contacting a support service."
 
-        InfoImmigrationP1 displayNumber ->
-            "xXx"
+        InfoTwoName ->
+            "Bite size information"
 
-        InfoLeavingName ->
-            "xXx"
+        InfoTwoSlug ->
+            "bite-size-info"
 
-        InfoLeavingP1 ->
-            "xXx"
+        InfoTwoIcon ->
+            "info-circle"
 
-        InfoLeavingP2 ->
-            "xXx"
+        InfoTwoP1 ->
+            "We include bite size information relating to a small number of fears and barriers that are likely to be stopping people from taking the next step. Keeping the language simple we aim to be open and honest, with a reassuring tone. We resist the temptation to provide all the information people might need. Our goal is to offer just enough to help people reach out to support services. Other websites have excellent longer content."
 
-        InfoLeavingP3 displayNumber ->
-            "xXx"
+        InfoThreeName ->
+            "Visual Storytelling"
 
-        InfoSocialServicesName ->
-            "xXx"
+        InfoThreeSlug ->
+            "visual-storytelling"
 
-        InfoSocialServicesP1 ->
-            "xXx"
+        InfoThreeIcon ->
+            "pencil"
 
-        InfoSocialServicesP2 ->
-            "xXx"
+        InfoThreeP1 ->
+            "Many organisations struggle with the same problem with stories. We know stories can be powerful, we want to use them for many reasons. Unfortunately people don’t always like to spend time reading them online. We believe that visual storytelling can change this. Contemplating Action has a budget for artists, to test whether this 4 image story format can encourage more people to read them."
 
-        InfoSocialServicesP3 ->
-            "xXx"
+        InfoFourName ->
+            "What is the survey?"
 
-        InfoMoneyName ->
-            "xXx"
+        InfoFourSlug ->
+            "survey"
 
-        InfoMoneyP1 ->
-            "xXx"
+        InfoFourIcon ->
+            "check-square-o"
 
-        InfoMoneyP2 displayNumber ->
-            "xXx"
+        InfoFourP1 ->
+            "We would like you to take our survey. We want to understand whether staff in organisations who work most closely with people seeking support think this approach could work. We’re interested in your instincts as well as any evidence you might share. It will help us decide where to take the project next."
 
-        InfoPoliceName ->
-            "xXx"
+        InfoFiveName ->
+            "Can my organisation try this?"
 
-        InfoPoliceP1 ->
-            "xXx"
+        InfoFiveSlug ->
+            "try-this"
 
-        InfoPoliceP2 ->
-            "xXx"
+        InfoFiveIcon ->
+            "group"
 
-        InfoPoliceP3 ->
-            "xXx"
+        InfoFiveP1 ->
+            "We’re actively looking for partner charities interested in experimenting with this visual storytelling format. So if you have a helpline, webchat, messaging service or even a face to face service, we could work together on whether an app could help people connect to those services. We have small amounts of funding to support charities getting involved. Please show your interest by taking the survey."
+
+        InfoSixName ->
+            "Who is involved in this project?"
+
+        InfoSixSlug ->
+            "who-is-involved"
+
+        InfoSixIcon ->
+            "involved"
+
+        InfoSixP1 ->
+            "This is a partnership between CAST - a charity driving social change through digital technology - and digital development agency Neontribe. It is one of a number of projects aimed at supporting civic and social organisations to grow confident in using digital tools to achieve their charitable objectives. It is possible thanks to The Haven, Wolverhampton sharing technology developed for and with the people they work with."
 
         StoriesTitleH2 ->
             "Stories"

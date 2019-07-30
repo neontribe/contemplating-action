@@ -133,59 +133,39 @@ infoList language =
             translate language
     in
     [ { id = 1
-      , name = t InfoCallName
-      , slug = "helpline"
-      , icon = "call"
-      , infoText =
-            [ t (InfoCallP1 (t CallToActionDestinationDisplay))
-            , t InfoCallP2
-            ]
+      , name = t InfoOneName
+      , slug = t InfoOneSlug
+      , icon = t InfoOneIcon
+      , infoText = [ t InfoOneP1 ]
       }
     , { id = 2
-      , name = t InfoImmigrationName
-      , slug = "worried-about-immigration"
-      , icon = "id-card"
-      , infoText =
-            [ t (InfoImmigrationP1 (t CallToActionDestinationDisplay))
-            ]
+      , name = t InfoTwoName
+      , slug = t InfoTwoSlug
+      , icon = t InfoTwoIcon
+      , infoText = [ t InfoTwoP1 ]
       }
     , { id = 3
-      , name = t InfoLeavingName
-      , slug = "thinking-about-leaving"
-      , icon = "leaving"
-      , infoText =
-            [ t InfoLeavingP1
-            , t InfoLeavingP2
-            , t (InfoLeavingP3 (t CallToActionDestinationDisplay))
-            ]
+      , name = t InfoThreeName
+      , slug = t InfoThreeSlug
+      , icon = t InfoThreeIcon
+      , infoText = [ t InfoThreeP1 ]
       }
     , { id = 4
-      , name = t InfoSocialServicesName
-      , slug = "social-services"
-      , icon = "children"
-      , infoText =
-            [ t InfoSocialServicesP1
-            , t InfoSocialServicesP2
-            , t InfoSocialServicesP3
-            ]
+      , name = t InfoFourName
+      , slug = t InfoFourSlug
+      , icon = t InfoFourIcon
+      , infoText = [ t InfoFourP1 ]
       }
     , { id = 5
-      , name = t InfoMoneyName
-      , slug = "worried-about-money"
-      , icon = "pound"
-      , infoText =
-            [ t InfoMoneyP1
-            , t (InfoMoneyP2 (t CallToActionDestinationDisplay))
-            ]
+      , name = t InfoFiveName
+      , slug = t InfoFiveSlug
+      , icon = t InfoFiveIcon
+      , infoText = [ t InfoFiveP1 ]
       }
     , { id = 6
-      , name = t InfoPoliceName
-      , slug = "talking-to-police"
-      , icon = "police"
-      , infoText =
-            [ t InfoPoliceP1
-            , t InfoPoliceP2
-            , t InfoPoliceP3
-            ]
+      , name = t InfoSixName
+      , slug = t InfoSixSlug
+      , icon = t InfoSixIcon
+      , infoText = [ t InfoSixP1 ]
       }
     ]
