@@ -80,79 +80,121 @@ enStrings key =
 
         -- Privacy Page
         PrivacyTitleH2 ->
-            "xXx"
+            "Contemplating Action Privacy Policy and Cookies"
 
         PrivacyIntroP ->
-            "xXx"
+            "This policy relates to www.contemplatingaction.org.uk (“the Site”) which is owned by Neontribe ltd and related activity "
+
+        PrivacyCompanyInfoLi1 ->
+            "Neontribe ltd trading as Neontribe"
+
+        PrivacyCompanyInfoLi2 ->
+            "Registered as a limited company in England & Wales"
+
+        PrivacyCompanyInfoLi3 ->
+            "Business registration: 06165574"
+
+        PrivacyCompanyInfoLi4 ->
+            "Registered office: 106 Lincoln St. Norwich, Norfolk, NR2 3LB."
 
         PrivacyDataCollectH3 ->
-            "xXx"
+            "What information is collected?"
 
         PrivacyDataCollectP ->
-            "xXx"
+            "We collect the following information from people who use this website:"
+
+        PrivacyDataCollectLi1 ->
+            "Email addresses of people who communicate with us via email"
+
+        PrivacyDataCollectLi2 ->
+            "Information volunteered by people in the course of using of the website (predominantly survey responses)"
+
+        PrivacyDataCollectLi3 ->
+            "Analytics and tracking data about people’s site usage"
 
         PrivacyInfoUsedH3 ->
-            "xXx"
+            "How is the information used?"
 
         PrivacyInfoUsedP ->
-            "xXx"
+            "Neontribe uses the information you provide to:"
 
         PrivacyInfoUsedLi1 ->
-            "xXx"
+            "Improve the usability of the Site"
 
         PrivacyInfoUsedLi2 ->
-            "xXx"
+            "Help design future projects "
 
         PrivacyInfoUsedLi3 ->
-            "xXx"
+            "Contribute to research about third sector use of digital"
 
         PrivacyInfoUsedLi4 ->
-            "xXx"
-
-        PrivacyInfoUsedLi5 ->
-            "xXx"
+            "Send you any information you have requested relating to the Contemplating Action project"
 
         PrivacyInfoSharedH3 ->
-            "xXx"
+            ""
 
         PrivacyInfoSharedP1 ->
-            "xXx"
+            "If you chose to give us contact details we will only contact you in relation to these four things. You can also tell us if you no longer wish to receive information from Neontribe by replying to any email from us with the subject line Unsubscribe, or sending a message to info@neontribe.co.uk requesting to unsubscribe."
 
         PrivacyInfoSharedP2 ->
-            "xXx"
+            "Information that is identifiable as relating to you (i.e. it has not been edited to make it anonymous) is not shared with or sold to other organizations for commercial purposes, other than under the following circumstances:"
 
-        PrivacyInfoSharedP3 ->
-            "xXx"
+        PrivacyInfoSharedLi1 ->
+            "If it is necessary to share information in order to investigate, prevent, or take action regarding illegal activities, suspected fraud, situations involving potential threats to the physical safety of any person, violations of Terms of Service, or as otherwise required by law."
+
+        PrivacyInfoSharedLi2 ->
+            "If we transfer information about you if Neontribe is acquired by or merged with another organisation, other than an organisation established by us and controlled by us."
+
+        PrivacyInfoSharedLi3 ->
+            "You have explicitly chosen to have us share the information with CAST - the centre for acceleration of social technology whilst giving us the information - in which case it will be freely shared with them."
+
+        PrivacyInfoStoredH3 ->
+            "Where is the information stored?"
+
+        PrivacyInfoStoredLi1 ->
+            "On our computers"
+
+        PrivacyInfoStoredLi2 ->
+            "On our survey provider Typeform’s servers. For more information see Typeform's privacy policy."
+
+        PrivacyInfoStoredLi3 ->
+            "In Google Analytics. For more information see Google's privacy policy."
+
+        PrivacyInfoStoredLi4 ->
+            "By our partner CAST on their servers if you have explicitly expressed the desire to share your information with them whilst using our site. For more information see CAST's privacy policy."
+
+        PrivacyRightsH3 ->
+            "Your rights"
+
+        PrivacyRightsP ->
+            "We guarantee to meet your rights in compliance with GDPR. Find out about those rights from the ICO GDPR indvidual rights guide. To exercise any of your rights, please contact us at hello@contemplatingaction.org.uk"
 
         PrivacyCookiesH3 ->
-            "xXx"
+            "Use of cookies"
 
         PrivacyCookiesP1 ->
-            "xXx"
+            "Cookies are pieces of information that a website transfers to your hard drive. Most web browsers automatically accept cookies, but if you prefer, you can change your browser to prevent that and will still be able to use the site. "
 
         PrivacyCookiesP2 ->
-            "xXx"
-
-        PrivacyCookiesP3 ->
-            "xXx"
+            "Contemplating Action uses cookies to:"
 
         PrivacyCookiesLi1 ->
-            "xXx"
+            "Monitor the number of visitors to our website"
 
         PrivacyCookiesLi2 ->
-            "xXx"
+            "Monitor how users use our website, i.e. which pages they have accessed"
 
         PrivacyCookiesLi3 ->
-            "xXx"
+            "To help improve our website"
 
         PrivacyCookiesLi4 ->
-            "xXx"
+            "For more data on Cookies visit www.aboutcookies.org. In addition to detailing extensive information on cookies this site also provides explanations on how to disable cookies on your computer."
 
         PrivacyTermsH3 ->
-            "xXx"
+            "Your acceptance of these terms"
 
         PrivacyTermsP ->
-            "xXx"
+            "By using this site, you consent to the collection and use of this information by Neontribe and to our privacy policy. Please send any questions, concerns or comments you have about these policies to info@neontribe.co.uk "
 
         -- Supporters Page
         SupportersTitleH2 ->

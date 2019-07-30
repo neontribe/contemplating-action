@@ -32,23 +32,37 @@ type Key
       -- Privacy
     | PrivacyTitleH2
     | PrivacyIntroP
+    | PrivacyCompanyInfoLi1
+    | PrivacyCompanyInfoLi2
+    | PrivacyCompanyInfoLi3
+    | PrivacyCompanyInfoLi4
     | PrivacyDataCollectH3
     | PrivacyDataCollectP
+    | PrivacyDataCollectLi1
+    | PrivacyDataCollectLi2
+    | PrivacyDataCollectLi3
     | PrivacyInfoUsedH3
     | PrivacyInfoUsedP
     | PrivacyInfoUsedLi1
     | PrivacyInfoUsedLi2
     | PrivacyInfoUsedLi3
     | PrivacyInfoUsedLi4
-    | PrivacyInfoUsedLi5
     | PrivacyInfoSharedH3
     | PrivacyInfoSharedP1
     | PrivacyInfoSharedP2
-    | PrivacyInfoSharedP3
+    | PrivacyInfoSharedLi1
+    | PrivacyInfoSharedLi2
+    | PrivacyInfoSharedLi3
+    | PrivacyInfoStoredH3
+    | PrivacyInfoStoredLi1
+    | PrivacyInfoStoredLi2
+    | PrivacyInfoStoredLi3
+    | PrivacyInfoStoredLi4
+    | PrivacyRightsH3
+    | PrivacyRightsP
     | PrivacyCookiesH3
     | PrivacyCookiesP1
     | PrivacyCookiesP2
-    | PrivacyCookiesP3
     | PrivacyCookiesLi1
     | PrivacyCookiesLi2
     | PrivacyCookiesLi3
