@@ -30,10 +30,6 @@ type Key
     | HomeLinkDisplay
     | HomeLinkDestination
     | HomeP2
-      -- Chat
-    | ChatH2
-    | ChatP1
-    | ChatP2
       -- Privacy
     | PrivacyTitleH2
     | PrivacyIntroP
@@ -63,14 +59,16 @@ type Key
       -- Supporters
     | SupportersTitleH2
     | SupportersP1
+    | SupportersP2
+    | CastLogoAlt
     | ComicReliefLogoAlt
     | DepartmentForCultureLogoAlt
     | BigLotteryLogoAlt
-    | SupportersP2
     | SupportersP3
+    | SupportersP4
     | NeontribeLogoAlt
     | HavenLogoAlt
-    | SupportersP4
+    | SupportersP5
       -- Footer
     | FooterSupportersText
     | FooterSupportersLink

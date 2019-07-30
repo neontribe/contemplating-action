@@ -81,16 +81,6 @@ enStrings key =
         HomeP2 ->
             "This space is used to give a reminder about what to do in a crisis or high risk situation when the app is not the right support."
 
-        -- Chat Page
-        ChatH2 ->
-            "xXx"
-
-        ChatP1 ->
-            "xXx"
-
-        ChatP2 ->
-            "xXx"
-
         -- Privacy Page
         PrivacyTitleH2 ->
             "xXx"
@@ -169,34 +159,40 @@ enStrings key =
 
         -- Supporters Page
         SupportersTitleH2 ->
-            "xXx"
+            "Our Supporters"
 
         SupportersP1 ->
-            "xXx"
-
-        ComicReliefLogoAlt ->
-            "xXx"
-
-        DepartmentForCultureLogoAlt ->
-            "xXx"
-
-        BigLotteryLogoAlt ->
-            "xXx"
+            "This page, available in the landing page footer, allows organisations to thank their partners."
 
         SupportersP2 ->
-            "xXx"
+            "We are grateful to all the partners that have made this project possible."
+
+        CastLogoAlt ->
+            "CAST"
+
+        ComicReliefLogoAlt ->
+            "Comic Relief"
+
+        DepartmentForCultureLogoAlt ->
+            "Department for Culture Media & Sport"
+
+        BigLotteryLogoAlt ->
+            "Big Lottery Fund"
 
         SupportersP3 ->
-            "xXx"
-
-        NeontribeLogoAlt ->
-            "xXx"
-
-        HavenLogoAlt ->
-            "xXx"
+            "Contemplating Action is a partnership with CAST - Centre for Acceleration of Social Technology."
 
         SupportersP4 ->
-            "xXx"
+            "The initial You Matter app which inspired Contemplating Action was part of Tech vs Abuse. This grant was funded through a joint funding initiative between the Tampon Tax Fund, a partnership between HM Government and Comic Relief, and the Big Lottery Fund."
+
+        NeontribeLogoAlt ->
+            "Neontribe"
+
+        HavenLogoAlt ->
+            "The Haven Wolverhampton"
+
+        SupportersP5 ->
+            "This website has been developed by Neontribe and The Haven, together with women who have been victims of domestic abuse. The Haven is a Wolverhampton based charity which supports women and dependent children who are vulnerable to domestic violence, homelessness and abuse."
 
         FooterSupportersText ->
             "Find out about our"
