@@ -13,7 +13,8 @@
             "elm/url": "1.0.0",
             "fapian/elm-html-aria": "1.4.0",
             "hecrj/elm-slug": "1.0.2",
-            "mdgriffith/elm-ui": "1.1.4"
+            "mdgriffith/elm-ui": "1.1.4",
+            "tesk9/accessible-html": "4.0.0"
         },
         "indirect": {
             "elm/regex": "1.0.0",
