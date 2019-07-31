@@ -33,9 +33,13 @@ The output of different versions of elm-format varies significantly, so please u
 
 ## Deployment
 
-### To staging (GitHub pages)
-- Build to `dist\` with `yarn build`
-- Push `dist\*` to gh-pages branch
+### To staging (GitHub pages) with Travis
+We're using [Travis](travis-ci.org).
+- On every push to the repo, Travis will build and run tests
+- To trigger a deploy to gh-pages, create and push a tag (e.g. `git tag v1.0.0 && git push origin --tags`
+Encrypted vars can be added to `.travis.yml` using the travis cli tools as decribed in the [travis docs](https://docs.travis-ci.com/user/encryption-keys/#usage).
+Currently configured with GITHUB_TOKEN value.
+
 
 ### To Production (Heroku)
 - You will need a Heroku account with appropriate permissions
