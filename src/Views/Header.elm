@@ -19,18 +19,18 @@ view model =
         t =
             translate model.language
     in
-        case model.currentPage of
-            Home ->
-                header []
-                    [ div [ class "section section--header text-center" ]
-                        [ h1 [] [ text (t AppTitle) ]
-                        ]
+    case model.currentPage of
+        Home ->
+            header []
+                [ div [ class "section section--header text-center" ]
+                    [ h1 [] [ text (t AppTitle) ]
                     ]
+                ]
 
-            -- Any other page
-            _ ->
-                header []
-                    [ div [ class "section section--header text-center" ]
-                        [ h1 [] [ a [ href "#" ] [ text (t AppTitle) ] ]
-                        ]
+        -- Any other page
+        _ ->
+            header []
+                [ div [ class "section section--header text-center" ]
+                    [ h1 [] [ a [ href "#" ] [ text (t AppTitle) ] ]
                     ]
+                ]

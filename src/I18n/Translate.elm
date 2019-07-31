@@ -16,4 +16,4 @@ translate language key =
                 English ->
                     enStrings
     in
-        translator key
+    translator key

@@ -29,7 +29,7 @@ init _ url navKey =
                 Just aPage ->
                     aPage
     in
-        ( Model maybePage Home English navKey url, Cmd.none )
+    ( Model maybePage Home English navKey url, Cmd.none )
 
 
 pageSlug : Page -> String
