@@ -1,7 +1,7 @@
 module View exposing (view)
 
 import Browser
-import Html exposing (div)
+import Html exposing (div, main_)
 import Html.Attributes exposing (class, id)
 import Html.Attributes.Aria exposing (role)
 import Messages exposing (Msg)
@@ -18,7 +18,7 @@ view model =
         [ div [ id "page-wrapper", class ("page " ++ pageSlug model.currentPage) ]
             [ Views.Header.view model
             , Views.Nav.view model
-            , div [ class "content", role "main" ]
+            , main_ [ class "content", role "main" ]
                 [ Views.Content.view model ]
             ]
         ]
