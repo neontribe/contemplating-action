@@ -34,7 +34,7 @@ The output of different versions of elm-format varies significantly, so please u
 ## Deployment
 
 ### To staging (GitHub pages) with Travis
-We're using [Travis](travis-ci.org).
+We're using [Travis](https://travis-ci.org).
 - On every push to the repo, Travis will build and run tests
 - To trigger a deploy to gh-pages, create and push a tag (e.g. `git tag v1.0.0 && git push origin --tags`
 Encrypted vars can be added to `.travis.yml` using the travis cli tools as decribed in the [travis docs](https://docs.travis-ci.com/user/encryption-keys/#usage).
