@@ -266,6 +266,12 @@ enStrings key =
         InfoNotFoundName ->
             "Not found"
 
+        InfoNotFoundSlug ->
+            "not-found"
+
+        InfoNotFoundIcon ->
+            "question"
+
         InfoNotFoundP1 ->
             "We can't find a page with that title, sorry."
 

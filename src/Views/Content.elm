@@ -169,12 +169,12 @@ view model =
             div [ class "section section--info section--vertical-fill-center" ]
                 [ h2 [] [ text (t InfoTitleH2) ]
                 , ul [ class "info--list" ]
-                    [ infoCard (getInfo model.language 1)
-                    , infoCard (getInfo model.language 2)
-                    , infoCard (getInfo model.language 3)
-                    , infoCard (getInfo model.language 4)
-                    , infoCard (getInfo model.language 5)
-                    , infoCard (getInfo model.language 6)
+                    [ infoCard model.language (getInfo 1)
+                    , infoCard model.language (getInfo 2)
+                    , infoCard model.language (getInfo 3)
+                    , infoCard model.language (getInfo 4)
+                    , infoCard model.language (getInfo 5)
+                    , infoCard model.language (getInfo 6)
                     ]
                 ]
 
