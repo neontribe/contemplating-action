@@ -6,29 +6,37 @@ module Views.Footer exposing (footerContent)
 import Html exposing (Html, a, div, footer, text)
 import Html.Attributes exposing (class, href)
 import Html.Events exposing (onClick)
+import I18n.Keys exposing (Key(..))
+import I18n.Translate exposing (Language, translate)
 import Messages exposing (Msg(..))
 
 
-footerContent : Html Msg
-footerContent =
+footerContent : Language -> Html Msg
+footerContent language =
+    let
+        t =
+            translate language
+    in
     footer [ class "section section--footer text-center text-small" ]
         [ div [ class "footer--item" ]
-            [ text "Find out about our "
+            [ text (t FooterSupportersText ++ " ")
             , a [ class "link link--plain", href "#/supporters" ]
-                [ text "supporters" ]
+                [ text (t FooterSupportersLink) ]
             ]
         , div [ class "footer--item" ]
-            [ text "Read our "
+            [ text (t FooterPrivacyText ++ " ")
             , a [ class "link link--plain", href "#/privacy-policy" ]
-                [ text "privacy policy" ]
+                [ text (t FooterPrivacyLink) ]
             ]
         , div [ class "footer--item" ]
-            [ text "© 2017 - "
+            [ text "© 2019 - "
             , a
                 [ class "link link--plain"
                 , href "http://www.neontribe.co.uk/"
                 , onClick (ButtonPress "contact" "website" "neontribe-website-footer" True)
                 ]
-                [ text "neontribe.co.uk" ]
+                [ text (t FooterCopyrightLink) ]
             ]
+        , div [ class "footer--item" ]
+            [ text (t FooterRegisteredText) ]
         ]

@@ -3,32 +3,36 @@
 
 module Views.Nav exposing (view)
 
-import CallToAction exposing (CallToAction, CallToActionType(..))
+import CallToAction exposing (CallToAction, CallToActionType(..), callToActionConstructor)
 import Html exposing (Html, a, div, nav, span, text)
-import Html.Attributes exposing (class, href, rel, target)
+import Html.Attributes exposing (class, href, id, rel, target)
 import Html.Events exposing (onClick)
+import I18n.Keys exposing (Key(..))
+import I18n.Translate exposing (translate)
 import Icon exposing (getIcon)
 import Messages exposing (Msg(..))
 import Model exposing (Model)
-import Views.Config exposing (callToAction, email)
 
 
 view : Model -> Html Msg
-view _ =
+view model =
+    let
+        t =
+            translate model.language
+    in
     -- Contains Nav for phones - but text email and phone number for desktop and tablet.
     div [ class "nav-bar" ]
         [ div [ class "desktop-only" ]
-            [ callToActionNavItemDesktop callToAction ]
+            [ callToActionNavItemDesktop (callToActionConstructor Survey (t CallToActionDestination) (t CallToActionDestinationDisplay)) ]
         , nav []
-            [ navItem "question-circle-o" "#/stories" "find-out-more" "view-list" "Find Out More" "Find Out More"
-            , navItem "envelope" ("mailto:" ++ email) "contact" "email" "Email" email
+            [ navItem (t IconStories) "#/stories" "find-out-more" "view-list" (t ContentLinkShort) (t ContentLinkMedium)
+            , navItem (t IconContact) (t ContactLinkDestination) "contact" "email" (t ContactLinkShort) (t ContactLinkLong)
             , span [ class "nav-item mobile-only" ]
-                [ callToActionNavItemMobile callToAction
-                ]
+                [ callToActionNavItemMobile (callToActionConstructor Survey (t CallToActionDestination) (t CallToActionDestinationDisplay)) ]
             , span [ class "nav-item" ]
                 [ a [ class "btn ", href "https://google.com", target "_blank", rel "noopener", onClick Exit ]
-                    [ getIcon "exit-door" (Just "nav-item-text nav-icon")
-                    , span [ class " nav-item-text nav-text-selector" ] [ text "Exit Site" ]
+                    [ getIcon (t IconExit) (Just "nav-item-text nav-icon")
+                    , span [ class " nav-item-text" ] [ text (t ExitSite) ]
                     ]
                 ]
             ]
@@ -42,7 +46,9 @@ navItem icon link category action shortLinkText longLinkText =
             [ getIcon icon (Just "nav-item-text nav-icon")
             , span [ class "nav-item-text" ]
                 [ span [ class "mobile-only" ] [ text shortLinkText ]
-                , span [ class "desktop-only nav-text-selector" ] [ text longLinkText ]
+
+                -- Note: longLinkText not rendered for phone number in Haven instance
+                , span [ class "desktop-only" ] [ text longLinkText ]
                 ]
             ]
         ]

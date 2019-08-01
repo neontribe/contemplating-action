@@ -1,10 +1,12 @@
-module StoryDeck exposing (card, getInfoButtons, storyRelatedInfo, storyTeaser, storyTitle)
+module StoryDeck exposing (card, storyRelatedInfo, storyTeaser, storyTitle)
 
 import Array
 import Assets exposing (AssetPath(..), path)
 import Html exposing (Html, a, blockquote, div, h3, img, p, text)
 import Html.Attributes exposing (alt, class, href, src)
 import Html.Events exposing (onClick)
+import I18n.Keys exposing (Key(..))
+import I18n.Translate exposing (Language(..), translate)
 import Icon exposing (getIcon)
 import Info exposing (getInfo)
 import List
@@ -13,10 +15,10 @@ import Messages exposing (Msg(..))
 
 type alias Deck =
     { id : Int
-    , title : String
-    , teaser : String
+    , title : Key
+    , teaser : Key
     , teaserImgPath : AssetPath
-    , teaserImgAltText : String
+    , teaserImgAltText : Key
     , relatedInfo : List Int
     , cards : List Card
     }
@@ -24,9 +26,9 @@ type alias Deck =
 
 type alias Card =
     { imagePath : AssetPath
-    , messageText : Maybe String
-    , quoteText : String
-    , altText : String
+    , messageText : Maybe Key
+    , quoteText : Key
+    , altText : Key
     }
 
 
@@ -34,7 +36,7 @@ type alias Card =
 -- Accessors for Story Deck content
 
 
-storyTitle : Int -> String
+storyTitle : Int -> Key
 storyTitle deckId =
     (getDeck deckId decks).title
 
@@ -44,41 +46,45 @@ storyTeaserImgPath deckId =
     path (getDeck deckId decks).teaserImgPath
 
 
-storyTeaserImgAltText : Int -> String
+storyTeaserImgAltText : Int -> Key
 storyTeaserImgAltText deckId =
     (getDeck deckId decks).teaserImgAltText
 
 
-storyTeaser : Int -> Html Msg
-storyTeaser deckId =
+storyTeaser : Language -> Int -> Html Msg
+storyTeaser language deckId =
+    let
+        t =
+            translate
+    in
     div [ class "card" ]
         [ a
             [ href ("#/stories/" ++ String.fromInt deckId)
-            , onClick (ButtonPress "story" "view-single" (storyTitle deckId) False)
+            , onClick (ButtonPress "story" "view-single" (t English (storyTitle deckId)) False)
             ]
-            [ img [ class "card--thumbnail", src (storyTeaserImgPath deckId), alt (storyTeaserImgAltText deckId) ] []
+            [ img [ class "card--thumbnail", src (storyTeaserImgPath deckId), alt (t language (storyTeaserImgAltText deckId)) ] []
             ]
         , a
             [ class "link--unstyled"
             , href ("#/stories/" ++ String.fromInt deckId)
-            , onClick (ButtonPress "story" "view-single" (storyTitle deckId) False)
+            , onClick (ButtonPress "story" "view-single" (t English (storyTitle deckId)) False)
             ]
-            [ h3 [ class "title--small" ] [ text (storyTitle deckId) ]
+            [ h3 [ class "title--small" ] [ text (t language (storyTitle deckId)) ]
             ]
         , blockquote [ class "card--quote" ]
-            [ text (getDeck deckId decks).teaser ]
+            [ text (t language (getDeck deckId decks).teaser) ]
         , div [ class "text-right text-with-icon--right stories--more-link" ]
             [ a
                 [ class "link"
                 , href ("#/stories/" ++ String.fromInt deckId)
-                , onClick (ButtonPress "story" "view-single" (storyTitle deckId) False)
+                , onClick (ButtonPress "story" "view-single" (t English (storyTitle deckId)) False)
                 ]
-                [ text ("See " ++ storyTitle deckId ++ "'s Story")
+                [ text (t language (StoriesTeaserMoreLink (t language (storyTitle deckId))))
                 ]
             , a
                 [ class "link--unstyled"
                 , href ("#/stories/" ++ String.fromInt deckId)
-                , onClick (ButtonPress "story" "view-single" (storyTitle deckId) False)
+                , onClick (ButtonPress "story" "view-single" (t English (storyTitle deckId)) False)
                 ]
                 [ getIcon "arrow-right" (Just "icon--alternate")
                 ]
@@ -86,38 +92,42 @@ storyTeaser deckId =
         ]
 
 
-storyRelatedInfo : Int -> List (Html Msg)
-storyRelatedInfo deckId =
-    List.map getInfoButtons (getRelatedInfo deckId)
+storyRelatedInfo : Language -> Int -> List (Html Msg)
+storyRelatedInfo language deckId =
+    List.map getInfoButtons (getRelatedInfoIds ( language, deckId ))
 
 
-getInfoButtons : Int -> Html Msg
-getInfoButtons id =
+getInfoButtons : ( Language, Int ) -> Html Msg
+getInfoButtons ( language, id ) =
     a
-        [ href ("#/info-to-help/" ++ (getInfo id).slug)
+        [ href ("#/info-to-help/" ++ (getInfo language id).slug)
         , class "button button--alternate button--full-width"
-        , onClick (ButtonPress "information" "view-single" (getInfo id).slug True)
+        , onClick (ButtonPress "information" "view-single" (getInfo language id).slug True)
         ]
-        [ text (getInfo id).name ]
+        [ text (getInfo language id).name ]
 
 
-card : Int -> Int -> Html msg
-card deckId cardId =
+card : Language -> Int -> Int -> Html msg
+card language deckId cardId =
+    let
+        t =
+            translate language
+    in
     div [ class "card story" ]
         [ h3 [ class "title--small title--alternate" ]
-            [ text ("Part " ++ String.fromInt cardId ++ " of 4") ]
+            [ text (t (StoryCardH3 cardId)) ]
         , blockquote [ class "card--quote quote" ]
-            [ text (getCard deckId cardId).quoteText ]
+            [ text (t (getCard deckId cardId).quoteText) ]
         , div [ class "story--illustration" ]
-            [ img [ src (cardImgPath deckId cardId), alt (getCard deckId cardId).altText ]
+            [ img [ src (cardImgPath deckId cardId), alt (t (getCard deckId cardId).altText) ]
                 []
-            , cardMessage deckId cardId
+            , cardMessage language deckId cardId
             ]
         ]
 
 
-cardMessage : Int -> Int -> Html msg
-cardMessage deckId cardId =
+cardMessage : Language -> Int -> Int -> Html msg
+cardMessage language deckId cardId =
     let
         maybeMessage =
             (getCard deckId cardId).messageText
@@ -128,16 +138,12 @@ cardMessage deckId cardId =
             p [ class "no-message" ] []
 
         Just aMessage ->
-            blockquote [ class "story--message quote" ] [ text aMessage ]
+            blockquote [ class "story--message quote" ] [ text (translate language aMessage) ]
 
 
 cardImgPath : Int -> Int -> String
 cardImgPath deckId cardId =
     path (getCard deckId cardId).imagePath
-
-
-
--- Helpers to get card and deck records
 
 
 getCard : Int -> Int -> Card
@@ -173,9 +179,9 @@ getDeck deckId deckList =
             placeholderDeck
 
 
-getRelatedInfo : Int -> List Int
-getRelatedInfo deckId =
-    (getDeck deckId decks).relatedInfo
+getRelatedInfoIds : ( Language, Int ) -> List ( Language, Int )
+getRelatedInfoIds ( language, deckId ) =
+    List.map (\n -> ( language, n )) (getDeck deckId decks).relatedInfo
 
 
 
@@ -185,10 +191,10 @@ getRelatedInfo deckId =
 placeholderDeck : Deck
 placeholderDeck =
     { id = 0
-    , title = "Coming soon"
-    , teaser = "We're working on it"
+    , title = StoryNotFoundTitle
+    , teaser = StoryNotFoundTeaser
     , teaserImgPath = AssetPath "story_images/thumb_placeholder.png"
-    , teaserImgAltText = "Placeholder image"
+    , teaserImgAltText = StoryNotFoundImageAlt
     , relatedInfo = [ 1 ]
     , cards = [ placeholderCard ]
     }
@@ -196,10 +202,10 @@ placeholderDeck =
 
 placeholderCard : Card
 placeholderCard =
-    { quoteText = "Story coming soon."
+    { quoteText = StoryNotFoundQuote
     , imagePath = AssetPath "story_images/slide1.svg"
-    , altText = "Placeholder image"
-    , messageText = Just "Check back soon"
+    , altText = StoryNotFoundImageAlt
+    , messageText = Just StoryNotFoundMessage
     }
 
 
@@ -210,85 +216,59 @@ placeholderCard =
 decks : List Deck
 decks =
     [ { id = 1
-      , title = "Our Project"
-      , teaser = "This shows you how we believe shaping stories from real people can work so that they help people feel ready to take action"
+      , title = StoryOneTitle
+      , teaser = StoryOneTeaser
       , teaserImgPath = AssetPath "story_images/ourproject-image1.jpg"
-      , teaserImgAltText = "A man kneeling on the floor of a dark room with his head in his hands"
-      , relatedInfo = [ 1, 3 ]
+      , teaserImgAltText = StoryOneTeaserImageAlt
+      , relatedInfo = [ 3, 6 ]
       , cards =
-            [ { quoteText =
-                    """The story starts with some background. It gives us key pieces of information that make this person’s story clear and
-                    relatable. It tends to deal with facts about the situation they were in rather than their feelings. It is always a situation
-                    that clearly needed to change.
-                    """
+            [ { quoteText = StoryOne1Quote
               , imagePath = AssetPath "story_images/ourproject-image1.jpg"
-              , altText = "A man is kneeling on the floor of a dark room with his head in his hands"
+              , altText = StoryOne1ImageAlt
               , messageText = Nothing
               }
-            , { quoteText =
-                    """Next the story moves on a little. It does one of two things. Either it tells us about a specific incident that began a
-                    drive to change things, or it explores the person’s fears and other things that were holding them back. This section focuses
-                    on emotions and helps us connect with the person’s story.
-                    """
+            , { quoteText = StoryOne2Quote
               , imagePath = AssetPath "story_images/ourproject-image2.jpg"
-              , altText = "The man looks up a long staircase with a locked door at the top"
-              , messageText = Just "This bar is used to give a little extra insight into how the person was feeling."
+              , altText = StoryOne2ImageAlt
+              , messageText = Just StoryOne2Message
               }
-            , { quoteText =
-                    """Here the story starts to change for the better. The person becomes able to take a positive step and get some support.
-                    The story tells us a little about what happened, how they managed to take the step and how they felt.
-                    """
+            , { quoteText = StoryOne3Quote
               , imagePath = AssetPath "story_images/ourproject-image3.jpg"
-              , altText = "The man starts climbing the stairs to reach a hand holding out a key."
+              , altText = StoryOne3ImageAlt
               , messageText = Nothing
               }
-            , { quoteText =
-                    """The final section of the story is about hope. It shows that taking a chance can be a positive choice. However it doesn’t suggest that the person’s life is now perfect.
-                    It is designed to encourage others to believe they could make a move to a more hopeful place too. It takes care not to sound out of reach.
-                    """
+            , { quoteText = StoryOne4Quote
               , imagePath = AssetPath "story_images/ourproject-image4.jpg"
-              , altText = "The door is open and the lock is on the floor. The man is outside in a bright and sunny environment holding onto the key."
-              , messageText = Just "sometimes the story highlights a worry that remains, and how the person is coping with it"
+              , altText = StoryOne4ImageAlt
+              , messageText = Just StoryOne4Message
               }
             ]
       }
     , { id = 2
-      , title = "The Haven"
-      , teaser = "This is one of the six stories created for The Haven’s app. The story uses Ama’s words but the names have been changed, and the story has been shaped to help others."
+      , title = StoryTwoTitle
+      , teaser = StoryTwoTeaser
       , teaserImgPath = AssetPath "story_images/ama_1.jpg"
-      , teaserImgAltText = "A pregnant woman wrapped in chains"
-      , relatedInfo = [ 1, 3 ]
+      , teaserImgAltText = StoryTwoTeaserImageAlt
+      , relatedInfo = [ 2, 5 ]
       , cards =
-            [ { quoteText =
-                    """I was born in Senegal and had lived in Spain as well as the UK and I couldn’t speak English. My husband became abusive
-                    after I got pregnant with our first child. For years I suffered so many different things
-                    """
+            [ { quoteText = StoryTwo1Quote
               , imagePath = AssetPath "story_images/ama_1.jpg"
-              , altText = "A pregnant woman wrapped in chains"
+              , altText = StoryTwo1ImageAlt
               , messageText = Nothing
               }
-            , { quoteText =
-                    """I wanted to leave, but my husband told me without him I would be sent back to Africa. I was completely dependent on my
-                    husband, I did not see any way out of my situation.
-                    """
+            , { quoteText = StoryTwo2Quote
               , imagePath = AssetPath "story_images/ama_2.jpg"
-              , altText = "A pregnant woman chained to her husband"
-              , messageText = Just "I did not know my rights in the UK and had no money but soon I discovered I had choices."
+              , altText = StoryTwo2ImageAlt
+              , messageText = Just StoryTwo2Message
               }
-            , { quoteText =
-                    """One day I broke down at my health care class. My teacher was so supportive. She told me about The Haven and they found me a
-                    support worker who spoke Spanish. They talked to social services for me and found me an immigration solicitor.
-                    """
+            , { quoteText = StoryTwo3Quote
               , imagePath = AssetPath "story_images/ama_3.jpg"
-              , altText = "A woman crying at a desk"
+              , altText = StoryTwo3ImageAlt
               , messageText = Nothing
               }
-            , { quoteText =
-                    """I have a house now, with my children, and away from my abusive husband. My solicitor is helping me with immigration documents and divorce papers.
-                    For the first time in a long time I can sleep and look forward to the future.
-                    """
+            , { quoteText = StoryTwo4Quote
               , imagePath = AssetPath "story_images/ama_4.jpg"
-              , altText = "A smiling woman with two children"
+              , altText = StoryTwo4ImageAlt
               , messageText = Nothing
               }
             ]
