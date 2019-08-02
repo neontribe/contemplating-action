@@ -18,7 +18,7 @@ supportersContent language =
         t =
             translate language
     in
-    div [ class " section section--lighter" ]
+    div [ class "section" ]
         [ div []
             [ h2 [] [ text (t SupportersTitleH2) ]
             , p [] [ text (t SupportersP1) ]

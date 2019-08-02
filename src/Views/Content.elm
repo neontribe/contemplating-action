@@ -73,7 +73,7 @@ view model =
     case model.currentPage of
         Home ->
             div [ class "section--vertical-fill-center" ]
-                [ section [ class "section section--highlight section--align-bottom" ]
+                [ section [ class "section section--lighter section--align-bottom" ]
                     [ h2 []
                         [ text (t HomeReadAboutH2) ]
                     , div [ class "button-group button-group--row" ]
@@ -84,7 +84,7 @@ view model =
                         ]
                     , img [ class "block", src (path (AssetPath "banner.png")), alt (t HomeBannerImageAlt) ] []
                     ]
-                , section [ class "section section--vertical-fill-center section--lighter" ]
+                , section [ class "section section--vertical-fill-center" ]
                     [ h2 [] [ text (t HomeTalkToSomeoneH2) ]
                     , p []
                         [ text (t HomeP1) ]
@@ -120,12 +120,12 @@ view model =
 
         StoriesPage ->
             div [ class "section--vertical-fill-center" ]
-                [ div [ class "section section--darker section--vertical-fill-center" ]
+                [ div [ class "section section--lighter section--vertical-fill-center" ]
                     [ h2 [] [ text (t StoriesTitleH2) ]
                     , storyTeaser model.language 1
                     , storyTeaser model.language 2
                     ]
-                , div [ class "section section--highlight" ]
+                , div [ class "section section--lighter" ]
                     [ div [ class "text-center" ]
                         [ a
                             [ class "button button--alternate button--full-width button--default-width--desktop"
@@ -139,7 +139,7 @@ view model =
 
         StoryPage id ->
             article [ class "section--vertical-fill-center" ]
-                [ div [ class "section section--darker section--vertical-fill-center" ]
+                [ div [ class "section section--lighter section--vertical-fill-center" ]
                     [ h2 []
                         [ text (t (storyTitle id)) ]
                     , card model.language id 1
@@ -147,7 +147,7 @@ view model =
                     , card model.language id 3
                     , card model.language id 4
                     ]
-                , div [ class "section section--highlight section--story-end" ]
+                , div [ class "section section--story-end" ]
                     [ p [ class "story--related" ] [ text (t StoryCardStartJourneyPrompt) ]
                     , div [ class "button-group story--related" ] (storyRelatedInfo model.language id)
                     , div [ class "button-group story--related" ]
