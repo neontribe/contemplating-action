@@ -8,7 +8,7 @@ import CallToAction exposing (CallToAction, CallToActionType(..), callToActionCo
 import Html exposing (Html, a, article, button, div, h2, iframe, img, p, section, span, text, ul)
 import Html.Attributes exposing (alt, class, height, href, src)
 import Html.Events exposing (onClick)
-import I18n.Keys exposing (Key(..))
+import I18n.Keys exposing (StringKey(..))
 import I18n.Translate exposing (translate)
 import Icon exposing (getIcon)
 import Info exposing (getInfo, getInfoBySlug, infoCard, infoPage)
@@ -112,7 +112,7 @@ view model =
                             ]
                         ]
                     ]
-                , footerContent model.language
+                , footerContent
                 ]
 
         SupportersPage ->
@@ -163,7 +163,7 @@ view model =
                 ]
 
         PrivacyPage ->
-            privacyContent model.language
+            privacyContent
 
         InfoToHelpPage ->
             div [ class "section section--info section--vertical-fill-center" ]

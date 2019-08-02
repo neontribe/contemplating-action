@@ -6,16 +6,16 @@ module Views.Footer exposing (footerContent)
 import Html exposing (Html, a, div, footer, text)
 import Html.Attributes exposing (class, href)
 import Html.Events exposing (onClick)
-import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language, translate)
+import I18n.Keys exposing (StringKey(..))
+import I18n.Translate exposing (getString)
 import Messages exposing (Msg(..))
 
 
-footerContent : Language -> Html Msg
-footerContent language =
+footerContent : Html Msg
+footerContent =
     let
         t =
-            translate language
+            getString
     in
     footer [ class "section section--footer text-center text-small" ]
         [ div [ class "footer--item" ]

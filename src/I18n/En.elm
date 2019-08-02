@@ -1,9 +1,20 @@
-module I18n.En exposing (enStrings)
+module I18n.En exposing (enLists, enStrings)
 
-import I18n.Keys exposing (Key(..))
+import I18n.Keys exposing (ListKey(..), StringKey(..))
 
 
-enStrings : Key -> String
+enLists : ListKey -> List String
+enLists key =
+    case key of
+        PrivacyCompanyInfoList ->
+            [ "Neontribe ltd trading as Neontribe"
+            , "Registered as a limited company in England & Wales"
+            , "Business registration: 06165574"
+            , "Registered office: 106 Lincoln St. Norwich, Norfolk, NR2 3LB."
+            ]
+
+
+enStrings : StringKey -> String
 enStrings key =
     case key of
         SiteTitle ->
@@ -84,18 +95,6 @@ enStrings key =
 
         PrivacyIntroP ->
             "This policy relates to www.contemplatingaction.org.uk (“the Site”) which is owned by Neontribe ltd and related activity "
-
-        PrivacyCompanyInfoLi1 ->
-            "Neontribe ltd trading as Neontribe"
-
-        PrivacyCompanyInfoLi2 ->
-            "Registered as a limited company in England & Wales"
-
-        PrivacyCompanyInfoLi3 ->
-            "Business registration: 06165574"
-
-        PrivacyCompanyInfoLi4 ->
-            "Registered office: 106 Lincoln St. Norwich, Norfolk, NR2 3LB."
 
         PrivacyDataCollectH3 ->
             "What information is collected?"

@@ -3,7 +3,7 @@ module Info exposing (Info, getInfo, getInfoBySlug, infoCard, infoPage)
 import Html exposing (Html, a, article, div, h2, li, p, span, text)
 import Html.Attributes exposing (class, href)
 import Html.Events exposing (onClick)
-import I18n.Keys exposing (Key(..))
+import I18n.Keys exposing (StringKey(..))
 import I18n.Translate exposing (Language(..), translate)
 import Icon exposing (getIcon)
 import List
@@ -12,10 +12,10 @@ import Messages exposing (Msg(..))
 
 type alias Info =
     { id : Int
-    , icon : Key
-    , name : Key
-    , slug : Key
-    , infoText : List Key
+    , icon : StringKey
+    , name : StringKey
+    , slug : StringKey
+    , infoText : List StringKey
     }
 
 
@@ -104,7 +104,7 @@ infoPage language info =
         ]
 
 
-renderParas : Language -> List Key -> List (Html msg)
+renderParas : Language -> List StringKey -> List (Html msg)
 renderParas language paras =
     let
         t =

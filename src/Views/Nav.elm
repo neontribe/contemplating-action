@@ -7,7 +7,7 @@ import CallToAction exposing (CallToAction, CallToActionType(..), callToActionCo
 import Html exposing (Html, a, div, nav, span, text)
 import Html.Attributes exposing (class, href, id, rel, target)
 import Html.Events exposing (onClick)
-import I18n.Keys exposing (Key(..))
+import I18n.Keys exposing (StringKey(..))
 import I18n.Translate exposing (translate)
 import Icon exposing (getIcon)
 import Messages exposing (Msg(..))

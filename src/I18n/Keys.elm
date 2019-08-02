@@ -1,7 +1,16 @@
-module I18n.Keys exposing (Key(..))
+module I18n.Keys exposing (AnyKey(..), ListKey(..), StringKey(..))
 
 
-type Key
+type AnyKey
+    = ListKey
+    | StringKey
+
+
+type ListKey
+    = PrivacyCompanyInfoList
+
+
+type StringKey
     = SiteTitle
     | AppTitle
       -- Nav and links
@@ -32,10 +41,6 @@ type Key
       -- Privacy
     | PrivacyTitleH2
     | PrivacyIntroP
-    | PrivacyCompanyInfoLi1
-    | PrivacyCompanyInfoLi2
-    | PrivacyCompanyInfoLi3
-    | PrivacyCompanyInfoLi4
     | PrivacyDataCollectH3
     | PrivacyDataCollectP
     | PrivacyDataCollectLi1

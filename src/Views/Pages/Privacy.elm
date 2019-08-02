@@ -5,17 +5,17 @@ module Views.Pages.Privacy exposing (privacyContent)
 
 import Html exposing (Html, div, h2, h3, li, p, text, ul)
 import Html.Attributes exposing (class)
-import I18n.Keys exposing (Key(..))
-import I18n.Translate exposing (Language, translate)
+import I18n.Keys exposing (ListKey(..), StringKey(..))
+import I18n.Translate exposing (getString, renderList, translate)
 import Messages exposing (Msg(..))
 import Views.Footer exposing (footerContent)
 
 
-privacyContent : Language -> Html Msg
-privacyContent language =
+privacyContent : Html Msg
+privacyContent =
     let
         t =
-            translate language
+            getString
     in
     div [ class "section section--lighter" ]
         [ h2 [] [ text (t PrivacyTitleH2) ]
@@ -24,11 +24,7 @@ privacyContent language =
                 [ text (t PrivacyIntroP)
                 ]
             , ul [ class "company-info" ]
-                [ li [] [ text (t PrivacyCompanyInfoLi1) ]
-                , li [] [ text (t PrivacyCompanyInfoLi2) ]
-                , li [] [ text (t PrivacyCompanyInfoLi3) ]
-                , li [] [ text (t PrivacyCompanyInfoLi4) ]
-                ]
+                (renderList PrivacyCompanyInfoList)
             , h3 [] [ text (t PrivacyDataCollectH3) ]
             , p []
                 [ text (t PrivacyDataCollectP)
@@ -85,5 +81,5 @@ privacyContent language =
 
         -- footer should probably be outside content container but this is easiest for now.
         -- It is conditional on page. Could hide in the story pages with css? But not sure that's any better.
-        , footerContent language
+        , footerContent
         ]
