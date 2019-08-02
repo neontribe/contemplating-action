@@ -1,36 +1,3 @@
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  src: url('./fonts/Poppins-Medium.ttf') format('truetype'),
-       url('./fonts/poppins-medium-webfont.woff') format('woff'),
-       url('./fonts/poppins-medium-webfont.woff2') format('woff2');
-
-}
-
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: bold;
-  src: url('./fonts/Poppins-SemiBold.ttf') format('truetype'),
-       url('./fonts/poppins-semibold-webfont.woff') format('woff'),
-       url('./fonts/poppins-semibold-webfont.woff2') format('woff2');
-
-}
-
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: normal;
-  src: url('./fonts/Poppins-Regular.ttf') format('truetype'),
-       url('./fonts/poppins-regular-webfont.woff2') format('woff2'),
-       url('./fonts/poppins-regular-webfont.woff') format('woff');
-
-}
-
-$nav-height-mobile: 71px;
-$nav-height-desktop--single-line: 54px;
-$nav-height-desktop--double-line: 77px;
 
 /* ------------------------------
 
@@ -38,31 +5,10 @@ $nav-height-desktop--double-line: 77px;
 
 ------------------------------ */
 
-// Contemplating Action variables
-$purple: #662483;
-$purple-light: #8B1ABC;
-$blue-darkest: #1A1E64;
-$blue-dark: #30336d;
-$blue-light: #4575BA;
-$black: #3c3c3b;
-$white: #F5F5F5;
-$grey-light: #eee;
-$grey-light-purple: #E4E1E7;
-$lime-green: #07c103;
-
-// Utility variables
-$white-pure: #ffffff;
-$black-pure: #000000;
-$shadow: rgba(89, 97, 116, 0.4);
-
-// Theme colours
-$primary-colour: $blue-darkest;
-$secondary-colour: $blue-light;
-$text-colour: $black;
-$interaction-colour: $purple;
-$focus-colour: $lime-green;
-
 $max-width: 1044px;
+$nav-height-mobile: 71px;
+$nav-height-desktop--single-line: 54px;
+$nav-height-desktop--double-line: 77px;
 
 /* ------------------------------
 
@@ -76,23 +22,14 @@ $max-width: 1044px;
   box-sizing: border-box;
 }
 
-*:focus {
-  outline-color: $focus-colour;
-}
-
 :root {
-  font-size: 16px;
-  font-family: 'Poppins', 'Arial';
-  line-height: 1.5;
+  font-size: 100%;
 }
 
 body {
   max-width: $max-width;
   padding: 0;
   margin: 0 auto;
-  font-size: 1.1rem;
-  color: $text-colour;
-  background-color: $white-pure;
 
   /* Allow space for mobile nav without overlapping content */
   margin-bottom: $nav-height-mobile;
@@ -118,7 +55,9 @@ label {
   cursor: pointer;
 }
 
-ul, ol, li {
+ul,
+ol,
+li {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -129,14 +68,8 @@ ul, ol, li {
   margin-left: 30px;
 }
 
-.company-info {
-  margin-top: 1em;
-  font-size: 0.9rem;
-}
-
 p {
   margin: 0;
-  font-family: 'Poppins', 'Arial';
 }
 
 button + p {
@@ -149,27 +82,14 @@ ul + p {
   margin-top: 1em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   padding: 0;
   margin: 0;
-  font-family: 'Poppins', 'Arial';
-}
-
-h1 {
-  font-size: 1.75em;
-}
-
-h2 {
-  font-size: 1.35rem;
-  margin-bottom: 1em;
-  line-height: 1.5;
-  font-weight: 600;
-}
-
-h3, h4, h5 {
-  font-size: 1.1rem;
-  line-height: 1.5;
-  margin-top: 1em;
 }
 
 button {
@@ -183,10 +103,6 @@ img {
 }
 
 @media screen and (min-width: 721px) {
-  :root {
-    font-size: 22px;
-  }
-
   body {
     /* Remove spacing for lower navigation */
     margin-bottom: 0;
@@ -237,10 +153,8 @@ img {
   justify-content: center;
   height: 50px;
   width: 50px;
-  color: $white;
   font-size: 1.75rem;
   border-radius: 50%;
-  background-color: $secondary-colour;
 }
 
 .icon--large {
@@ -250,7 +164,6 @@ img {
 }
 
 .icon--alternate {
-  color: $text-colour;
   margin-left: 10px;
 }
 
@@ -287,58 +200,7 @@ img {
 ------------------------------ */
 
 .title--small {
-  font-size: 1.25rem;
   margin-bottom: 10px;
-}
-
-.title--alternate {
-  color: $primary-colour;
-}
-
-/* ------------------------------
-
-   Link
-
------------------------------- */
-
-.link {
-  font-family: 'Poppins', 'Arial';
-  color: inherit;
-  border-bottom: 2px solid currentColor;
-  text-decoration: none;
-
-  &:hover,
-  &:active {
-    color: $interaction-colour;
-  }
-}
-
-.link--plain {
-  color: $interaction-colour;
-  border-bottom-color: transparent;
-  font-weight: normal;
-  text-decoration: none;
-
-  &:hover,
-  &:active {
-    color: $interaction-colour;
-    border-bottom-color: currentColor;
-  }
-}
-
-.link--unstyled{
-  color: inherit;
-  text-decoration: none;
-}
-
-.link--stateless {
-  &:hover,
-  &:active,
-  &:focus {
-    // !important is specified to as an immutability measure
-    color: inherit !important;
-    border-bottom-color: inherit !important;
-  }
 }
 
 /* ------------------------------
@@ -349,19 +211,7 @@ img {
 
 .button {
   display: inline-block;
-  color: $white;
-  background-color: $interaction-colour;
-  border-radius: 5em;
   padding: 15px 20px;
-  font-size: 1.125rem;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.button:active,
-.button:focus,
-.button:hover {
-  background-color: $purple-light;
 }
 
 .button--center {
@@ -375,17 +225,6 @@ img {
 .button--full-width {
   width: 100%;
   text-align: center;
-}
-
-.button--alternate {
-  color: $white;
-  background-color: $interaction-colour;
-}
-
-.button--alternate:active,
-.button--alternate:focus,
-.button--alternate:hover {
-  background-color: $purple-light;
 }
 
 .button--icon {
@@ -445,19 +284,6 @@ img {
 
 .section {
   padding: 40px 20px;
-  background-color: $white;
-}
-
-.section--darker {
-  background-color: $grey-light;
-}
-
-.section--lighter {
-  background-color: $white-pure;
-}
-.section--highlight {
-  color: $text-colour;
-  background-color: $grey-light-purple;
 }
 
 .section--align-bottom {
@@ -513,16 +339,11 @@ img {
 .nav-bar {
   display: flex;
   align-items: stretch;
-  background-color: $primary-colour;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   z-index: 100;
-}
-
-.nav-icon {
-  color: $white;
 }
 
 nav,
@@ -538,23 +359,8 @@ nav,
 .nav-item a {
   flex: 1 0 auto;
   padding: 15px 10px;
-  color: $white;
   text-align: center;
-  text-decoration: none;
-  font-weight: 600;
   line-height: 1;
-}
-
-.nav-item--active,
-.nav-text-selector:hover {
-    color: $white;
-    border-bottom: 2px solid $white;
-  }
-
-.nav-item a:active {
-  .nav-item-text {
-    color: $white;
-  }
 }
 
 .nav-item-text {
@@ -576,7 +382,8 @@ nav,
     max-width: $max-width;
   }
 
-  nav, .nav-bar {
+  nav,
+  .nav-bar {
     justify-content: flex-end;
   }
 
@@ -594,7 +401,6 @@ nav,
 @media screen and (min-width: 860px) {
   .nav-item-text {
     display: inline;
-    font-size: 0.8181rem;
   }
 }
 
@@ -609,38 +415,11 @@ nav,
   display: flex;
   justify-content: center;
   padding: 0;
-  background: $secondary-colour;
-  color: $white;
-}
-
-.section--header a {
-  color: $white;
-  text-decoration: none;
-}
-
-.section--header a:hover {
-  border-bottom: 5px solid $white;
-  cursor: pointer;
-}
-
-.section--header:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 1px;
-  width: 100%;
-  height: 4px;
-  box-shadow: 0 3px 4px 0 $shadow;
 }
 
 .home .section--header {
   height: 120px;
-  font-size: 1.25rem;
   align-items: center;
-}
-
-.home .section--header::after {
-  display: none;
 }
 
 /* ------------------------------
@@ -672,18 +451,10 @@ nav,
 .card {
   width: 100%;
   padding: 15px;
-  border-radius: 10px;
-  font-size: 1rem;
-  background-color: $white;
 }
 
 .card + .card {
   margin-top: 20px;
-}
-
-.card--alternate {
-  color: $white-pure;
-  background-color: $primary-colour;
 }
 
 .card--with-icon {
@@ -739,12 +510,6 @@ nav,
   text-decoration: none;
 }
 
-.info:active,
-.info:focus,
-.info:hover {
-  background-color: $purple;
-}
-
 .info--icon {
   flex-shrink: 0;
   margin-right: 20px;
@@ -766,16 +531,6 @@ nav,
   }
 }
 
-/* Stops hover issue on iPad */
-@media only screen
-  and (min-device-width: 768px)
-  and (max-device-width: 1024px)
-  and (-webkit-min-device-pixel-ratio: 1) {
-    .info:hover {
-      background-color: $purple;
-    }
-}
-
 /* ------------------------------
 
    Stories
@@ -784,7 +539,6 @@ nav,
 
 .stories--more-link {
   margin-top: 10px;
-  font-size:  0.875rem;
 }
 
 /* ------------------------------
@@ -818,7 +572,6 @@ nav,
   height: 0;
   border-left: 35px solid transparent;
   border-right: 35px solid transparent;
-  border-top: 45px solid $white;
 }
 
 .story--illustration {
@@ -831,9 +584,6 @@ nav,
 }
 
 .story--message {
-  background-color: $white;
-  color: $text-colour;
-  font-size: 1rem;
   margin: 0;
   padding: 5px;
   text-align: center;
