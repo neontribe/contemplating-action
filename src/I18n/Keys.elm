@@ -1,13 +1,13 @@
-module I18n.Keys exposing (AnyKey(..), ListKey(..), StringKey(..))
-
-
-type AnyKey
-    = ListKey
-    | StringKey
+module I18n.Keys exposing (ListKey(..), StringKey(..))
 
 
 type ListKey
     = PrivacyCompanyInfoList
+    | PrivacyDataCollectList
+    | PrivacyInfoUsedList
+    | PrivacyInfoSharedList
+    | PrivacyInfoStoredList
+    | PrivacyCookiesList
 
 
 type StringKey
@@ -43,35 +43,17 @@ type StringKey
     | PrivacyIntroP
     | PrivacyDataCollectH3
     | PrivacyDataCollectP
-    | PrivacyDataCollectLi1
-    | PrivacyDataCollectLi2
-    | PrivacyDataCollectLi3
     | PrivacyInfoUsedH3
     | PrivacyInfoUsedP
-    | PrivacyInfoUsedLi1
-    | PrivacyInfoUsedLi2
-    | PrivacyInfoUsedLi3
-    | PrivacyInfoUsedLi4
     | PrivacyInfoSharedH3
     | PrivacyInfoSharedP1
     | PrivacyInfoSharedP2
-    | PrivacyInfoSharedLi1
-    | PrivacyInfoSharedLi2
-    | PrivacyInfoSharedLi3
     | PrivacyInfoStoredH3
-    | PrivacyInfoStoredLi1
-    | PrivacyInfoStoredLi2
-    | PrivacyInfoStoredLi3
-    | PrivacyInfoStoredLi4
     | PrivacyRightsH3
     | PrivacyRightsP
     | PrivacyCookiesH3
     | PrivacyCookiesP1
     | PrivacyCookiesP2
-    | PrivacyCookiesLi1
-    | PrivacyCookiesLi2
-    | PrivacyCookiesLi3
-    | PrivacyCookiesLi4
     | PrivacyTermsH3
     | PrivacyTermsP
       -- Supporters
