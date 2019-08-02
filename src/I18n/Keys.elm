@@ -95,6 +95,8 @@ type Key
     | InfoLikeOtherInfoLink
     | InfoOtherInfoLink
     | InfoNotFoundName
+    | InfoNotFoundSlug
+    | InfoNotFoundIcon
     | InfoNotFoundP1
     | InfoNotFoundP2
     | InfoOneName

@@ -12,10 +12,10 @@ import Messages exposing (Msg(..))
 
 type alias Info =
     { id : Int
-    , icon : String
-    , name : String
-    , slug : String
-    , infoText : List String
+    , icon : Key
+    , name : Key
+    , slug : Key
+    , infoText : List Key
     }
 
 
@@ -23,51 +23,55 @@ type alias Info =
 -- Helpers
 
 
-getInfo : Language -> Int -> Info
-getInfo language infoId =
+getInfo : Int -> Info
+getInfo infoId =
     let
         foundInfo =
-            List.head (List.filter (\i -> i.id == infoId) (infoList language))
+            List.head (List.filter (\i -> i.id == infoId) infoList)
     in
     case foundInfo of
         Just info ->
             info
 
         Nothing ->
-            placeholderInfo language
+            placeholderInfo
 
 
 getInfoBySlug : Language -> String -> Info
-getInfoBySlug language infoSlug =
+getInfoBySlug language slug =
     let
         foundInfo =
-            List.head (List.filter (\i -> i.slug == infoSlug) (infoList language))
+            List.head (List.filter (\i -> translate language i.slug == slug) infoList)
     in
     case foundInfo of
         Just info ->
             info
 
         Nothing ->
-            placeholderInfo language
+            placeholderInfo
 
 
 
 -- Views
 
 
-infoCard : Info -> Html Msg
-infoCard info =
+infoCard : Language -> Info -> Html Msg
+infoCard language info =
+    let
+        t =
+            translate language
+    in
     li []
         [ a
             [ class "card card--alternate info"
-            , href ("#/info-to-help/" ++ info.slug)
+            , href ("#/info-to-help/" ++ t info.slug)
 
             -- Record page source because same event will register from click to info from a story page.
-            , onClick (ButtonPress "information" "view-single" info.slug True)
+            , onClick (ButtonPress "information" "view-single" (t info.slug) True)
             ]
-            [ getIcon info.icon (Just "icon info--icon")
+            [ getIcon (t info.icon) (Just "icon info--icon")
             , span [ class "info--text" ]
-                [ span [ class "link link--stateless" ] [ text info.name ] ]
+                [ span [ class "link link--stateless" ] [ text (t info.name) ] ]
             , span [] [ span [] [ getIcon "arrow-right" Nothing ] ]
             ]
         ]
@@ -83,10 +87,10 @@ infoPage language info =
         [ div [ class "section section--align-bottom" ]
             [ div [ class "card card--alternate card--with-icon" ]
                 [ div [ class "text-center" ]
-                    [ getIcon info.icon (Just "icon icon--large card--icon")
+                    [ getIcon (t info.icon) (Just "icon icon--large card--icon")
                     , article [ class "inset" ]
-                        [ h2 [] [ text info.name ]
-                        , div [] (renderParas info.infoText)
+                        [ h2 [] [ text (t info.name) ]
+                        , div [] (renderParas language info.infoText)
                         ]
                     ]
                 ]
@@ -100,72 +104,68 @@ infoPage language info =
         ]
 
 
-renderParas : List String -> List (Html msg)
-renderParas paras =
-    List.map (\t -> p [] [ text t ]) paras
+renderParas : Language -> List Key -> List (Html msg)
+renderParas language paras =
+    let
+        t =
+            translate language
+    in
+    List.map (\key -> p [] [ text (t key) ]) paras
 
 
 
 -- Info records
 
 
-placeholderInfo : Language -> Info
-placeholderInfo language =
-    let
-        t =
-            translate language
-    in
+placeholderInfo : Info
+placeholderInfo =
     { id = 0
-    , name = t InfoNotFoundName
-    , slug = "not-found"
-    , icon = "question"
+    , name = InfoNotFoundName
+    , slug = InfoNotFoundSlug
+    , icon = InfoNotFoundIcon
     , infoText =
-        [ t InfoNotFoundP1
-        , t InfoNotFoundP2
+        [ InfoNotFoundP1
+        , InfoNotFoundP2
         ]
     }
 
 
-infoList : Language -> List Info
-infoList language =
-    let
-        t =
-            translate language
-    in
+infoList : List Info
+infoList =
     [ { id = 1
-      , name = t InfoOneName
-      , slug = t InfoOneSlug
-      , icon = t InfoOneIcon
-      , infoText = [ t InfoOneP1 ]
+      , name = InfoOneName
+      , slug = InfoOneSlug
+      , icon = InfoOneIcon
+      , infoText = [ InfoOneP1 ]
       }
     , { id = 2
-      , name = t InfoTwoName
-      , slug = t InfoTwoSlug
-      , icon = t InfoTwoIcon
-      , infoText = [ t InfoTwoP1 ]
+      , name = InfoTwoName
+      , slug = InfoTwoSlug
+      , icon = InfoTwoIcon
+      , infoText = [ InfoTwoP1 ]
       }
     , { id = 3
-      , name = t InfoThreeName
-      , slug = t InfoThreeSlug
-      , icon = t InfoThreeIcon
-      , infoText = [ t InfoThreeP1 ]
+      , name = InfoThreeName
+      , slug = InfoThreeSlug
+      , icon = InfoThreeIcon
+      , infoText = [ InfoThreeP1 ]
       }
     , { id = 4
-      , name = t InfoFourName
-      , slug = t InfoFourSlug
-      , icon = t InfoFourIcon
-      , infoText = [ t InfoFourP1 ]
+      , name = InfoFourName
+      , slug = InfoFourSlug
+      , icon = InfoFourIcon
+      , infoText = [ InfoFourP1 ]
       }
     , { id = 5
-      , name = t InfoFiveName
-      , slug = t InfoFiveSlug
-      , icon = t InfoFiveIcon
-      , infoText = [ t InfoFiveP1 ]
+      , name = InfoFiveName
+      , slug = InfoFiveSlug
+      , icon = InfoFiveIcon
+      , infoText = [ InfoFiveP1 ]
       }
     , { id = 6
-      , name = t InfoSixName
-      , slug = t InfoSixSlug
-      , icon = t InfoSixIcon
-      , infoText = [ t InfoSixP1 ]
+      , name = InfoSixName
+      , slug = InfoSixSlug
+      , icon = InfoSixIcon
+      , infoText = [ InfoSixP1 ]
       }
     ]

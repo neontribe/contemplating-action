@@ -99,12 +99,16 @@ storyRelatedInfo language deckId =
 
 getInfoButtons : ( Language, Int ) -> Html Msg
 getInfoButtons ( language, id ) =
+    let
+        t =
+            translate language
+    in
     a
-        [ href ("#/info-to-help/" ++ (getInfo language id).slug)
+        [ href ("#/info-to-help/" ++ t (getInfo id).slug)
         , class "button button--alternate button--full-width"
-        , onClick (ButtonPress "information" "view-single" (getInfo language id).slug True)
+        , onClick (ButtonPress "information" "view-single" (t (getInfo id).slug) True)
         ]
-        [ text (getInfo language id).name ]
+        [ text (t (getInfo id).name) ]
 
 
 card : Language -> Int -> Int -> Html msg
