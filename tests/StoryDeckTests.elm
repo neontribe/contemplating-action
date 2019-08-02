@@ -1,6 +1,7 @@
 module StoryDeckTests exposing (all)
 
 import Expect
+import I18n.Keys exposing (Key(..))
 import StoryDeck exposing (card, storyRelatedInfo, storyTeaser, storyTitle)
 import Test exposing (Test, describe, test, todo)
 
@@ -11,21 +12,21 @@ all =
         [ describe "Getting Story Title"
             [ test "Index of 1" <|
                 \() ->
-                    storyTitle 1 |> Expect.equal "Our Project"
+                    storyTitle 1 |> Expect.equal StoryOneTitle
             , test "Index of 2" <|
                 \() ->
-                    storyTitle 2 |> Expect.equal "The Haven"
+                    storyTitle 2 |> Expect.equal StoryTwoTitle
             , test "Index of 3" <|
                 \() ->
-                    storyTitle 3 |> Expect.equal "Coming soon"
+                    storyTitle 3 |> Expect.equal StoryNotFoundTitle
             , test "Index of 4" <|
                 \() ->
-                    storyTitle 4 |> Expect.equal "Coming soon"
+                    storyTitle 4 |> Expect.equal StoryNotFoundTitle
             , test "Index of 0" <|
                 \() ->
-                    storyTitle 0 |> Expect.equal "Coming soon"
+                    storyTitle 0 |> Expect.equal StoryNotFoundTitle
             , test "Index of 500" <|
                 \() ->
-                    storyTitle 500 |> Expect.equal "Coming soon"
+                    storyTitle 500 |> Expect.equal StoryNotFoundTitle
             ]
         ]
