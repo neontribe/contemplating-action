@@ -2,7 +2,7 @@ module Copy.Keys exposing (Copy(..), Key(..))
 
 
 type Copy
-    = Copy String
+    = CopyText String
     | CopyList (List String)
 
 

@@ -18,36 +18,30 @@ privacyContent =
             renderCopy
     in
     div [ class "section section--lighter" ]
-        [ h2 [] (t PrivacyTitleH2)
+        [ h2 [] [ t PrivacyTitleH2 ]
         , div []
-            [ p [] (t PrivacyIntroP)
-            , ul [ class "company-info" ]
-                (t PrivacyCompanyInfoList)
-            , h3 [] (t PrivacyDataCollectH3)
-            , p [] (t PrivacyDataCollectP)
-            , ul [ class "ul--disc" ]
-                (t PrivacyDataCollectList)
-            , h3 [] (t PrivacyInfoUsedH3)
-            , p [] (t PrivacyInfoUsedP)
-            , ul [ class "ul--disc" ]
-                (t PrivacyInfoUsedList)
-            , h3 [] (t PrivacyInfoSharedH3)
-            , p [] (t PrivacyInfoSharedP1)
-            , p [] (t PrivacyInfoSharedP2)
-            , ul [ class "ul--disc" ]
-                (t PrivacyInfoSharedList)
-            , h3 [] (t PrivacyInfoStoredH3)
-            , ul [ class "ul--disc" ]
-                (t PrivacyInfoStoredList)
-            , h3 [] (t PrivacyRightsH3)
-            , p [] (t PrivacyRightsP)
-            , h3 [] (t PrivacyCookiesH3)
-            , p [] (t PrivacyCookiesP1)
-            , p [] (t PrivacyCookiesP2)
-            , ul [ class "ul--disc" ]
-                (t PrivacyCookiesList)
-            , h3 [] (t PrivacyTermsH3)
-            , p [] (t PrivacyTermsP)
+            [ p [] [ t PrivacyIntroP ]
+            , t PrivacyCompanyInfoList
+            , h3 [] [ t PrivacyDataCollectH3 ]
+            , p [] [ t PrivacyDataCollectP ]
+            , t PrivacyDataCollectList
+            , h3 [] [ t PrivacyInfoUsedH3 ]
+            , p [] [ t PrivacyInfoUsedP ]
+            , t PrivacyInfoUsedList
+            , h3 [] [ t PrivacyInfoSharedH3 ]
+            , p [] [ t PrivacyInfoSharedP1 ]
+            , p [] [ t PrivacyInfoSharedP2 ]
+            , t PrivacyInfoSharedList
+            , h3 [] [ t PrivacyInfoStoredH3 ]
+            , t PrivacyInfoStoredList
+            , h3 [] [ t PrivacyRightsH3 ]
+            , p [] [ t PrivacyRightsP ]
+            , h3 [] [ t PrivacyCookiesH3 ]
+            , p [] [ t PrivacyCookiesP1 ]
+            , p [] [ t PrivacyCookiesP2 ]
+            , t PrivacyCookiesList
+            , h3 [] [ t PrivacyTermsH3 ]
+            , p [] [ t PrivacyTermsP ]
             ]
 
         -- footer should probably be outside content container but this is easiest for now.

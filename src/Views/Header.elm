@@ -23,7 +23,7 @@ view model =
         Home ->
             header []
                 [ div [ class "section section--header text-center" ]
-                    [ h1 [] (t AppTitle)
+                    [ h1 [] [ t AppTitle ]
                     ]
                 ]
 
@@ -31,6 +31,6 @@ view model =
         _ ->
             header []
                 [ div [ class "section section--header text-center" ]
-                    [ h1 [] [ a [ href "#" ] (t AppTitle) ]
+                    [ h1 [] [ a [ href "#" ] [ t AppTitle ] ]
                     ]
                 ]

@@ -7,83 +7,83 @@ brandCopy : Key -> Copy
 brandCopy key =
     case key of
         SiteTitle ->
-            Copy "Contemplating Action"
+            CopyText "Contemplating Action"
 
         AppTitle ->
-            Copy "Contemplating Action"
+            CopyText "Contemplating Action"
 
         CallToActionDestination ->
-            Copy "https://contemplating-action.typeform.com/to/zUOTYA"
+            CopyText "https://contemplating-action.typeform.com/to/zUOTYA"
 
         CallToActionDestinationDisplay ->
-            Copy ""
+            CopyText ""
 
         CallToActionLong ->
-            Copy "Take part in our survey"
+            CopyText "Take part in our survey"
 
         CallToActionShort ->
-            Copy "Survey"
+            CopyText "Survey"
 
         ContentLinkLong ->
-            Copy "Find out more"
+            CopyText "Find out more"
 
         ContentLinkMedium ->
-            Copy "Find Out More"
+            CopyText "Find Out More"
 
         ContentLinkShort ->
-            Copy "Find Out More"
+            CopyText "Find Out More"
 
         ContactLinkLong ->
-            Copy "hello@contemplatingaction.org.uk"
+            CopyText "hello@contemplatingaction.org.uk"
 
         ContactLinkShort ->
-            Copy "Email"
+            CopyText "Email"
 
         ContactLinkDestination ->
-            Copy "mailto:hello@contemplatingaction.org.uk"
+            CopyText "mailto:hello@contemplatingaction.org.uk"
 
         ExitSite ->
-            Copy "Exit Site"
+            CopyText "Exit Site"
 
         IconCallToAction ->
-            Copy "check-square-o"
+            CopyText "check-square-o"
 
         IconStories ->
-            Copy "question-circle-o"
+            CopyText "question-circle-o"
 
         IconContact ->
-            Copy "envelope"
+            CopyText "envelope"
 
         IconExit ->
-            Copy "exit-door"
+            CopyText "exit-door"
 
         HomeReadAboutH2 ->
-            Copy "A project exploring how to encourage people to seek support. Can visual stories help change lives?"
+            CopyText "A project exploring how to encourage people to seek support. Can visual stories help change lives?"
 
         HomeBannerImageAlt ->
-            Copy "A description of banner image."
+            CopyText "A description of banner image."
 
         HomeTalkToSomeoneH2 ->
-            Copy "Breaking down fears and barriers."
+            CopyText "Breaking down fears and barriers."
 
         HomeP1 ->
-            Copy "This is a demonstration version of a web app we believe could be used by different organisations to encourage people to use a helpline or web chat or text service. We believe that reassuring people that their fears and challenges are shared will help them take early steps on a journey of change. In a live app the information in this section would be additional information about the organisation and it’s support services for people who did not follow the direct link to the stories."
+            CopyText "This is a demonstration version of a web app we believe could be used by different organisations to encourage people to use a helpline or web chat or text service. We believe that reassuring people that their fears and challenges are shared will help them take early steps on a journey of change. In a live app the information in this section would be additional information about the organisation and it’s support services for people who did not follow the direct link to the stories."
 
         HomeLinkDisplay ->
-            Copy "Read in depth about this project"
+            CopyText "Read in depth about this project"
 
         HomeLinkDestination ->
-            Copy "https://neontribe.co.uk/contemplating-action"
+            CopyText "https://neontribe.co.uk/contemplating-action"
 
         HomeP2 ->
-            Copy "This space is used to give a reminder about what to do in a crisis or high risk situation when the app is not the right support."
+            CopyText "This space is used to give a reminder about what to do in a crisis or high risk situation when the app is not the right support."
 
         -- Privacy Page
         PrivacyTitleH2 ->
-            Copy "Contemplating Action Privacy Policy and Cookies"
+            CopyText "Contemplating Action Privacy Policy and Cookies"
 
         PrivacyIntroP ->
-            Copy "This policy relates to www.contemplatingaction.org.uk (“the Site”) which is owned by Neontribe ltd and related activity "
+            CopyText "This policy relates to www.contemplatingaction.org.uk (“the Site”) which is owned by Neontribe ltd and related activity "
 
         PrivacyCompanyInfoList ->
             CopyList
@@ -94,10 +94,10 @@ brandCopy key =
                 ]
 
         PrivacyDataCollectH3 ->
-            Copy "What information is collected?"
+            CopyText "What information is collected?"
 
         PrivacyDataCollectP ->
-            Copy "We collect the following information from people who use this website:"
+            CopyText "We collect the following information from people who use this website:"
 
         PrivacyDataCollectList ->
             CopyList
@@ -107,10 +107,10 @@ brandCopy key =
                 ]
 
         PrivacyInfoUsedH3 ->
-            Copy "How is the information used?"
+            CopyText "How is the information used?"
 
         PrivacyInfoUsedP ->
-            Copy "Neontribe uses the information you provide to:"
+            CopyText "Neontribe uses the information you provide to:"
 
         PrivacyInfoUsedList ->
             CopyList
@@ -121,13 +121,13 @@ brandCopy key =
                 ]
 
         PrivacyInfoSharedH3 ->
-            Copy ""
+            CopyText ""
 
         PrivacyInfoSharedP1 ->
-            Copy "If you chose to give us contact details we will only contact you in relation to these four things. You can also tell us if you no longer wish to receive information from Neontribe by replying to any email from us with the subject line Unsubscribe, or sending a message to info@neontribe.co.uk requesting to unsubscribe."
+            CopyText "If you chose to give us contact details we will only contact you in relation to these four things. You can also tell us if you no longer wish to receive information from Neontribe by replying to any email from us with the subject line Unsubscribe, or sending a message to info@neontribe.co.uk requesting to unsubscribe."
 
         PrivacyInfoSharedP2 ->
-            Copy "Information that is identifiable as relating to you (i.e. it has not been edited to make it anonymous) is not shared with or sold to other organizations for commercial purposes, other than under the following circumstances:"
+            CopyText "Information that is identifiable as relating to you (i.e. it has not been edited to make it anonymous) is not shared with or sold to other organizations for commercial purposes, other than under the following circumstances:"
 
         PrivacyInfoSharedList ->
             CopyList
@@ -137,7 +137,7 @@ brandCopy key =
                 ]
 
         PrivacyInfoStoredH3 ->
-            Copy "Where is the information stored?"
+            CopyText "Where is the information stored?"
 
         PrivacyInfoStoredList ->
             CopyList
@@ -148,19 +148,19 @@ brandCopy key =
                 ]
 
         PrivacyRightsH3 ->
-            Copy "Your rights"
+            CopyText "Your rights"
 
         PrivacyRightsP ->
-            Copy "We guarantee to meet your rights in compliance with GDPR. Find out about those rights from the ICO GDPR indvidual rights guide. To exercise any of your rights, please contact us at hello@contemplatingaction.org.uk"
+            CopyText "We guarantee to meet your rights in compliance with GDPR. Find out about those rights from the ICO GDPR indvidual rights guide. To exercise any of your rights, please contact us at hello@contemplatingaction.org.uk"
 
         PrivacyCookiesH3 ->
-            Copy "Use of cookies"
+            CopyText "Use of cookies"
 
         PrivacyCookiesP1 ->
-            Copy "Cookies are pieces of information that a website transfers to your hard drive. Most web browsers automatically accept cookies, but if you prefer, you can change your browser to prevent that and will still be able to use the site. "
+            CopyText "Cookies are pieces of information that a website transfers to your hard drive. Most web browsers automatically accept cookies, but if you prefer, you can change your browser to prevent that and will still be able to use the site. "
 
         PrivacyCookiesP2 ->
-            Copy "Contemplating Action uses cookies to:"
+            CopyText "Contemplating Action uses cookies to:"
 
         PrivacyCookiesList ->
             CopyList
@@ -171,271 +171,271 @@ brandCopy key =
                 ]
 
         PrivacyTermsH3 ->
-            Copy "Your acceptance of these terms"
+            CopyText "Your acceptance of these terms"
 
         PrivacyTermsP ->
-            Copy "By using this site, you consent to the collection and use of this information by Neontribe and to our privacy policy. Please send any questions, concerns or comments you have about these policies to info@neontribe.co.uk "
+            CopyText "By using this site, you consent to the collection and use of this information by Neontribe and to our privacy policy. Please send any questions, concerns or comments you have about these policies to info@neontribe.co.uk "
 
         -- Supporters Page
         SupportersTitleH2 ->
-            Copy "Our Supporters"
+            CopyText "Our Supporters"
 
         SupportersP1 ->
-            Copy "This page, available in the landing page footer, allows organisations to thank their partners."
+            CopyText "This page, available in the landing page footer, allows organisations to thank their partners."
 
         SupportersP2 ->
-            Copy "We are grateful to all the partners that have made this project possible."
+            CopyText "We are grateful to all the partners that have made this project possible."
 
         CastLogoAlt ->
-            Copy "CAST"
+            CopyText "CAST"
 
         ComicReliefLogoAlt ->
-            Copy "Comic Relief"
+            CopyText "Comic Relief"
 
         DepartmentForCultureLogoAlt ->
-            Copy "Department for Culture Media & Sport"
+            CopyText "Department for Culture Media & Sport"
 
         BigLotteryLogoAlt ->
-            Copy "Big Lottery Fund"
+            CopyText "Big Lottery Fund"
 
         SupportersP3 ->
-            Copy "Contemplating Action is a partnership with CAST - Centre for Acceleration of Social Technology."
+            CopyText "Contemplating Action is a partnership with CAST - Centre for Acceleration of Social Technology."
 
         SupportersP4 ->
-            Copy "The initial You Matter app which inspired Contemplating Action was part of Tech vs Abuse. This grant was funded through a joint funding initiative between the Tampon Tax Fund, a partnership between HM Government and Comic Relief, and the Big Lottery Fund."
+            CopyText "The initial You Matter app which inspired Contemplating Action was part of Tech vs Abuse. This grant was funded through a joint funding initiative between the Tampon Tax Fund, a partnership between HM Government and Comic Relief, and the Big Lottery Fund."
 
         NeontribeLogoAlt ->
-            Copy "Neontribe"
+            CopyText "Neontribe"
 
         HavenLogoAlt ->
-            Copy "The Haven Wolverhampton"
+            CopyText "The Haven Wolverhampton"
 
         SupportersP5 ->
-            Copy "This website has been developed by Neontribe and The Haven, together with women who have been victims of domestic abuse. The Haven is a Wolverhampton based charity which supports women and dependent children who are vulnerable to domestic violence, homelessness and abuse."
+            CopyText "This website has been developed by Neontribe and The Haven, together with women who have been victims of domestic abuse. The Haven is a Wolverhampton based charity which supports women and dependent children who are vulnerable to domestic violence, homelessness and abuse."
 
         FooterSupportersText ->
-            Copy "Find out about our"
+            CopyText "Find out about our"
 
         FooterSupportersLink ->
-            Copy "supporters"
+            CopyText "supporters"
 
         FooterPrivacyText ->
-            Copy "Read our"
+            CopyText "Read our"
 
         FooterPrivacyLink ->
-            Copy "privacy policy"
+            CopyText "privacy policy"
 
         FooterRegisteredText ->
-            Copy ""
+            CopyText ""
 
         FooterCopyrightLink ->
-            Copy "neontribe.co.uk"
+            CopyText "neontribe.co.uk"
 
         InfoTitleH2 ->
-            Copy "Information to help you"
+            CopyText "Information to help you"
 
         InfoLikeMoreInfoLink ->
-            Copy "I'd like some more information"
+            CopyText "I'd like some more information"
 
         InfoLikeOtherInfoLink ->
-            Copy "I'd like some other information"
+            CopyText "I'd like some other information"
 
         InfoOtherInfoLink ->
-            Copy "Other information to help you"
+            CopyText "Other information to help you"
 
         InfoNotFoundName ->
-            Copy "Not found"
+            CopyText "Not found"
 
         InfoNotFoundSlug ->
-            Copy "not-found"
+            CopyText "not-found"
 
         InfoNotFoundIcon ->
-            Copy "question"
+            CopyText "question"
 
         InfoNotFoundP1 ->
-            Copy "We can't find a page with that title, sorry."
+            CopyText "We can't find a page with that title, sorry."
 
         InfoNotFoundP2 ->
-            Copy "Please use the 'Other information to help you' page to see if we have the topic you are looking for."
+            CopyText "Please use the 'Other information to help you' page to see if we have the topic you are looking for."
 
         InfoOneName ->
-            Copy "About the project"
+            CopyText "About the project"
 
         InfoOneSlug ->
-            Copy "about"
+            CopyText "about"
 
         InfoOneIcon ->
-            Copy "question-circle-o"
+            CopyText "question-circle-o"
 
         InfoOneP1 ->
-            Copy "In 2017, The Haven Wolverhampton, worked with Neontribe and women who had been through domestic abuse. We co-designed a web app to encourage other women in that situation to seek support and advice. We want to find out if the structure of that app could be used by different organisations. We believe that reassuring people that their fears and challenges are shared could help them take early steps on a journey of change such as contacting a support service."
+            CopyText "In 2017, The Haven Wolverhampton, worked with Neontribe and women who had been through domestic abuse. We co-designed a web app to encourage other women in that situation to seek support and advice. We want to find out if the structure of that app could be used by different organisations. We believe that reassuring people that their fears and challenges are shared could help them take early steps on a journey of change such as contacting a support service."
 
         InfoTwoName ->
-            Copy "Bite size information"
+            CopyText "Bite size information"
 
         InfoTwoSlug ->
-            Copy "bite-size-info"
+            CopyText "bite-size-info"
 
         InfoTwoIcon ->
-            Copy "info-circle"
+            CopyText "info-circle"
 
         InfoTwoP1 ->
-            Copy "We include bite size information relating to a small number of fears and barriers that are likely to be stopping people from taking the next step. Keeping the language simple we aim to be open and honest, with a reassuring tone. We resist the temptation to provide all the information people might need. Our goal is to offer just enough to help people reach out to support services. Other websites have excellent longer content."
+            CopyText "We include bite size information relating to a small number of fears and barriers that are likely to be stopping people from taking the next step. Keeping the language simple we aim to be open and honest, with a reassuring tone. We resist the temptation to provide all the information people might need. Our goal is to offer just enough to help people reach out to support services. Other websites have excellent longer content."
 
         InfoThreeName ->
-            Copy "Visual Storytelling"
+            CopyText "Visual Storytelling"
 
         InfoThreeSlug ->
-            Copy "visual-storytelling"
+            CopyText "visual-storytelling"
 
         InfoThreeIcon ->
-            Copy "pencil"
+            CopyText "pencil"
 
         InfoThreeP1 ->
-            Copy "Many organisations struggle with the same problem with stories. We know stories can be powerful, we want to use them for many reasons. Unfortunately people don’t always like to spend time reading them online. We believe that visual storytelling can change this. Contemplating Action has a budget for artists, to test whether this 4 image story format can encourage more people to read them."
+            CopyText "Many organisations struggle with the same problem with stories. We know stories can be powerful, we want to use them for many reasons. Unfortunately people don’t always like to spend time reading them online. We believe that visual storytelling can change this. Contemplating Action has a budget for artists, to test whether this 4 image story format can encourage more people to read them."
 
         InfoFourName ->
-            Copy "What is the survey?"
+            CopyText "What is the survey?"
 
         InfoFourSlug ->
-            Copy "survey"
+            CopyText "survey"
 
         InfoFourIcon ->
-            Copy "check-square-o"
+            CopyText "check-square-o"
 
         InfoFourP1 ->
-            Copy "We would like you to take our survey. We want to understand whether staff in organisations who work most closely with people seeking support think this approach could work. We’re interested in your instincts as well as any evidence you might share. It will help us decide where to take the project next."
+            CopyText "We would like you to take our survey. We want to understand whether staff in organisations who work most closely with people seeking support think this approach could work. We’re interested in your instincts as well as any evidence you might share. It will help us decide where to take the project next."
 
         InfoFiveName ->
-            Copy "Can my organisation try this?"
+            CopyText "Can my organisation try this?"
 
         InfoFiveSlug ->
-            Copy "try-this"
+            CopyText "try-this"
 
         InfoFiveIcon ->
-            Copy "group"
+            CopyText "group"
 
         InfoFiveP1 ->
-            Copy "We’re actively looking for partner charities interested in experimenting with this visual storytelling format. So if you have a helpline, webchat, messaging service or even a face to face service, we could work together on whether an app could help people connect to those services. We have small amounts of funding to support charities getting involved. Please show your interest by taking the survey."
+            CopyText "We’re actively looking for partner charities interested in experimenting with this visual storytelling format. So if you have a helpline, webchat, messaging service or even a face to face service, we could work together on whether an app could help people connect to those services. We have small amounts of funding to support charities getting involved. Please show your interest by taking the survey."
 
         InfoSixName ->
-            Copy "Who is involved in this project?"
+            CopyText "Who is involved in this project?"
 
         InfoSixSlug ->
-            Copy "who-is-involved"
+            CopyText "who-is-involved"
 
         InfoSixIcon ->
-            Copy "involved"
+            CopyText "involved"
 
         InfoSixP1 ->
-            Copy "This is a partnership between CAST - a charity driving social change through digital technology - and digital development agency Neontribe. It is one of a number of projects aimed at supporting civic and social organisations to grow confident in using digital tools to achieve their charitable objectives. It is possible thanks to The Haven, Wolverhampton sharing technology developed for and with the people they work with."
+            CopyText "This is a partnership between CAST - a charity driving social change through digital technology - and digital development agency Neontribe. It is one of a number of projects aimed at supporting civic and social organisations to grow confident in using digital tools to achieve their charitable objectives. It is possible thanks to The Haven, Wolverhampton sharing technology developed for and with the people they work with."
 
         StoriesTitleH2 ->
-            Copy "Stories"
+            CopyText "Stories"
 
         StoriesTeaserMoreLink title ->
-            Copy ("See " ++ title ++ "'s Story")
+            CopyText ("See " ++ title ++ "'s Story")
 
         StoryCardH3 cardId ->
-            Copy ("Part " ++ String.fromInt cardId ++ " of 4")
+            CopyText ("Part " ++ String.fromInt cardId ++ " of 4")
 
         StoryCardStartJourneyPrompt ->
-            Copy "Every story is different. Let us help you discover yours."
+            CopyText "Every story is different. Let us help you discover yours."
 
         StoryNotFoundTitle ->
-            Copy "Not found Title"
+            CopyText "Not found Title"
 
         StoryNotFoundTeaser ->
-            Copy "Not found teaser"
+            CopyText "Not found teaser"
 
         StoryNotFoundQuote ->
-            Copy "Not Found Quote"
+            CopyText "Not Found Quote"
 
         StoryNotFoundImageAlt ->
-            Copy "Not found Image"
+            CopyText "Not found Image"
 
         StoryNotFoundMessage ->
-            Copy "Not found Message"
+            CopyText "Not found Message"
 
         StoryOneTitle ->
-            Copy "Our Project"
+            CopyText "Our Project"
 
         StoryOneTeaser ->
-            Copy "This shows you how we believe shaping stories from real people can work so that they help people feel ready to take action"
+            CopyText "This shows you how we believe shaping stories from real people can work so that they help people feel ready to take action"
 
         StoryOneTeaserImageAlt ->
-            Copy "A man kneeling on the floor of a dark room with his head in his hands"
+            CopyText "A man kneeling on the floor of a dark room with his head in his hands"
 
         StoryOne1Quote ->
-            Copy "The story starts with some background. It gives us key pieces of information that make this person’s story clear and relatable. It tends to deal with facts about the situation they were in rather than their feelings. It is always a situation that clearly needed to change."
+            CopyText "The story starts with some background. It gives us key pieces of information that make this person’s story clear and relatable. It tends to deal with facts about the situation they were in rather than their feelings. It is always a situation that clearly needed to change."
 
         StoryOne1ImageAlt ->
-            Copy "A man is kneeling on the floor of a dark room with his head in his hands"
+            CopyText "A man is kneeling on the floor of a dark room with his head in his hands"
 
         StoryOne2Quote ->
-            Copy "Next the story moves on a little. It does one of two things. Either it tells us about a specific incident that began a drive to change things, or it explores the person’s fears and other things that were holding them back. This section focuses on emotions and helps us connect with the person’s story."
+            CopyText "Next the story moves on a little. It does one of two things. Either it tells us about a specific incident that began a drive to change things, or it explores the person’s fears and other things that were holding them back. This section focuses on emotions and helps us connect with the person’s story."
 
         StoryOne2ImageAlt ->
-            Copy "The man looks up a long staircase with a locked door at the top"
+            CopyText "The man looks up a long staircase with a locked door at the top"
 
         StoryOne2Message ->
-            Copy "This bar is used to give a little extra insight into how the person was feeling."
+            CopyText "This bar is used to give a little extra insight into how the person was feeling."
 
         StoryOne3Quote ->
-            Copy "Here the story starts to change for the better. The person becomes able to take a positive step and get some support. The story tells us a little about what happened, how they managed to take the step and how they felt."
+            CopyText "Here the story starts to change for the better. The person becomes able to take a positive step and get some support. The story tells us a little about what happened, how they managed to take the step and how they felt."
 
         StoryOne3ImageAlt ->
-            Copy "The man starts climbing the stairs to reach a hand holding out a key."
+            CopyText "The man starts climbing the stairs to reach a hand holding out a key."
 
         StoryOne4Quote ->
-            Copy "The final section of the story is about hope. It shows that taking a chance can be a positive choice. However it doesn’t suggest that the person’s life is now perfect. It is designed to encourage others to believe they could make a move to a more hopeful place too. It takes care not to sound out of reach."
+            CopyText "The final section of the story is about hope. It shows that taking a chance can be a positive choice. However it doesn’t suggest that the person’s life is now perfect. It is designed to encourage others to believe they could make a move to a more hopeful place too. It takes care not to sound out of reach."
 
         StoryOne4ImageAlt ->
-            Copy "The door is open and the lock is on the floor. The man is outside in a bright and sunny environment holding onto the key."
+            CopyText "The door is open and the lock is on the floor. The man is outside in a bright and sunny environment holding onto the key."
 
         StoryOne4Message ->
-            Copy "sometimes the story highlights a worry that remains, and how the person is coping with it"
+            CopyText "sometimes the story highlights a worry that remains, and how the person is coping with it"
 
         StoryTwoTitle ->
-            Copy "The Haven"
+            CopyText "The Haven"
 
         StoryTwoTeaser ->
-            Copy "This is one of the six stories created for The Haven’s app. The story uses Two’s words but the names have been changed, and the story has been shaped to help others."
+            CopyText "This is one of the six stories created for The Haven’s app. The story uses Two’s words but the names have been changed, and the story has been shaped to help others."
 
         StoryTwoTeaserImageAlt ->
-            Copy "A pregnant woman wrapped in chains"
+            CopyText "A pregnant woman wrapped in chains"
 
         StoryTwo1Quote ->
-            Copy """I was born in Senegal and had lived in Spain as well as the UK and I couldn’t
+            CopyText """I was born in Senegal and had lived in Spain as well as the UK and I couldn’t
             speak English. My husband became abusive after I got pregnant with our first
             child. For years I suffered so many different things."""
 
         StoryTwo1ImageAlt ->
-            Copy "A pregnant woman wrapped in chains"
+            CopyText "A pregnant woman wrapped in chains"
 
         StoryTwo2Quote ->
-            Copy """I wanted to leave, but my husband told me without him I would be sent back to
+            CopyText """I wanted to leave, but my husband told me without him I would be sent back to
             Africa. I was completely dependent on my husband, I did not see any way out of
             my situation."""
 
         StoryTwo2ImageAlt ->
-            Copy "A pregnant woman chained to her husband"
+            CopyText "A pregnant woman chained to her husband"
 
         StoryTwo2Message ->
-            Copy "I did not know my rights in the UK and had no money but soon I discovered I had choices."
+            CopyText "I did not know my rights in the UK and had no money but soon I discovered I had choices."
 
         StoryTwo3Quote ->
-            Copy """One day I broke down at my health care class. My teacher was so supportive. She
+            CopyText """One day I broke down at my health care class. My teacher was so supportive. She
             told me about The Haven and they found me a support worker who spoke Spanish. They
             talked to social services for me and found me an immigration solicitor."""
 
         StoryTwo3ImageAlt ->
-            Copy "A woman crying at a desk"
+            CopyText "A woman crying at a desk"
 
         StoryTwo4Quote ->
-            Copy """I have a house now, with my children, and away from my abusive husband. My
+            CopyText """I have a house now, with my children, and away from my abusive husband. My
             solicitor is helping me with immigration documents and divorce papers. For the
             first time in a long time I can sleep and look forward to the future."""
 
         StoryTwo4ImageAlt ->
-            Copy "A smiling woman with two children"
+            CopyText "A smiling woman with two children"
