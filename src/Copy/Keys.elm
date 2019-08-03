@@ -1,4 +1,4 @@
-module I18n.Keys exposing (ListKey(..), StringKey(..))
+module Copy.Keys exposing (Key(..), ListKey(..))
 
 
 type ListKey
@@ -10,8 +10,9 @@ type ListKey
     | PrivacyCookiesList
 
 
-type StringKey
+type Key
     = SiteTitle
+    | AppTitle
       -- Nav and links
     | CallToActionDestination
     | CallToActionDestinationDisplay

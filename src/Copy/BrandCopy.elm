@@ -1,6 +1,6 @@
-module I18n.En exposing (enLists, enStrings)
+module Copy.BrandCopy exposing (brandCopy, enLists)
 
-import I18n.Keys exposing (ListKey(..), StringKey(..))
+import Copy.Keys exposing (Key(..), ListKey(..))
 
 
 enLists : ListKey -> List String
@@ -47,10 +47,13 @@ enLists key =
             ]
 
 
-enStrings : StringKey -> String
-enStrings key =
+brandCopy : Key -> String
+brandCopy key =
     case key of
         SiteTitle ->
+            "Contemplating Action"
+
+        AppTitle ->
             "Contemplating Action"
 
         CallToActionDestination ->
