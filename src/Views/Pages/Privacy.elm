@@ -3,10 +3,10 @@
 
 module Views.Pages.Privacy exposing (privacyContent)
 
+import Copy.Keys exposing (Key(..))
+import Copy.ToHtml exposing (renderCopy)
 import Html exposing (Html, div, h2, h3, li, p, text, ul)
 import Html.Attributes exposing (class)
-import I18n.Keys exposing (ListKey(..), StringKey(..))
-import I18n.Translate exposing (getString, renderList, translate)
 import Messages exposing (Msg(..))
 import Views.Footer exposing (footerContent)
 
@@ -15,49 +15,39 @@ privacyContent : Html Msg
 privacyContent =
     let
         t =
-            getString
+            renderCopy
     in
     div [ class "section section--lighter" ]
-        [ h2 [] [ text (t PrivacyTitleH2) ]
+        [ h2 [] (t PrivacyTitleH2)
         , div []
-            [ p []
-                [ text (t PrivacyIntroP)
-                ]
+            [ p [] (t PrivacyIntroP)
             , ul [ class "company-info" ]
-                (renderList PrivacyCompanyInfoList)
-            , h3 [] [ text (t PrivacyDataCollectH3) ]
-            , p []
-                [ text (t PrivacyDataCollectP)
-                ]
+                (t PrivacyCompanyInfoList)
+            , h3 [] (t PrivacyDataCollectH3)
+            , p [] (t PrivacyDataCollectP)
             , ul [ class "ul--disc" ]
-                (renderList PrivacyDataCollectList)
-            , h3 [] [ text (t PrivacyInfoUsedH3) ]
-            , p []
-                [ text (t PrivacyInfoUsedP) ]
+                (t PrivacyDataCollectList)
+            , h3 [] (t PrivacyInfoUsedH3)
+            , p [] (t PrivacyInfoUsedP)
             , ul [ class "ul--disc" ]
-                (renderList PrivacyInfoUsedList)
-            , h3 [] [ text (t PrivacyInfoSharedH3) ]
-            , p []
-                [ text (t PrivacyInfoSharedP1) ]
-            , p []
-                [ text (t PrivacyInfoSharedP2) ]
+                (t PrivacyInfoUsedList)
+            , h3 [] (t PrivacyInfoSharedH3)
+            , p [] (t PrivacyInfoSharedP1)
+            , p [] (t PrivacyInfoSharedP2)
             , ul [ class "ul--disc" ]
-                (renderList PrivacyInfoSharedList)
-            , h3 [] [ text (t PrivacyInfoStoredH3) ]
+                (t PrivacyInfoSharedList)
+            , h3 [] (t PrivacyInfoStoredH3)
             , ul [ class "ul--disc" ]
-                (renderList PrivacyInfoStoredList)
-            , h3 [] [ text (t PrivacyRightsH3) ]
-            , p [] [ text (t PrivacyRightsP) ]
-            , h3 [] [ text (t PrivacyCookiesH3) ]
-            , p []
-                [ text (t PrivacyCookiesP1) ]
-            , p []
-                [ text (t PrivacyCookiesP2) ]
+                (t PrivacyInfoStoredList)
+            , h3 [] (t PrivacyRightsH3)
+            , p [] (t PrivacyRightsP)
+            , h3 [] (t PrivacyCookiesH3)
+            , p [] (t PrivacyCookiesP1)
+            , p [] (t PrivacyCookiesP2)
             , ul [ class "ul--disc" ]
-                (renderList PrivacyCookiesList)
-            , h3 [] [ text (t PrivacyTermsH3) ]
-            , p []
-                [ text (t PrivacyTermsP) ]
+                (t PrivacyCookiesList)
+            , h3 [] (t PrivacyTermsH3)
+            , p [] (t PrivacyTermsP)
             ]
 
         -- footer should probably be outside content container but this is easiest for now.
