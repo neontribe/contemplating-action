@@ -1,13 +1,9 @@
-module Copy.Keys exposing (Key(..), ListKey(..))
+module Copy.Keys exposing (Copy(..), Key(..))
 
 
-type ListKey
-    = PrivacyCompanyInfoList
-    | PrivacyDataCollectList
-    | PrivacyInfoUsedList
-    | PrivacyInfoSharedList
-    | PrivacyInfoStoredList
-    | PrivacyCookiesList
+type Copy
+    = Copy String
+    | CopyList (List String)
 
 
 type Key
@@ -41,19 +37,25 @@ type Key
       -- Privacy
     | PrivacyTitleH2
     | PrivacyIntroP
+    | PrivacyCompanyInfoList
     | PrivacyDataCollectH3
     | PrivacyDataCollectP
+    | PrivacyDataCollectList
     | PrivacyInfoUsedH3
     | PrivacyInfoUsedP
+    | PrivacyInfoUsedList
     | PrivacyInfoSharedH3
     | PrivacyInfoSharedP1
     | PrivacyInfoSharedP2
+    | PrivacyInfoSharedList
     | PrivacyInfoStoredH3
+    | PrivacyInfoStoredList
     | PrivacyRightsH3
     | PrivacyRightsP
     | PrivacyCookiesH3
     | PrivacyCookiesP1
     | PrivacyCookiesP2
+    | PrivacyCookiesList
     | PrivacyTermsH3
     | PrivacyTermsP
       -- Supporters

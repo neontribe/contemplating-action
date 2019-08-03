@@ -1,23 +1,15 @@
-module Copy.ToHtml exposing (renderList, renderString)
+module Copy.ToHtml exposing (renderCopy)
 
-import Copy.BrandCopy exposing (brandCopy, enLists)
-import Copy.Keys exposing (Key(..), ListKey(..))
+import Copy.BrandCopy exposing (brandCopy)
+import Copy.Keys exposing (Copy(..), Key(..))
 import Html exposing (Html, li, text)
 
 
-renderList : ListKey -> List (Html msg)
-renderList key =
-    let
-        listItems =
-            enLists
-    in
-    List.map (\item -> li [] [ text item ]) (listItems key)
+renderCopy : Key -> List (Html msg)
+renderCopy key =
+    case brandCopy key of
+        Copy string ->
+            [ text string ]
 
-
-renderString : Key -> List (Html msg)
-renderString key =
-    let
-        copy =
-            brandCopy
-    in
-    [ text (copy key) ]
+        CopyList list ->
+            List.map (\item -> li [] [ text item ]) list
