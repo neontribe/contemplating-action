@@ -1,21 +1,13 @@
-module I18n.Translate exposing (Language(..), getString, renderList, translate)
+module I18n.Translate exposing (Language(..), getString, translate)
 
 import Html exposing (Html, li, text)
-import I18n.En exposing (enLists, enStrings)
+import I18n.En exposing (enStrings)
 import I18n.Keys exposing (ListKey(..), StringKey(..))
 
 
 type Language
     = English
 
-
-renderList : ListKey -> List (Html msg)
-renderList key =
-    let
-        listItems =
-            enLists
-    in
-    List.map (\item -> li [] [ text item ]) (listItems key)
 
 
 getString : StringKey -> String

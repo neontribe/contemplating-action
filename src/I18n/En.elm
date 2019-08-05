@@ -1,50 +1,8 @@
-module I18n.En exposing (enLists, enStrings)
+module I18n.En exposing (enStrings)
 
 import I18n.Keys exposing (ListKey(..), StringKey(..))
 
 
-enLists : ListKey -> List String
-enLists key =
-    case key of
-        PrivacyCompanyInfoList ->
-            [ "Neontribe ltd trading as Neontribe"
-            , "Registered as a limited company in England & Wales"
-            , "Business registration: 06165574"
-            , "Registered office: 106 Lincoln St. Norwich, Norfolk, NR2 3LB."
-            ]
-
-        PrivacyDataCollectList ->
-            [ "Email addresses of people who communicate with us via email"
-            , "Information volunteered by people in the course of using of the website (predominantly survey responses)"
-            , "Analytics and tracking data about people’s site usage"
-            ]
-
-        PrivacyInfoUsedList ->
-            [ "Improve the usability of the Site"
-            , "Help design future projects "
-            , "Contribute to research about third sector use of digital"
-            , "Send you any information you have requested relating to the Contemplating Action project"
-            ]
-
-        PrivacyInfoSharedList ->
-            [ "If it is necessary to share information in order to investigate, prevent, or take action regarding illegal activities, suspected fraud, situations involving potential threats to the physical safety of any person, violations of Terms of Service, or as otherwise required by law."
-            , "If we transfer information about you if Neontribe is acquired by or merged with another organisation, other than an organisation established by us and controlled by us."
-            , "You have explicitly chosen to have us share the information with CAST - the centre for acceleration of social technology whilst giving us the information - in which case it will be freely shared with them."
-            ]
-
-        PrivacyInfoStoredList ->
-            [ "On our computers"
-            , "On our survey provider Typeform’s servers. For more information see Typeform's privacy policy."
-            , "In Google Analytics. For more information see Google's privacy policy."
-            , "By our partner CAST on their servers if you have explicitly expressed the desire to share your information with them whilst using our site. For more information see CAST's privacy policy."
-            ]
-
-        PrivacyCookiesList ->
-            [ "Monitor the number of visitors to our website"
-            , "Monitor how users use our website, i.e. which pages they have accessed"
-            , "To help improve our website"
-            , "For more data on Cookies visit www.aboutcookies.org. In addition to detailing extensive information on cookies this site also provides explanations on how to disable cookies on your computer."
-            ]
 
 
 enStrings : StringKey -> String

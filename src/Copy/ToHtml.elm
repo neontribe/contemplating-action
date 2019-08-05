@@ -1,4 +1,4 @@
-module Copy.ToHtml exposing (renderCopy)
+module Copy.ToHtml exposing (renderCopy, toString)
 
 import Copy.BrandCopy exposing (brandCopy)
 import Copy.Keys exposing (Copy(..), Key(..))
@@ -24,3 +24,11 @@ renderCopy key =
             in
             ul [ class listClass ]
                 (List.map (\item -> li [] [ text item ]) list)
+
+toString : Key -> String
+toString key =
+  case brandCopy key of
+    CopyText string ->
+      string
+    CopyList list ->
+      ""
