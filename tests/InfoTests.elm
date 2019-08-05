@@ -1,7 +1,7 @@
 module InfoTests exposing (all)
 
 import Expect
-import I18n.Keys exposing (StringKey(..))
+import Copy.Keys exposing (Key(..))
 import Info exposing (getInfo)
 import Test exposing (Test, describe, test, todo)
 
