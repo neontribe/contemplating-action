@@ -49,5 +49,5 @@ Currently configured with GITHUB_TOKEN value.
 - `git checkout <release-branch>`
 - `git tag v<semantic version number>`
 - `git push origin --tags`
-- `git push heroku <release-branch>:master
+- `git push heroku <release-branch>:master`
 - Todo automate on tagged release

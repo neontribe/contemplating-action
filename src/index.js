@@ -1,6 +1,7 @@
 'use strict';
 
-require('./styles/app.scss');
+require('./styles/layout.scss');
+require('./styles/theme.scss');
 
 // Requiring after app.scss ensures correct selector precedence
 require('./styles/icons.css');

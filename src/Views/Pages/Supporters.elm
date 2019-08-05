@@ -18,13 +18,13 @@ supportersContent language =
         t =
             translate language
     in
-    div [ class " section section--lighter" ]
+    div [ class "section" ]
         [ div []
             [ h2 [] [ text (t SupportersTitleH2) ]
             , p [] [ text (t SupportersP1) ]
             , p [] [ text (t SupportersP2) ]
             , div [ class "supporter--logo-group" ]
-                [ img [ class "supporter--logo", src (path (AssetPath "supporters_logos/Castlogo.png")), alt "Cast Logo" ] []
+                [ img [ class "supporter--logo supporter--logo-landscape", src (path (AssetPath "supporters_logos/Castlogo.png")), alt "Cast Logo" ] []
                 ]
             , p [] [ text (t SupportersP3) ]
             , div [ class "supporter--logo-group" ]
