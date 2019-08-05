@@ -4,7 +4,7 @@
 module Views.Pages.Privacy exposing (privacyContent)
 
 import Copy.Keys exposing (Key(..))
-import Copy.ToHtml exposing (renderCopy)
+import Copy.Render exposing (toHtml)
 import Html exposing (Html, div, h2, h3, li, p, text, ul)
 import Html.Attributes exposing (class)
 import Messages exposing (Msg(..))
@@ -15,7 +15,7 @@ privacyContent : Html Msg
 privacyContent =
     let
         t =
-            renderCopy
+            toHtml
     in
     div [ class "section section--lighter" ]
         [ h2 [] [ t PrivacyTitleH2 ]

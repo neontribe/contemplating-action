@@ -4,11 +4,11 @@
 module Views.Nav exposing (view)
 
 import CallToAction exposing (CallToAction, CallToActionType(..), callToActionConstructor)
+import Copy.Keys exposing (Key(..))
+import Copy.Render exposing (toString)
 import Html exposing (Html, a, div, nav, span, text)
 import Html.Attributes exposing (class, href, id, rel, target)
 import Html.Events exposing (onClick)
-import I18n.Keys exposing (StringKey(..))
-import I18n.Translate exposing (translate)
 import Icon exposing (getIcon)
 import Messages exposing (Msg(..))
 import Model exposing (Model)
@@ -18,7 +18,7 @@ view : Model -> Html Msg
 view model =
     let
         t =
-            translate model.language
+            toString
     in
     -- Contains Nav for phones - but text email and phone number for desktop and tablet.
     div [ class "nav-bar" ]

@@ -1,7 +1,6 @@
 module Model exposing (Model, init, pageSlug)
 
 import Browser.Navigation as Navigation
-import I18n.Translate exposing (Language(..))
 import Messages exposing (Msg(..))
 import Route exposing (Page(..), pageFromUrl, pageToString)
 import Slug
@@ -11,7 +10,6 @@ import Url
 type alias Model =
     { currentPage : Page
     , idlePage : Page
-    , language : Language
     , navKey : Navigation.Key
     , url : Url.Url
     }
@@ -29,7 +27,7 @@ init _ url navKey =
                 Just aPage ->
                     aPage
     in
-    ( Model maybePage Home English navKey url, Cmd.none )
+    ( Model maybePage Home navKey url, Cmd.none )
 
 
 pageSlug : Page -> String

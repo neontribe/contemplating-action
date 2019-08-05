@@ -1,7 +1,7 @@
 module StoryDeckTests exposing (all)
 
 import Expect
-import I18n.Keys exposing (StringKey(..))
+import Copy.Keys exposing (Key(..))
 import StoryDeck exposing (card, storyRelatedInfo, storyTeaser, storyTitle)
 import Test exposing (Test, describe, test, todo)
 
