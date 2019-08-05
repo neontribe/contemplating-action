@@ -3,7 +3,7 @@ module StoryDeck exposing (card, storyRelatedInfo, storyTeaser, storyTitle)
 import Array
 import Assets exposing (AssetPath(..), path)
 import Copy.Keys exposing (Key(..))
-import Copy.RenderCopy exposing (toHtml, toString)
+import Copy.Render exposing (toHtml, toString)
 import Html exposing (Html, a, blockquote, div, h3, img, p, text)
 import Html.Attributes exposing (alt, class, href, src)
 import Html.Events exposing (onClick)

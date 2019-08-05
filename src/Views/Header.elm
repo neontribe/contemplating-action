@@ -4,7 +4,7 @@
 module Views.Header exposing (view)
 
 import Copy.Keys exposing (Key(..))
-import Copy.RenderCopy exposing (toHtml)
+import Copy.Render exposing (toHtml)
 import Html exposing (Html, a, button, div, h1, header)
 import Html.Attributes exposing (class, href)
 import Html.Events exposing (onClick)

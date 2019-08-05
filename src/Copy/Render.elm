@@ -1,4 +1,4 @@
-module Copy.RenderCopy exposing (toHtml, toString)
+module Copy.Render exposing (toHtml, toString)
 
 import Copy.BrandCopy exposing (brandCopy)
 import Copy.Keys exposing (Copy(..), Key(..))
