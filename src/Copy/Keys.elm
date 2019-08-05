@@ -1,17 +1,14 @@
-module I18n.Keys exposing (ListKey(..), StringKey(..))
+module Copy.Keys exposing (Copy(..), Key(..))
 
 
-type ListKey
-    = PrivacyCompanyInfoList
-    | PrivacyDataCollectList
-    | PrivacyInfoUsedList
-    | PrivacyInfoSharedList
-    | PrivacyInfoStoredList
-    | PrivacyCookiesList
+type Copy
+    = CopyText String
+    | CopyList (List String)
 
 
-type StringKey
+type Key
     = SiteTitle
+    | AppTitle
       -- Nav and links
     | CallToActionDestination
     | CallToActionDestinationDisplay
@@ -40,19 +37,25 @@ type StringKey
       -- Privacy
     | PrivacyTitleH2
     | PrivacyIntroP
+    | PrivacyCompanyInfoList
     | PrivacyDataCollectH3
     | PrivacyDataCollectP
+    | PrivacyDataCollectList
     | PrivacyInfoUsedH3
     | PrivacyInfoUsedP
+    | PrivacyInfoUsedList
     | PrivacyInfoSharedH3
     | PrivacyInfoSharedP1
     | PrivacyInfoSharedP2
+    | PrivacyInfoSharedList
     | PrivacyInfoStoredH3
+    | PrivacyInfoStoredList
     | PrivacyRightsH3
     | PrivacyRightsP
     | PrivacyCookiesH3
     | PrivacyCookiesP1
     | PrivacyCookiesP2
+    | PrivacyCookiesList
     | PrivacyTermsH3
     | PrivacyTermsP
       -- Supporters

@@ -1,15 +1,56 @@
-module I18n.En exposing (enStrings)
+module I18n.En exposing (enLists, enStrings)
 
-import I18n.Keys exposing (Key(..))
+import I18n.Keys exposing (ListKey(..), StringKey(..))
 
 
-enStrings : Key -> String
+enLists : ListKey -> List String
+enLists key =
+    case key of
+        PrivacyCompanyInfoList ->
+            [ "Neontribe ltd trading as Neontribe"
+            , "Registered as a limited company in England & Wales"
+            , "Business registration: 06165574"
+            , "Registered office: 106 Lincoln St. Norwich, Norfolk, NR2 3LB."
+            ]
+
+        PrivacyDataCollectList ->
+            [ "Email addresses of people who communicate with us via email"
+            , "Information volunteered by people in the course of using of the website (predominantly survey responses)"
+            , "Analytics and tracking data about people’s site usage"
+            ]
+
+        PrivacyInfoUsedList ->
+            [ "Improve the usability of the Site"
+            , "Help design future projects "
+            , "Contribute to research about third sector use of digital"
+            , "Send you any information you have requested relating to the Contemplating Action project"
+            ]
+
+        PrivacyInfoSharedList ->
+            [ "If it is necessary to share information in order to investigate, prevent, or take action regarding illegal activities, suspected fraud, situations involving potential threats to the physical safety of any person, violations of Terms of Service, or as otherwise required by law."
+            , "If we transfer information about you if Neontribe is acquired by or merged with another organisation, other than an organisation established by us and controlled by us."
+            , "You have explicitly chosen to have us share the information with CAST - the centre for acceleration of social technology whilst giving us the information - in which case it will be freely shared with them."
+            ]
+
+        PrivacyInfoStoredList ->
+            [ "On our computers"
+            , "On our survey provider Typeform’s servers. For more information see Typeform's privacy policy."
+            , "In Google Analytics. For more information see Google's privacy policy."
+            , "By our partner CAST on their servers if you have explicitly expressed the desire to share your information with them whilst using our site. For more information see CAST's privacy policy."
+            ]
+
+        PrivacyCookiesList ->
+            [ "Monitor the number of visitors to our website"
+            , "Monitor how users use our website, i.e. which pages they have accessed"
+            , "To help improve our website"
+            , "For more data on Cookies visit www.aboutcookies.org. In addition to detailing extensive information on cookies this site also provides explanations on how to disable cookies on your computer."
+            ]
+
+
+enStrings : StringKey -> String
 enStrings key =
     case key of
         SiteTitle ->
-            "Contemplating Action"
-
-        AppTitle ->
             "Contemplating Action"
 
         CallToActionDestination ->
@@ -85,50 +126,17 @@ enStrings key =
         PrivacyIntroP ->
             "This policy relates to www.contemplatingaction.org.uk (“the Site”) which is owned by Neontribe ltd and related activity "
 
-        PrivacyCompanyInfoLi1 ->
-            "Neontribe ltd trading as Neontribe"
-
-        PrivacyCompanyInfoLi2 ->
-            "Registered as a limited company in England & Wales"
-
-        PrivacyCompanyInfoLi3 ->
-            "Business registration: 06165574"
-
-        PrivacyCompanyInfoLi4 ->
-            "Registered office: 106 Lincoln St. Norwich, Norfolk, NR2 3LB."
-
         PrivacyDataCollectH3 ->
             "What information is collected?"
 
         PrivacyDataCollectP ->
             "We collect the following information from people who use this website:"
 
-        PrivacyDataCollectLi1 ->
-            "Email addresses of people who communicate with us via email"
-
-        PrivacyDataCollectLi2 ->
-            "Information volunteered by people in the course of using of the website (predominantly survey responses)"
-
-        PrivacyDataCollectLi3 ->
-            "Analytics and tracking data about people’s site usage"
-
         PrivacyInfoUsedH3 ->
             "How is the information used?"
 
         PrivacyInfoUsedP ->
             "Neontribe uses the information you provide to:"
-
-        PrivacyInfoUsedLi1 ->
-            "Improve the usability of the Site"
-
-        PrivacyInfoUsedLi2 ->
-            "Help design future projects "
-
-        PrivacyInfoUsedLi3 ->
-            "Contribute to research about third sector use of digital"
-
-        PrivacyInfoUsedLi4 ->
-            "Send you any information you have requested relating to the Contemplating Action project"
 
         PrivacyInfoSharedH3 ->
             ""
@@ -139,29 +147,8 @@ enStrings key =
         PrivacyInfoSharedP2 ->
             "Information that is identifiable as relating to you (i.e. it has not been edited to make it anonymous) is not shared with or sold to other organizations for commercial purposes, other than under the following circumstances:"
 
-        PrivacyInfoSharedLi1 ->
-            "If it is necessary to share information in order to investigate, prevent, or take action regarding illegal activities, suspected fraud, situations involving potential threats to the physical safety of any person, violations of Terms of Service, or as otherwise required by law."
-
-        PrivacyInfoSharedLi2 ->
-            "If we transfer information about you if Neontribe is acquired by or merged with another organisation, other than an organisation established by us and controlled by us."
-
-        PrivacyInfoSharedLi3 ->
-            "You have explicitly chosen to have us share the information with CAST - the centre for acceleration of social technology whilst giving us the information - in which case it will be freely shared with them."
-
         PrivacyInfoStoredH3 ->
             "Where is the information stored?"
-
-        PrivacyInfoStoredLi1 ->
-            "On our computers"
-
-        PrivacyInfoStoredLi2 ->
-            "On our survey provider Typeform’s servers. For more information see Typeform's privacy policy."
-
-        PrivacyInfoStoredLi3 ->
-            "In Google Analytics. For more information see Google's privacy policy."
-
-        PrivacyInfoStoredLi4 ->
-            "By our partner CAST on their servers if you have explicitly expressed the desire to share your information with them whilst using our site. For more information see CAST's privacy policy."
 
         PrivacyRightsH3 ->
             "Your rights"
@@ -177,18 +164,6 @@ enStrings key =
 
         PrivacyCookiesP2 ->
             "Contemplating Action uses cookies to:"
-
-        PrivacyCookiesLi1 ->
-            "Monitor the number of visitors to our website"
-
-        PrivacyCookiesLi2 ->
-            "Monitor how users use our website, i.e. which pages they have accessed"
-
-        PrivacyCookiesLi3 ->
-            "To help improve our website"
-
-        PrivacyCookiesLi4 ->
-            "For more data on Cookies visit www.aboutcookies.org. In addition to detailing extensive information on cookies this site also provides explanations on how to disable cookies on your computer."
 
         PrivacyTermsH3 ->
             "Your acceptance of these terms"

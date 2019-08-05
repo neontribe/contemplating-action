@@ -5,7 +5,7 @@ import Assets exposing (AssetPath(..), path)
 import Html exposing (Html, a, blockquote, div, h3, img, p, text)
 import Html.Attributes exposing (alt, class, href, src)
 import Html.Events exposing (onClick)
-import I18n.Keys exposing (Key(..))
+import I18n.Keys exposing (StringKey(..))
 import I18n.Translate exposing (Language(..), translate)
 import Icon exposing (getIcon)
 import Info exposing (getInfo)
@@ -15,10 +15,10 @@ import Messages exposing (Msg(..))
 
 type alias Deck =
     { id : Int
-    , title : Key
-    , teaser : Key
+    , title : StringKey
+    , teaser : StringKey
     , teaserImgPath : AssetPath
-    , teaserImgAltText : Key
+    , teaserImgAltText : StringKey
     , relatedInfo : List Int
     , cards : List Card
     }
@@ -26,9 +26,9 @@ type alias Deck =
 
 type alias Card =
     { imagePath : AssetPath
-    , messageText : Maybe Key
-    , quoteText : Key
-    , altText : Key
+    , messageText : Maybe StringKey
+    , quoteText : StringKey
+    , altText : StringKey
     }
 
 
@@ -36,7 +36,7 @@ type alias Card =
 -- Accessors for Story Deck content
 
 
-storyTitle : Int -> Key
+storyTitle : Int -> StringKey
 storyTitle deckId =
     (getDeck deckId decks).title
 
@@ -46,7 +46,7 @@ storyTeaserImgPath deckId =
     path (getDeck deckId decks).teaserImgPath
 
 
-storyTeaserImgAltText : Int -> Key
+storyTeaserImgAltText : Int -> StringKey
 storyTeaserImgAltText deckId =
     (getDeck deckId decks).teaserImgAltText
 
