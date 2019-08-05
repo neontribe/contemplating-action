@@ -5,7 +5,7 @@ module Views.Nav exposing (view)
 
 import CallToAction exposing (CallToAction, CallToActionType(..), callToActionConstructor)
 import Copy.Keys exposing (Key(..))
-import Copy.ToHtml exposing (toString)
+import Copy.RenderCopy exposing (toString)
 import Html exposing (Html, a, div, nav, span, text)
 import Html.Attributes exposing (class, href, id, rel, target)
 import Html.Events exposing (onClick)

@@ -4,7 +4,7 @@
 module Views.Footer exposing (footerContent)
 
 import Copy.Keys exposing (Key(..))
-import Copy.ToHtml exposing (renderCopy)
+import Copy.RenderCopy exposing (toHtml)
 import Html exposing (Html, a, div, footer, text)
 import Html.Attributes exposing (class, href)
 import Html.Events exposing (onClick)
@@ -15,7 +15,7 @@ footerContent : Html Msg
 footerContent =
     let
         t =
-            renderCopy
+            toHtml
     in
     footer [ class "section section--footer text-center text-small" ]
         [ div [ class "footer--item" ]

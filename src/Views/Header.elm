@@ -4,7 +4,7 @@
 module Views.Header exposing (view)
 
 import Copy.Keys exposing (Key(..))
-import Copy.ToHtml exposing (renderCopy)
+import Copy.RenderCopy exposing (toHtml)
 import Html exposing (Html, a, button, div, h1, header)
 import Html.Attributes exposing (class, href)
 import Html.Events exposing (onClick)
@@ -17,7 +17,7 @@ view : Model -> Html Msg
 view model =
     let
         t =
-            renderCopy
+            toHtml
     in
     case model.currentPage of
         Home ->

@@ -1,4 +1,4 @@
-module Copy.ToHtml exposing (renderCopy, toString)
+module Copy.RenderCopy exposing (toHtml, toString)
 
 import Copy.BrandCopy exposing (brandCopy)
 import Copy.Keys exposing (Copy(..), Key(..))
@@ -6,8 +6,8 @@ import Html exposing (Html, li, text, ul)
 import Html.Attributes exposing (class)
 
 
-renderCopy : Key -> Html msg
-renderCopy key =
+toHtml : Key -> Html msg
+toHtml key =
     case brandCopy key of
         CopyText string ->
             text string
