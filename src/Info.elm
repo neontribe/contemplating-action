@@ -5,7 +5,6 @@ import Copy.RenderCopy exposing (toString)
 import Html exposing (Html, a, article, div, h2, li, p, span, text)
 import Html.Attributes exposing (class, href)
 import Html.Events exposing (onClick)
-import I18n.Translate exposing (Language(..), translate)
 import Icon exposing (getIcon)
 import List
 import Messages exposing (Msg(..))
@@ -38,8 +37,8 @@ getInfo infoId =
             placeholderInfo
 
 
-getInfoBySlug : Language -> String -> Info
-getInfoBySlug language slug =
+getInfoBySlug : String -> Info
+getInfoBySlug slug =
     let
         foundInfo =
             List.head (List.filter (\i -> toString i.slug == slug) infoList)
@@ -56,8 +55,8 @@ getInfoBySlug language slug =
 -- Views
 
 
-infoCard : Language -> Info -> Html Msg
-infoCard language info =
+infoCard : Info -> Html Msg
+infoCard info =
     let
         t =
             toString
@@ -78,8 +77,8 @@ infoCard language info =
         ]
 
 
-infoPage : Language -> Info -> Html Msg
-infoPage language info =
+infoPage : Info -> Html Msg
+infoPage info =
     let
         t =
             toString
@@ -91,7 +90,7 @@ infoPage language info =
                     [ getIcon (t info.icon) (Just "icon icon--large card--icon")
                     , article [ class "inset" ]
                         [ h2 [] [ text (t info.name) ]
-                        , div [] (renderParas language info.infoText)
+                        , div [] (renderParas info.infoText)
                         ]
                     ]
                 ]
@@ -105,8 +104,8 @@ infoPage language info =
         ]
 
 
-renderParas : Language -> List Key -> List (Html msg)
-renderParas language paras =
+renderParas : List Key -> List (Html msg)
+renderParas paras =
     let
         t =
             toString

@@ -7,7 +7,6 @@ import Copy.RenderCopy exposing (toHtml, toString)
 import Html exposing (Html, a, blockquote, div, h3, img, p, text)
 import Html.Attributes exposing (alt, class, href, src)
 import Html.Events exposing (onClick)
-import I18n.Translate exposing (Language(..))
 import Icon exposing (getIcon)
 import Info exposing (getInfo)
 import List
@@ -52,8 +51,8 @@ storyTeaserImgAltText deckId =
     (getDeck deckId decks).teaserImgAltText
 
 
-storyTeaser : Language -> Int -> Html Msg
-storyTeaser language deckId =
+storyTeaser : Int -> Html Msg
+storyTeaser deckId =
     let
         t =
             toString
@@ -93,13 +92,13 @@ storyTeaser language deckId =
         ]
 
 
-storyRelatedInfo : Language -> Int -> List (Html Msg)
-storyRelatedInfo language deckId =
-    List.map getInfoButtons (getRelatedInfoIds ( language, deckId ))
+storyRelatedInfo : Int -> List (Html Msg)
+storyRelatedInfo deckId =
+    List.map getInfoButtons (getRelatedInfoIds deckId )
 
 
-getInfoButtons : ( Language, Int ) -> Html Msg
-getInfoButtons ( language, id ) =
+getInfoButtons : Int -> Html Msg
+getInfoButtons id =
     let
         t =
             toString
@@ -112,8 +111,8 @@ getInfoButtons ( language, id ) =
         [ text (t (getInfo id).name) ]
 
 
-card : Language -> Int -> Int -> Html msg
-card language deckId cardId =
+card : Int -> Int -> Html msg
+card deckId cardId =
     let
         t =
             toString
@@ -126,13 +125,13 @@ card language deckId cardId =
         , div [ class "story--illustration" ]
             [ img [ src (cardImgPath deckId cardId), alt (t (getCard deckId cardId).altText) ]
                 []
-            , cardMessage language deckId cardId
+            , cardMessage deckId cardId
             ]
         ]
 
 
-cardMessage : Language -> Int -> Int -> Html msg
-cardMessage language deckId cardId =
+cardMessage : Int -> Int -> Html msg
+cardMessage  deckId cardId =
     let
         maybeMessage =
             (getCard deckId cardId).messageText
@@ -184,9 +183,9 @@ getDeck deckId deckList =
             placeholderDeck
 
 
-getRelatedInfoIds : ( Language, Int ) -> List ( Language, Int )
-getRelatedInfoIds ( language, deckId ) =
-    List.map (\n -> ( language, n )) (getDeck deckId decks).relatedInfo
+getRelatedInfoIds :  Int -> List Int
+getRelatedInfoIds deckId =
+    List.map (\n ->  n ) (getDeck deckId decks).relatedInfo
 
 
 

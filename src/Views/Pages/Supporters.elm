@@ -4,41 +4,41 @@
 module Views.Pages.Supporters exposing (supportersContent)
 
 import Assets exposing (AssetPath(..), path)
-import Html exposing (Html, div, h2, img, p, text)
+import Copy.Keys exposing (Key(..))
+import Copy.RenderCopy exposing (toHtml, toString)
+import Html exposing (Html, div, h2, img, p)
 import Html.Attributes exposing (alt, class, src)
-import I18n.Keys exposing (StringKey(..))
-import I18n.Translate exposing (Language, translate)
 import Messages exposing (Msg(..))
 import Views.Footer exposing (footerContent)
 
 
-supportersContent : Language -> Html Msg
-supportersContent language =
+supportersContent : Html Msg
+supportersContent =
     let
         t =
-            translate language
+            toHtml
     in
     div [ class "section" ]
         [ div []
-            [ h2 [] [ text (t SupportersTitleH2) ]
-            , p [] [ text (t SupportersP1) ]
-            , p [] [ text (t SupportersP2) ]
+            [ h2 [] [  (t SupportersTitleH2) ]
+            , p [] [  (t SupportersP1) ]
+            , p [] [  (t SupportersP2) ]
             , div [ class "supporter--logo-group" ]
                 [ img [ class "supporter--logo supporter--logo-landscape", src (path (AssetPath "supporters_logos/Castlogo.png")), alt "Cast Logo" ] []
                 ]
-            , p [] [ text (t SupportersP3) ]
+            , p [] [  (t SupportersP3) ]
             , div [ class "supporter--logo-group" ]
-                [ img [ class "supporter--logo", src (path (AssetPath "supporters_logos/comicrelief.svg")), alt (t ComicReliefLogoAlt) ] []
-                , img [ class "supporter--logo", src (path (AssetPath "supporters_logos/DCMSlogo.svg")), alt (t DepartmentForCultureLogoAlt) ] []
-                , img [ class "supporter--logo", src (path (AssetPath "supporters_logos/biglottery.svg")), alt (t BigLotteryLogoAlt) ] []
+                [ img [ class "supporter--logo", src (path (AssetPath "supporters_logos/comicrelief.svg")), alt (toString ComicReliefLogoAlt) ] []
+                , img [ class "supporter--logo", src (path (AssetPath "supporters_logos/DCMSlogo.svg")), alt (toString DepartmentForCultureLogoAlt) ] []
+                , img [ class "supporter--logo", src (path (AssetPath "supporters_logos/biglottery.svg")), alt (toString BigLotteryLogoAlt) ] []
                 ]
-            , p [] [ text (t SupportersP4) ]
+            , p [] [  (t SupportersP4) ]
             , div [ class "supporter--logo-group" ]
-                [ img [ class "supporter--logo", src (path (AssetPath "supporters_logos/neontribelogo.svg")), alt (t NeontribeLogoAlt) ] []
-                , img [ class "supporter--logo", src (path (AssetPath "supporters_logos/havenlogo.svg")), alt (t HavenLogoAlt) ] []
+                [ img [ class "supporter--logo", src (path (AssetPath "supporters_logos/neontribelogo.svg")), alt (toString NeontribeLogoAlt) ] []
+                , img [ class "supporter--logo", src (path (AssetPath "supporters_logos/havenlogo.svg")), alt (toString HavenLogoAlt) ] []
                 ]
             , p []
-                [ text (t SupportersP5) ]
+                [  (t SupportersP5) ]
             ]
 
         -- footer should probably be outside content container but this is easiest for now.

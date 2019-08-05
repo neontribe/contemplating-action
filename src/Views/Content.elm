@@ -116,14 +116,14 @@ view model =
                 ]
 
         SupportersPage ->
-            supportersContent model.language
+            supportersContent
 
         StoriesPage ->
             div [ class "section--vertical-fill-center" ]
                 [ div [ class "section section--lighter section--vertical-fill-center" ]
                     [ h2 [] [ text (t StoriesTitleH2) ]
-                    , storyTeaser model.language 1
-                    , storyTeaser model.language 2
+                    , storyTeaser  1
+                    , storyTeaser  2
                     ]
                 , div [ class "section section--lighter" ]
                     [ div [ class "text-center" ]
@@ -142,14 +142,14 @@ view model =
                 [ div [ class "section section--lighter section--vertical-fill-center" ]
                     [ h2 []
                         [ text (t (storyTitle id)) ]
-                    , card model.language id 1
-                    , card model.language id 2
-                    , card model.language id 3
-                    , card model.language id 4
+                    , card  id 1
+                    , card  id 2
+                    , card  id 3
+                    , card  id 4
                     ]
                 , div [ class "section section--story-end" ]
                     [ p [ class "story--related" ] [ text (t StoryCardStartJourneyPrompt) ]
-                    , div [ class "button-group story--related" ] (storyRelatedInfo model.language id)
+                    , div [ class "button-group story--related" ] (storyRelatedInfo  id)
                     , div [ class "button-group story--related" ]
                         [ a
                             [ href "#/info-to-help/"
@@ -169,14 +169,14 @@ view model =
             div [ class "section section--info section--vertical-fill-center" ]
                 [ h2 [] [ text (t InfoTitleH2) ]
                 , ul [ class "info--list" ]
-                    [ infoCard model.language (getInfo 1)
-                    , infoCard model.language (getInfo 2)
-                    , infoCard model.language (getInfo 3)
-                    , infoCard model.language (getInfo 4)
-                    , infoCard model.language (getInfo 5)
-                    , infoCard model.language (getInfo 6)
+                    [ infoCard  (getInfo 1)
+                    , infoCard  (getInfo 2)
+                    , infoCard  (getInfo 3)
+                    , infoCard  (getInfo 4)
+                    , infoCard  (getInfo 5)
+                    , infoCard  (getInfo 6)
                     ]
                 ]
 
         InfoPage slug ->
-            infoPage model.language (getInfoBySlug model.language slug)
+            infoPage  (getInfoBySlug  slug)
