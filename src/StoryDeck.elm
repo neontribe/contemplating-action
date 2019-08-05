@@ -94,7 +94,7 @@ storyTeaser deckId =
 
 storyRelatedInfo : Int -> List (Html Msg)
 storyRelatedInfo deckId =
-    List.map getInfoButtons (getRelatedInfoIds deckId )
+    List.map getInfoButtons (getRelatedInfoIds deckId)
 
 
 getInfoButtons : Int -> Html Msg
@@ -131,7 +131,7 @@ card deckId cardId =
 
 
 cardMessage : Int -> Int -> Html msg
-cardMessage  deckId cardId =
+cardMessage deckId cardId =
     let
         maybeMessage =
             (getCard deckId cardId).messageText
@@ -183,9 +183,9 @@ getDeck deckId deckList =
             placeholderDeck
 
 
-getRelatedInfoIds :  Int -> List Int
+getRelatedInfoIds : Int -> List Int
 getRelatedInfoIds deckId =
-    List.map (\n ->  n ) (getDeck deckId decks).relatedInfo
+    List.map (\n -> n) (getDeck deckId decks).relatedInfo
 
 
 

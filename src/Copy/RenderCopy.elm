@@ -25,10 +25,12 @@ toHtml key =
             ul [ class listClass ]
                 (List.map (\item -> li [] [ text item ]) list)
 
+
 toString : Key -> String
 toString key =
-  case brandCopy key of
-    CopyText string ->
-      string
-    CopyList list ->
-      ""
+    case brandCopy key of
+        CopyText string ->
+            string
+
+        CopyList list ->
+            ""

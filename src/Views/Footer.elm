@@ -19,16 +19,16 @@ footerContent =
     in
     footer [ class "section section--footer text-center text-small" ]
         [ div [ class "footer--item" ]
-            [ (t FooterSupportersText)
+            [ t FooterSupportersText
             , text " "
             , a [ class "link link--plain", href "#/supporters" ]
-                [ (t FooterSupportersLink) ]
+                [ t FooterSupportersLink ]
             ]
         , div [ class "footer--item" ]
-            [ (t FooterPrivacyText)
+            [ t FooterPrivacyText
             , text " "
             , a [ class "link link--plain", href "#/privacy-policy" ]
-                [ (t FooterPrivacyLink) ]
+                [ t FooterPrivacyLink ]
             ]
         , div [ class "footer--item" ]
             [ text "© 2019 - "
@@ -37,8 +37,8 @@ footerContent =
                 , href "http://www.neontribe.co.uk/"
                 , onClick (ButtonPress "contact" "website" "neontribe-website-footer" True)
                 ]
-                [ (t FooterCopyrightLink) ]
+                [ t FooterCopyrightLink ]
             ]
         , div [ class "footer--item" ]
-            [ (t FooterRegisteredText) ]
+            [ t FooterRegisteredText ]
         ]
