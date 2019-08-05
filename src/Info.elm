@@ -1,9 +1,10 @@
 module Info exposing (Info, getInfo, getInfoBySlug, infoCard, infoPage)
 
+import Copy.Keys exposing (Key(..))
+import Copy.ToHtml exposing (toString)
 import Html exposing (Html, a, article, div, h2, li, p, span, text)
 import Html.Attributes exposing (class, href)
 import Html.Events exposing (onClick)
-import I18n.Keys exposing (StringKey(..))
 import I18n.Translate exposing (Language(..), translate)
 import Icon exposing (getIcon)
 import List
@@ -12,10 +13,10 @@ import Messages exposing (Msg(..))
 
 type alias Info =
     { id : Int
-    , icon : StringKey
-    , name : StringKey
-    , slug : StringKey
-    , infoText : List StringKey
+    , icon : Key
+    , name : Key
+    , slug : Key
+    , infoText : List Key
     }
 
 
@@ -41,7 +42,7 @@ getInfoBySlug : Language -> String -> Info
 getInfoBySlug language slug =
     let
         foundInfo =
-            List.head (List.filter (\i -> translate language i.slug == slug) infoList)
+            List.head (List.filter (\i -> toString i.slug == slug) infoList)
     in
     case foundInfo of
         Just info ->
@@ -59,7 +60,7 @@ infoCard : Language -> Info -> Html Msg
 infoCard language info =
     let
         t =
-            translate language
+            toString
     in
     li []
         [ a
@@ -81,7 +82,7 @@ infoPage : Language -> Info -> Html Msg
 infoPage language info =
     let
         t =
-            translate language
+            toString
     in
     div [ class "section--vertical-fill-center" ]
         [ div [ class "section section--align-bottom" ]
@@ -104,11 +105,11 @@ infoPage language info =
         ]
 
 
-renderParas : Language -> List StringKey -> List (Html msg)
+renderParas : Language -> List Key -> List (Html msg)
 renderParas language paras =
     let
         t =
-            translate language
+            toString
     in
     List.map (\key -> p [] [ text (t key) ]) paras
 

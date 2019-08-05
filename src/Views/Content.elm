@@ -5,11 +5,11 @@ module Views.Content exposing (view)
 
 import Assets exposing (AssetPath(..), path)
 import CallToAction exposing (CallToAction, CallToActionType(..), callToActionConstructor, callToActionNoDesktopButton)
+import Copy.Keys exposing (Key(..))
+import Copy.ToHtml exposing (toString)
 import Html exposing (Html, a, article, button, div, h2, iframe, img, p, section, span, text, ul)
 import Html.Attributes exposing (alt, class, height, href, src)
 import Html.Events exposing (onClick)
-import I18n.Keys exposing (StringKey(..))
-import I18n.Translate exposing (translate)
 import Icon exposing (getIcon)
 import Info exposing (getInfo, getInfoBySlug, infoCard, infoPage)
 import Messages exposing (Msg(..))
@@ -68,7 +68,7 @@ view : Model -> Html Msg
 view model =
     let
         t =
-            translate model.language
+            toString
     in
     case model.currentPage of
         Home ->

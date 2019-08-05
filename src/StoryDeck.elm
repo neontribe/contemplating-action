@@ -2,11 +2,12 @@ module StoryDeck exposing (card, storyRelatedInfo, storyTeaser, storyTitle)
 
 import Array
 import Assets exposing (AssetPath(..), path)
+import Copy.Keys exposing (Key(..))
+import Copy.ToHtml exposing (renderCopy, toString)
 import Html exposing (Html, a, blockquote, div, h3, img, p, text)
 import Html.Attributes exposing (alt, class, href, src)
 import Html.Events exposing (onClick)
-import I18n.Keys exposing (StringKey(..))
-import I18n.Translate exposing (Language(..), translate)
+import I18n.Translate exposing (Language(..))
 import Icon exposing (getIcon)
 import Info exposing (getInfo)
 import List
@@ -15,10 +16,10 @@ import Messages exposing (Msg(..))
 
 type alias Deck =
     { id : Int
-    , title : StringKey
-    , teaser : StringKey
+    , title : Key
+    , teaser : Key
     , teaserImgPath : AssetPath
-    , teaserImgAltText : StringKey
+    , teaserImgAltText : Key
     , relatedInfo : List Int
     , cards : List Card
     }
@@ -26,9 +27,9 @@ type alias Deck =
 
 type alias Card =
     { imagePath : AssetPath
-    , messageText : Maybe StringKey
-    , quoteText : StringKey
-    , altText : StringKey
+    , messageText : Maybe Key
+    , quoteText : Key
+    , altText : Key
     }
 
 
@@ -36,7 +37,7 @@ type alias Card =
 -- Accessors for Story Deck content
 
 
-storyTitle : Int -> StringKey
+storyTitle : Int -> Key
 storyTitle deckId =
     (getDeck deckId decks).title
 
@@ -46,7 +47,7 @@ storyTeaserImgPath deckId =
     path (getDeck deckId decks).teaserImgPath
 
 
-storyTeaserImgAltText : Int -> StringKey
+storyTeaserImgAltText : Int -> Key
 storyTeaserImgAltText deckId =
     (getDeck deckId decks).teaserImgAltText
 
@@ -55,36 +56,36 @@ storyTeaser : Language -> Int -> Html Msg
 storyTeaser language deckId =
     let
         t =
-            translate
+            toString
     in
     div [ class "card" ]
         [ a
             [ href ("#/stories/" ++ String.fromInt deckId)
-            , onClick (ButtonPress "story" "view-single" (t English (storyTitle deckId)) False)
+            , onClick (ButtonPress "story" "view-single" (t (storyTitle deckId)) False)
             ]
-            [ img [ class "card--thumbnail", src (storyTeaserImgPath deckId), alt (t language (storyTeaserImgAltText deckId)) ] []
+            [ img [ class "card--thumbnail", src (storyTeaserImgPath deckId), alt (t (storyTeaserImgAltText deckId)) ] []
             ]
         , a
             [ class "link--unstyled"
             , href ("#/stories/" ++ String.fromInt deckId)
-            , onClick (ButtonPress "story" "view-single" (t English (storyTitle deckId)) False)
+            , onClick (ButtonPress "story" "view-single" (t (storyTitle deckId)) False)
             ]
-            [ h3 [ class "title--small" ] [ text (t language (storyTitle deckId)) ]
+            [ h3 [ class "title--small" ] [ text (t (storyTitle deckId)) ]
             ]
         , blockquote [ class "card--quote" ]
-            [ text (t language (getDeck deckId decks).teaser) ]
+            [ text (t (getDeck deckId decks).teaser) ]
         , div [ class "text-right text-with-icon--right stories--more-link" ]
             [ a
                 [ class "link"
                 , href ("#/stories/" ++ String.fromInt deckId)
-                , onClick (ButtonPress "story" "view-single" (t English (storyTitle deckId)) False)
+                , onClick (ButtonPress "story" "view-single" (t (storyTitle deckId)) False)
                 ]
-                [ text (t language (StoriesTeaserMoreLink (t language (storyTitle deckId))))
+                [ text (t (StoriesTeaserMoreLink (t (storyTitle deckId))))
                 ]
             , a
                 [ class "link--unstyled"
                 , href ("#/stories/" ++ String.fromInt deckId)
-                , onClick (ButtonPress "story" "view-single" (t English (storyTitle deckId)) False)
+                , onClick (ButtonPress "story" "view-single" (t (storyTitle deckId)) False)
                 ]
                 [ getIcon "arrow-right" (Just "icon--alternate")
                 ]
@@ -101,7 +102,7 @@ getInfoButtons : ( Language, Int ) -> Html Msg
 getInfoButtons ( language, id ) =
     let
         t =
-            translate language
+            toString
     in
     a
         [ href ("#/info-to-help/" ++ t (getInfo id).slug)
@@ -115,7 +116,7 @@ card : Language -> Int -> Int -> Html msg
 card language deckId cardId =
     let
         t =
-            translate language
+            toString
     in
     div [ class "card story" ]
         [ h3 [ class "title--small title--alternate" ]
@@ -142,7 +143,7 @@ cardMessage language deckId cardId =
             p [ class "no-message" ] []
 
         Just aMessage ->
-            blockquote [ class "story--message quote" ] [ text (translate language aMessage) ]
+            blockquote [ class "story--message quote" ] [ renderCopy aMessage ]
 
 
 cardImgPath : Int -> Int -> String
