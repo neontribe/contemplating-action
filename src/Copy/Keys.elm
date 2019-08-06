@@ -8,11 +8,6 @@ type alias TextWithLink =
     , textAfter : String
     }
 
-
-
---If I understand this correctly, that means this piece of code takes 4 inputs and stores a record? -J
-
-
 type Copy
     = CopyText String
     | CopyList (List String)
