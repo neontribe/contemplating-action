@@ -1,9 +1,22 @@
 module Copy.Keys exposing (Copy(..), Key(..))
 
 
+type alias TextWithLink =
+    { textBefore : String
+    , linkText : String
+    , destination : String
+    , textAfter : String
+    }
+
+
+
+--If I understand this correctly, that means this piece of code takes 4 inputs and stores a record? -J
+
+
 type Copy
     = CopyText String
     | CopyList (List String)
+    | CopyWithLink TextWithLink
 
 
 type Key

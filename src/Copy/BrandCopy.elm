@@ -3,6 +3,38 @@ module Copy.BrandCopy exposing (brandCopy)
 import Copy.Keys exposing (Copy(..), Key(..))
 
 
+
+{-
+   To make a paragraph use CopyText and just write out your paragraph in the following "quotation marks"
+
+   CopyText "This is a paragraph or title. Easy!"
+
+
+   To make a list (such as bulletpointed information) use CopyList. Wrap your list [in square brackets],  write each of your list items
+   "contained in its own quotation marks" and follow each with a comma
+
+    CopyList
+     [ "Please"
+     , "Don't forget to write"
+     , "Lists like"
+     , "This"
+     ]
+
+
+   To make a paragraph that has a link in the text, use CopyWithLink. There are four components to CopyWithLink: the text that comes before the link,
+   the words that will comprise the link itself, the web address you want the text to link to, and any text that comes after the link.
+
+   CopyWithLink
+     { textBefore = "This is a paragraph that contains"
+     , linkText = "a link"
+     , destination="https://www.google.co.uk"
+     , textAfter="to Google's home page."
+     }
+
+
+-}
+
+
 brandCopy : Key -> Copy
 brandCopy key =
     case key of
@@ -57,6 +89,7 @@ brandCopy key =
         IconExit ->
             CopyText "exit-door"
 
+        --Home Page
         HomeReadAboutH2 ->
             CopyText "A project exploring how to encourage people to seek support. Can visual stories help change lives?"
 
