@@ -1,9 +1,17 @@
 module Copy.Keys exposing (Copy(..), Key(..))
 
 
+type alias TextWithLink =
+    { textBefore : String
+    , linkText : String
+    , destination : String
+    , textAfter : String
+    }
+
 type Copy
     = CopyText String
     | CopyList (List String)
+    | CopyWithLink TextWithLink
 
 
 type Key
