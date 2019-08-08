@@ -409,16 +409,14 @@ nav,
 ------------------------------ */
 
 .section--header {
-  position: relative;
+  align-items: center;
   display: flex;
+  font-size: 1.25rem;
+  height: 120px;
   justify-content: center;
   padding: 0;
 }
 
-.home .section--header {
-  height: 120px;
-  align-items: center;
-}
 
 /* ------------------------------
 
