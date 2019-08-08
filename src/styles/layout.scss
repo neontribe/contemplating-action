@@ -349,7 +349,7 @@ nav,
 .nav-item {
   display: flex;
   flex: 1 0 auto;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   white-space: nowrap;
 }
@@ -383,7 +383,7 @@ nav,
 
   nav,
   .nav-bar {
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
 
   .nav-item {
