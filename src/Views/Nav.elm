@@ -22,10 +22,10 @@ view model =
     in
     -- Contains Nav for phones - but text email and phone number for desktop and tablet.
     div [ class "nav-bar" ]
-        [ div [ class "desktop-only" ]
-            [ callToActionNavItemDesktop (callToActionConstructor Survey (t CallToActionDestination) (t CallToActionDestinationDisplay)) ]
-        , nav []
-            [ navItem (t IconStories) "#/stories" "find-out-more" "view-list" (t ContentLinkShort) (t ContentLinkMedium)
+        [ nav []
+            [ div [ class "desktop-only" ]
+                [ callToActionNavItemDesktop (callToActionConstructor Survey (t CallToActionDestination) (t CallToActionDestinationDisplay)) ]
+            , navItem (t IconStories) "#/stories" "find-out-more" "view-list" (t ContentLinkShort) (t ContentLinkMedium)
             , navItem (t IconContact) (t ContactLinkDestination) "contact" "email" (t ContactLinkShort) (t ContactLinkLong)
             , span [ class "nav-item mobile-only" ]
                 [ callToActionNavItemMobile (callToActionConstructor Survey (t CallToActionDestination) (t CallToActionDestinationDisplay)) ]
