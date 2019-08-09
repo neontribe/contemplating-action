@@ -204,7 +204,7 @@ brandCopy key =
             CopyWithLink
                 { textBefore = "We guarantee to meet your rights in compliance with GDPR. Find out about those rights from the"
                 , linkText = "ICO GDPR indvidual rights guide"
-                , destination = ""
+                , destination = "https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/individual-rights/"
                 , textAfter = ". To exercise any of your rights, please contact us at hello@contemplatingaction.org.uk"
                 }
 
