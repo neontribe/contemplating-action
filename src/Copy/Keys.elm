@@ -29,12 +29,10 @@ type Key
     | ContentLinkShort
     | ContactLinkLong
     | ContactLinkShort
-    | ExitSite
       -- Nav Icons
     | IconCallToAction
     | IconStories
     | IconContact
-    | IconExit
       -- Home page
     | HomeReadAboutH2
     | HomeBannerImageAlt

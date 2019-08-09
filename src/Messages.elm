@@ -1,4 +1,4 @@
-port module Messages exposing (Msg(..), gaEvent, hidePage, updateAnalyticsEvent, updateAnalyticsPage)
+port module Messages exposing (Msg(..), gaEvent, updateAnalyticsEvent, updateAnalyticsPage)
 
 import Browser
 import Url
@@ -11,7 +11,6 @@ type
       -- Navigation
     | UrlChanged Url.Url
     | LinkClicked Browser.UrlRequest
-    | Exit
 
 
 
@@ -37,6 +36,3 @@ port updateAnalyticsPage : String -> Cmd msg
 
 
 port updateAnalyticsEvent : GaEvent -> Cmd msg
-
-
-port hidePage : Maybe String -> Cmd msg

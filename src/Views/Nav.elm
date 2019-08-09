@@ -29,12 +29,6 @@ view model =
             , navItem (t IconContact) (t ContactLinkDestination) "contact" "email" (t ContactLinkShort) (t ContactLinkLong)
             , span [ class "nav-item mobile-only" ]
                 [ callToActionNavItemMobile (callToActionConstructor Survey (t CallToActionDestination) (t CallToActionDestinationDisplay)) ]
-            , span [ class "nav-item" ]
-                [ a [ class "btn ", href "https://google.com", target "_blank", rel "noopener", onClick Exit ]
-                    [ getIcon (t IconExit) (Just "nav-item-text nav-icon")
-                    , span [ class " nav-item-text" ] [ text (t ExitSite) ]
-                    ]
-                ]
             ]
         ]
 
