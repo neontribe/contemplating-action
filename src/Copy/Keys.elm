@@ -8,6 +8,7 @@ type alias TextWithLink =
     , textAfter : String
     }
 
+
 type Copy
     = CopyText String
     | CopyList (List String)
@@ -28,7 +29,6 @@ type Key
     | ContentLinkShort
     | ContactLinkLong
     | ContactLinkShort
-    | ExitSite
       -- Nav Icons
     | IconCallToAction
     | IconStories

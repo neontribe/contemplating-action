@@ -74,9 +74,6 @@ brandCopy key =
         ContactLinkDestination ->
             CopyText "mailto:hello@contemplatingaction.org.uk"
 
-        ExitSite ->
-            CopyText "Exit Site"
-
         IconCallToAction ->
             CopyText "check-square-o"
 
