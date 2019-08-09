@@ -37,10 +37,6 @@ app.ports.updateAnalyticsEvent.subscribe(function (gaEvent) {
     gtag('event', gaEvent.action, { 'event_category' : gaEvent.category, 'event_label' : gaEvent.label });
 });
 
-app.ports.hidePage.subscribe(function() {
-    document.getElementById('page-wrapper').style.display = "none";
-});
-
 // Options for the observer (which mutations to observe)
 var config = { childList: true, subtree: true };
 
