@@ -9,6 +9,10 @@ import Copy.Keys exposing (Copy(..), Key(..))
 
    CopyText "This is a paragraph or title. Easy!"
 
+   Also use CopyText with empty "" if you don't want anything there.
+
+   CopyText ""
+
 
    To make a list (such as bulletpointed information) use CopyList. Wrap your list [in square brackets],  write each of your list items
    "contained in its own quotation marks" and follow each with a comma
@@ -156,11 +160,12 @@ brandCopy key =
         PrivacySectionThreeH3 ->
             CopyText ""
 
-        PrivacySectionThreeP ->
-            CopyList
-                [ "If you chose to give us contact details we will only contact you in relation to these four things. You can also tell us if you no longer wish to receive information from Neontribe by replying to any email from us with the subject line Unsubscribe, or sending a message to info@neontribe.co.uk requesting to unsubscribe."
-                , "Information that is identifiable as relating to you (i.e. it has not been edited to make it anonymous) is not shared with or sold to other organizations for commercial purposes, other than under the following circumstances:"
-                ]
+        PrivacySectionThreeP1 ->
+            CopyText
+                "If you chose to give us contact details we will only contact you in relation to these four things. You can also tell us if you no longer wish to receive information from Neontribe by replying to any email from us with the subject line Unsubscribe, or sending a message to info@neontribe.co.uk requesting to unsubscribe."
+
+        PrivacySectionThreeP2 ->
+            CopyText "Information that is identifiable as relating to you (i.e. it has not been edited to make it anonymous) is not shared with or sold to other organizations for commercial purposes, other than under the following circumstances:"
 
         PrivacySectionThreeList ->
             CopyList
@@ -190,16 +195,17 @@ brandCopy key =
             CopyText "We guarantee to meet your rights in compliance with GDPR. Find out about those rights from the ICO GDPR indvidual rights guide. To exercise any of your rights, please contact us at hello@contemplatingaction.org.uk"
 
         PrivacySectionFiveList ->
-            CopyList []
+            CopyText ""
 
         PrivacySectionSixH3 ->
             CopyText "Use of cookies"
 
-        PrivacySectionSixP ->
-            CopyList
-                [ "Cookies are pieces of information that a website transfers to your hard drive. Most web browsers automatically accept cookies, but if you prefer, you can change your browser to prevent that and will still be able to use the site. "
-                , "Contemplating Action uses cookies to:"
-                ]
+        PrivacySectionSixP1 ->
+            CopyText
+                "Cookies are pieces of information that a website transfers to your hard drive. Most web browsers automatically accept cookies, but if you prefer, you can change your browser to prevent that and will still be able to use the site. "
+
+        PrivacySectionSixP2 ->
+            CopyText "Contemplating Action uses cookies to:"
 
         PrivacySectionSixList ->
             CopyList
@@ -216,7 +222,7 @@ brandCopy key =
             CopyText "By using this site, you consent to the collection and use of this information by Neontribe and to our privacy policy. Please send any questions, concerns or comments you have about these policies to info@neontribe.co.uk "
 
         PrivacySectionSevenList ->
-            CopyList []
+            CopyText ""
 
         -- Supporters Page
         SupportersTitleH2 ->

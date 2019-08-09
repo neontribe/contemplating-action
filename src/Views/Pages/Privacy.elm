@@ -29,7 +29,8 @@ privacyContent =
             , p [] [ t PrivacySectionTwoP ]
             , t PrivacySectionTwoList
             , h3 [] [ t PrivacySectionThreeH3 ]
-            , p [] [ t PrivacySectionThreeP ]
+            , p [] [ t PrivacySectionThreeP1 ]
+            , p [] [ t PrivacySectionThreeP2 ]
             , t PrivacySectionThreeList
             , h3 [] [ t PrivacySectionFourH3 ]
             , p [] [ t PrivacySectionFourP ]
@@ -38,7 +39,8 @@ privacyContent =
             , p [] [ t PrivacySectionFiveP ]
             , t PrivacySectionFiveList
             , h3 [] [ t PrivacySectionSixH3 ]
-            , p [] [ t PrivacySectionSixP ]
+            , p [] [ t PrivacySectionSixP1 ]
+            , p [] [ t PrivacySectionSixP2 ]
             , t PrivacySectionSixList
             , h3 [] [ t PrivacySectionSevenH3 ]
             , p [] [ t PrivacySectionSevenP ]

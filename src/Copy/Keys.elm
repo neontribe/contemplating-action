@@ -54,7 +54,8 @@ type Key
     | PrivacySectionTwoP
     | PrivacySectionTwoList
     | PrivacySectionThreeH3
-    | PrivacySectionThreeP
+    | PrivacySectionThreeP1
+    | PrivacySectionThreeP2
     | PrivacySectionThreeList
     | PrivacySectionFourH3
     | PrivacySectionFourP
@@ -63,7 +64,8 @@ type Key
     | PrivacySectionFiveP
     | PrivacySectionFiveList
     | PrivacySectionSixH3
-    | PrivacySectionSixP
+    | PrivacySectionSixP1
+    | PrivacySectionSixP2
     | PrivacySectionSixList
     | PrivacySectionSevenH3
     | PrivacySectionSevenP
