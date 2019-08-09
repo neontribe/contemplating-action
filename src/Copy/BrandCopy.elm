@@ -118,7 +118,7 @@ brandCopy key =
         PrivacyIntroP ->
             CopyText "This policy relates to www.contemplatingaction.org.uk (“the Site”) which is owned by Neontribe ltd and related activity "
 
-        PrivacyCompanyInfoList ->
+        PrivacyCompanyAddress ->
             CopyList
                 [ "Neontribe ltd trading as Neontribe"
                 , "Registered as a limited company in England & Wales"
@@ -126,26 +126,26 @@ brandCopy key =
                 , "Registered office: 106 Lincoln St. Norwich, Norfolk, NR2 3LB."
                 ]
 
-        PrivacyDataCollectH3 ->
+        PrivacySectionOneH3 ->
             CopyText "What information is collected?"
 
-        PrivacyDataCollectP ->
+        PrivacySectionOneP ->
             CopyText "We collect the following information from people who use this website:"
 
-        PrivacyDataCollectList ->
+        PrivacySectionOneList ->
             CopyList
                 [ "Email addresses of people who communicate with us via email"
                 , "Information volunteered by people in the course of using of the website (predominantly survey responses)"
                 , "Analytics and tracking data about people’s site usage"
                 ]
 
-        PrivacyInfoUsedH3 ->
+        PrivacySectionTwoH3 ->
             CopyText "How is the information used?"
 
-        PrivacyInfoUsedP ->
+        PrivacySectionTwoP ->
             CopyText "Neontribe uses the information you provide to:"
 
-        PrivacyInfoUsedList ->
+        PrivacySectionTwoList ->
             CopyList
                 [ "Improve the usability of the Site"
                 , "Help design future projects "
@@ -153,26 +153,29 @@ brandCopy key =
                 , "Send you any information you have requested relating to the Contemplating Action project"
                 ]
 
-        PrivacyInfoSharedH3 ->
+        PrivacySectionThreeH3 ->
             CopyText ""
 
-        PrivacyInfoSharedP1 ->
-            CopyText "If you chose to give us contact details we will only contact you in relation to these four things. You can also tell us if you no longer wish to receive information from Neontribe by replying to any email from us with the subject line Unsubscribe, or sending a message to info@neontribe.co.uk requesting to unsubscribe."
+        PrivacySectionThreeP ->
+            CopyList
+                [ "If you chose to give us contact details we will only contact you in relation to these four things. You can also tell us if you no longer wish to receive information from Neontribe by replying to any email from us with the subject line Unsubscribe, or sending a message to info@neontribe.co.uk requesting to unsubscribe."
+                , "Information that is identifiable as relating to you (i.e. it has not been edited to make it anonymous) is not shared with or sold to other organizations for commercial purposes, other than under the following circumstances:"
+                ]
 
-        PrivacyInfoSharedP2 ->
-            CopyText "Information that is identifiable as relating to you (i.e. it has not been edited to make it anonymous) is not shared with or sold to other organizations for commercial purposes, other than under the following circumstances:"
-
-        PrivacyInfoSharedList ->
+        PrivacySectionThreeList ->
             CopyList
                 [ "If it is necessary to share information in order to investigate, prevent, or take action regarding illegal activities, suspected fraud, situations involving potential threats to the physical safety of any person, violations of Terms of Service, or as otherwise required by law."
                 , "If we transfer information about you if Neontribe is acquired by or merged with another organisation, other than an organisation established by us and controlled by us."
                 , "You have explicitly chosen to have us share the information with CAST - the centre for acceleration of social technology whilst giving us the information - in which case it will be freely shared with them."
                 ]
 
-        PrivacyInfoStoredH3 ->
+        PrivacySectionFourH3 ->
             CopyText "Where is the information stored?"
 
-        PrivacyInfoStoredList ->
+        PrivacySectionFourP ->
+            CopyText ""
+
+        PrivacySectionFourList ->
             CopyList
                 [ "On our computers"
                 , "On our survey provider Typeform’s servers. For more information see Typeform's privacy policy."
@@ -180,22 +183,25 @@ brandCopy key =
                 , "By our partner CAST on their servers if you have explicitly expressed the desire to share your information with them whilst using our site. For more information see CAST's privacy policy."
                 ]
 
-        PrivacyRightsH3 ->
+        PrivacySectionFiveH3 ->
             CopyText "Your rights"
 
-        PrivacyRightsP ->
+        PrivacySectionFiveP ->
             CopyText "We guarantee to meet your rights in compliance with GDPR. Find out about those rights from the ICO GDPR indvidual rights guide. To exercise any of your rights, please contact us at hello@contemplatingaction.org.uk"
 
-        PrivacyCookiesH3 ->
+        PrivacySectionFiveList ->
+            CopyList []
+
+        PrivacySectionSixH3 ->
             CopyText "Use of cookies"
 
-        PrivacyCookiesP1 ->
-            CopyText "Cookies are pieces of information that a website transfers to your hard drive. Most web browsers automatically accept cookies, but if you prefer, you can change your browser to prevent that and will still be able to use the site. "
+        PrivacySectionSixP ->
+            CopyList
+                [ "Cookies are pieces of information that a website transfers to your hard drive. Most web browsers automatically accept cookies, but if you prefer, you can change your browser to prevent that and will still be able to use the site. "
+                , "Contemplating Action uses cookies to:"
+                ]
 
-        PrivacyCookiesP2 ->
-            CopyText "Contemplating Action uses cookies to:"
-
-        PrivacyCookiesList ->
+        PrivacySectionSixList ->
             CopyList
                 [ "Monitor the number of visitors to our website"
                 , "Monitor how users use our website, i.e. which pages they have accessed"
@@ -203,11 +209,14 @@ brandCopy key =
                 , "For more data on Cookies visit www.aboutcookies.org. In addition to detailing extensive information on cookies this site also provides explanations on how to disable cookies on your computer."
                 ]
 
-        PrivacyTermsH3 ->
+        PrivacySectionSevenH3 ->
             CopyText "Your acceptance of these terms"
 
-        PrivacyTermsP ->
+        PrivacySectionSevenP ->
             CopyText "By using this site, you consent to the collection and use of this information by Neontribe and to our privacy policy. Please send any questions, concerns or comments you have about these policies to info@neontribe.co.uk "
+
+        PrivacySectionSevenList ->
+            CopyList []
 
         -- Supporters Page
         SupportersTitleH2 ->

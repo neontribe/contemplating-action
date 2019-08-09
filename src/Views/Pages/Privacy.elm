@@ -21,27 +21,28 @@ privacyContent =
         [ h2 [] [ t PrivacyTitleH2 ]
         , div []
             [ p [] [ t PrivacyIntroP ]
-            , t PrivacyCompanyInfoList
-            , h3 [] [ t PrivacyDataCollectH3 ]
-            , p [] [ t PrivacyDataCollectP ]
-            , t PrivacyDataCollectList
-            , h3 [] [ t PrivacyInfoUsedH3 ]
-            , p [] [ t PrivacyInfoUsedP ]
-            , t PrivacyInfoUsedList
-            , h3 [] [ t PrivacyInfoSharedH3 ]
-            , p [] [ t PrivacyInfoSharedP1 ]
-            , p [] [ t PrivacyInfoSharedP2 ]
-            , t PrivacyInfoSharedList
-            , h3 [] [ t PrivacyInfoStoredH3 ]
-            , t PrivacyInfoStoredList
-            , h3 [] [ t PrivacyRightsH3 ]
-            , p [] [ t PrivacyRightsP ]
-            , h3 [] [ t PrivacyCookiesH3 ]
-            , p [] [ t PrivacyCookiesP1 ]
-            , p [] [ t PrivacyCookiesP2 ]
-            , t PrivacyCookiesList
-            , h3 [] [ t PrivacyTermsH3 ]
-            , p [] [ t PrivacyTermsP ]
+            , t PrivacyCompanyAddress
+            , h3 [] [ t PrivacySectionOneH3 ]
+            , p [] [ t PrivacySectionOneP ]
+            , t PrivacySectionOneList
+            , h3 [] [ t PrivacySectionTwoH3 ]
+            , p [] [ t PrivacySectionTwoP ]
+            , t PrivacySectionTwoList
+            , h3 [] [ t PrivacySectionThreeH3 ]
+            , p [] [ t PrivacySectionThreeP ]
+            , t PrivacySectionThreeList
+            , h3 [] [ t PrivacySectionFourH3 ]
+            , p [] [ t PrivacySectionFourP ]
+            , t PrivacySectionFourList
+            , h3 [] [ t PrivacySectionFiveH3 ]
+            , p [] [ t PrivacySectionFiveP ]
+            , t PrivacySectionFiveList
+            , h3 [] [ t PrivacySectionSixH3 ]
+            , p [] [ t PrivacySectionSixP ]
+            , t PrivacySectionSixList
+            , h3 [] [ t PrivacySectionSevenH3 ]
+            , p [] [ t PrivacySectionSevenP ]
+            , t PrivacySectionSevenList
             ]
 
         -- footer should probably be outside content container but this is easiest for now.

@@ -16,7 +16,7 @@ toHtml key =
             let
                 listClass =
                     case key of
-                        PrivacyCompanyInfoList ->
+                        PrivacyCompanyAddress ->
                             "company-info"
 
                         _ ->
