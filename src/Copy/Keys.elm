@@ -8,6 +8,7 @@ type alias TextWithLink =
     , textAfter : String
     }
 
+
 type Copy
     = CopyText String
     | CopyList (List String)
@@ -45,27 +46,30 @@ type Key
       -- Privacy
     | PrivacyTitleH2
     | PrivacyIntroP
-    | PrivacyCompanyInfoList
-    | PrivacyDataCollectH3
-    | PrivacyDataCollectP
-    | PrivacyDataCollectList
-    | PrivacyInfoUsedH3
-    | PrivacyInfoUsedP
-    | PrivacyInfoUsedList
-    | PrivacyInfoSharedH3
-    | PrivacyInfoSharedP1
-    | PrivacyInfoSharedP2
-    | PrivacyInfoSharedList
-    | PrivacyInfoStoredH3
-    | PrivacyInfoStoredList
-    | PrivacyRightsH3
-    | PrivacyRightsP
-    | PrivacyCookiesH3
-    | PrivacyCookiesP1
-    | PrivacyCookiesP2
-    | PrivacyCookiesList
-    | PrivacyTermsH3
-    | PrivacyTermsP
+    | PrivacyCompanyAddress
+    | PrivacySectionOneH3
+    | PrivacySectionOneP
+    | PrivacySectionOneList
+    | PrivacySectionTwoH3
+    | PrivacySectionTwoP
+    | PrivacySectionTwoList
+    | PrivacySectionThreeH3
+    | PrivacySectionThreeP1
+    | PrivacySectionThreeP2
+    | PrivacySectionThreeList
+    | PrivacySectionFourH3
+    | PrivacySectionFourP
+    | PrivacySectionFourList
+    | PrivacySectionFiveH3
+    | PrivacySectionFiveP
+    | PrivacySectionFiveList
+    | PrivacySectionSixH3
+    | PrivacySectionSixP1
+    | PrivacySectionSixP2
+    | PrivacySectionSixList
+    | PrivacySectionSevenH3
+    | PrivacySectionSevenP
+    | PrivacySectionSevenList
       -- Supporters
     | SupportersTitleH2
     | SupportersP1

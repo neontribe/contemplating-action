@@ -16,11 +16,11 @@ toHtml key =
             let
                 listClass =
                     case key of
-                        PrivacyCompanyInfoList ->
+                        PrivacyCompanyAddress ->
                             "company-info"
 
                         _ ->
-                            "il--disc"
+                            "ul--disc"
             in
             ul [ class listClass ]
                 (List.map (\item -> li [] [ text item ]) list)
