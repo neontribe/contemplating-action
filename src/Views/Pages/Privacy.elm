@@ -8,7 +8,6 @@ import Copy.Render exposing (toHtml)
 import Html exposing (Html, div, h2, h3, li, p, text, ul)
 import Html.Attributes exposing (class)
 import Messages exposing (Msg(..))
-import Views.Footer exposing (footerContent)
 
 
 privacyContent : Html Msg
@@ -46,8 +45,4 @@ privacyContent =
             , p [] [ t PrivacySectionSevenP ]
             , t PrivacySectionSevenList
             ]
-
-        -- footer should probably be outside content container but this is easiest for now.
-        -- It is conditional on page. Could hide in the story pages with css? But not sure that's any better.
-        , footerContent
         ]
