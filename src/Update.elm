@@ -25,6 +25,9 @@ update msg model =
                 , updateAnalyticsEvent (gaEvent category action label)
                 )
 
+        Consent int ->
+            ( { model | consent = int }, Cmd.none )
+
         --
         -- Navigation messages
         --

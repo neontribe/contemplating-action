@@ -12,6 +12,7 @@ type
     | UrlChanged Url.Url
     | LinkClicked Browser.UrlRequest
     | Exit
+    | Consent Int
 
 
 

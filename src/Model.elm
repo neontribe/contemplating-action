@@ -12,6 +12,7 @@ type alias Model =
     , idlePage : Page
     , navKey : Navigation.Key
     , url : Url.Url
+    , consent : Int
     }
 
 
@@ -27,7 +28,7 @@ init _ url navKey =
                 Just aPage ->
                     aPage
     in
-    ( Model maybePage Home navKey url, Cmd.none )
+    ( Model maybePage Home navKey url 0, Cmd.none )
 
 
 pageSlug : Page -> String
