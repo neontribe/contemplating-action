@@ -33,7 +33,6 @@ type Key
     | IconCallToAction
     | IconStories
     | IconContact
-    | IconExit
       -- Home page
     | HomeReadAboutH2
     | HomeBannerImageAlt

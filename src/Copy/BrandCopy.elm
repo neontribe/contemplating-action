@@ -83,9 +83,6 @@ brandCopy key =
         IconContact ->
             CopyText "envelope"
 
-        IconExit ->
-            CopyText "exit-door"
-
         --Home Page
         HomeReadAboutH2 ->
             CopyText "A project exploring how to encourage people to seek support. Can visual stories help change lives?"
