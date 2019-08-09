@@ -185,8 +185,8 @@ brandCopy key =
                     }
                 , CopyWithLink
                     { textBefore = "In Google Analytics. For more information see"
-                    , linkText = "https://support.google.com/analytics/answer/6004245"
-                    , destination = "Google's privacy policy"
+                    , linkText = "Google's privacy policy"
+                    , destination = "https://support.google.com/analytics/answer/6004245"
                     , textAfter = "."
                     }
                 , CopyWithLink
