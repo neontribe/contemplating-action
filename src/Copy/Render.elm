@@ -6,31 +6,27 @@ import Html exposing (Html, a, li, p, text, ul)
 import Html.Attributes exposing (class, href)
 
 
-toHtml : Key -> Html msg
-toHtml key =
-    case brandCopy key of
+copyToHtml : Copy -> Html msg
+copyToHtml copy =
+    case copy of
         CopyText string ->
             text string
 
         CopyList list ->
-            let
-                listClass =
-                    case key of
-                        PrivacyCompanyAddress ->
-                            "company-info"
-
-                        _ ->
-                            "ul--disc"
-            in
-            ul [ class listClass ]
-                (List.map (\item -> li [] [ text item ]) list)
+            ul [ class "ul--disc" ]
+                (List.map (\item -> li [] [ copyToHtml item ]) list)
 
         CopyWithLink textLink ->
             p []
                 [ text (textLink.textBefore ++ " ")
-                , a [ href textLink.destination ] [ text textLink.linkText ]
+                , a [ class "link link--plain", href textLink.destination ] [ text textLink.linkText ]
                 , text (" " ++ textLink.textAfter)
                 ]
+
+
+toHtml : Key -> Html msg
+toHtml key =
+    copyToHtml (brandCopy key)
 
 
 toString : Key -> String
