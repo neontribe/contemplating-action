@@ -4,7 +4,7 @@ import Browser
 import Html exposing (Html, div, main_, text)
 import Html.Attributes exposing (class, id)
 import Html.Attributes.Aria exposing (role)
-import Messages exposing (Msg(..))
+import Messages exposing (Msg)
 import Model exposing (Model, pageSlug)
 import Route exposing (Page(..))
 import Views.Content
