@@ -67,6 +67,15 @@ li {
   margin-left: 30px;
 }
 
+address {
+  font-style: normal;
+}
+
+address ul.ul--disc li {
+  list-style: none;
+  margin-left: 0;
+}
+
 p {
   margin: 0;
 }

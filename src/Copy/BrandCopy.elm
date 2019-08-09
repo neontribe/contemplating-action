@@ -18,10 +18,10 @@ import Copy.Keys exposing (Copy(..), Key(..))
    "contained in its own quotation marks" and follow each with a comma
 
     CopyList
-     [ "Please"
-     , "Don't forget to write"
-     , "Lists like"
-     , "This"
+     [ CopyText "Please"
+     , CopyText "Don't forget to write"
+     , CopyText "Lists like"
+     , CopyText "This"
      ]
 
 
@@ -31,8 +31,8 @@ import Copy.Keys exposing (Copy(..), Key(..))
    CopyWithLink
      { textBefore = "This is a paragraph that contains"
      , linkText = "a link"
-     , destination="https://www.google.co.uk"
-     , textAfter="to Google's home page."
+     , destination = "https://www.google.co.uk"
+     , textAfter = "to Google's home page."
      }
 
 
@@ -118,10 +118,10 @@ brandCopy key =
 
         PrivacyCompanyAddress ->
             CopyList
-                [ "Neontribe ltd trading as Neontribe"
-                , "Registered as a limited company in England & Wales"
-                , "Business registration: 06165574"
-                , "Registered office: 106 Lincoln St. Norwich, Norfolk, NR2 3LB."
+                [ CopyText "Neontribe ltd trading as Neontribe"
+                , CopyText "Registered as a limited company in England & Wales"
+                , CopyText "Business registration: 06165574"
+                , CopyText "Registered office: 106 Lincoln St. Norwich, Norfolk, NR2 3LB."
                 ]
 
         PrivacySectionOneH3 ->
@@ -132,9 +132,9 @@ brandCopy key =
 
         PrivacySectionOneList ->
             CopyList
-                [ "Email addresses of people who communicate with us via email"
-                , "Information volunteered by people in the course of using of the website (predominantly survey responses)"
-                , "Analytics and tracking data about people’s site usage"
+                [ CopyText "Email addresses of people who communicate with us via email"
+                , CopyText "Information volunteered by people in the course of using of the website (predominantly survey responses)"
+                , CopyText "Analytics and tracking data about people’s site usage"
                 ]
 
         PrivacySectionTwoH3 ->
@@ -145,10 +145,10 @@ brandCopy key =
 
         PrivacySectionTwoList ->
             CopyList
-                [ "Improve the usability of the Site"
-                , "Help design future projects "
-                , "Contribute to research about third sector use of digital"
-                , "Send you any information you have requested relating to the Contemplating Action project"
+                [ CopyText "Improve the usability of the Site"
+                , CopyText "Help design future projects "
+                , CopyText "Contribute to research about third sector use of digital"
+                , CopyText "Send you any information you have requested relating to the Contemplating Action project"
                 ]
 
         PrivacySectionThreeH3 ->
@@ -163,9 +163,9 @@ brandCopy key =
 
         PrivacySectionThreeList ->
             CopyList
-                [ "If it is necessary to share information in order to investigate, prevent, or take action regarding illegal activities, suspected fraud, situations involving potential threats to the physical safety of any person, violations of Terms of Service, or as otherwise required by law."
-                , "If we transfer information about you if Neontribe is acquired by or merged with another organisation, other than an organisation established by us and controlled by us."
-                , "You have explicitly chosen to have us share the information with CAST - the centre for acceleration of social technology whilst giving us the information - in which case it will be freely shared with them."
+                [ CopyText "If it is necessary to share information in order to investigate, prevent, or take action regarding illegal activities, suspected fraud, situations involving potential threats to the physical safety of any person, violations of Terms of Service, or as otherwise required by law."
+                , CopyText "If we transfer information about you if Neontribe is acquired by or merged with another organisation, other than an organisation established by us and controlled by us."
+                , CopyText "You have explicitly chosen to have us share the information with CAST - the centre for acceleration of social technology whilst giving us the information - in which case it will be freely shared with them."
                 ]
 
         PrivacySectionFourH3 ->
@@ -176,17 +176,37 @@ brandCopy key =
 
         PrivacySectionFourList ->
             CopyList
-                [ "On our computers"
-                , "On our survey provider Typeform’s servers. For more information see Typeform's privacy policy."
-                , "In Google Analytics. For more information see Google's privacy policy."
-                , "By our partner CAST on their servers if you have explicitly expressed the desire to share your information with them whilst using our site. For more information see CAST's privacy policy."
+                [ CopyText "On our computers"
+                , CopyWithLink
+                    { textBefore = "On our survey provider Typeform’s servers. For more information see"
+                    , linkText = "Typeform's privacy policy"
+                    , destination = "https://www.typeform.com/help/gdpr-rights-for-respondents/"
+                    , textAfter = "."
+                    }
+                , CopyWithLink
+                    { textBefore = "In Google Analytics. For more information see"
+                    , linkText = "Google's privacy policy"
+                    , destination = "https://support.google.com/analytics/answer/6004245"
+                    , textAfter = "."
+                    }
+                , CopyWithLink
+                    { textBefore = "By our partner CAST on their servers if you have explicitly expressed the desire to share your information with them whilst using our site. For more information see"
+                    , linkText = "CAST's privacy policy"
+                    , destination = "https://www.castsoftware.com/privacy"
+                    , textAfter = "."
+                    }
                 ]
 
         PrivacySectionFiveH3 ->
             CopyText "Your rights"
 
         PrivacySectionFiveP ->
-            CopyText "We guarantee to meet your rights in compliance with GDPR. Find out about those rights from the ICO GDPR indvidual rights guide. To exercise any of your rights, please contact us at hello@contemplatingaction.org.uk"
+            CopyWithLink
+                { textBefore = "We guarantee to meet your rights in compliance with GDPR. Find out about those rights from the"
+                , linkText = "ICO GDPR indvidual rights guide"
+                , destination = "https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/individual-rights/"
+                , textAfter = ". To exercise any of your rights, please contact us at hello@contemplatingaction.org.uk"
+                }
 
         PrivacySectionFiveList ->
             CopyText ""
@@ -203,10 +223,10 @@ brandCopy key =
 
         PrivacySectionSixList ->
             CopyList
-                [ "Monitor the number of visitors to our website"
-                , "Monitor how users use our website, i.e. which pages they have accessed"
-                , "To help improve our website"
-                , "For more data on Cookies visit www.aboutcookies.org. In addition to detailing extensive information on cookies this site also provides explanations on how to disable cookies on your computer."
+                [ CopyText "Monitor the number of visitors to our website"
+                , CopyText "Monitor how users use our website, i.e. which pages they have accessed"
+                , CopyText "To help improve our website"
+                , CopyText "For more data on Cookies visit www.aboutcookies.org. In addition to detailing extensive information on cookies this site also provides explanations on how to disable cookies on your computer."
                 ]
 
         PrivacySectionSevenH3 ->

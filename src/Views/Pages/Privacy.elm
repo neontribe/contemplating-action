@@ -4,8 +4,8 @@
 module Views.Pages.Privacy exposing (privacyContent)
 
 import Copy.Keys exposing (Key(..))
-import Copy.Render exposing (toHtml)
-import Html exposing (Html, div, h2, h3, li, p, text, ul)
+import Copy.Render exposing (toHtml, toString)
+import Html exposing (Html, address, div, h2, h3, li, p, text, ul)
 import Html.Attributes exposing (class)
 import Messages exposing (Msg(..))
 
@@ -16,11 +16,15 @@ privacyContent =
         t =
             toHtml
     in
-    div [ class "section section--lighter" ]
+    div [ class "section" ]
         [ h2 [] [ t PrivacyTitleH2 ]
         , div []
             [ p [] [ t PrivacyIntroP ]
-            , t PrivacyCompanyAddress
+            , if t PrivacyCompanyAddress /= text "" then
+                address [ class "company-info" ] [ t PrivacyCompanyAddress ]
+
+              else
+                text ""
             , h3 [] [ t PrivacySectionOneH3 ]
             , p [] [ t PrivacySectionOneP ]
             , t PrivacySectionOneList

@@ -11,7 +11,7 @@ type alias TextWithLink =
 
 type Copy
     = CopyText String
-    | CopyList (List String)
+    | CopyList (List Copy)
     | CopyWithLink TextWithLink
 
 
