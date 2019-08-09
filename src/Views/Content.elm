@@ -16,7 +16,6 @@ import Messages exposing (Msg(..))
 import Model exposing (Model)
 import Route exposing (Page(..))
 import StoryDeck exposing (card, storyRelatedInfo, storyTeaser, storyTitle)
-import Views.Footer exposing (footerContent)
 import Views.Pages.Privacy exposing (privacyContent)
 import Views.Pages.Supporters exposing (supportersContent)
 
@@ -112,7 +111,6 @@ view model =
                             ]
                         ]
                     ]
-                , footerContent
                 ]
 
         SupportersPage ->
