@@ -78,9 +78,6 @@ brandCopy key =
         ContactLinkDestination ->
             CopyText "mailto:hello@contemplatingaction.org.uk"
 
-        ExitSite ->
-            CopyText "Exit Site"
-
         IconCallToAction ->
             CopyText "check-square-o"
 
@@ -89,9 +86,6 @@ brandCopy key =
 
         IconContact ->
             CopyText "envelope"
-
-        IconExit ->
-            CopyText "exit-door"
 
         --Home Page
         HomeReadAboutH2 ->

@@ -2,7 +2,7 @@ module Update exposing (update)
 
 import Browser
 import Browser.Navigation as Navigation
-import Messages exposing (Msg(..), gaEvent, hidePage, updateAnalyticsEvent, updateAnalyticsPage)
+import Messages exposing (Msg(..), gaEvent, updateAnalyticsEvent, updateAnalyticsPage)
 import Model exposing (Model, pageSlug)
 import Route exposing (Page(..), pageFromUrl)
 import Url
@@ -57,15 +57,3 @@ update msg model =
 
                 Browser.External href ->
                     ( model, Navigation.load href )
-
-        Exit ->
-            ( model
-            , Cmd.batch
-                -- Hide the page immediately with JavaScript
-                [ hidePage Nothing
-                , updateAnalyticsEvent (gaEvent "exit" "force" ("exit-button_" ++ pageSlug model.currentPage))
-
-                -- Then redirect to Google
-                , Navigation.load "https://google.com"
-                ]
-            )
