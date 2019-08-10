@@ -20,7 +20,7 @@ cookieContent model =
     in
     case model.consent of
         0 ->
-            div []
+            div [ class "section section--highlight" ]
                 [ p [] [ text "Can we use first and third party cookies to help us understand our audience?" ]
                 , button [ class "button", onClick (Consent 1) ] [ text "Yes please" ]
                 , button [ class "button", onClick (Consent 2) ] [ text "No thanks" ]
