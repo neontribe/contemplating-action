@@ -1,4 +1,4 @@
-module Info exposing (Info, getInfo, getInfoBySlug, infoCard, infoPage)
+module Info exposing (Info, getInfo, getInfoBySlug, infoListItem, infoPage)
 
 import Copy.Keys exposing (Key(..))
 import Copy.Render exposing (toHtml, toString)
@@ -55,8 +55,8 @@ getInfoBySlug slug =
 -- Views
 
 
-infoCard : Info -> Html Msg
-infoCard info =
+infoListItem : Info -> Html Msg
+infoListItem info =
     let
         t =
             toString
