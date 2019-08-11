@@ -171,7 +171,7 @@ brandCopy key =
         PrivacySectionFourH3 ->
             CopyText "Where is the information stored?"
 
-        PrivacySectionFourP ->
+        PrivacySectionFourP1 ->
             CopyText ""
 
         PrivacySectionFourList ->
@@ -197,6 +197,9 @@ brandCopy key =
                     }
                 ]
 
+        PrivacySectionFourP2 ->
+            CopyText ""
+
         PrivacySectionFiveH3 ->
             CopyText "Your rights"
 
@@ -220,6 +223,12 @@ brandCopy key =
 
         PrivacySectionSixP2 ->
             CopyText "Contemplating Action uses cookies to:"
+
+        PrivacySectionSixP3 ->
+            CopyText ""
+
+        PrivacySectionSixP4 ->
+            CopyText ""
 
         PrivacySectionSixList ->
             CopyList
