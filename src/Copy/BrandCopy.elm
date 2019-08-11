@@ -7,34 +7,41 @@ import Copy.Keys exposing (Copy(..), Key(..))
 {-
    To make a paragraph use CopyText and just write out your paragraph in the following "quotation marks"
 
-   CopyText "This is a paragraph or title. Easy!"
+       CopyText "This is a paragraph or title. Easy!"
 
-   Also use CopyText with empty "" if you don't want anything there.
+       Also use CopyText with empty "" if you don't want anything there.
 
-   CopyText ""
+       CopyText ""
 
 
    To make a list (such as bulletpointed information) use CopyList. Wrap your list [in square brackets],  write each of your list items
    "contained in its own quotation marks" and follow each with a comma
 
-    CopyList
-     [ CopyText "Please"
-     , CopyText "Don't forget to write"
-     , CopyText "Lists like"
-     , CopyText "This"
-     ]
+       CopyList
+           [ CopyText "Please"
+           , CopyText "Don't forget to write"
+           , CopyText "Lists like"
+           , CopyText "This"
+           ]
 
 
    To make a paragraph that has a link in the text, use CopyWithLink. There are four components to CopyWithLink: the text that comes before the link,
    the words that will comprise the link itself, the web address you want the text to link to, and any text that comes after the link.
 
-   CopyWithLink
-     { textBefore = "This is a paragraph that contains"
-     , linkText = "a link"
-     , destination = "https://www.google.co.uk"
-     , textAfter = "to Google's home page."
-     }
+       CopyWithLink
+           { textBefore = "This is a paragraph that contains"
+           , linkText = "a link"
+           , destination = "https://www.google.co.uk"
+           , textAfter = "to Google's home page."
+           }
 
+   To add multiple bits of copy to a single section use CopySection. The items in the the section will appear with space between them.
+
+       CopySection
+           [ CopyText
+           , CopyList
+           , CoptText
+           ]
 
 -}
 
@@ -314,11 +321,11 @@ brandCopy key =
         InfoNotFoundIcon ->
             CopyText "question"
 
-        InfoNotFoundP1 ->
-            CopyText "We can't find a page with that title, sorry."
-
-        InfoNotFoundP2 ->
-            CopyText "Please use the 'Other information to help you' page to see if we have the topic you are looking for."
+        InfoNotFoundContent ->
+            CopySection
+                [ CopyText "We can't find a page with that title, sorry."
+                , CopyText "Please use the 'Other information to help you' page to see if we have the topic you are looking for."
+                ]
 
         InfoOneName ->
             CopyText "About the project"
@@ -329,7 +336,7 @@ brandCopy key =
         InfoOneIcon ->
             CopyText "question-circle-o"
 
-        InfoOneP1 ->
+        InfoOneContent ->
             CopyText "In 2017, The Haven Wolverhampton, worked with Neontribe and women who had been through domestic abuse. We co-designed a web app to encourage other women in that situation to seek support and advice. We want to find out if the structure of that app could be used by different organisations. We believe that reassuring people that their fears and challenges are shared could help them take early steps on a journey of change such as contacting a support service."
 
         InfoTwoName ->
@@ -341,7 +348,7 @@ brandCopy key =
         InfoTwoIcon ->
             CopyText "info-circle"
 
-        InfoTwoP1 ->
+        InfoTwoContent ->
             CopyText "We include bite size information relating to a small number of fears and barriers that are likely to be stopping people from taking the next step. Keeping the language simple we aim to be open and honest, with a reassuring tone. We resist the temptation to provide all the information people might need. Our goal is to offer just enough to help people reach out to support services. Other websites have excellent longer content."
 
         InfoThreeName ->
@@ -353,7 +360,7 @@ brandCopy key =
         InfoThreeIcon ->
             CopyText "pencil"
 
-        InfoThreeP1 ->
+        InfoThreeContent ->
             CopyText "Many organisations struggle with the same problem with stories. We know stories can be powerful, we want to use them for many reasons. Unfortunately people don’t always like to spend time reading them online. We believe that visual storytelling can change this. Contemplating Action has a budget for artists, to test whether this 4 image story format can encourage more people to read them."
 
         InfoFourName ->
@@ -365,7 +372,7 @@ brandCopy key =
         InfoFourIcon ->
             CopyText "check-square-o"
 
-        InfoFourP1 ->
+        InfoFourContent ->
             CopyText "We would like you to take our survey. We want to understand whether staff in organisations who work most closely with people seeking support think this approach could work. We’re interested in your instincts as well as any evidence you might share. It will help us decide where to take the project next."
 
         InfoFiveName ->
@@ -377,7 +384,7 @@ brandCopy key =
         InfoFiveIcon ->
             CopyText "group"
 
-        InfoFiveP1 ->
+        InfoFiveContent ->
             CopyText "We’re actively looking for partner charities interested in experimenting with this visual storytelling format. So if you have a helpline, webchat, messaging service or even a face to face service, we could work together on whether an app could help people connect to those services. We have small amounts of funding to support charities getting involved. Please show your interest by taking the survey."
 
         InfoSixName ->
@@ -389,7 +396,7 @@ brandCopy key =
         InfoSixIcon ->
             CopyText "involved"
 
-        InfoSixP1 ->
+        InfoSixContent ->
             CopyText "This is a partnership between CAST - a charity driving social change through digital technology - and digital development agency Neontribe. It is one of a number of projects aimed at supporting civic and social organisations to grow confident in using digital tools to achieve their charitable objectives. It is possible thanks to The Haven, Wolverhampton sharing technology developed for and with the people they work with."
 
         StoriesTitleH2 ->
