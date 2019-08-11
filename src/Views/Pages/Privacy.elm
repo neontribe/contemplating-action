@@ -36,14 +36,17 @@ privacyContent =
             , p [] [ t PrivacySectionThreeP2 ]
             , t PrivacySectionThreeList
             , h3 [] [ t PrivacySectionFourH3 ]
-            , p [] [ t PrivacySectionFourP ]
+            , p [] [ t PrivacySectionFourP1 ]
             , t PrivacySectionFourList
+            , p [] [ t PrivacySectionFourP2 ]
             , h3 [] [ t PrivacySectionFiveH3 ]
             , p [] [ t PrivacySectionFiveP ]
             , t PrivacySectionFiveList
             , h3 [] [ t PrivacySectionSixH3 ]
             , p [] [ t PrivacySectionSixP1 ]
             , p [] [ t PrivacySectionSixP2 ]
+            , p [] [ t PrivacySectionSixP3 ]
+            , p [] [ t PrivacySectionSixP4 ]
             , t PrivacySectionSixList
             , h3 [] [ t PrivacySectionSevenH3 ]
             , p [] [ t PrivacySectionSevenP ]

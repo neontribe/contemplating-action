@@ -57,14 +57,17 @@ type Key
     | PrivacySectionThreeP2
     | PrivacySectionThreeList
     | PrivacySectionFourH3
-    | PrivacySectionFourP
+    | PrivacySectionFourP1
     | PrivacySectionFourList
+    | PrivacySectionFourP2
     | PrivacySectionFiveH3
     | PrivacySectionFiveP
     | PrivacySectionFiveList
     | PrivacySectionSixH3
     | PrivacySectionSixP1
     | PrivacySectionSixP2
+    | PrivacySectionSixP3
+    | PrivacySectionSixP4
     | PrivacySectionSixList
     | PrivacySectionSevenH3
     | PrivacySectionSevenP
