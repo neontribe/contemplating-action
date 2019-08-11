@@ -5,43 +5,43 @@ import Copy.Keys exposing (Copy(..), Key(..))
 
 
 {-
-      To make a paragraph use CopyText and just write out your paragraph in the following "quotation marks"
+   To make a paragraph use CopyText and just write out your paragraph in the following "quotation marks"
 
-      CopyText "This is a paragraph or title. Easy!"
+       CopyText "This is a paragraph or title. Easy!"
 
-      Also use CopyText with empty "" if you don't want anything there.
+       Also use CopyText with empty "" if you don't want anything there.
 
-      CopyText ""
+       CopyText ""
 
 
-      To make a list (such as bulletpointed information) use CopyList. Wrap your list [in square brackets],  write each of your list items
-      "contained in its own quotation marks" and follow each with a comma
+   To make a list (such as bulletpointed information) use CopyList. Wrap your list [in square brackets],  write each of your list items
+   "contained in its own quotation marks" and follow each with a comma
 
        CopyList
-          [ CopyText "Please"
-          , CopyText "Don't forget to write"
-          , CopyText "Lists like"
-          , CopyText "This"
-          ]
+           [ CopyText "Please"
+           , CopyText "Don't forget to write"
+           , CopyText "Lists like"
+           , CopyText "This"
+           ]
 
 
-      To make a paragraph that has a link in the text, use CopyWithLink. There are four components to CopyWithLink: the text that comes before the link,
-      the words that will comprise the link itself, the web address you want the text to link to, and any text that comes after the link.
+   To make a paragraph that has a link in the text, use CopyWithLink. There are four components to CopyWithLink: the text that comes before the link,
+   the words that will comprise the link itself, the web address you want the text to link to, and any text that comes after the link.
 
-      CopyWithLink
-          { textBefore = "This is a paragraph that contains"
-          , linkText = "a link"
-          , destination = "https://www.google.co.uk"
-          , textAfter = "to Google's home page."
-          }
+       CopyWithLink
+           { textBefore = "This is a paragraph that contains"
+           , linkText = "a link"
+           , destination = "https://www.google.co.uk"
+           , textAfter = "to Google's home page."
+           }
 
-       To add multiple bits of copy to a single section use CopySection. The items in the the section will appear with space between them.
+   To add multiple bits of copy to a single section use CopySection. The items in the the section will appear with space between them.
 
-   CopySection
-       [ CopyText
-       , CopyList
-       , CoptText
-       ]
+       CopySection
+           [ CopyText
+           , CopyList
+           , CoptText
+           ]
 
 -}
 
