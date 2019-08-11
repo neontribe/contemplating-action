@@ -85,7 +85,7 @@ infoPage info =
     in
     div [ class "section--vertical-fill-center" ]
         [ div [ class "section section--align-bottom" ]
-            [ div [ class "card card--alternate card--with-icon" ]
+            [ div [ class "card card--alternate card--with-icon card--info" ]
                 [ div [ class "text-center" ]
                     [ getIcon (t info.icon) (Just "icon icon--large card--icon")
                     , article [ class "inset" ]
