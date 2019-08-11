@@ -11,7 +11,7 @@ import Html exposing (Html, a, article, button, div, h2, iframe, img, p, section
 import Html.Attributes exposing (alt, class, height, href, src)
 import Html.Events exposing (onClick)
 import Icon exposing (getIcon)
-import Info exposing (getInfo, getInfoBySlug, infoCard, infoPage)
+import Info exposing (getInfo, getInfoBySlug, infoListItem, infoPage)
 import Messages exposing (Msg(..))
 import Model exposing (Model)
 import Route exposing (Page(..))
@@ -167,12 +167,12 @@ view model =
             div [ class "section section--info section--vertical-fill-center" ]
                 [ h2 [] [ text (t InfoTitleH2) ]
                 , ul [ class "info--list" ]
-                    [ infoCard (getInfo 1)
-                    , infoCard (getInfo 2)
-                    , infoCard (getInfo 3)
-                    , infoCard (getInfo 4)
-                    , infoCard (getInfo 5)
-                    , infoCard (getInfo 6)
+                    [ infoListItem (getInfo 1)
+                    , infoListItem (getInfo 2)
+                    , infoListItem (getInfo 3)
+                    , infoListItem (getInfo 4)
+                    , infoListItem (getInfo 5)
+                    , infoListItem (getInfo 6)
                     ]
                 ]
 

@@ -1,4 +1,4 @@
-module Info exposing (Info, getInfo, getInfoBySlug, infoCard, infoPage)
+module Info exposing (Info, getInfo, getInfoBySlug, infoListItem, infoPage)
 
 import Copy.Keys exposing (Key(..))
 import Copy.Render exposing (toHtml, toString)
@@ -55,8 +55,8 @@ getInfoBySlug slug =
 -- Views
 
 
-infoCard : Info -> Html Msg
-infoCard info =
+infoListItem : Info -> Html Msg
+infoListItem info =
     let
         t =
             toString
@@ -85,7 +85,7 @@ infoPage info =
     in
     div [ class "section--vertical-fill-center" ]
         [ div [ class "section section--align-bottom" ]
-            [ div [ class "card card--alternate card--with-icon" ]
+            [ div [ class "card card--alternate card--with-icon card--info" ]
                 [ div [ class "text-center" ]
                     [ getIcon (t info.icon) (Just "icon icon--large card--icon")
                     , article [ class "inset" ]
