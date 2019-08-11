@@ -1,7 +1,7 @@
 module Info exposing (Info, getInfo, getInfoBySlug, infoCard, infoPage)
 
 import Copy.Keys exposing (Key(..))
-import Copy.Render exposing (toString)
+import Copy.Render exposing (toHtml, toString)
 import Html exposing (Html, a, article, div, h2, li, p, span, text)
 import Html.Attributes exposing (class, href)
 import Html.Events exposing (onClick)
@@ -15,7 +15,7 @@ type alias Info =
     , icon : Key
     , name : Key
     , slug : Key
-    , infoText : List Key
+    , infoText : Key
     }
 
 
@@ -90,7 +90,7 @@ infoPage info =
                     [ getIcon (t info.icon) (Just "icon icon--large card--icon")
                     , article [ class "inset" ]
                         [ h2 [] [ text (t info.name) ]
-                        , div [] (renderParas info.infoText)
+                        , toHtml info.infoText
                         ]
                     ]
                 ]
@@ -104,15 +104,6 @@ infoPage info =
         ]
 
 
-renderParas : List Key -> List (Html msg)
-renderParas paras =
-    let
-        t =
-            toString
-    in
-    List.map (\key -> p [] [ text (t key) ]) paras
-
-
 
 -- Info records
 
@@ -123,10 +114,7 @@ placeholderInfo =
     , name = InfoNotFoundName
     , slug = InfoNotFoundSlug
     , icon = InfoNotFoundIcon
-    , infoText =
-        [ InfoNotFoundP1
-        , InfoNotFoundP2
-        ]
+    , infoText = InfoNotFoundContent
     }
 
 
@@ -136,36 +124,36 @@ infoList =
       , name = InfoOneName
       , slug = InfoOneSlug
       , icon = InfoOneIcon
-      , infoText = [ InfoOneP1 ]
+      , infoText = InfoOneContent
       }
     , { id = 2
       , name = InfoTwoName
       , slug = InfoTwoSlug
       , icon = InfoTwoIcon
-      , infoText = [ InfoTwoP1 ]
+      , infoText = InfoTwoContent
       }
     , { id = 3
       , name = InfoThreeName
       , slug = InfoThreeSlug
       , icon = InfoThreeIcon
-      , infoText = [ InfoThreeP1 ]
+      , infoText = InfoThreeContent
       }
     , { id = 4
       , name = InfoFourName
       , slug = InfoFourSlug
       , icon = InfoFourIcon
-      , infoText = [ InfoFourP1 ]
+      , infoText = InfoFourContent
       }
     , { id = 5
       , name = InfoFiveName
       , slug = InfoFiveSlug
       , icon = InfoFiveIcon
-      , infoText = [ InfoFiveP1 ]
+      , infoText = InfoFiveContent
       }
     , { id = 6
       , name = InfoSixName
       , slug = InfoSixSlug
       , icon = InfoSixIcon
-      , infoText = [ InfoSixP1 ]
+      , infoText = InfoSixContent
       }
     ]

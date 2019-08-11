@@ -12,6 +12,7 @@ type alias TextWithLink =
 type Copy
     = CopyText String
     | CopyList (List Copy)
+    | CopySection (List Copy)
     | CopyWithLink TextWithLink
 
 
@@ -96,32 +97,31 @@ type Key
     | InfoNotFoundName
     | InfoNotFoundSlug
     | InfoNotFoundIcon
-    | InfoNotFoundP1
-    | InfoNotFoundP2
+    | InfoNotFoundContent
     | InfoOneName
     | InfoOneSlug
     | InfoOneIcon
-    | InfoOneP1
+    | InfoOneContent
     | InfoTwoName
     | InfoTwoSlug
     | InfoTwoIcon
-    | InfoTwoP1
+    | InfoTwoContent
     | InfoThreeName
     | InfoThreeSlug
     | InfoThreeIcon
-    | InfoThreeP1
+    | InfoThreeContent
     | InfoFourName
     | InfoFourSlug
     | InfoFourIcon
-    | InfoFourP1
+    | InfoFourContent
     | InfoFiveName
     | InfoFiveSlug
     | InfoFiveIcon
-    | InfoFiveP1
+    | InfoFiveContent
     | InfoSixName
     | InfoSixSlug
     | InfoSixIcon
-    | InfoSixP1
+    | InfoSixContent
       --Stories
     | StoriesTitleH2
     | StoriesTeaserMoreLink String
