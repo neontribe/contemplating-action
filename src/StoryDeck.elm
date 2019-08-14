@@ -207,7 +207,7 @@ placeholderDeck =
 placeholderCard : Card
 placeholderCard =
     { quoteText = StoryNotFoundQuote
-    , imagePath = AssetPath "story_images/slide1.svg"
+    , imagePath = AssetPath "story_images/placeholder.png"
     , altText = StoryNotFoundImageAlt
     , messageText = Just StoryNotFoundMessage
     }
