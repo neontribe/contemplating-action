@@ -72,6 +72,9 @@ type Key
     | PrivacySectionSevenH3
     | PrivacySectionSevenP
     | PrivacySectionSevenList
+    | PrivacySectionEightH3
+    | PrivacySectionEightP
+    | PrivacySectionEightList
       -- Supporters
     | SupportersTitleH2
     | SupportersP1

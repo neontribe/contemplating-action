@@ -254,6 +254,15 @@ brandCopy key =
         PrivacySectionSevenList ->
             CopyText ""
 
+        PrivacySectionEightH3 ->
+            CopyText ""
+
+        PrivacySectionEightP ->
+            CopyText ""
+
+        PrivacySectionEightList ->
+            CopyText ""
+
         -- Supporters Page
         SupportersTitleH2 ->
             CopyText "Our Supporters"
