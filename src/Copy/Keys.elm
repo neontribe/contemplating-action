@@ -29,6 +29,10 @@ type Key
     | ContactLinkLong
     | ContactLinkShort
     | ExitSite
+      -- Cookies
+    | CookieDescription
+    | CookieAccept
+    | CookieDecline
       -- Nav Icons
     | IconCallToAction
     | IconStories

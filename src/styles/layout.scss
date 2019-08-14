@@ -625,6 +625,31 @@ nav,
 
 /* ------------------------------
 
+   Cookies
+
+------------------------------ */
+
+.section--cookie {
+  padding: 10px 20px;
+  font-size: 0.8181rem;
+}
+
+.button-group--cookie {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+
+  .button--cookie {
+    font-size: 0.8181rem;
+  }
+
+  .button + .button {
+    margin: 0;
+  }
+}
+
+/* ------------------------------
+
    Helper
 
 ------------------------------ */
