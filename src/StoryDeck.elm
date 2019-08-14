@@ -277,4 +277,33 @@ decks =
               }
             ]
       }
+    , { id = 3
+      , title = StoryThreeTitle
+      , teaser = StoryThreeTeaser
+      , teaserImgPath = AssetPath "story_images/story3-thumbnail.jpg"
+      , teaserImgAltText = StoryThreeTeaserImageAlt
+      , relatedInfo = [ 1, 4 ]
+      , cards =
+            [ { quoteText = StoryThree1Quote
+              , imagePath = AssetPath "story_images/story3-image1.jpg"
+              , altText = StoryThree1ImageAlt
+              , messageText = Nothing
+              }
+            , { quoteText = StoryThree2Quote
+              , imagePath = AssetPath "story_images/story3-image2.jpg"
+              , altText = StoryThree2ImageAlt
+              , messageText = Just StoryThree2Message
+              }
+            , { quoteText = StoryThree3Quote
+              , imagePath = AssetPath "story_images/story3-image3.jpg"
+              , altText = StoryThree3ImageAlt
+              , messageText = Nothing
+              }
+            , { quoteText = StoryThree4Quote
+              , imagePath = AssetPath "story_images/story3-image4.jpg"
+              , altText = StoryThree4ImageAlt
+              , messageText = Nothing
+              }
+            ]
+      }
     ]

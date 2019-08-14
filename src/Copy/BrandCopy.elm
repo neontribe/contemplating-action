@@ -517,3 +517,39 @@ brandCopy key =
 
         StoryTwo4ImageAlt ->
             CopyText "A smiling woman with two children"
+
+        StoryThreeTitle ->
+            CopyText "✨"
+
+        StoryThreeTeaser ->
+            CopyText "✨"
+
+        StoryThreeTeaserImageAlt ->
+            CopyText "✨"
+
+        StoryThree1Quote ->
+            CopyText """✨"""
+
+        StoryThree1ImageAlt ->
+            CopyText "✨"
+
+        StoryThree2Quote ->
+            CopyText """✨"""
+
+        StoryThree2ImageAlt ->
+            CopyText "✨"
+
+        StoryThree2Message ->
+            CopyText "✨"
+
+        StoryThree3Quote ->
+            CopyText """✨"""
+
+        StoryThree3ImageAlt ->
+            CopyText "✨"
+
+        StoryThree4Quote ->
+            CopyText """✨"""
+
+        StoryThree4ImageAlt ->
+            CopyText "✨"

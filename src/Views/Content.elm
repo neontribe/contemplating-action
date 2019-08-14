@@ -122,6 +122,7 @@ view model =
                     [ h2 [] [ text (t StoriesTitleH2) ]
                     , storyTeaser 1
                     , storyTeaser 2
+                    , storyTeaser 3
                     ]
                 , div [ class "section section--lighter" ]
                     [ div [ class "text-center" ]
