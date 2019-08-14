@@ -3,9 +3,8 @@
 
 module Views.Nav exposing (view)
 
-import CallToAction exposing (CallToAction, CallToActionType(..), callToActionConstructor)
 import Copy.Keys exposing (Key(..))
-import Copy.Render exposing (toString)
+import Copy.Render exposing (toHtml, toString)
 import Html exposing (Html, a, div, nav, span, text)
 import Html.Attributes exposing (class, href, id, rel, target)
 import Html.Events exposing (onClick)
@@ -24,11 +23,11 @@ view model =
     div [ class "nav-bar" ]
         [ nav []
             [ div [ class "desktop-only" ]
-                [ callToActionNavItemDesktop (callToActionConstructor Survey (t CallToActionDestination) (t CallToActionDestinationDisplay)) ]
+                [ toHtml CallToActionOne ]
             , navItem (t IconStories) "#/stories" "find-out-more" "view-list" (t ContentLinkShort) (t ContentLinkMedium)
             , navItem (t IconContact) (t ContactLinkDestination) "contact" "email" (t ContactLinkShort) (t ContactLinkLong)
             , span [ class "nav-item mobile-only" ]
-                [ callToActionNavItemMobile (callToActionConstructor Survey (t CallToActionDestination) (t CallToActionDestinationDisplay)) ]
+                [ toHtml CallToActionOne ]
             ]
         ]
 
@@ -46,29 +45,3 @@ navItem icon link category action shortLinkText longLinkText =
                 ]
             ]
         ]
-
-
-callToActionNavItemDesktop : CallToAction -> Html Msg
-callToActionNavItemDesktop cta =
-    case cta.action of
-        Phone ->
-            div [ class "nav-item--text-only" ]
-                [ span [ class "nav-item-text" ] [ text cta.promptLong ]
-                , span [ class "nav-item-text" ] [ text cta.displayHref ]
-                ]
-
-        Survey ->
-            navItem cta.icon cta.href "call-to-action" cta.category cta.promptShort cta.promptLong
-
-
-{-| Call to action can be a phone number or a survey link
-If it's a phone we only render as a button on small screens
--}
-callToActionNavItemMobile : CallToAction -> Html Msg
-callToActionNavItemMobile cta =
-    case cta.action of
-        Phone ->
-            navItem cta.icon ("tel:" ++ cta.href) "call-to-action" cta.category cta.promptShort cta.promptLong
-
-        Survey ->
-            navItem cta.icon cta.href "call-to-action" cta.category cta.promptShort cta.promptLong

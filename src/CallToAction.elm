@@ -1,44 +1,50 @@
-module CallToAction exposing (CallToAction, CallToActionType(..), callToActionConstructor, callToActionNoDesktopButton)
+module CallToAction exposing (callToActionButton)
+
+import Copy.Keys exposing (CallToActionRecord, CallToActionType(..))
+import Html exposing (Html, a, div, span, text)
+import Html.Attributes exposing (class, href)
+import Html.Events exposing (onClick)
+import Icon exposing (getIcon)
+import Messages exposing (Msg(..))
 
 
-type CallToActionType
-    = Phone
-    | Survey
+callToActionButton : CallToActionRecord -> String -> List (Html Msg)
+callToActionButton callToAction aClass =
+    [ if callToActionNoDesktopButton callToAction.action then
+        div [ class "desktop-only" ]
+            [ div []
+                [ span []
+                    [ getIcon callToAction.icon (Just "button--icon")
+                    , span [] [ text callToAction.promptLong ]
+                    ]
+                , span []
+                    [ text callToAction.displayHref ]
+                ]
+            ]
 
+      else
+        text ""
+    , a
+        [ class
+            (if callToActionNoDesktopButton callToAction.action then
+                "mobile-only button button--full-width " ++ aClass
 
-type alias CallToAction =
-    { action : CallToActionType
-    , category : String
-    , href : String
-    , icon : String
-    , displayHref : String
-    , promptLong : String
-    , promptShort : String
-    }
+             else
+                "button button--full-width " ++ aClass
+            )
+        , href
+            (if callToActionNoDesktopButton callToAction.action then
+                "tel:" ++ callToAction.href
 
-
-callToActionConstructor : CallToActionType -> String -> String -> CallToAction
-callToActionConstructor actionType href displayHref =
-    case actionType of
-        Phone ->
-            { action = Phone
-            , category = "phone"
-            , href = "tel:" ++ href
-            , icon = "phone"
-            , displayHref = displayHref
-            , promptLong = "Call Us"
-            , promptShort = "Call"
-            }
-
-        Survey ->
-            { action = Survey
-            , category = "survey"
-            , href = href
-            , icon = "check-square-o"
-            , displayHref = displayHref
-            , promptLong = "Take part in our Survey"
-            , promptShort = "Survey"
-            }
+             else
+                callToAction.href
+            )
+        , onClick (ButtonPress "call-to-action" callToAction.category "button" True)
+        ]
+        [ getIcon callToAction.icon (Just "button--icon")
+        , span [] [ text callToAction.promptLong ]
+        ]
+    ]
 
 
 callToActionNoDesktopButton : CallToActionType -> Bool

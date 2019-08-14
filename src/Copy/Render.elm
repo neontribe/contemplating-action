@@ -1,20 +1,29 @@
-module Copy.Render exposing (toHtml, toString)
+module Copy.Render exposing (toHtml, toHtmlWithContext, toString)
 
+import CallToAction exposing (callToActionButton)
 import Copy.BrandCopy exposing (brandCopy)
-import Copy.Keys exposing (Copy(..), Key(..))
-import Html exposing (Html, a, div, li, p, text, ul)
+import Copy.Keys exposing (CallToActionType(..), Copy(..), Key(..))
+import Html exposing (Html, a, div, li, p, span, text, ul)
 import Html.Attributes exposing (class, href)
+import Messages exposing (Msg(..))
 
 
-copyToHtml : Copy -> Html msg
-copyToHtml copy =
+copyToHtml : Copy -> Maybe String -> Html Msg
+copyToHtml copy context =
     case copy of
+        CallToAction cta ->
+            if context == Just "button" then
+                div [] (callToActionButton cta "class-string")
+
+            else
+                text "Not button"
+
         CopyText string ->
             text string
 
         CopyList list ->
             ul [ class "ul--disc" ]
-                (List.map (\item -> li [] [ copyToHtml item ]) list)
+                (List.map (\item -> li [] [ copyToHtml item Nothing ]) list)
 
         CopySection list ->
             let
@@ -30,10 +39,10 @@ copyToHtml copy =
                 (List.map
                     (\item ->
                         if needsParagraph item then
-                            p [] [ copyToHtml item ]
+                            p [] [ copyToHtml item Nothing ]
 
                         else
-                            copyToHtml item
+                            copyToHtml item Nothing
                     )
                     list
                 )
@@ -46,9 +55,14 @@ copyToHtml copy =
                 ]
 
 
-toHtml : Key -> Html msg
+toHtml : Key -> Html Msg
 toHtml key =
-    copyToHtml (brandCopy key)
+    copyToHtml (brandCopy key) Nothing
+
+
+toHtmlWithContext : Key -> Maybe String -> Html Msg
+toHtmlWithContext key context =
+    copyToHtml (brandCopy key) context
 
 
 toString : Key -> String
@@ -57,11 +71,9 @@ toString key =
         CopyText string ->
             string
 
-        CopyList _ ->
-            ""
-
-        CopySection _ ->
-            ""
-
         CopyWithLink textLink ->
             textLink.textBefore ++ " " ++ textLink.linkText ++ " " ++ textLink.textAfter
+
+        -- This is a hack - we don't use, but have to output something.
+        _ ->
+            ""

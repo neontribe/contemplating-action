@@ -1,6 +1,6 @@
 module Copy.BrandCopy exposing (brandCopy)
 
-import Copy.Keys exposing (Copy(..), Key(..))
+import Copy.Keys exposing (CallToActionType(..), Copy(..), Key(..))
 
 
 
@@ -55,17 +55,16 @@ brandCopy key =
         AppTitle ->
             CopyText "Contemplating Action"
 
-        CallToActionDestination ->
-            CopyText "https://contemplating-action.typeform.com/to/zUOTYA"
-
-        CallToActionDestinationDisplay ->
-            CopyText ""
-
-        CallToActionLong ->
-            CopyText "Take part in our survey"
-
-        CallToActionShort ->
-            CopyText "Survey"
+        CallToActionOne ->
+            CallToAction
+                { action = Link
+                , category = "survey"
+                , icon = "check-square-o"
+                , href = "https://Contemplating-action.typeform.com/to/zUOTYA"
+                , displayHref = ""
+                , promptLong = "Take part in our survey"
+                , promptShort = "Survey"
+                }
 
         ContentLinkLong ->
             CopyText "Find out more"
@@ -84,9 +83,6 @@ brandCopy key =
 
         ContactLinkDestination ->
             CopyText "mailto:hello@contemplatingaction.org.uk"
-
-        IconCallToAction ->
-            CopyText "check-square-o"
 
         IconStories ->
             CopyText "question-circle-o"
