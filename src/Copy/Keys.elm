@@ -160,3 +160,15 @@ type Key
     | StoryTwo3ImageAlt
     | StoryTwo4Quote
     | StoryTwo4ImageAlt
+    | StoryThreeTitle
+    | StoryThreeTeaser
+    | StoryThreeTeaserImageAlt
+    | StoryThree1Quote
+    | StoryThree1ImageAlt
+    | StoryThree2Quote
+    | StoryThree2ImageAlt
+    | StoryThree2Message
+    | StoryThree3Quote
+    | StoryThree3ImageAlt
+    | StoryThree4Quote
+    | StoryThree4ImageAlt
