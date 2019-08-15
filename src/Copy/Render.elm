@@ -32,7 +32,7 @@ copyToHtml copy context =
             case value of
                 -- The button ones are passed in as classes
                 "button" ->
-                    div [] (callToActionButton cta (Maybe.withDefault "" context))
+                    callToActionButton cta (Maybe.withDefault "" context)
 
                 -- The nav item is construsted for desktop or mobile
                 "desktop-nav" ->

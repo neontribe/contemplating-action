@@ -8,9 +8,9 @@ import Icon exposing (getIcon)
 import Messages exposing (Msg(..))
 
 
-callToActionButton : CallToActionRecord -> String -> List (Html Msg)
+callToActionButton : CallToActionRecord -> String -> Html Msg
 callToActionButton callToAction aClass =
-    [ if callToActionNoDesktopButton callToAction.action then
+    if callToActionNoDesktopButton callToAction.action then
         div []
             [ span []
                 [ getIcon callToAction.icon (Just "button--icon")
@@ -20,29 +20,27 @@ callToActionButton callToAction aClass =
                 [ text callToAction.displayHref ]
             ]
 
-      else
-        text ""
-    , a
-        [ class
-            (if callToActionNoDesktopButton callToAction.action then
-                "mobile-only button button--full-width " ++ aClass
+    else
+        a
+            [ class
+                (if callToActionNoDesktopButton callToAction.action then
+                    "mobile-only button button--full-width " ++ aClass
 
-             else
-                "button button--full-width " ++ aClass
-            )
-        , href
-            (if callToActionNoDesktopButton callToAction.action then
-                "tel:" ++ callToAction.href
+                 else
+                    "button button--full-width " ++ aClass
+                )
+            , href
+                (if callToActionNoDesktopButton callToAction.action then
+                    "tel:" ++ callToAction.href
 
-             else
-                callToAction.href
-            )
-        , onClick (ButtonPress "call-to-action" callToAction.category "button" True)
-        ]
-        [ getIcon callToAction.icon (Just "button--icon")
-        , span [] [ text callToAction.promptLong ]
-        ]
-    ]
+                 else
+                    callToAction.href
+                )
+            , onClick (ButtonPress "call-to-action" callToAction.category "button" True)
+            ]
+            [ getIcon callToAction.icon (Just "button--icon")
+            , span [] [ text callToAction.promptLong ]
+            ]
 
 
 callToActionNoDesktopButton : CallToActionType -> Bool
