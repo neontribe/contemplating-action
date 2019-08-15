@@ -1,4 +1,10 @@
-module Copy.Keys exposing (Copy(..), Key(..))
+module Copy.Keys exposing (CallToActionRecord, CallToActionType(..), Copy(..), Key(..))
+
+
+type CallToActionType
+    = Email
+    | Link
+    | Phone
 
 
 type alias TextWithLink =
@@ -9,31 +15,36 @@ type alias TextWithLink =
     }
 
 
+type alias CallToActionRecord =
+    { action : CallToActionType
+    , category : String
+    , href : String
+    , icon : String
+    , displayHref : String
+    , promptLong : String
+    , promptShort : String
+    }
+
+
 type Copy
     = CopyText String
     | CopyList (List Copy)
     | CopySection (List Copy)
     | CopyWithLink TextWithLink
+    | CallToAction CallToActionRecord
 
 
 type Key
     = SiteTitle
     | AppTitle
       -- Nav and links
-    | CallToActionDestination
-    | CallToActionDestinationDisplay
-    | CallToActionLong
-    | CallToActionShort
-    | ContactLinkDestination
+    | CallToActionOne
+    | CallToActionTwo
     | ContentLinkLong
     | ContentLinkMedium
     | ContentLinkShort
-    | ContactLinkLong
-    | ContactLinkShort
       -- Nav Icons
-    | IconCallToAction
     | IconStories
-    | IconContact
       -- Home page
     | HomeReadAboutH2
     | HomeBannerImageAlt

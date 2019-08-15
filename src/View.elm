@@ -19,7 +19,7 @@ view model =
     , body =
         [ div [ id "page-wrapper", class ("page " ++ pageSlug model.currentPage) ]
             [ Views.Header.view model
-            , Views.Nav.view model
+            , Views.Nav.view
             , main_ [ class "content", role "main" ]
                 [ Views.Content.view model ]
             ]

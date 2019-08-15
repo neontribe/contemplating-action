@@ -4,11 +4,10 @@
 module Views.Content exposing (view)
 
 import Assets exposing (AssetPath(..), path)
-import CallToAction exposing (CallToAction, CallToActionType(..), callToActionConstructor, callToActionNoDesktopButton)
-import Copy.Keys exposing (Key(..))
-import Copy.Render exposing (toString)
-import Html exposing (Html, a, article, button, div, h2, iframe, img, p, section, span, text, ul)
-import Html.Attributes exposing (alt, class, height, href, src)
+import Copy.Keys exposing (CallToActionType(..), Key(..))
+import Copy.Render exposing (toHtmlWithContext, toString)
+import Html exposing (Html, a, article, div, h2, img, p, section, span, text, ul)
+import Html.Attributes exposing (alt, class, href, src)
 import Html.Events exposing (onClick)
 import Icon exposing (getIcon)
 import Info exposing (getInfo, getInfoBySlug, infoListItem, infoPage)
@@ -18,49 +17,6 @@ import Route exposing (Page(..))
 import StoryDeck exposing (card, storyRelatedInfo, storyTeaser, storyTitle)
 import Views.Pages.Privacy exposing (privacyContent)
 import Views.Pages.Supporters exposing (supportersContent)
-
-
-
--- Helper: Call to action button markup
-
-
-callToActionButton : CallToAction -> String -> List (Html Msg)
-callToActionButton callToAction aClass =
-    [ if callToActionNoDesktopButton callToAction.action then
-        div [ class "desktop-only" ]
-            [ div []
-                [ span []
-                    [ getIcon callToAction.icon (Just "button--icon")
-                    , span [] [ text callToAction.promptLong ]
-                    ]
-                , span []
-                    [ text callToAction.displayHref ]
-                ]
-            ]
-
-      else
-        text ""
-    , a
-        [ class
-            (if callToActionNoDesktopButton callToAction.action then
-                "mobile-only button button--full-width " ++ aClass
-
-             else
-                "button button--full-width " ++ aClass
-            )
-        , href
-            (if callToActionNoDesktopButton callToAction.action then
-                "tel:" ++ callToAction.href
-
-             else
-                callToAction.href
-            )
-        , onClick (ButtonPress "call-to-action" callToAction.category "button" True)
-        ]
-        [ getIcon callToAction.icon (Just "button--icon")
-        , span [] [ text callToAction.promptLong ]
-        ]
-    ]
 
 
 view : Model -> Html Msg
@@ -89,19 +45,9 @@ view model =
                         [ text (t HomeP1) ]
                     , p [] [ a [ class "link link--plain", href (t HomeLinkDestination) ] [ text (t HomeLinkDisplay) ] ]
                     , div [ class "button-group" ]
-                        (List.concat
-                            [ callToActionButton (callToActionConstructor Survey (t CallToActionDestination) (t CallToActionDestinationDisplay)) "button--default-width--desktop"
-                            , [ a
-                                    [ class "button button--full-width button--default-width--desktop"
-                                    , href ("mailto:" ++ t ContactLinkDestination)
-                                    , onClick (ButtonPress "contact" "email" "email-button" True)
-                                    ]
-                                    [ getIcon (t IconCallToAction) (Just "button--icon")
-                                    , span [] [ text "Email us" ]
-                                    ]
-                              ]
-                            ]
-                        )
+                        [ toHtmlWithContext CallToActionOne (Just "button--default-width--desktop")
+                        , toHtmlWithContext CallToActionTwo (Just "button button--full-width button--default-width--desktop")
+                        ]
                     ]
                 , div [ class "section section--highlight" ]
                     [ div [ class "inset" ]
@@ -157,7 +103,7 @@ view model =
                             ]
                             [ text (t InfoLikeOtherInfoLink) ]
                         ]
-                    , div [] (callToActionButton (callToActionConstructor Survey (t CallToActionDestination) (t CallToActionDestinationDisplay)) "")
+                    , div [] [ toHtmlWithContext CallToActionOne (Just "button") ]
                     ]
                 ]
 

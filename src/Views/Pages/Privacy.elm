@@ -4,8 +4,8 @@
 module Views.Pages.Privacy exposing (privacyContent)
 
 import Copy.Keys exposing (Key(..))
-import Copy.Render exposing (toHtml, toString)
-import Html exposing (Html, address, div, h2, h3, li, p, text, ul)
+import Copy.Render exposing (toHtml)
+import Html exposing (Html, address, div, h2, h3, p, text)
 import Html.Attributes exposing (class)
 import Messages exposing (Msg(..))
 

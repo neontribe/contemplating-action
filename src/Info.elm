@@ -2,7 +2,7 @@ module Info exposing (Info, getInfo, getInfoBySlug, infoListItem, infoPage)
 
 import Copy.Keys exposing (Key(..))
 import Copy.Render exposing (toHtml, toString)
-import Html exposing (Html, a, article, div, h2, li, p, span, text)
+import Html exposing (Html, a, article, div, h2, li, span, text)
 import Html.Attributes exposing (class, href)
 import Html.Events exposing (onClick)
 import Icon exposing (getIcon)
