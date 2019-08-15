@@ -1,6 +1,6 @@
 module Copy.Render exposing (toHtml, toHtmlWithContext, toString)
 
-import CallToAction exposing (callToActionButton)
+import CallToAction exposing (callToActionButton, callToActionNav)
 import Copy.BrandCopy exposing (brandCopy)
 import Copy.Keys exposing (CallToActionType(..), Copy(..), Key(..))
 import Html exposing (Html, a, div, li, p, span, text, ul)
@@ -8,15 +8,41 @@ import Html.Attributes exposing (class, href)
 import Messages exposing (Msg(..))
 
 
+filterContext : String -> String
+filterContext context =
+    -- Anything passing a string containing "button" will be a class for us.
+    -- They all get same markup with different classes.
+    if String.contains "button" context then
+        "button"
+        -- All other contexts can be used as they are. They need different markup.
+
+    else
+        context
+
+
 copyToHtml : Copy -> Maybe String -> Html Msg
 copyToHtml copy context =
     case copy of
         CallToAction cta ->
-            if context == Just "button" then
-                div [] (callToActionButton cta "class-string")
+            let
+                value =
+                    Maybe.withDefault "" context
+                        |> filterContext
+            in
+            case value of
+                -- The button ones are passed in as classes
+                "button" ->
+                    div [] (callToActionButton cta (Maybe.withDefault "" context))
 
-            else
-                text "Not button"
+                -- The nav item is construsted for desktop or mobile
+                "desktop-nav" ->
+                    div [] [ callToActionNav cta value ]
+
+                "mobile-nav" ->
+                    div [] [ callToActionNav cta value ]
+
+                _ ->
+                    text ""
 
         CopyText string ->
             text string

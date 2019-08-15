@@ -45,13 +45,13 @@ view model =
                         [ text (t HomeP1) ]
                     , p [] [ a [ class "link link--plain", href (t HomeLinkDestination) ] [ text (t HomeLinkDisplay) ] ]
                     , div [ class "button-group" ]
-                        [ toHtmlWithContext CallToActionOne (Just "button")
+                        [ toHtmlWithContext CallToActionOne (Just "button--default-width--desktop")
                         , a
                             [ class "button button--full-width button--default-width--desktop"
                             , href ("mailto:" ++ t ContactLinkDestination)
                             , onClick (ButtonPress "contact" "email" "email-button" True)
                             ]
-                            [ getIcon "xXx" (Just "button--icon")
+                            [ getIcon "envelope" (Just "button--icon")
                             , span [] [ text "Email us" ]
                             ]
                         ]
@@ -110,7 +110,7 @@ view model =
                             ]
                             [ text (t InfoLikeOtherInfoLink) ]
                         ]
-                    , div [] [ toHtmlWithContext CallToActionOne Nothing ]
+                    , div [] [ toHtmlWithContext CallToActionOne (Just "button") ]
                     ]
                 ]
 

@@ -1,10 +1,10 @@
 -- Views/Nav.elm
 
 
-module Views.Nav exposing (view)
+module Views.Nav exposing (navItem, view)
 
 import Copy.Keys exposing (Key(..))
-import Copy.Render exposing (toHtml, toString)
+import Copy.Render exposing (toHtmlWithContext, toString)
 import Html exposing (Html, a, div, nav, span, text)
 import Html.Attributes exposing (class, href, id, rel, target)
 import Html.Events exposing (onClick)
@@ -23,11 +23,11 @@ view model =
     div [ class "nav-bar" ]
         [ nav []
             [ div [ class "desktop-only" ]
-                [ toHtml CallToActionOne ]
+                [ toHtmlWithContext CallToActionOne (Just "desktop-nav") ]
             , navItem (t IconStories) "#/stories" "find-out-more" "view-list" (t ContentLinkShort) (t ContentLinkMedium)
             , navItem (t IconContact) (t ContactLinkDestination) "contact" "email" (t ContactLinkShort) (t ContactLinkLong)
             , span [ class "nav-item mobile-only" ]
-                [ toHtml CallToActionOne ]
+                [ toHtmlWithContext CallToActionOne (Just "mobile-nav") ]
             ]
         ]
 
