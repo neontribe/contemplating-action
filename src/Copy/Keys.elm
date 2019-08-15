@@ -43,9 +43,6 @@ type Key
     | ContentLinkLong
     | ContentLinkMedium
     | ContentLinkShort
-    | ContactLinkLong
-    | ContactLinkShort
-    | ExitSite
       -- Cookies
     | CookieDescription
     | CookieAccept
