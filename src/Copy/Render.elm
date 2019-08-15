@@ -3,7 +3,7 @@ module Copy.Render exposing (toHtml, toHtmlWithContext, toString)
 import CallToAction exposing (callToActionButton, callToActionNav)
 import Copy.BrandCopy exposing (brandCopy)
 import Copy.Keys exposing (CallToActionType(..), Copy(..), Key(..))
-import Html exposing (Html, a, div, li, p, span, text, ul)
+import Html exposing (Html, a, div, li, p, text, ul)
 import Html.Attributes exposing (class, href)
 import Messages exposing (Msg(..))
 

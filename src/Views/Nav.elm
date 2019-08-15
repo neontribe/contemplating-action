@@ -6,15 +6,14 @@ module Views.Nav exposing (navItem, view)
 import Copy.Keys exposing (Key(..))
 import Copy.Render exposing (toHtmlWithContext, toString)
 import Html exposing (Html, a, div, nav, span, text)
-import Html.Attributes exposing (class, href, id, rel, target)
+import Html.Attributes exposing (class, href)
 import Html.Events exposing (onClick)
 import Icon exposing (getIcon)
 import Messages exposing (Msg(..))
-import Model exposing (Model)
 
 
-view : Model -> Html Msg
-view model =
+view : Html Msg
+view =
     let
         t =
             toString
