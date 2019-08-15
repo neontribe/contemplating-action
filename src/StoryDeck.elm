@@ -2,6 +2,7 @@ module StoryDeck exposing (card, storyRelatedInfo, storyTeaser, storyTitle)
 
 import Array
 import Assets exposing (AssetPath(..), path)
+import Copy.BrandCopy exposing (relatedInfo)
 import Copy.Keys exposing (Key(..))
 import Copy.Render exposing (toHtml, toString)
 import Html exposing (Html, a, blockquote, div, h3, img, p, text)
@@ -224,7 +225,7 @@ decks =
       , teaser = StoryOneTeaser
       , teaserImgPath = AssetPath "story_images/story1-thumbnail.jpg"
       , teaserImgAltText = StoryOneTeaserImageAlt
-      , relatedInfo = [ 3, 6 ]
+      , relatedInfo = relatedInfo 1
       , cards =
             [ { quoteText = StoryOne1Quote
               , imagePath = AssetPath "story_images/story1-image1.jpg"
@@ -253,7 +254,7 @@ decks =
       , teaser = StoryTwoTeaser
       , teaserImgPath = AssetPath "story_images/story2-thumbnail.jpg"
       , teaserImgAltText = StoryTwoTeaserImageAlt
-      , relatedInfo = [ 2, 5 ]
+      , relatedInfo = relatedInfo 2
       , cards =
             [ { quoteText = StoryTwo1Quote
               , imagePath = AssetPath "story_images/story2-image1.jpg"
@@ -282,7 +283,7 @@ decks =
       , teaser = StoryThreeTeaser
       , teaserImgPath = AssetPath "story_images/story3-thumbnail.jpg"
       , teaserImgAltText = StoryThreeTeaserImageAlt
-      , relatedInfo = [ 1, 4 ]
+      , relatedInfo = relatedInfo 3
       , cards =
             [ { quoteText = StoryThree1Quote
               , imagePath = AssetPath "story_images/story3-image1.jpg"

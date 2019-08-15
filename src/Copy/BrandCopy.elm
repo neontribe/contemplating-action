@@ -1,4 +1,4 @@
-module Copy.BrandCopy exposing (brandCopy)
+module Copy.BrandCopy exposing (brandCopy, relatedInfo)
 
 import Copy.Keys exposing (CallToActionType(..), Copy(..), Key(..))
 
@@ -557,3 +557,19 @@ brandCopy key =
 
         StoryThree4ImageAlt ->
             CopyText "✨"
+
+
+relatedInfo : Int -> List Int
+relatedInfo storyId =
+    case storyId of
+        1 ->
+            [ 1, 6 ]
+
+        2 ->
+            [ 2, 5 ]
+
+        3 ->
+            [ 1, 4 ]
+
+        _ ->
+            [ 1 ]
