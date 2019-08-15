@@ -66,6 +66,17 @@ brandCopy key =
                 , promptShort = "Survey"
                 }
 
+        CallToActionTwo ->
+            CallToAction
+                { action = Email
+                , category = "email"
+                , icon = "envelope"
+                , href = ""
+                , displayHref = ""
+                , promptLong = ""
+                , promptShort = ""
+                }
+
         ContentLinkLong ->
             CopyText "Find out more"
 

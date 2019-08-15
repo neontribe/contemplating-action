@@ -39,6 +39,7 @@ type Key
     | AppTitle
       -- Nav and links
     | CallToActionOne
+    | CallToActionTwo
     | ContactLinkDestination
     | ContentLinkLong
     | ContentLinkMedium

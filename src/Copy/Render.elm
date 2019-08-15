@@ -10,14 +10,13 @@ import Messages exposing (Msg(..))
 
 filterContext : String -> String
 filterContext context =
-    -- Anything passing a string containing "button" will be a class for us.
-    -- They all get same markup with different classes.
-    if String.contains "button" context then
-        "button"
-        -- All other contexts can be used as they are. They need different markup.
+    -- Anything passing a string containing "nav".
+    if String.contains "nav" context then
+        "nav"
 
     else
-        context
+        -- All other contexts assumed to be button for now.
+        "button"
 
 
 copyToHtml : Copy -> Maybe String -> Html Msg
@@ -35,11 +34,8 @@ copyToHtml copy context =
                     callToActionButton cta (Maybe.withDefault "" context)
 
                 -- The nav item is construsted for desktop or mobile
-                "desktop-nav" ->
-                    div [] [ callToActionNav cta value ]
-
-                "mobile-nav" ->
-                    div [] [ callToActionNav cta value ]
+                "nav" ->
+                    div [] [ callToActionNav cta (Maybe.withDefault "" context) ]
 
                 _ ->
                     text ""

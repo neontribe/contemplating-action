@@ -1,5 +1,7 @@
 module CallToAction exposing (callToActionButton, callToActionNav)
 
+-- Potential to move all of this into Copy.Render
+
 import Copy.Keys exposing (CallToActionRecord, CallToActionType(..))
 import Html exposing (Html, a, div, span, text)
 import Html.Attributes exposing (class, href)
