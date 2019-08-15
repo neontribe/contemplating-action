@@ -51,5 +51,8 @@ privacyContent =
             , h3 [] [ t PrivacySectionSevenH3 ]
             , p [] [ t PrivacySectionSevenP ]
             , t PrivacySectionSevenList
+            , h3 [] [ t PrivacySectionEightH3 ]
+            , p [] [ t PrivacySectionEightP ]
+            , t PrivacySectionEightList
             ]
         ]
