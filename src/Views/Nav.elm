@@ -19,14 +19,18 @@ view =
             toString
     in
     -- Contains Nav for phones - but text email and phone number for desktop and tablet.
+    -- Not sure why the desktop and mobile menu items need to be in different orders.
     div [ class "nav-bar" ]
         [ nav []
             [ div [ class "desktop-only" ]
                 [ toHtmlWithContext CallToActionOne (Just "desktop-nav") ]
             , navItem (t IconStories) "#/stories" "find-out-more" "view-list" (t ContentLinkShort) (t ContentLinkMedium)
-            , navItem (t IconContact) (t ContactLinkDestination) "contact" "email" (t ContactLinkShort) (t ContactLinkLong)
+            , div [ class "desktop-only" ]
+                [ toHtmlWithContext CallToActionTwo (Just "desktop-nav") ]
             , span [ class "nav-item mobile-only" ]
-                [ toHtmlWithContext CallToActionOne (Just "mobile-nav") ]
+                [ toHtmlWithContext CallToActionOne (Just "mobile-nav")
+                , toHtmlWithContext CallToActionTwo (Just "mobile-nav")
+                ]
             ]
         ]
 

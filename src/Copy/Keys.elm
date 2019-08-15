@@ -40,12 +40,9 @@ type Key
       -- Nav and links
     | CallToActionOne
     | CallToActionTwo
-    | ContactLinkDestination
     | ContentLinkLong
     | ContentLinkMedium
     | ContentLinkShort
-    | ContactLinkLong
-    | ContactLinkShort
       -- Nav Icons
     | IconStories
     | IconContact

@@ -46,14 +46,7 @@ view model =
                     , p [] [ a [ class "link link--plain", href (t HomeLinkDestination) ] [ text (t HomeLinkDisplay) ] ]
                     , div [ class "button-group" ]
                         [ toHtmlWithContext CallToActionOne (Just "button--default-width--desktop")
-                        , a
-                            [ class "button button--full-width button--default-width--desktop"
-                            , href ("mailto:" ++ t ContactLinkDestination)
-                            , onClick (ButtonPress "contact" "email" "email-button" True)
-                            ]
-                            [ getIcon "envelope" (Just "button--icon")
-                            , span [] [ text "Email us" ]
-                            ]
+                        , toHtmlWithContext CallToActionTwo (Just "button button--full-width button--default-width--desktop")
                         ]
                     ]
                 , div [ class "section section--highlight" ]

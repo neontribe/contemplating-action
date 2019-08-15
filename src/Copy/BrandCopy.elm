@@ -71,10 +71,10 @@ brandCopy key =
                 { action = Email
                 , category = "email"
                 , icon = "envelope"
-                , href = ""
-                , displayHref = ""
-                , promptLong = ""
-                , promptShort = ""
+                , href = "mailto:hello@contemplatingaction.org.uk"
+                , displayHref = "hello@contemplatingaction.org.uk"
+                , promptLong = "Email us"
+                , promptShort = "Email"
                 }
 
         ContentLinkLong ->
@@ -85,15 +85,6 @@ brandCopy key =
 
         ContentLinkShort ->
             CopyText "Find Out More"
-
-        ContactLinkLong ->
-            CopyText "hello@contemplatingaction.org.uk"
-
-        ContactLinkShort ->
-            CopyText "Email"
-
-        ContactLinkDestination ->
-            CopyText "mailto:hello@contemplatingaction.org.uk"
 
         IconStories ->
             CopyText "question-circle-o"
