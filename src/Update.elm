@@ -17,13 +17,16 @@ update msg model =
         ButtonPress category action label withPage ->
             if withPage then
                 ( model
-                , updateAnalyticsEvent (gaEvent category action (label ++ "_" ++ pageSlug model.currentPage))
+                , updateAnalytics model (updateAnalyticsEvent (gaEvent category action (label ++ "_" ++ pageSlug model.currentPage)))
                 )
 
             else
                 ( model
-                , updateAnalyticsEvent (gaEvent category action label)
+                , updateAnalytics model (updateAnalyticsEvent (gaEvent category action label))
                 )
+
+        Consent int ->
+            ( { model | consent = int }, Cmd.none )
 
         --
         -- Navigation messages
@@ -51,9 +54,31 @@ update msg model =
                     , Cmd.batch
                         -- pass a list of commands.
                         [ Navigation.pushUrl model.navKey (Url.toString url)
-                        , updateAnalyticsPage (pageSlug page)
+                        , updateAnalytics model (updateAnalyticsPage (pageSlug page))
                         ]
                     )
 
                 Browser.External href ->
                     ( model, Navigation.load href )
+
+        Exit ->
+            ( model
+            , Cmd.batch
+                -- Hide the page immediately with JavaScript
+                [ hidePage Nothing
+                , updateAnalytics model (updateAnalyticsEvent (gaEvent "exit" "force" ("exit-button_" ++ pageSlug model.currentPage)))
+
+                -- Then redirect to Google
+                , Navigation.load "https://google.com"
+                ]
+            )
+
+
+updateAnalytics : Model -> Cmd Msg -> Cmd Msg
+updateAnalytics model gaevent =
+    case model.consent of
+        1 ->
+            gaevent
+
+        _ ->
+            Cmd.none

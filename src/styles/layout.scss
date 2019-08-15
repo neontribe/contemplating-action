@@ -640,6 +640,32 @@ nav,
 
 /* ------------------------------
 
+   Cookies
+
+------------------------------ */
+
+.section--cookie {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+.button-group--cookie {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+
+  .button--cookie {
+    font-size: 1rem;
+  }
+
+  .button + .button {
+    margin: 0;
+    margin-left: 2em;
+  }
+}
+
+/* ------------------------------
+
    Helper
 
 ------------------------------ */

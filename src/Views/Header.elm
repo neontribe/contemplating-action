@@ -10,6 +10,7 @@ import Html.Attributes exposing (class, href)
 import Messages exposing (Msg(..))
 import Model exposing (Model)
 import Route exposing (Page(..))
+import Views.Cookies exposing (cookieContent)
 
 
 view : Model -> Html Msg
@@ -21,7 +22,8 @@ view model =
     case model.currentPage of
         Home ->
             header []
-                [ div [ class "section section--header text-center" ]
+                [ cookieContent model
+                , div [ class "section section--header text-center" ]
                     [ h1 [] [ t AppTitle ]
                     ]
                 ]
@@ -29,7 +31,8 @@ view model =
         -- Any other page
         _ ->
             header []
-                [ div [ class "section section--header text-center" ]
+                [ cookieContent model
+                , div [ class "section section--header text-center" ]
                     [ h1 [] [ a [ href "#" ] [ t AppTitle ] ]
                     ]
                 ]

@@ -89,6 +89,15 @@ brandCopy key =
         IconStories ->
             CopyText "question-circle-o"
 
+        CookieDescription ->
+            CopyText "Can we use cookies to help improve this site? We'd like to use Google Analytics cookies to collect and report information on how people use the site. Allowing us to use cookies does not allow us to identify you. For more information please see our 'Privacy Policy' page."
+
+        CookieAccept ->
+            CopyText "Accept"
+
+        CookieDecline ->
+            CopyText "Decline"
+
         --Home Page
         HomeReadAboutH2 ->
             CopyText "A project exploring how to encourage people to seek support. Can visual stories help change lives?"

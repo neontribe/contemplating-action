@@ -11,6 +11,8 @@ type
       -- Navigation
     | UrlChanged Url.Url
     | LinkClicked Browser.UrlRequest
+      -- 0 is unconfirmed, 1 is accept, 2 is decline
+    | Consent Int
 
 
 

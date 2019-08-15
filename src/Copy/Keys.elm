@@ -43,6 +43,10 @@ type Key
     | ContentLinkLong
     | ContentLinkMedium
     | ContentLinkShort
+      -- Cookies
+    | CookieDescription
+    | CookieAccept
+    | CookieDecline
       -- Nav Icons
     | IconStories
       -- Home page
