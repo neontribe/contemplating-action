@@ -45,7 +45,6 @@ type Key
     | ContentLinkShort
       -- Nav Icons
     | IconStories
-    | IconContact
       -- Home page
     | HomeReadAboutH2
     | HomeBannerImageAlt

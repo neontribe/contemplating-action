@@ -89,9 +89,6 @@ brandCopy key =
         IconStories ->
             CopyText "question-circle-o"
 
-        IconContact ->
-            CopyText "envelope"
-
         --Home Page
         HomeReadAboutH2 ->
             CopyText "A project exploring how to encourage people to seek support. Can visual stories help change lives?"
