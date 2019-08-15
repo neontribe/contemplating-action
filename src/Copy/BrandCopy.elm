@@ -1,6 +1,6 @@
 module Copy.BrandCopy exposing (brandCopy)
 
-import Copy.Keys exposing (Copy(..), Key(..))
+import Copy.Keys exposing (CallToActionType(..), Copy(..), Key(..))
 
 
 
@@ -55,17 +55,27 @@ brandCopy key =
         AppTitle ->
             CopyText "Contemplating Action"
 
-        CallToActionDestination ->
-            CopyText "https://contemplating-action.typeform.com/to/zUOTYA"
+        CallToActionOne ->
+            CallToAction
+                { action = Link
+                , category = "survey"
+                , icon = "check-square-o"
+                , href = "https://Contemplating-action.typeform.com/to/zUOTYA"
+                , displayHref = ""
+                , promptLong = "Take part in our survey"
+                , promptShort = "Survey"
+                }
 
-        CallToActionDestinationDisplay ->
-            CopyText ""
-
-        CallToActionLong ->
-            CopyText "Take part in our survey"
-
-        CallToActionShort ->
-            CopyText "Survey"
+        CallToActionTwo ->
+            CallToAction
+                { action = Email
+                , category = "email"
+                , icon = "envelope"
+                , href = "mailto:hello@contemplatingaction.org.uk"
+                , displayHref = "hello@contemplatingaction.org.uk"
+                , promptLong = "Email us"
+                , promptShort = "Email"
+                }
 
         ContentLinkLong ->
             CopyText "Find out more"
@@ -76,23 +86,8 @@ brandCopy key =
         ContentLinkShort ->
             CopyText "Find Out More"
 
-        ContactLinkLong ->
-            CopyText "hello@contemplatingaction.org.uk"
-
-        ContactLinkShort ->
-            CopyText "Email"
-
-        ContactLinkDestination ->
-            CopyText "mailto:hello@contemplatingaction.org.uk"
-
-        IconCallToAction ->
-            CopyText "check-square-o"
-
         IconStories ->
             CopyText "question-circle-o"
-
-        IconContact ->
-            CopyText "envelope"
 
         --Home Page
         HomeReadAboutH2 ->
@@ -252,6 +247,15 @@ brandCopy key =
             CopyText "By using this site, you consent to the collection and use of this information by Neontribe and to our privacy policy. Please send any questions, concerns or comments you have about these policies to info@neontribe.co.uk "
 
         PrivacySectionSevenList ->
+            CopyText ""
+
+        PrivacySectionEightH3 ->
+            CopyText ""
+
+        PrivacySectionEightP ->
+            CopyText ""
+
+        PrivacySectionEightList ->
             CopyText ""
 
         -- Supporters Page

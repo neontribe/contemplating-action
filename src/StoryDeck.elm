@@ -111,7 +111,7 @@ getInfoButtons id =
         [ text (t (getInfo id).name) ]
 
 
-card : Int -> Int -> Html msg
+card : Int -> Int -> Html Msg
 card deckId cardId =
     let
         t =
@@ -130,7 +130,7 @@ card deckId cardId =
         ]
 
 
-cardMessage : Int -> Int -> Html msg
+cardMessage : Int -> Int -> Html Msg
 cardMessage deckId cardId =
     let
         maybeMessage =

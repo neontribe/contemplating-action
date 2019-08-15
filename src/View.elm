@@ -1,6 +1,8 @@
 module View exposing (view)
 
 import Browser
+import Copy.Keys exposing (Key(..))
+import Copy.Render exposing (toString)
 import Html exposing (Html, div, main_, text)
 import Html.Attributes exposing (class, id)
 import Html.Attributes.Aria exposing (role)
@@ -15,11 +17,11 @@ import Views.Nav
 
 view : Model -> Browser.Document Msg
 view model =
-    { title = "Contemplating Action"
+    { title = toString SiteTitle 
     , body =
         [ div [ id "page-wrapper", class ("page " ++ pageSlug model.currentPage) ]
             [ Views.Header.view model
-            , Views.Nav.view model
+            , Views.Nav.view
             , main_ [ class "content", role "main" ]
                 [ Views.Content.view model ]
             ]
