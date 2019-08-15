@@ -1,4 +1,10 @@
-module Copy.Keys exposing (Copy(..), Key(..))
+module Copy.Keys exposing (CallToActionRecord, CallToActionType(..), Copy(..), Key(..))
+
+
+type CallToActionType
+    = Email
+    | Link
+    | Phone
 
 
 type alias TextWithLink =
@@ -8,21 +14,32 @@ type alias TextWithLink =
     , textAfter : String
     }
 
+
+type alias CallToActionRecord =
+    { action : CallToActionType
+    , category : String
+    , href : String
+    , icon : String
+    , displayHref : String
+    , promptLong : String
+    , promptShort : String
+    }
+
+
 type Copy
     = CopyText String
-    | CopyList (List String)
+    | CopyList (List Copy)
+    | CopySection (List Copy)
     | CopyWithLink TextWithLink
+    | CallToAction CallToActionRecord
 
 
 type Key
     = SiteTitle
     | AppTitle
       -- Nav and links
-    | CallToActionDestination
-    | CallToActionDestinationDisplay
-    | CallToActionLong
-    | CallToActionShort
-    | ContactLinkDestination
+    | CallToActionOne
+    | CallToActionTwo
     | ContentLinkLong
     | ContentLinkMedium
     | ContentLinkShort
@@ -34,10 +51,7 @@ type Key
     | CookieAccept
     | CookieDecline
       -- Nav Icons
-    | IconCallToAction
     | IconStories
-    | IconContact
-    | IconExit
       -- Home page
     | HomeReadAboutH2
     | HomeBannerImageAlt
@@ -49,27 +63,36 @@ type Key
       -- Privacy
     | PrivacyTitleH2
     | PrivacyIntroP
-    | PrivacyCompanyInfoList
-    | PrivacyDataCollectH3
-    | PrivacyDataCollectP
-    | PrivacyDataCollectList
-    | PrivacyInfoUsedH3
-    | PrivacyInfoUsedP
-    | PrivacyInfoUsedList
-    | PrivacyInfoSharedH3
-    | PrivacyInfoSharedP1
-    | PrivacyInfoSharedP2
-    | PrivacyInfoSharedList
-    | PrivacyInfoStoredH3
-    | PrivacyInfoStoredList
-    | PrivacyRightsH3
-    | PrivacyRightsP
-    | PrivacyCookiesH3
-    | PrivacyCookiesP1
-    | PrivacyCookiesP2
-    | PrivacyCookiesList
-    | PrivacyTermsH3
-    | PrivacyTermsP
+    | PrivacyCompanyAddress
+    | PrivacySectionOneH3
+    | PrivacySectionOneP
+    | PrivacySectionOneList
+    | PrivacySectionTwoH3
+    | PrivacySectionTwoP
+    | PrivacySectionTwoList
+    | PrivacySectionThreeH3
+    | PrivacySectionThreeP1
+    | PrivacySectionThreeP2
+    | PrivacySectionThreeList
+    | PrivacySectionFourH3
+    | PrivacySectionFourP1
+    | PrivacySectionFourList
+    | PrivacySectionFourP2
+    | PrivacySectionFiveH3
+    | PrivacySectionFiveP
+    | PrivacySectionFiveList
+    | PrivacySectionSixH3
+    | PrivacySectionSixP1
+    | PrivacySectionSixP2
+    | PrivacySectionSixP3
+    | PrivacySectionSixP4
+    | PrivacySectionSixList
+    | PrivacySectionSevenH3
+    | PrivacySectionSevenP
+    | PrivacySectionSevenList
+    | PrivacySectionEightH3
+    | PrivacySectionEightP
+    | PrivacySectionEightList
       -- Supporters
     | SupportersTitleH2
     | SupportersP1
@@ -98,32 +121,31 @@ type Key
     | InfoNotFoundName
     | InfoNotFoundSlug
     | InfoNotFoundIcon
-    | InfoNotFoundP1
-    | InfoNotFoundP2
+    | InfoNotFoundContent
     | InfoOneName
     | InfoOneSlug
     | InfoOneIcon
-    | InfoOneP1
+    | InfoOneContent
     | InfoTwoName
     | InfoTwoSlug
     | InfoTwoIcon
-    | InfoTwoP1
+    | InfoTwoContent
     | InfoThreeName
     | InfoThreeSlug
     | InfoThreeIcon
-    | InfoThreeP1
+    | InfoThreeContent
     | InfoFourName
     | InfoFourSlug
     | InfoFourIcon
-    | InfoFourP1
+    | InfoFourContent
     | InfoFiveName
     | InfoFiveSlug
     | InfoFiveIcon
-    | InfoFiveP1
+    | InfoFiveContent
     | InfoSixName
     | InfoSixSlug
     | InfoSixIcon
-    | InfoSixP1
+    | InfoSixContent
       --Stories
     | StoriesTitleH2
     | StoriesTeaserMoreLink String
@@ -159,3 +181,15 @@ type Key
     | StoryTwo3ImageAlt
     | StoryTwo4Quote
     | StoryTwo4ImageAlt
+    | StoryThreeTitle
+    | StoryThreeTeaser
+    | StoryThreeTeaserImageAlt
+    | StoryThree1Quote
+    | StoryThree1ImageAlt
+    | StoryThree2Quote
+    | StoryThree2ImageAlt
+    | StoryThree2Message
+    | StoryThree3Quote
+    | StoryThree3ImageAlt
+    | StoryThree4Quote
+    | StoryThree4ImageAlt

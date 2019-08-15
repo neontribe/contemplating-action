@@ -2,7 +2,7 @@ module Update exposing (update)
 
 import Browser
 import Browser.Navigation as Navigation
-import Messages exposing (Msg(..), gaEvent, hidePage, updateAnalyticsEvent, updateAnalyticsPage)
+import Messages exposing (Msg(..), gaEvent, updateAnalyticsEvent, updateAnalyticsPage)
 import Model exposing (Model, pageSlug)
 import Route exposing (Page(..), pageFromUrl)
 import Url

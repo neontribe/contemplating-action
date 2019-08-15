@@ -5,10 +5,9 @@ module Views.Pages.Privacy exposing (privacyContent)
 
 import Copy.Keys exposing (Key(..))
 import Copy.Render exposing (toHtml)
-import Html exposing (Html, div, h2, h3, li, p, text, ul)
+import Html exposing (Html, address, div, h2, h3, p, text)
 import Html.Attributes exposing (class)
 import Messages exposing (Msg(..))
-import Views.Footer exposing (footerContent)
 
 
 privacyContent : Html Msg
@@ -17,34 +16,40 @@ privacyContent =
         t =
             toHtml
     in
-    div [ class "section section--lighter" ]
+    div [ class "section" ]
         [ h2 [] [ t PrivacyTitleH2 ]
         , div []
             [ p [] [ t PrivacyIntroP ]
-            , t PrivacyCompanyInfoList
-            , h3 [] [ t PrivacyDataCollectH3 ]
-            , p [] [ t PrivacyDataCollectP ]
-            , t PrivacyDataCollectList
-            , h3 [] [ t PrivacyInfoUsedH3 ]
-            , p [] [ t PrivacyInfoUsedP ]
-            , t PrivacyInfoUsedList
-            , h3 [] [ t PrivacyInfoSharedH3 ]
-            , p [] [ t PrivacyInfoSharedP1 ]
-            , p [] [ t PrivacyInfoSharedP2 ]
-            , t PrivacyInfoSharedList
-            , h3 [] [ t PrivacyInfoStoredH3 ]
-            , t PrivacyInfoStoredList
-            , h3 [] [ t PrivacyRightsH3 ]
-            , p [] [ t PrivacyRightsP ]
-            , h3 [] [ t PrivacyCookiesH3 ]
-            , p [] [ t PrivacyCookiesP1 ]
-            , p [] [ t PrivacyCookiesP2 ]
-            , t PrivacyCookiesList
-            , h3 [] [ t PrivacyTermsH3 ]
-            , p [] [ t PrivacyTermsP ]
-            ]
+            , if t PrivacyCompanyAddress /= text "" then
+                address [ class "company-info" ] [ t PrivacyCompanyAddress ]
 
-        -- footer should probably be outside content container but this is easiest for now.
-        -- It is conditional on page. Could hide in the story pages with css? But not sure that's any better.
-        , footerContent
+              else
+                text ""
+            , h3 [] [ t PrivacySectionOneH3 ]
+            , p [] [ t PrivacySectionOneP ]
+            , t PrivacySectionOneList
+            , h3 [] [ t PrivacySectionTwoH3 ]
+            , p [] [ t PrivacySectionTwoP ]
+            , t PrivacySectionTwoList
+            , h3 [] [ t PrivacySectionThreeH3 ]
+            , p [] [ t PrivacySectionThreeP1 ]
+            , p [] [ t PrivacySectionThreeP2 ]
+            , t PrivacySectionThreeList
+            , h3 [] [ t PrivacySectionFourH3 ]
+            , p [] [ t PrivacySectionFourP1 ]
+            , t PrivacySectionFourList
+            , p [] [ t PrivacySectionFourP2 ]
+            , h3 [] [ t PrivacySectionFiveH3 ]
+            , p [] [ t PrivacySectionFiveP ]
+            , t PrivacySectionFiveList
+            , h3 [] [ t PrivacySectionSixH3 ]
+            , p [] [ t PrivacySectionSixP1 ]
+            , p [] [ t PrivacySectionSixP2 ]
+            , p [] [ t PrivacySectionSixP3 ]
+            , p [] [ t PrivacySectionSixP4 ]
+            , t PrivacySectionSixList
+            , h3 [] [ t PrivacySectionSevenH3 ]
+            , p [] [ t PrivacySectionSevenP ]
+            , t PrivacySectionSevenList
+            ]
         ]

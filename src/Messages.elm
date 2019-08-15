@@ -1,4 +1,4 @@
-port module Messages exposing (Msg(..), gaEvent, hidePage, updateAnalyticsEvent, updateAnalyticsPage)
+port module Messages exposing (Msg(..), gaEvent, updateAnalyticsEvent, updateAnalyticsPage)
 
 import Browser
 import Url
@@ -39,6 +39,3 @@ port updateAnalyticsPage : String -> Cmd msg
 
 
 port updateAnalyticsEvent : GaEvent -> Cmd msg
-
-
-port hidePage : Maybe String -> Cmd msg

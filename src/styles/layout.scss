@@ -67,6 +67,15 @@ li {
   margin-left: 30px;
 }
 
+address {
+  font-style: normal;
+}
+
+address ul.ul--disc li {
+  list-style: none;
+  margin-left: 0;
+}
+
 p {
   margin: 0;
 }
@@ -465,6 +474,12 @@ nav,
   left: 0;
   right: 0;
   margin: auto;
+}
+
+.card--info ul {
+  margin: auto;
+  max-width: 50ch;
+  text-align: left;
 }
 
 .card--thumbnail {

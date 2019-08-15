@@ -1,36 +1,47 @@
 module Copy.BrandCopy exposing (brandCopy)
 
-import Copy.Keys exposing (Copy(..), Key(..))
+import Copy.Keys exposing (CallToActionType(..), Copy(..), Key(..))
 
 
 
 {-
    To make a paragraph use CopyText and just write out your paragraph in the following "quotation marks"
 
-   CopyText "This is a paragraph or title. Easy!"
+       CopyText "This is a paragraph or title. Easy!"
+
+       Also use CopyText with empty "" if you don't want anything there.
+
+       CopyText ""
 
 
    To make a list (such as bulletpointed information) use CopyList. Wrap your list [in square brackets],  write each of your list items
    "contained in its own quotation marks" and follow each with a comma
 
-    CopyList
-     [ "Please"
-     , "Don't forget to write"
-     , "Lists like"
-     , "This"
-     ]
+       CopyList
+           [ CopyText "Please"
+           , CopyText "Don't forget to write"
+           , CopyText "Lists like"
+           , CopyText "This"
+           ]
 
 
    To make a paragraph that has a link in the text, use CopyWithLink. There are four components to CopyWithLink: the text that comes before the link,
    the words that will comprise the link itself, the web address you want the text to link to, and any text that comes after the link.
 
-   CopyWithLink
-     { textBefore = "This is a paragraph that contains"
-     , linkText = "a link"
-     , destination="https://www.google.co.uk"
-     , textAfter="to Google's home page."
-     }
+       CopyWithLink
+           { textBefore = "This is a paragraph that contains"
+           , linkText = "a link"
+           , destination = "https://www.google.co.uk"
+           , textAfter = "to Google's home page."
+           }
 
+   To add multiple bits of copy to a single section use CopySection. The items in the the section will appear with space between them.
+
+       CopySection
+           [ CopyText
+           , CopyList
+           , CoptText
+           ]
 
 -}
 
@@ -44,17 +55,27 @@ brandCopy key =
         AppTitle ->
             CopyText "Contemplating Action"
 
-        CallToActionDestination ->
-            CopyText "https://contemplating-action.typeform.com/to/zUOTYA"
+        CallToActionOne ->
+            CallToAction
+                { action = Link
+                , category = "survey"
+                , icon = "check-square-o"
+                , href = "https://Contemplating-action.typeform.com/to/zUOTYA"
+                , displayHref = ""
+                , promptLong = "Take part in our survey"
+                , promptShort = "Survey"
+                }
 
-        CallToActionDestinationDisplay ->
-            CopyText ""
-
-        CallToActionLong ->
-            CopyText "Take part in our survey"
-
-        CallToActionShort ->
-            CopyText "Survey"
+        CallToActionTwo ->
+            CallToAction
+                { action = Email
+                , category = "email"
+                , icon = "envelope"
+                , href = "mailto:hello@contemplatingaction.org.uk"
+                , displayHref = "hello@contemplatingaction.org.uk"
+                , promptLong = "Email us"
+                , promptShort = "Email"
+                }
 
         ContentLinkLong ->
             CopyText "Find out more"
@@ -65,38 +86,8 @@ brandCopy key =
         ContentLinkShort ->
             CopyText "Find Out More"
 
-        ContactLinkLong ->
-            CopyText "hello@contemplatingaction.org.uk"
-
-        ContactLinkShort ->
-            CopyText "Email"
-
-        ContactLinkDestination ->
-            CopyText "mailto:hello@contemplatingaction.org.uk"
-
-        ExitSite ->
-            CopyText "Exit Site"
-
-        IconCallToAction ->
-            CopyText "check-square-o"
-
         IconStories ->
             CopyText "question-circle-o"
-
-        IconContact ->
-            CopyText "envelope"
-
-        IconExit ->
-            CopyText "exit-door"
-
-        CookieDescription ->
-            CopyText "Can we use cookies to help improve this site? We'd like to use Google Analytics cookies to collect and report information on how people use the site. Allowing us to use cookies does not allow us to identify you. For more information please see our 'Privacy Policy' page."
-
-        CookieAccept ->
-            CopyText "Accept"
-
-        CookieDecline ->
-            CopyText "Decline"
 
         --Home Page
         HomeReadAboutH2 ->
@@ -127,96 +118,145 @@ brandCopy key =
         PrivacyIntroP ->
             CopyText "This policy relates to www.contemplatingaction.org.uk (“the Site”) which is owned by Neontribe ltd and related activity "
 
-        PrivacyCompanyInfoList ->
+        PrivacyCompanyAddress ->
             CopyList
-                [ "Neontribe ltd trading as Neontribe"
-                , "Registered as a limited company in England & Wales"
-                , "Business registration: 06165574"
-                , "Registered office: 106 Lincoln St. Norwich, Norfolk, NR2 3LB."
+                [ CopyText "Neontribe ltd trading as Neontribe"
+                , CopyText "Registered as a limited company in England & Wales"
+                , CopyText "Business registration: 06165574"
+                , CopyText "Registered office: 106 Lincoln St. Norwich, Norfolk, NR2 3LB."
                 ]
 
-        PrivacyDataCollectH3 ->
+        PrivacySectionOneH3 ->
             CopyText "What information is collected?"
 
-        PrivacyDataCollectP ->
+        PrivacySectionOneP ->
             CopyText "We collect the following information from people who use this website:"
 
-        PrivacyDataCollectList ->
+        PrivacySectionOneList ->
             CopyList
-                [ "Email addresses of people who communicate with us via email"
-                , "Information volunteered by people in the course of using of the website (predominantly survey responses)"
-                , "Analytics and tracking data about people’s site usage"
+                [ CopyText "Email addresses of people who communicate with us via email"
+                , CopyText "Information volunteered by people in the course of using of the website (predominantly survey responses)"
+                , CopyText "Analytics and tracking data about people’s site usage"
                 ]
 
-        PrivacyInfoUsedH3 ->
+        PrivacySectionTwoH3 ->
             CopyText "How is the information used?"
 
-        PrivacyInfoUsedP ->
+        PrivacySectionTwoP ->
             CopyText "Neontribe uses the information you provide to:"
 
-        PrivacyInfoUsedList ->
+        PrivacySectionTwoList ->
             CopyList
-                [ "Improve the usability of the Site"
-                , "Help design future projects "
-                , "Contribute to research about third sector use of digital"
-                , "Send you any information you have requested relating to the Contemplating Action project"
+                [ CopyText "Improve the usability of the Site"
+                , CopyText "Help design future projects "
+                , CopyText "Contribute to research about third sector use of digital"
+                , CopyText "Send you any information you have requested relating to the Contemplating Action project"
                 ]
 
-        PrivacyInfoSharedH3 ->
+        PrivacySectionThreeH3 ->
             CopyText ""
 
-        PrivacyInfoSharedP1 ->
-            CopyText "If you chose to give us contact details we will only contact you in relation to these four things. You can also tell us if you no longer wish to receive information from Neontribe by replying to any email from us with the subject line Unsubscribe, or sending a message to info@neontribe.co.uk requesting to unsubscribe."
+        PrivacySectionThreeP1 ->
+            CopyText
+                "If you chose to give us contact details we will only contact you in relation to these four things. You can also tell us if you no longer wish to receive information from Neontribe by replying to any email from us with the subject line Unsubscribe, or sending a message to info@neontribe.co.uk requesting to unsubscribe."
 
-        PrivacyInfoSharedP2 ->
+        PrivacySectionThreeP2 ->
             CopyText "Information that is identifiable as relating to you (i.e. it has not been edited to make it anonymous) is not shared with or sold to other organizations for commercial purposes, other than under the following circumstances:"
 
-        PrivacyInfoSharedList ->
+        PrivacySectionThreeList ->
             CopyList
-                [ "If it is necessary to share information in order to investigate, prevent, or take action regarding illegal activities, suspected fraud, situations involving potential threats to the physical safety of any person, violations of Terms of Service, or as otherwise required by law."
-                , "If we transfer information about you if Neontribe is acquired by or merged with another organisation, other than an organisation established by us and controlled by us."
-                , "You have explicitly chosen to have us share the information with CAST - the centre for acceleration of social technology whilst giving us the information - in which case it will be freely shared with them."
+                [ CopyText "If it is necessary to share information in order to investigate, prevent, or take action regarding illegal activities, suspected fraud, situations involving potential threats to the physical safety of any person, violations of Terms of Service, or as otherwise required by law."
+                , CopyText "If we transfer information about you if Neontribe is acquired by or merged with another organisation, other than an organisation established by us and controlled by us."
+                , CopyText "You have explicitly chosen to have us share the information with CAST - the centre for acceleration of social technology whilst giving us the information - in which case it will be freely shared with them."
                 ]
 
-        PrivacyInfoStoredH3 ->
+        PrivacySectionFourH3 ->
             CopyText "Where is the information stored?"
 
-        PrivacyInfoStoredList ->
+        PrivacySectionFourP1 ->
+            CopyText ""
+
+        PrivacySectionFourList ->
             CopyList
-                [ "On our computers"
-                , "On our survey provider Typeform’s servers. For more information see Typeform's privacy policy."
-                , "In Google Analytics. For more information see Google's privacy policy."
-                , "By our partner CAST on their servers if you have explicitly expressed the desire to share your information with them whilst using our site. For more information see CAST's privacy policy."
+                [ CopyText "On our computers"
+                , CopyWithLink
+                    { textBefore = "On our survey provider Typeform’s servers. For more information see"
+                    , linkText = "Typeform's privacy policy"
+                    , destination = "https://www.typeform.com/help/gdpr-rights-for-respondents/"
+                    , textAfter = "."
+                    }
+                , CopyWithLink
+                    { textBefore = "In Google Analytics. For more information see"
+                    , linkText = "Google's privacy policy"
+                    , destination = "https://support.google.com/analytics/answer/6004245"
+                    , textAfter = "."
+                    }
+                , CopyWithLink
+                    { textBefore = "By our partner CAST on their servers if you have explicitly expressed the desire to share your information with them whilst using our site. For more information see"
+                    , linkText = "CAST's privacy policy"
+                    , destination = "https://www.castsoftware.com/privacy"
+                    , textAfter = "."
+                    }
                 ]
 
-        PrivacyRightsH3 ->
+        PrivacySectionFourP2 ->
+            CopyText ""
+
+        PrivacySectionFiveH3 ->
             CopyText "Your rights"
 
-        PrivacyRightsP ->
-            CopyText "We guarantee to meet your rights in compliance with GDPR. Find out about those rights from the ICO GDPR indvidual rights guide. To exercise any of your rights, please contact us at hello@contemplatingaction.org.uk"
+        PrivacySectionFiveP ->
+            CopyWithLink
+                { textBefore = "We guarantee to meet your rights in compliance with GDPR. Find out about those rights from the"
+                , linkText = "ICO GDPR indvidual rights guide"
+                , destination = "https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/individual-rights/"
+                , textAfter = ". To exercise any of your rights, please contact us at hello@contemplatingaction.org.uk"
+                }
 
-        PrivacyCookiesH3 ->
+        PrivacySectionFiveList ->
+            CopyText ""
+
+        PrivacySectionSixH3 ->
             CopyText "Use of cookies"
 
-        PrivacyCookiesP1 ->
-            CopyText "Cookies are pieces of information that a website transfers to your hard drive. Most web browsers automatically accept cookies, but if you prefer, you can change your browser to prevent that and will still be able to use the site. "
+        PrivacySectionSixP1 ->
+            CopyText
+                "Cookies are pieces of information that a website transfers to your hard drive. Most web browsers automatically accept cookies, but if you prefer, you can change your browser to prevent that and will still be able to use the site. "
 
-        PrivacyCookiesP2 ->
+        PrivacySectionSixP2 ->
             CopyText "Contemplating Action uses cookies to:"
 
-        PrivacyCookiesList ->
+        PrivacySectionSixP3 ->
+            CopyText ""
+
+        PrivacySectionSixP4 ->
+            CopyText ""
+
+        PrivacySectionSixList ->
             CopyList
-                [ "Monitor the number of visitors to our website"
-                , "Monitor how users use our website, i.e. which pages they have accessed"
-                , "To help improve our website"
-                , "For more data on Cookies visit www.aboutcookies.org. In addition to detailing extensive information on cookies this site also provides explanations on how to disable cookies on your computer."
+                [ CopyText "Monitor the number of visitors to our website"
+                , CopyText "Monitor how users use our website, i.e. which pages they have accessed"
+                , CopyText "To help improve our website"
+                , CopyText "For more data on Cookies visit www.aboutcookies.org. In addition to detailing extensive information on cookies this site also provides explanations on how to disable cookies on your computer."
                 ]
 
-        PrivacyTermsH3 ->
+        PrivacySectionSevenH3 ->
             CopyText "Your acceptance of these terms"
 
-        PrivacyTermsP ->
+        PrivacySectionSevenP ->
             CopyText "By using this site, you consent to the collection and use of this information by Neontribe and to our privacy policy. Please send any questions, concerns or comments you have about these policies to info@neontribe.co.uk "
+
+        PrivacySectionSevenList ->
+            CopyText ""
+
+        PrivacySectionEightH3 ->
+            CopyText ""
+
+        PrivacySectionEightP ->
+            CopyText ""
+
+        PrivacySectionEightList ->
+            CopyText ""
 
         -- Supporters Page
         SupportersTitleH2 ->
@@ -294,11 +334,11 @@ brandCopy key =
         InfoNotFoundIcon ->
             CopyText "question"
 
-        InfoNotFoundP1 ->
-            CopyText "We can't find a page with that title, sorry."
-
-        InfoNotFoundP2 ->
-            CopyText "Please use the 'Other information to help you' page to see if we have the topic you are looking for."
+        InfoNotFoundContent ->
+            CopySection
+                [ CopyText "We can't find a page with that title, sorry."
+                , CopyText "Please use the 'Other information to help you' page to see if we have the topic you are looking for."
+                ]
 
         InfoOneName ->
             CopyText "About the project"
@@ -309,7 +349,7 @@ brandCopy key =
         InfoOneIcon ->
             CopyText "question-circle-o"
 
-        InfoOneP1 ->
+        InfoOneContent ->
             CopyText "In 2017, The Haven Wolverhampton, worked with Neontribe and women who had been through domestic abuse. We co-designed a web app to encourage other women in that situation to seek support and advice. We want to find out if the structure of that app could be used by different organisations. We believe that reassuring people that their fears and challenges are shared could help them take early steps on a journey of change such as contacting a support service."
 
         InfoTwoName ->
@@ -321,7 +361,7 @@ brandCopy key =
         InfoTwoIcon ->
             CopyText "info-circle"
 
-        InfoTwoP1 ->
+        InfoTwoContent ->
             CopyText "We include bite size information relating to a small number of fears and barriers that are likely to be stopping people from taking the next step. Keeping the language simple we aim to be open and honest, with a reassuring tone. We resist the temptation to provide all the information people might need. Our goal is to offer just enough to help people reach out to support services. Other websites have excellent longer content."
 
         InfoThreeName ->
@@ -333,7 +373,7 @@ brandCopy key =
         InfoThreeIcon ->
             CopyText "pencil"
 
-        InfoThreeP1 ->
+        InfoThreeContent ->
             CopyText "Many organisations struggle with the same problem with stories. We know stories can be powerful, we want to use them for many reasons. Unfortunately people don’t always like to spend time reading them online. We believe that visual storytelling can change this. Contemplating Action has a budget for artists, to test whether this 4 image story format can encourage more people to read them."
 
         InfoFourName ->
@@ -345,7 +385,7 @@ brandCopy key =
         InfoFourIcon ->
             CopyText "check-square-o"
 
-        InfoFourP1 ->
+        InfoFourContent ->
             CopyText "We would like you to take our survey. We want to understand whether staff in organisations who work most closely with people seeking support think this approach could work. We’re interested in your instincts as well as any evidence you might share. It will help us decide where to take the project next."
 
         InfoFiveName ->
@@ -357,7 +397,7 @@ brandCopy key =
         InfoFiveIcon ->
             CopyText "group"
 
-        InfoFiveP1 ->
+        InfoFiveContent ->
             CopyText "We’re actively looking for partner charities interested in experimenting with this visual storytelling format. So if you have a helpline, webchat, messaging service or even a face to face service, we could work together on whether an app could help people connect to those services. We have small amounts of funding to support charities getting involved. Please show your interest by taking the survey."
 
         InfoSixName ->
@@ -369,7 +409,7 @@ brandCopy key =
         InfoSixIcon ->
             CopyText "involved"
 
-        InfoSixP1 ->
+        InfoSixContent ->
             CopyText "This is a partnership between CAST - a charity driving social change through digital technology - and digital development agency Neontribe. It is one of a number of projects aimed at supporting civic and social organisations to grow confident in using digital tools to achieve their charitable objectives. It is possible thanks to The Haven, Wolverhampton sharing technology developed for and with the people they work with."
 
         StoriesTitleH2 ->
@@ -481,3 +521,39 @@ brandCopy key =
 
         StoryTwo4ImageAlt ->
             CopyText "A smiling woman with two children"
+
+        StoryThreeTitle ->
+            CopyText "✨"
+
+        StoryThreeTeaser ->
+            CopyText "✨"
+
+        StoryThreeTeaserImageAlt ->
+            CopyText "✨"
+
+        StoryThree1Quote ->
+            CopyText """✨"""
+
+        StoryThree1ImageAlt ->
+            CopyText "✨"
+
+        StoryThree2Quote ->
+            CopyText """✨"""
+
+        StoryThree2ImageAlt ->
+            CopyText "✨"
+
+        StoryThree2Message ->
+            CopyText "✨"
+
+        StoryThree3Quote ->
+            CopyText """✨"""
+
+        StoryThree3ImageAlt ->
+            CopyText "✨"
+
+        StoryThree4Quote ->
+            CopyText """✨"""
+
+        StoryThree4ImageAlt ->
+            CopyText "✨"

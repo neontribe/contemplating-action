@@ -9,7 +9,6 @@ import Copy.Render exposing (toHtml, toString)
 import Html exposing (Html, div, h2, img, p)
 import Html.Attributes exposing (alt, class, src)
 import Messages exposing (Msg(..))
-import Views.Footer exposing (footerContent)
 
 
 supportersContent : Html Msg
@@ -40,8 +39,4 @@ supportersContent =
             , p []
                 [ t SupportersP5 ]
             ]
-
-        -- footer should probably be outside content container but this is easiest for now.
-        -- It is conditional on page. Could hide in the story pages with css? But not sure that's any better.
-        , footerContent
         ]

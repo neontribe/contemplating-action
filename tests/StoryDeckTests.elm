@@ -18,7 +18,7 @@ all =
                     storyTitle 2 |> Expect.equal StoryTwoTitle
             , test "Index of 3" <|
                 \() ->
-                    storyTitle 3 |> Expect.equal StoryNotFoundTitle
+                    storyTitle 3 |> Expect.equal StoryThreeTitle
             , test "Index of 4" <|
                 \() ->
                     storyTitle 4 |> Expect.equal StoryNotFoundTitle
