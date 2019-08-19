@@ -2,6 +2,7 @@ module StoryDeck exposing (card, storyRelatedInfo, storyTeaser, storyTitle)
 
 import Array
 import Assets exposing (AssetPath(..), path)
+import Browser
 import Copy.BrandCopy exposing (relatedInfo)
 import Copy.Keys exposing (Key(..))
 import Copy.Render exposing (toHtml, toString)
@@ -12,6 +13,12 @@ import Icon exposing (getIcon)
 import Info exposing (getInfo)
 import List
 import Messages exposing (Msg(..))
+import Url exposing (Protocol(..))
+
+
+type Protocol
+    = Http
+    | Https
 
 
 type alias Deck =
@@ -57,21 +64,14 @@ storyTeaser deckId =
     let
         t =
             toString
+
+        works =
+            { host = "www.google.com", protocol = Http }
+                |> Url.Url
     in
-    div [ class "card" ]
-        [ a
-            [ href ("#/stories/" ++ String.fromInt deckId)
-            , onClick (ButtonPress "story" "view-single" (t (storyTitle deckId)) False)
-            ]
-            [ img [ class "card--thumbnail", src (storyTeaserImgPath deckId), alt (t (storyTeaserImgAltText deckId)) ] []
-            ]
-        , a
-            [ class "link--unstyled"
-            , href ("#/stories/" ++ String.fromInt deckId)
-            , onClick (ButtonPress "story" "view-single" (t (storyTitle deckId)) False)
-            ]
-            [ h3 [ class "title--small" ] [ text (t (storyTitle deckId)) ]
-            ]
+    div [ class "card", onClick (UrlChanged works) ]
+        [ img [ class "card--thumbnail", src (storyTeaserImgPath deckId), alt (t (storyTeaserImgAltText deckId)) ] []
+        , h3 [ class "title--small" ] [ text (t (storyTitle deckId)) ]
         , blockquote [ class "card--quote" ]
             [ text (t (getDeck deckId decks).teaser) ]
         , div [ class "text-right text-with-icon--right stories--more-link" ]
