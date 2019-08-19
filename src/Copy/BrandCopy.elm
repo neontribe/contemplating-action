@@ -320,7 +320,12 @@ brandCopy key =
             CopyText ""
 
         FooterCopyrightLink ->
-            CopyText "neontribe.co.uk"
+            CopyWithLink
+                { textBefore = ""
+                , linkText = "www.neontribe.co.uk"
+                , destination = "https://www.neontribe.co.uk/"
+                , textAfter = ""
+                }
 
         InfoTitleH2 ->
             CopyText "Information to help you"
