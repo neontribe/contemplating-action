@@ -1,7 +1,7 @@
 -- Views/Nav.elm
 
 
-module Views.Nav exposing (navItem, view)
+module Views.Nav exposing (view)
 
 import Copy.Keys exposing (Key(..))
 import Copy.Render exposing (toHtmlWithContext, toString)
