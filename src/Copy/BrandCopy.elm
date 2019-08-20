@@ -468,6 +468,9 @@ brandCopy key =
         StoryOne1ImageAlt ->
             CopyText "A man is kneeling on the floor of a dark room with his head in his hands"
 
+        StoryOne1Message ->
+            CopyText ""
+            
         StoryOne2Quote ->
             CopyText "Next the story moves on a little. It does one of two things. Either it tells us about a specific incident that began a drive to change things, or it explores the person’s fears and other things that were holding them back. This section focuses on emotions and helps us connect with the person’s story."
 
@@ -482,7 +485,10 @@ brandCopy key =
 
         StoryOne3ImageAlt ->
             CopyText "The man starts climbing the stairs to reach a hand holding out a key."
-
+            
+        StoryOne3Message ->
+            CopyText ""
+            
         StoryOne4Quote ->
             CopyText "The final section of the story is about hope. It shows that taking a chance can be a positive choice. However it doesn’t suggest that the person’s life is now perfect. It is designed to encourage others to believe they could make a move to a more hopeful place too. It takes care not to sound out of reach."
 
@@ -508,7 +514,10 @@ brandCopy key =
 
         StoryTwo1ImageAlt ->
             CopyText "A pregnant woman wrapped in chains"
-
+            
+        StoryTwo1Message ->
+            CopyText ""
+            
         StoryTwo2Quote ->
             CopyText """I wanted to leave, but my husband told me without him I would be sent back to
             Africa. I was completely dependent on my husband, I did not see any way out of
@@ -528,6 +537,9 @@ brandCopy key =
         StoryTwo3ImageAlt ->
             CopyText "A woman crying at a desk"
 
+        StoryTwo3Message ->
+            CopyText ""
+            
         StoryTwo4Quote ->
             CopyText """I have a house now, with my children, and away from my abusive husband. My
             solicitor is helping me with immigration documents and divorce papers. For the
@@ -535,7 +547,10 @@ brandCopy key =
 
         StoryTwo4ImageAlt ->
             CopyText "A smiling woman with two children"
-
+                        
+        StoryTwo4Message ->
+            CopyText ""
+            
         StoryThreeTitle ->
             CopyText "✨"
 
@@ -550,7 +565,10 @@ brandCopy key =
 
         StoryThree1ImageAlt ->
             CopyText "✨"
-
+            
+        StoryThree1Message ->
+            CopyText ""
+            
         StoryThree2Quote ->
             CopyText """✨"""
 
@@ -565,13 +583,18 @@ brandCopy key =
 
         StoryThree3ImageAlt ->
             CopyText "✨"
-
+            
+        StoryThree3Message ->
+            CopyText ""
+            
         StoryThree4Quote ->
             CopyText """✨"""
 
         StoryThree4ImageAlt ->
             CopyText "✨"
-
+            
+        StoryThree4Message ->
+            CopyText ""
 
 relatedInfo : Int -> List Int
 relatedInfo storyId =
