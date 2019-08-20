@@ -33,9 +33,9 @@ copyToHtml copy context =
                 "button" ->
                     callToActionButton cta (Maybe.withDefault "" context)
 
-                -- The nav item is construsted for desktop or mobile
+                -- The nav item is constructed for desktop or mobile
                 "nav" ->
-                    div [] [ callToActionNav cta (Maybe.withDefault "" context) ]
+                    callToActionNav cta (Maybe.withDefault "" context)
 
                 _ ->
                     text ""
