@@ -68,6 +68,17 @@ brandCopy key =
 
         CallToActionTwo ->
             CallToAction
+                { action = Page
+                , category = "page"
+                , icon = "question-circle-o"
+                , href = "/stories"
+                , displayHref = "Find Out More"
+                , promptLong = "Find Out More"
+                , promptShort = "Find Out More"
+                }
+
+        CallToActionThree ->
+            CallToAction
                 { action = Email
                 , category = "email"
                 , icon = "envelope"

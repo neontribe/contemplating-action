@@ -5,6 +5,7 @@ type CallToActionType
     = Email
     | Link
     | Phone
+    | Page
 
 
 type alias TextWithLink =
@@ -40,6 +41,7 @@ type Key
       -- Nav and links
     | CallToActionOne
     | CallToActionTwo
+    | CallToActionThree
     | ContentLinkLong
     | ContentLinkMedium
     | ContentLinkShort
