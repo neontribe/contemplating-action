@@ -17,7 +17,7 @@ import Views.Nav
 
 view : Model -> Browser.Document Msg
 view model =
-    { title = toString SiteTitle 
+    { title = toString SiteTitle
     , body =
         [ div [ id "page-wrapper", class ("page " ++ pageSlug model.currentPage) ]
             [ Views.Header.view model
