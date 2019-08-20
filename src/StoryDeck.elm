@@ -27,7 +27,7 @@ type alias Deck =
 
 type alias Card =
     { imagePath : AssetPath
-    , messageText : Maybe Key
+    , messageText : Key
     , quoteText : Key
     , altText : Key
     }
@@ -134,16 +134,15 @@ card deckId cardId =
 cardMessage : Int -> Int -> Html Msg
 cardMessage deckId cardId =
     let
-        maybeMessage =
+        theMessage =
             (getCard deckId cardId).messageText
     in
-    case maybeMessage of
+    if toString theMessage == "" then
         -- Easiest to return an empty p here. Class in case we need to style.
-        Nothing ->
-            p [ class "no-message" ] []
+        p [ class "no-message" ] []
 
-        Just aMessage ->
-            blockquote [ class "story--message quote" ] [ toHtml aMessage ]
+    else
+        blockquote [ class "story--message quote" ] [ toHtml theMessage ]
 
 
 cardImgPath : Int -> Int -> String
@@ -210,7 +209,7 @@ placeholderCard =
     { quoteText = StoryNotFoundQuote
     , imagePath = AssetPath "story_images/placeholder.png"
     , altText = StoryNotFoundImageAlt
-    , messageText = Just StoryNotFoundMessage
+    , messageText = StoryNotFoundMessage
     }
 
 
@@ -230,22 +229,22 @@ decks =
             [ { quoteText = StoryOne1Quote
               , imagePath = AssetPath "story_images/story1-image1.jpg"
               , altText = StoryOne1ImageAlt
-              , messageText = Nothing
+              , messageText = StoryOne1Message
               }
             , { quoteText = StoryOne2Quote
               , imagePath = AssetPath "story_images/story1-image2.jpg"
               , altText = StoryOne2ImageAlt
-              , messageText = Just StoryOne2Message
+              , messageText = StoryOne2Message
               }
             , { quoteText = StoryOne3Quote
               , imagePath = AssetPath "story_images/story1-image3.jpg"
               , altText = StoryOne3ImageAlt
-              , messageText = Nothing
+              , messageText = StoryOne3Message
               }
             , { quoteText = StoryOne4Quote
               , imagePath = AssetPath "story_images/story1-image4.jpg"
               , altText = StoryOne4ImageAlt
-              , messageText = Just StoryOne4Message
+              , messageText = StoryOne4Message
               }
             ]
       }
@@ -259,22 +258,22 @@ decks =
             [ { quoteText = StoryTwo1Quote
               , imagePath = AssetPath "story_images/story2-image1.jpg"
               , altText = StoryTwo1ImageAlt
-              , messageText = Nothing
+              , messageText = StoryTwo1Message
               }
             , { quoteText = StoryTwo2Quote
               , imagePath = AssetPath "story_images/story2-image2.jpg"
               , altText = StoryTwo2ImageAlt
-              , messageText = Just StoryTwo2Message
+              , messageText = StoryTwo2Message
               }
             , { quoteText = StoryTwo3Quote
               , imagePath = AssetPath "story_images/story2-image3.jpg"
               , altText = StoryTwo3ImageAlt
-              , messageText = Nothing
+              , messageText = StoryTwo3Message
               }
             , { quoteText = StoryTwo4Quote
               , imagePath = AssetPath "story_images/story2-image4.jpg"
               , altText = StoryTwo4ImageAlt
-              , messageText = Nothing
+              , messageText = StoryTwo4Message
               }
             ]
       }
@@ -288,22 +287,22 @@ decks =
             [ { quoteText = StoryThree1Quote
               , imagePath = AssetPath "story_images/story3-image1.jpg"
               , altText = StoryThree1ImageAlt
-              , messageText = Nothing
+              , messageText = StoryThree1Message
               }
             , { quoteText = StoryThree2Quote
               , imagePath = AssetPath "story_images/story3-image2.jpg"
               , altText = StoryThree2ImageAlt
-              , messageText = Just StoryThree2Message
+              , messageText = StoryThree2Message
               }
             , { quoteText = StoryThree3Quote
               , imagePath = AssetPath "story_images/story3-image3.jpg"
               , altText = StoryThree3ImageAlt
-              , messageText = Nothing
+              , messageText = StoryThree3Message
               }
             , { quoteText = StoryThree4Quote
               , imagePath = AssetPath "story_images/story3-image4.jpg"
               , altText = StoryThree4ImageAlt
-              , messageText = Nothing
+              , messageText = StoryThree4Message
               }
             ]
       }
