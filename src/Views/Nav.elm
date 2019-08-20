@@ -20,18 +20,12 @@ view =
     in
     -- Contains Nav for phones - but text email and phone number for desktop and tablet.
     -- Not sure why the desktop and mobile menu items need to be in different orders.
-    div [ class "nav-bar" ]
-        [ nav []
-            [ div [ class "desktop-only" ]
-                [ toHtmlWithContext CallToActionOne (Just "desktop-nav") ]
-            , navItem (t IconStories) "#/stories" "find-out-more" "view-list" (t ContentLinkShort) (t ContentLinkMedium)
-            , div [ class "desktop-only" ]
-                [ toHtmlWithContext CallToActionTwo (Just "desktop-nav") ]
-            , span [ class "nav-item mobile-only" ]
-                [ toHtmlWithContext CallToActionOne (Just "mobile-nav")
-                , toHtmlWithContext CallToActionTwo (Just "mobile-nav")
-                ]
-            ]
+    nav [ class "nav-bar" ]
+        [ toHtmlWithContext CallToActionOne (Just "desktop-nav")
+        , toHtmlWithContext CallToActionOne (Just "mobile-nav")
+        , navItem (t IconStories) "#/stories" "find-out-more" "view-list" (t ContentLinkShort) (t ContentLinkMedium) "beep"
+        , toHtmlWithContext CallToActionTwo (Just "desktop-nav")
+        , toHtmlWithContext CallToActionTwo (Just "mobile-nav")
         ]
 
 
