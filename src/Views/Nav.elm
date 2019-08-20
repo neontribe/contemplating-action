@@ -21,24 +21,7 @@ view =
     -- Contains Nav for phones - but text email and phone number for desktop and tablet.
     -- Not sure why the desktop and mobile menu items need to be in different orders.
     nav [ class "nav-bar" ]
-        [ toHtmlWithContext CallToActionOne (Just "desktop-nav")
-        , toHtmlWithContext CallToActionOne (Just "mobile-nav")
-        , navItem (t IconStories) "#/stories" "find-out-more" "view-list" (t ContentLinkShort) (t ContentLinkMedium) "beep"
-        , toHtmlWithContext CallToActionTwo (Just "desktop-nav")
-        , toHtmlWithContext CallToActionTwo (Just "mobile-nav")
-        ]
-
-
-navItem : String -> String -> String -> String -> String -> String -> Html Msg
-navItem icon link category action shortLinkText longLinkText =
-    span [ class "nav-item" ]
-        [ a [ href link, onClick (ButtonPress category action (action ++ "-nav") True) ]
-            [ getIcon icon (Just "nav-item-text nav-icon")
-            , span [ class "nav-item-text" ]
-                [ span [ class "mobile-only" ] [ text shortLinkText ]
-
-                -- Note: longLinkText not rendered for phone number in Haven instance
-                , span [ class "desktop-only" ] [ text longLinkText ]
-                ]
-            ]
+        [ toHtmlWithContext CallToActionOne (Just "nav")
+        , toHtmlWithContext CallToActionTwo (Just "nav")
+        , toHtmlWithContext CallToActionThree (Just "nav")
         ]

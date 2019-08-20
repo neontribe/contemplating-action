@@ -57,37 +57,39 @@ callToActionNoDesktopButton actionType =
 callToActionNav : CallToActionRecord -> String -> Html Msg
 callToActionNav cta context =
     case context of
-        "desktop-nav" ->
-            if cta.action == Phone then
-                div [ class "nav-item--text-only" ]
-                    [ span [ class "nav-item-text" ] [ text cta.promptLong ]
-                    , span [ class "nav-item-text" ] [ text cta.displayHref ]
-                    ]
-
-            else
-                navItem cta.icon cta.href "call-to-action" cta.category cta.promptShort cta.promptLong
-
-        "mobile-nav" ->
-            if cta.action == Phone then
-                navItem cta.icon ("tel:" ++ cta.href) "call-to-action" cta.category cta.promptShort cta.promptLong
-
-            else
-                navItem cta.icon cta.href "call-to-action" cta.category cta.promptShort cta.promptLong
+        "nav" ->
+            navItem cta.icon cta.href "call-to-action" cta.category cta.promptShort cta.promptLong cta.displayHref cta.action
 
         _ ->
             text ""
 
 
-navItem : String -> String -> String -> String -> String -> String -> Html Msg
-navItem icon link category action shortLinkText longLinkText =
-    span [ class "nav-item" ]
-        [ a [ href link, onClick (ButtonPress category action (action ++ "-nav") True) ]
-            [ getIcon icon (Just "nav-item-text nav-icon")
-            , span [ class "nav-item-text" ]
-                [ span [ class "mobile-only" ] [ text shortLinkText ]
-
-                -- Note: longLinkText not rendered for phone number in Haven instance
-                , span [ class "desktop-only" ] [ text longLinkText ]
+navItem : String -> String -> String -> String -> String -> String -> String -> CallToActionType -> Html Msg
+navItem icon link category action shortLinkText longLinkText displayLink actionType =
+    case actionType of
+        Phone ->
+            div [ class "nav-item" ]
+                [ a [ href ("tel:" ++ link), onClick (ButtonPress category action (action ++ "-nav") True), class "mobile-only" ]
+                    [ getIcon icon (Just "nav-item-text nav-icon")
+                    , span [ class "nav-item-text" ]
+                        [ span [ class "mobile-only" ] [ text shortLinkText ]
+                        ]
+                    ]
+                , div [ class "nav-item--text-only desktop-only" ]
+                    [ span [ class "nav-item-text" ] [ text longLinkText ]
+                    , span [ class "nav-item-text" ] [ text displayLink ]
+                    ]
                 ]
-            ]
-        ]
+
+        _ ->
+            div [ class "nav-item" ]
+                [ a [ href link, onClick (ButtonPress category action (action ++ "-nav") True) ]
+                    [ getIcon icon (Just "nav-item-text nav-icon")
+                    , span [ class "nav-item-text" ]
+                        [ span [ class "mobile-only" ] [ text shortLinkText ]
+
+                        -- Note: longLinkText not rendered for phone number in Haven instance
+                        , span [ class "desktop-only" ] [ text longLinkText ]
+                        ]
+                    ]
+                ]
