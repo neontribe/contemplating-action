@@ -357,17 +357,21 @@ img {
 nav,
 .nav-item {
   display: flex;
-  flex: 1 0 auto;
+  flex: 1 0 33%;
   align-items: center;
   white-space: nowrap;
 }
 
 .nav-item--text-only,
-.nav-item a {
-  flex: 1 0 auto;
+.nav-item {
+  flex: 1 0 33%;
   padding: 15px 10px;
   text-align: center;
   line-height: 1;
+}
+
+.nav-item a {
+  margin: auto;
 }
 
 .nav-item-text {
@@ -395,7 +399,7 @@ nav,
   }
 
   .nav-item {
-    flex: 0 1 auto;
+    flex: 1 1 33%;
   }
 
   .nav-item-text {
