@@ -13,7 +13,7 @@ import Messages exposing (Msg(..))
 callToActionButton : CallToActionRecord -> String -> Html Msg
 callToActionButton callToAction aClass =
     if callToActionNoDesktopButton callToAction.action then
-        div []
+        div [ class "cta-text" ]
             [ span []
                 [ getIcon callToAction.icon (Just "button--icon")
                 , span [] [ text callToAction.promptLong ]

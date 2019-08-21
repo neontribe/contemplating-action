@@ -278,10 +278,11 @@ img {
     flex-direction: row;
   }
 
-  .button + .button {
+  .button + .button, .cta-text + .button {
     margin-top: 0;
     margin-left: 20px;
   }
+
 }
 
 /* ------------------------------
