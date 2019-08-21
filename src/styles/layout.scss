@@ -258,6 +258,11 @@ img {
   flex-direction: row;
 }
 
+
+.cta-text + .button {
+  margin-top: 20px;
+}
+
 @media screen and (min-width: 360px) {
   // Ensures side-by-side buttons are not unequal heights.
   .button {
@@ -345,7 +350,7 @@ img {
 
 ------------------------------ */
 
-.nav-bar {
+nav {
   display: flex;
   align-items: stretch;
   position: fixed;
@@ -355,24 +360,19 @@ img {
   z-index: 100;
 }
 
-nav,
+
 .nav-item {
+  align-items: center;
   display: flex;
   flex: 1 0 33%;
-  align-items: center;
-  white-space: nowrap;
-}
-
-.nav-item--text-only,
-.nav-item {
-  flex: 1 0 33%;
-  padding: 15px 10px;
-  text-align: center;
   line-height: 1;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .nav-item a {
   margin: auto;
+  padding: 15px 10px;
 }
 
 .nav-item-text {
@@ -381,6 +381,10 @@ nav,
 
 .nav-item-text + .nav-item-text {
   margin-top: 5px;
+}
+
+.nav-item--text-only {
+  margin: auto;
 }
 
 @media screen and (min-width: 721px) {
