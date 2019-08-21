@@ -57,7 +57,7 @@ brandCopy key =
 
         CallToActionOne ->
             CallToAction
-                { action = DesktopDisplayOnly
+                { action = DesktopInteractive
                 , category = "survey"
                 , icon = "check-square-o"
                 , href = "https://Contemplating-action.typeform.com/to/zUOTYA"
