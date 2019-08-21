@@ -158,11 +158,13 @@ type Key
     | StoryOneTeaserImageAlt
     | StoryOne1Quote
     | StoryOne1ImageAlt
+    | StoryOne1Message
     | StoryOne2Quote
     | StoryOne2ImageAlt
     | StoryOne2Message
     | StoryOne3Quote
     | StoryOne3ImageAlt
+    | StoryOne3Message
     | StoryOne4Quote
     | StoryOne4ImageAlt
     | StoryOne4Message
@@ -171,22 +173,28 @@ type Key
     | StoryTwoTeaserImageAlt
     | StoryTwo1Quote
     | StoryTwo1ImageAlt
+    | StoryTwo1Message
     | StoryTwo2Quote
     | StoryTwo2ImageAlt
     | StoryTwo2Message
     | StoryTwo3Quote
     | StoryTwo3ImageAlt
+    | StoryTwo3Message
     | StoryTwo4Quote
     | StoryTwo4ImageAlt
+    | StoryTwo4Message
     | StoryThreeTitle
     | StoryThreeTeaser
     | StoryThreeTeaserImageAlt
     | StoryThree1Quote
     | StoryThree1ImageAlt
+    | StoryThree1Message
     | StoryThree2Quote
     | StoryThree2ImageAlt
     | StoryThree2Message
     | StoryThree3Quote
     | StoryThree3ImageAlt
+    | StoryThree3Message
     | StoryThree4Quote
     | StoryThree4ImageAlt
+    | StoryThree4Message
