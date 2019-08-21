@@ -1,4 +1,4 @@
-module CallToAction exposing (callToActionButton, callToActionNav)
+module CallToAction exposing (callToActionButton, callToActionNavItem)
 
 -- Potential to move all of this into Copy.Render
 
@@ -47,49 +47,39 @@ callToActionButton callToAction aClass =
 
 callToActionNoDesktopButton : CallToActionType -> Bool
 callToActionNoDesktopButton actionType =
-    if actionType == Phone then
+    if actionType == DesktopDisplayOnly then
         True
 
     else
         False
 
 
-callToActionNav : CallToActionRecord -> String -> Html Msg
-callToActionNav cta context =
-    case context of
-        "nav" ->
-            navItem cta.icon cta.href "call-to-action" cta.category cta.promptShort cta.promptLong cta.displayHref cta.action
-
-        _ ->
-            text ""
-
-
-navItem : String -> String -> String -> String -> String -> String -> String -> CallToActionType -> Html Msg
-navItem icon link category action shortLinkText longLinkText displayLink actionType =
-    case actionType of
-        Phone ->
+callToActionNavItem : CallToActionRecord -> Html Msg
+callToActionNavItem cta =
+    case cta.action of
+        DesktopDisplayOnly ->
             div [ class "nav-item" ]
-                [ a [ href ("tel:" ++ link), onClick (ButtonPress category action (action ++ "-nav") True), class "mobile-only" ]
-                    [ getIcon icon (Just "nav-item-text nav-icon")
+                [ a [ href cta.href, onClick (ButtonPress "call-to-action" cta.category (cta.category ++ "-nav") True), class "mobile-only" ]
+                    [ getIcon cta.icon (Just "nav-item-text nav-icon")
                     , span [ class "nav-item-text" ]
-                        [ span [ class "mobile-only" ] [ text shortLinkText ]
+                        [ span [ class "mobile-only" ] [ text cta.promptShort ]
                         ]
                     ]
                 , div [ class "nav-item--text-only desktop-only" ]
-                    [ span [ class "nav-item-text" ] [ text longLinkText ]
-                    , span [ class "nav-item-text" ] [ text displayLink ]
+                    [ span [ class "nav-item-text" ] [ text cta.promptLong ]
+                    , span [ class "nav-item-text" ] [ text cta.displayHref ]
                     ]
                 ]
 
-        _ ->
+        DesktopInteractive ->
             div [ class "nav-item" ]
-                [ a [ href link, onClick (ButtonPress category action (action ++ "-nav") True) ]
-                    [ getIcon icon (Just "nav-item-text nav-icon")
+                [ a [ href cta.href, onClick (ButtonPress "call-to-action" cta.category (cta.category ++ "-nav") True) ]
+                    [ getIcon cta.icon (Just "nav-item-text nav-icon")
                     , span [ class "nav-item-text" ]
-                        [ span [ class "mobile-only" ] [ text shortLinkText ]
+                        [ span [ class "mobile-only" ] [ text cta.promptShort ]
 
-                        -- Note: longLinkText not rendered for phone number in Haven instance
-                        , span [ class "desktop-only" ] [ text longLinkText ]
+                        -- Note: cta.promptLong not rendered for phone number in Haven instance
+                        , span [ class "desktop-only" ] [ text cta.promptLong ]
                         ]
                     ]
                 ]

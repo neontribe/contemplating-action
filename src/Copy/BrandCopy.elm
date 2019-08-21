@@ -57,7 +57,7 @@ brandCopy key =
 
         CallToActionOne ->
             CallToAction
-                { action = Link
+                { action = DesktopDisplayOnly
                 , category = "survey"
                 , icon = "check-square-o"
                 , href = "https://Contemplating-action.typeform.com/to/zUOTYA"
@@ -68,7 +68,7 @@ brandCopy key =
 
         CallToActionTwo ->
             CallToAction
-                { action = Page
+                { action = DesktopInteractive
                 , category = "page"
                 , icon = "question-circle-o"
                 , href = "/stories"
@@ -79,7 +79,7 @@ brandCopy key =
 
         CallToActionThree ->
             CallToAction
-                { action = Email
+                { action = DesktopInteractive
                 , category = "email"
                 , icon = "envelope"
                 , href = "mailto:hello@contemplatingaction.org.uk"

@@ -1,6 +1,6 @@
 module Copy.Render exposing (toHtml, toHtmlWithContext, toString)
 
-import CallToAction exposing (callToActionButton, callToActionNav)
+import CallToAction exposing (callToActionButton, callToActionNavItem)
 import Copy.BrandCopy exposing (brandCopy)
 import Copy.Keys exposing (CallToActionType(..), Copy(..), Key(..))
 import Html exposing (Html, a, div, li, p, text, ul)
@@ -35,7 +35,7 @@ copyToHtml copy context =
 
                 -- The nav item is constructed for desktop or mobile
                 "nav" ->
-                    callToActionNav cta (Maybe.withDefault "" context)
+                    callToActionNavItem cta
 
                 _ ->
                     text ""
