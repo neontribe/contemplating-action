@@ -86,10 +86,10 @@ infoPage info =
     div [ class "section--vertical-fill-center" ]
         [ div [ class "section section--align-bottom" ]
             [ div [ class "card card--alternate card--with-icon card--info" ]
-                [ div [ class "text-center" ]
+                [ div []
                     [ getIcon (t info.icon) (Just "icon icon--large card--icon")
                     , article [ class "inset" ]
-                        [ h2 [] [ text (t info.name) ]
+                        [ h2 [ class "text-center" ] [ text (t info.name) ]
                         , toHtml info.infoText
                         ]
                     ]
