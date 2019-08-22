@@ -258,6 +258,11 @@ img {
   flex-direction: row;
 }
 
+
+.cta-text + .button {
+  margin-top: 20px;
+}
+
 @media screen and (min-width: 360px) {
   // Ensures side-by-side buttons are not unequal heights.
   .button {
@@ -278,10 +283,11 @@ img {
     flex-direction: row;
   }
 
-  .button + .button {
+  .button + .button, .cta-text + .button {
     margin-top: 0;
     margin-left: 20px;
   }
+
 }
 
 /* ------------------------------
@@ -344,7 +350,7 @@ img {
 
 ------------------------------ */
 
-.nav-bar {
+nav {
   display: flex;
   align-items: stretch;
   position: fixed;
@@ -354,20 +360,19 @@ img {
   z-index: 100;
 }
 
-nav,
+
 .nav-item {
-  display: flex;
-  flex: 1 0 auto;
   align-items: center;
+  display: flex;
+  flex: 1 0 33%;
+  line-height: 1;
+  text-align: center;
   white-space: nowrap;
 }
 
-.nav-item--text-only,
 .nav-item a {
-  flex: 1 0 auto;
+  margin: auto;
   padding: 15px 10px;
-  text-align: center;
-  line-height: 1;
 }
 
 .nav-item-text {
@@ -376,6 +381,10 @@ nav,
 
 .nav-item-text + .nav-item-text {
   margin-top: 5px;
+}
+
+.nav-item--text-only {
+  margin: auto;
 }
 
 @media screen and (min-width: 721px) {
@@ -395,7 +404,7 @@ nav,
   }
 
   .nav-item {
-    flex: 0 1 auto;
+    flex: 1 1 33%;
   }
 
   .nav-item-text {

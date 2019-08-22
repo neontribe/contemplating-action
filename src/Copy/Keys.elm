@@ -2,9 +2,8 @@ module Copy.Keys exposing (CallToActionRecord, CallToActionType(..), Copy(..), K
 
 
 type CallToActionType
-    = Email
-    | Link
-    | Phone
+    = DesktopDisplayOnly
+    | DesktopInteractive
 
 
 type alias TextWithLink =
@@ -40,6 +39,7 @@ type Key
       -- Nav and links
     | CallToActionOne
     | CallToActionTwo
+    | CallToActionThree
     | ContentLinkLong
     | ContentLinkMedium
     | ContentLinkShort
