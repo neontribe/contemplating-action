@@ -447,7 +447,14 @@ nav {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      padding-bottom: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 721px) {
+  .section--footer {
+    li {
+      margin: 10px 0;
     }
   }
 
