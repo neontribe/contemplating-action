@@ -31,8 +31,7 @@ footerContent =
                 [ t FooterPrivacyLink ]
             ]
         , div [ class "footer--item" ]
-            [ text "© 2019 - "
-            , t FooterCopyrightLink
+            [ t FooterCopyrightLink
             ]
         , div [ class "footer--item" ]
             [ t FooterRegisteredText ]
