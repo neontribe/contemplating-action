@@ -332,8 +332,8 @@ brandCopy key =
 
         FooterCopyrightLink ->
             CopyWithLink
-                { textBefore = ""
-                , linkText = "www.neontribe.co.uk"
+                { textBefore = "© 2019 - "
+                , linkText = "Neontribe"
                 , destination = "https://www.neontribe.co.uk/"
                 , textAfter = ""
                 }
