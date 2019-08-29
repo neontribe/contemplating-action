@@ -5,7 +5,7 @@ import Assets exposing (AssetPath(..), path)
 import Copy.BrandCopy exposing (relatedInfo)
 import Copy.Keys exposing (Key(..))
 import Copy.Render exposing (toHtml, toString)
-import Html exposing (Html, a, blockquote, div, h3, img, p, span, text)
+import Html exposing (Html, a, article, blockquote, div, h3, img, p, span, text)
 import Html.Attributes exposing (alt, class, href, src)
 import Html.Events exposing (onClick)
 import Icon exposing (getIcon)
@@ -58,15 +58,15 @@ storyTeaser deckId =
         t =
             toString
     in
-    a
-        [ class "card link--unstyled", href ("#/stories/" ++ String.fromInt deckId), onClick (ButtonPress "story" "view-single" (t (storyTitle deckId)) False) ]
+    article
+        [ class "card link--unstyled", onClick (ButtonPress "story" "view-single" (t (storyTitle deckId)) False) ]
         [ img [ class "card--thumbnail", src (storyTeaserImgPath deckId), alt (t (storyTeaserImgAltText deckId)) ] []
         , h3 [ class "title--small" ] [ text (t (storyTitle deckId)) ]
         , blockquote [ class "card--quote" ]
             [ text (t (getDeck deckId decks).teaser) ]
         , div [ class "text-right text-with-icon--right stories--more-link" ]
-            [ span
-                [ class "link" ]
+            [ a
+                [ class "link", href ("#/stories/" ++ String.fromInt deckId) ]
                 [ text (t (StoriesTeaserMoreLink (t (storyTitle deckId))))
                 ]
             , span [] [ getIcon "arrow-right" (Just "icon--alternate") ]
