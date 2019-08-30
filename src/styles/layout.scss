@@ -258,7 +258,6 @@ img {
   flex-direction: row;
 }
 
-
 .cta-text + .button {
   margin-top: 20px;
 }
@@ -283,11 +282,11 @@ img {
     flex-direction: row;
   }
 
-  .button + .button, .cta-text + .button {
+  .button + .button,
+  .cta-text + .button {
     margin-top: 0;
     margin-left: 20px;
   }
-
 }
 
 /* ------------------------------
@@ -359,7 +358,6 @@ nav {
   width: 100%;
   z-index: 100;
 }
-
 
 .nav-item {
   align-items: center;
@@ -435,7 +433,6 @@ nav {
   padding: 0;
 }
 
-
 /* ------------------------------
 
    Footer
@@ -445,10 +442,20 @@ nav {
 @media screen and (min-width: 721px) {
   .section--footer {
     padding: 40px 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     width: 100%;
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media screen and (max-width: 721px) {
+  .section--footer {
+    li {
+      margin: 10px 0;
+    }
   }
 
   .footer--item {
@@ -582,7 +589,7 @@ nav {
 
 // Downward triangle below card
 .story:not(:last-child)::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -45px;
   left: 0;

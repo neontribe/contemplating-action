@@ -5,7 +5,7 @@ module Views.Footer exposing (footerContent)
 
 import Copy.Keys exposing (Key(..))
 import Copy.Render exposing (toHtml)
-import Html exposing (Html, a, div, footer, text)
+import Html exposing (Html, a, footer, li, text, ul)
 import Html.Attributes exposing (class, href)
 import Html.Events exposing (onClick)
 import Messages exposing (Msg(..))
@@ -18,22 +18,23 @@ footerContent =
             toHtml
     in
     footer [ class "section section--footer text-center text-small" ]
-        [ div [ class "footer--item" ]
-            [ t FooterSupportersText
-            , text " "
-            , a [ class "link link--plain", href "#/supporters" ]
-                [ t FooterSupportersLink ]
+        [ ul []
+            [ li [ class "footer--item" ]
+                [ t FooterSupportersText
+                , text " "
+                , a [ class "link link--plain", href "#/supporters" ]
+                    [ t FooterSupportersLink ]
+                ]
+            , li [ class "footer--item" ]
+                [ t FooterPrivacyText
+                , text " "
+                , a [ class "link link--plain", href "#/privacy-policy" ]
+                    [ t FooterPrivacyLink ]
+                ]
+            , li [ class "footer--item" ]
+                [ t FooterCopyrightLink
+                ]
+            , li [ class "footer--item" ]
+                [ t FooterRegisteredText ]
             ]
-        , div [ class "footer--item" ]
-            [ t FooterPrivacyText
-            , text " "
-            , a [ class "link link--plain", href "#/privacy-policy" ]
-                [ t FooterPrivacyLink ]
-            ]
-        , div [ class "footer--item" ]
-            [ text "© 2019 - "
-            , t FooterCopyrightLink
-            ]
-        , div [ class "footer--item" ]
-            [ t FooterRegisteredText ]
         ]
