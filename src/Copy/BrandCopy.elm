@@ -120,13 +120,12 @@ brandCopy key =
             CopyText "Breaking down fears and barriers."
 
         HomeP1 ->
-            CopyText "This is a demonstration version of a web app we believe could be used by different organisations to encourage people to use a helpline or web chat or text service. We believe that reassuring people that their fears and challenges are shared will help them take early steps on a journey of change. In a live app the information in this section would be additional information about the organisation and it’s support services for people who did not follow the direct link to the stories."
-
-        HomeLinkDisplay ->
-            CopyText "Read in depth about this project"
-
-        HomeLinkDestination ->
-            CopyText "https://neontribe.co.uk/contemplating-action"
+            CopyWithLink
+                { textBefore = "This is a demonstration version of a web app we believe could be used by different organisations to encourage people to use a helpline or web chat or text service. We believe that reassuring people that their fears and challenges are shared will help them take early steps on a journey of change. In a live app the information in this section would be additional information about the organisation and it’s support services for people who did not follow the direct link to the stories. Read in depth about this project"
+                , linkText = "here."
+                , destination = "https://neontribe.co.uk/contemplating-action"
+                , textAfter = ""
+                }
 
         HomeP2 ->
             CopyText "This space is used to give a reminder about what to do in a crisis or high risk situation when the app is not the right support."

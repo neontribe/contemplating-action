@@ -5,7 +5,7 @@ module Views.Content exposing (view)
 
 import Assets exposing (AssetPath(..), path)
 import Copy.Keys exposing (CallToActionType(..), Key(..))
-import Copy.Render exposing (toHtmlWithContext, toString)
+import Copy.Render exposing (toHtml, toHtmlWithContext, toString)
 import Html exposing (Html, a, article, div, h2, img, p, section, span, text, ul)
 import Html.Attributes exposing (alt, class, href, src)
 import Html.Events exposing (onClick)
@@ -42,8 +42,7 @@ view model =
                 , section [ class "section section--vertical-fill-center" ]
                     [ h2 [] [ text (t HomeTalkToSomeoneH2) ]
                     , p []
-                        [ text (t HomeP1) ]
-                    , p [] [ a [ class "link link--plain", href (t HomeLinkDestination) ] [ text (t HomeLinkDisplay) ] ]
+                        [ toHtml ( HomeP1) ]
                     , div [ class "button-group" ]
                         [ toHtmlWithContext CallToActionOne (Just "button--default-width--desktop")
                         , toHtmlWithContext CallToActionTwo (Just "button button--full-width button--default-width--desktop")
