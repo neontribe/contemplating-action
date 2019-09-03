@@ -54,8 +54,6 @@ type Key
     | HomeBannerImageAlt
     | HomeTalkToSomeoneH2
     | HomeP1
-    | HomeLinkDisplay
-    | HomeLinkDestination
     | HomeP2
       -- Privacy
     | PrivacyTitleH2
