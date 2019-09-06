@@ -7,7 +7,6 @@ import Copy.Keys exposing (Key(..))
 import Copy.Render exposing (toHtml)
 import Html exposing (Html, a, footer, li, text, ul)
 import Html.Attributes exposing (class, href)
-import Html.Events exposing (onClick)
 import Messages exposing (Msg(..))
 
 

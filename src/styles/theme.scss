@@ -345,6 +345,19 @@ h5 {
   background-color: $white;
 }
 
+.card--link:hover {
+  background-color: $grey-light-purple;
+  cursor: pointer;
+
+  .link {
+    color: $interaction-colour;
+  }
+
+  .icon-arrow-right {
+    color: $interaction-colour;
+  }
+}
+
 .card--alternate {
   color: $white-pure;
   background-color: $primary-colour;
