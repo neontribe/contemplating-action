@@ -31,6 +31,14 @@ update msg model =
         --
         -- Navigation messages
         --
+        NavigateToString url ->
+            ( model
+            , Cmd.batch
+                [ Navigation.load url
+                , updateAnalytics model (updateAnalyticsPage (pageSlug model.currentPage))
+                ]
+            )
+
         UrlChanged url ->
             let
                 newPage =

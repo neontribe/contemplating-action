@@ -59,7 +59,7 @@ storyTeaser deckId =
             toString
     in
     article
-        [ class "card link--unstyled", onClick (ButtonPress "story" "view-single" (t (storyTitle deckId)) False) ]
+        [ class "card card--link", onClick (NavigateToString ("#/stories/" ++ String.fromInt deckId)) ]
         [ img [ class "card--thumbnail", src (storyTeaserImgPath deckId), alt (t (storyTeaserImgAltText deckId)) ] []
         , h3 [ class "title--small" ] [ text (t (storyTitle deckId)) ]
         , blockquote [ class "card--quote" ]
