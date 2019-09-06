@@ -35,7 +35,7 @@ update msg model =
             ( model
             , Cmd.batch
                 [ Navigation.load url
-                , updateAnalytics model (updateAnalyticsPage (pageSlug model.currentPage))
+                , updateAnalytics model (updateAnalyticsPage (pageSlug model.currentPage ++ " onClick navigation"))
                 ]
             )
 
