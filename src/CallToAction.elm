@@ -21,9 +21,7 @@ callToActionButton callToAction aClass =
             , span []
                 [ text " " ]
             , span []
-                [ text
-                    callToAction.displayHref
-                ]
+                [ text callToAction.displayHref ]
             ]
 
     else
