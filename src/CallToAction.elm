@@ -18,8 +18,11 @@ callToActionButton callToAction aClass =
                 [ getIcon callToAction.icon (Just "button--icon")
                 , span [] [ text callToAction.promptLong ]
                 ]
-            , span []
-                [ text callToAction.displayHref ]
+                ,
+                span[] 
+                 [text " "]
+                , span []
+                    [ text callToAction.displayHref ]
             ]
 
     else
