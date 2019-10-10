@@ -42,7 +42,7 @@ view model =
                 , section [ class "section section--vertical-fill-center" ]
                     [ h2 [] [ text (t HomeTalkToSomeoneH2) ]
                     , p []
-                        [ toHtml ( HomeP1) ]
+                        [ toHtml HomeP1 ]
                     , div [ class "button-group" ]
                         [ toHtmlWithContext CallToActionOne (Just "button--default-width--desktop")
                         , toHtmlWithContext CallToActionTwo (Just "button button--full-width button--default-width--desktop")
