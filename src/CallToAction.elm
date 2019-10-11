@@ -19,6 +19,8 @@ callToActionButton callToAction aClass =
                 , span [] [ text callToAction.promptLong ]
                 ]
             , span []
+                [ text " " ]
+            , span []
                 [ text callToAction.displayHref ]
             ]
 
