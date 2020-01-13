@@ -71,7 +71,7 @@ brandCopy key =
                 { action = DesktopInteractive
                 , category = "page"
                 , icon = "question-circle-o"
-                , href = "/stories"
+                , href = "#/stories"
                 , displayHref = "Find Out More"
                 , promptLong = "Find Out More"
                 , promptShort = "Find Out More"
@@ -562,48 +562,93 @@ brandCopy key =
             CopyText ""
 
         StoryThreeTitle ->
-            CopyText "✨"
+            CopyText ""
 
         StoryThreeTeaser ->
-            CopyText "✨"
+            CopyText ""
 
         StoryThreeTeaserImageAlt ->
-            CopyText "✨"
+            CopyText ""
 
         StoryThree1Quote ->
-            CopyText """✨"""
+            CopyText ""
 
         StoryThree1ImageAlt ->
-            CopyText "✨"
+            CopyText ""
 
         StoryThree1Message ->
             CopyText ""
 
         StoryThree2Quote ->
-            CopyText """✨"""
+            CopyText ""
 
         StoryThree2ImageAlt ->
-            CopyText "✨"
+            CopyText ""
 
         StoryThree2Message ->
-            CopyText "✨"
+            CopyText ""
 
         StoryThree3Quote ->
-            CopyText """✨"""
+            CopyText ""
 
         StoryThree3ImageAlt ->
-            CopyText "✨"
+            CopyText ""
 
         StoryThree3Message ->
             CopyText ""
 
         StoryThree4Quote ->
-            CopyText """✨"""
+            CopyText ""
 
         StoryThree4ImageAlt ->
-            CopyText "✨"
+            CopyText ""
 
         StoryThree4Message ->
+            CopyText ""
+
+        StoryFourTitle ->
+            CopyText ""
+
+        StoryFourTeaser ->
+            CopyText ""
+
+        StoryFourTeaserImageAlt ->
+            CopyText ""
+
+        StoryFour1Quote ->
+            CopyText ""
+
+        StoryFour1ImageAlt ->
+            CopyText ""
+
+        StoryFour1Message ->
+            CopyText ""
+
+        StoryFour2Quote ->
+            CopyText ""
+
+        StoryFour2ImageAlt ->
+            CopyText ""
+
+        StoryFour2Message ->
+            CopyText ""
+
+        StoryFour3Quote ->
+            CopyText ""
+
+        StoryFour3ImageAlt ->
+            CopyText ""
+
+        StoryFour3Message ->
+            CopyText ""
+
+        StoryFour4Quote ->
+            CopyText ""
+
+        StoryFour4ImageAlt ->
+            CopyText ""
+
+        StoryFour4Message ->
             CopyText ""
 
 
