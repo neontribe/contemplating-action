@@ -1,4 +1,4 @@
-module StoryDeck exposing (card, storyRelatedInfo, storyTeaser, storyTitle)
+module StoryDeck exposing (card, storyHasContent, storyRelatedInfo, storyTeaser, storyTitle)
 
 import Array
 import Assets exposing (AssetPath(..), path)
@@ -37,6 +37,15 @@ type alias Card =
 -- Accessors for Story Deck content
 
 
+storyHasContent : Int -> Bool
+storyHasContent deckId =
+    if toString (storyTitle deckId) /= "" then
+        True
+
+    else
+        False
+
+
 storyTitle : Int -> Key
 storyTitle deckId =
     (getDeck deckId decks).title
@@ -58,7 +67,7 @@ storyTeaser deckId =
         t =
             toString
     in
-    if t (storyTitle deckId) /= "" then
+    if storyHasContent deckId then
         article
             [ class "card card--link", onClick (NavigateToString ("#/stories/" ++ String.fromInt deckId)) ]
             [ img [ class "card--thumbnail", src (storyTeaserImgPath deckId), alt (t (storyTeaserImgAltText deckId)) ] []
