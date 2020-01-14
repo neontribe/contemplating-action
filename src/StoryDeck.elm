@@ -303,27 +303,27 @@ decks =
     , { id = 4
       , title = StoryFourTitle
       , teaser = StoryFourTeaser
-      , teaserImgPath = AssetPath "story_images/story3-thumbnail.jpg"
+      , teaserImgPath = AssetPath "story_images/story4-thumbnail.jpg"
       , teaserImgAltText = StoryFourTeaserImageAlt
       , relatedInfo = relatedInfo 3
       , cards =
             [ { quoteText = StoryFour1Quote
-              , imagePath = AssetPath "story_images/story3-image1.jpg"
+              , imagePath = AssetPath "story_images/story4-image1.jpg"
               , altText = StoryFour1ImageAlt
               , messageText = StoryFour1Message
               }
             , { quoteText = StoryFour2Quote
-              , imagePath = AssetPath "story_images/story3-image2.jpg"
+              , imagePath = AssetPath "story_images/story4-image2.jpg"
               , altText = StoryFour2ImageAlt
               , messageText = StoryFour2Message
               }
             , { quoteText = StoryFour3Quote
-              , imagePath = AssetPath "story_images/story3-image3.jpg"
+              , imagePath = AssetPath "story_images/story4-image3.jpg"
               , altText = StoryFour3ImageAlt
               , messageText = StoryFour3Message
               }
             , { quoteText = StoryFour4Quote
-              , imagePath = AssetPath "story_images/story3-image4.jpg"
+              , imagePath = AssetPath "story_images/story4-image4.jpg"
               , altText = StoryFour4ImageAlt
               , messageText = StoryFour4Message
               }
