@@ -1,4 +1,4 @@
-module StoryDeck exposing (card, storyRelatedInfo, storyTeaser, storyTitle)
+module StoryDeck exposing (card, storyHasContent, storyRelatedInfo, storyTeaser, storyTitle)
 
 import Array
 import Assets exposing (AssetPath(..), path)
@@ -37,6 +37,15 @@ type alias Card =
 -- Accessors for Story Deck content
 
 
+storyHasContent : Int -> Bool
+storyHasContent deckId =
+    if toString (storyTitle deckId) /= "" then
+        True
+
+    else
+        False
+
+
 storyTitle : Int -> Key
 storyTitle deckId =
     (getDeck deckId decks).title
@@ -58,20 +67,24 @@ storyTeaser deckId =
         t =
             toString
     in
-    article
-        [ class "card card--link", onClick (NavigateToString ("#/stories/" ++ String.fromInt deckId)) ]
-        [ img [ class "card--thumbnail", src (storyTeaserImgPath deckId), alt (t (storyTeaserImgAltText deckId)) ] []
-        , h3 [ class "title--small" ] [ text (t (storyTitle deckId)) ]
-        , blockquote [ class "card--quote" ]
-            [ text (t (getDeck deckId decks).teaser) ]
-        , div [ class "text-right text-with-icon--right stories--more-link" ]
-            [ a
-                [ class "link", href ("#/stories/" ++ String.fromInt deckId) ]
-                [ text (t (StoriesTeaserMoreLink (t (storyTitle deckId))))
+    if storyHasContent deckId then
+        article
+            [ class "card card--link", onClick (NavigateToString ("#/stories/" ++ String.fromInt deckId)) ]
+            [ img [ class "card--thumbnail", src (storyTeaserImgPath deckId), alt (t (storyTeaserImgAltText deckId)) ] []
+            , h3 [ class "title--small" ] [ text (t (storyTitle deckId)) ]
+            , blockquote [ class "card--quote" ]
+                [ text (t (getDeck deckId decks).teaser) ]
+            , div [ class "text-right text-with-icon--right stories--more-link" ]
+                [ a
+                    [ class "link", href ("#/stories/" ++ String.fromInt deckId) ]
+                    [ text (t (StoriesTeaserMoreLink (t (storyTitle deckId))))
+                    ]
+                , span [] [ getIcon "arrow-right" (Just "icon--alternate") ]
                 ]
-            , span [] [ getIcon "arrow-right" (Just "icon--alternate") ]
             ]
-        ]
+
+    else
+        text ""
 
 
 storyRelatedInfo : Int -> List (Html Msg)
@@ -284,6 +297,35 @@ decks =
               , imagePath = AssetPath "story_images/story3-image4.jpg"
               , altText = StoryThree4ImageAlt
               , messageText = StoryThree4Message
+              }
+            ]
+      }
+    , { id = 4
+      , title = StoryFourTitle
+      , teaser = StoryFourTeaser
+      , teaserImgPath = AssetPath "story_images/story4-thumbnail.jpg"
+      , teaserImgAltText = StoryFourTeaserImageAlt
+      , relatedInfo = relatedInfo 4
+      , cards =
+            [ { quoteText = StoryFour1Quote
+              , imagePath = AssetPath "story_images/story4-image1.jpg"
+              , altText = StoryFour1ImageAlt
+              , messageText = StoryFour1Message
+              }
+            , { quoteText = StoryFour2Quote
+              , imagePath = AssetPath "story_images/story4-image2.jpg"
+              , altText = StoryFour2ImageAlt
+              , messageText = StoryFour2Message
+              }
+            , { quoteText = StoryFour3Quote
+              , imagePath = AssetPath "story_images/story4-image3.jpg"
+              , altText = StoryFour3ImageAlt
+              , messageText = StoryFour3Message
+              }
+            , { quoteText = StoryFour4Quote
+              , imagePath = AssetPath "story_images/story4-image4.jpg"
+              , altText = StoryFour4ImageAlt
+              , messageText = StoryFour4Message
               }
             ]
       }

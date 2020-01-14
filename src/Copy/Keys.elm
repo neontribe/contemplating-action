@@ -196,3 +196,18 @@ type Key
     | StoryThree4Quote
     | StoryThree4ImageAlt
     | StoryThree4Message
+    | StoryFourTitle
+    | StoryFourTeaser
+    | StoryFourTeaserImageAlt
+    | StoryFour1Quote
+    | StoryFour1ImageAlt
+    | StoryFour1Message
+    | StoryFour2Quote
+    | StoryFour2ImageAlt
+    | StoryFour2Message
+    | StoryFour3Quote
+    | StoryFour3ImageAlt
+    | StoryFour3Message
+    | StoryFour4Quote
+    | StoryFour4ImageAlt
+    | StoryFour4Message

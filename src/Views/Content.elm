@@ -14,7 +14,7 @@ import Info exposing (getInfo, getInfoBySlug, infoListItem, infoPage)
 import Messages exposing (Msg(..))
 import Model exposing (Model)
 import Route exposing (Page(..))
-import StoryDeck exposing (card, storyRelatedInfo, storyTeaser, storyTitle)
+import StoryDeck exposing (card, storyHasContent, storyRelatedInfo, storyTeaser, storyTitle)
 import Views.Pages.Privacy exposing (privacyContent)
 import Views.Pages.Supporters exposing (supportersContent)
 
@@ -68,6 +68,7 @@ view model =
                     , storyTeaser 1
                     , storyTeaser 2
                     , storyTeaser 3
+                    , storyTeaser 4
                     ]
                 , div [ class "section section--lighter" ]
                     [ div [ class "text-center" ]
@@ -82,16 +83,35 @@ view model =
                 ]
 
         StoryPage id ->
-            article [ class "section--vertical-fill-center" ]
-                [ div [ class "section section--lighter section--vertical-fill-center" ]
-                    [ h2 []
-                        [ text (t (storyTitle id)) ]
-                    , card id 1
-                    , card id 2
-                    , card id 3
-                    , card id 4
+            if storyHasContent id then
+                article [ class "section--vertical-fill-center" ]
+                    [ div [ class "section section--lighter section--vertical-fill-center" ]
+                        [ h2 []
+                            [ text (t (storyTitle id)) ]
+                        , card id 1
+                        , card id 2
+                        , card id 3
+                        , card id 4
+                        ]
+                    , div [ class "section section--story-end" ]
+                        [ p [ class "story--related" ] [ text (t StoryCardStartJourneyPrompt) ]
+                        , div [ class "button-group story--related" ] (storyRelatedInfo id)
+                        , div [ class "button-group story--related" ]
+                            [ a
+                                [ href "#/info-to-help/"
+                                , class "button button--alternate button--full-width"
+                                , onClick (ButtonPress "information" "view-list" "more-info" True)
+                                ]
+                                [ text (t InfoLikeOtherInfoLink) ]
+                            ]
+                        , div [] [ toHtmlWithContext CallToActionOne (Just "button") ]
+                        ]
                     ]
-                , div [ class "section section--story-end" ]
+
+            else
+                -- User should not find their way here since we don't render teaser
+                -- But more helpful to have these links than empty
+                div [ class "section section--story-end" ]
                     [ p [ class "story--related" ] [ text (t StoryCardStartJourneyPrompt) ]
                     , div [ class "button-group story--related" ] (storyRelatedInfo id)
                     , div [ class "button-group story--related" ]
@@ -104,7 +124,6 @@ view model =
                         ]
                     , div [] [ toHtmlWithContext CallToActionOne (Just "button") ]
                     ]
-                ]
 
         PrivacyPage ->
             privacyContent
