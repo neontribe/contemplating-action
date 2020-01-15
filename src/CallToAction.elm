@@ -81,7 +81,7 @@ callToActionNavItem cta =
                         [ span [ class "mobile-only" ] [ text cta.promptShort ]
 
                         -- Note: cta.promptLong not rendered for phone number in Haven instance
-                        , span [ class "desktop-only" ] [ text cta.promptLong ]
+                        , span [ class "desktop-only nav-text-selector" ] [ text cta.promptLong ]
                         ]
                     ]
                 ]
