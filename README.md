@@ -33,21 +33,9 @@ The output of different versions of elm-format varies significantly, so please u
 
 ## Deployment
 
-### To staging (GitHub pages) with Travis
+### To GitHub pages with Travis
 We're using [Travis](https://travis-ci.org).
 - On every push to the repo, Travis will build and run tests
 - To trigger a deploy to gh-pages, create and push a tag (e.g. `git tag v1.0.0 && git push origin --tags`
 Encrypted vars can be added to `.travis.yml` using the travis cli tools as decribed in the [travis docs](https://docs.travis-ci.com/user/encryption-keys/#usage).
 Currently configured with GITHUB_TOKEN value.
-
-
-### To Production (Heroku)
-- You will need a Heroku account with appropriate permissions
-- We're using the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) for deploys. You will need to install it.
-- First time: Login with `heroku login -i`
-- First time: Add the Heroku remote to your local repo with `heroku git:remote -a contemplating-action`
-- `git checkout <release-branch>`
-- `git tag v<semantic version number>`
-- `git push origin --tags`
-- `git push heroku <release-branch>:master`
-- Todo automate on tagged release
