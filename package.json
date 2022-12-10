@@ -29,7 +29,7 @@
     "webpack-dev-server": "^3.1.9"
   },
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.17.3"
   },
   "browserslist": [
     "defaults"
